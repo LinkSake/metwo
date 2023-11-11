@@ -1,0 +1,33 @@
+
+<div class="footer-row">
+  <!-- Languages -->
+  <div>
+    <a href="/">English</a>
+    //
+    <a href="/es">Español</a>
+  </div>
+  
+  <!-- RSS -->
+  <a href="index.xml">RSS</a>
+
+  <!-- Color scheme -->
+  <div class="color-scheme-toggle">
+    <button class="color-scheme-button light" title="Light mode">
+      ☀
+    </button>
+    <button class="color-scheme-button dark" title="Dark mode">
+      ☾
+    </button>
+  </div>
+</div>
+
+<div class="footer-row">
+  <!-- Copyright -->
+  {{ .Site.Copyright }}
+  
+  <!-- Theme credit -->
+  <div>
+    {{ markdownify .Site.Params.madeWith }}
+  </div>
+</div>
+

@@ -1,0 +1,65 @@
+/* Custom CSS */
+
+:root,
+  :root.light {
+    --bg-color: #fff;
+    --text-color: #444;
+  }
+  :root.dark {
+    --bg-color: #131516;
+    --text-color: #d8d4cf;
+  }
+
+header {
+  text-align: end;
+}
+
+main {
+  min-height: 100vh;
+}
+
+body {
+  font-size: 16px;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+footer {
+  display: flex;
+  font-size: 14px;
+  padding-left: 0%;
+  padding-right: 0%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}:first-child{
+  margin-bottom: 0.3rem;
+}
+
+.color-scheme-button {
+  width: 27px;
+  height: 27px;
+  cursor: pointer;
+  border-radius: 100%;
+  color: var(--text-color);
+  background-color: transparent;
+  border: 1px solid var(--text-color);
+}
+
+/* TODO: Finish color scheme switcher, remove this */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #d8d4cf;
+    background-color: #131516;
+  }
+
+  .color-scheme-button {
+    color: #d8d4cf;
+    border-color: #d8d4cf;
+  }
+}
