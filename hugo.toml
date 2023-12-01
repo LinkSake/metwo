@@ -8,7 +8,7 @@ theme = 'hugo-bearblog'
 # Basic metadata configuration for your blog.
 title = "luis angel _φ(．．;)"
 author = "Luis Angel Ortega"
-copyright = "2019 - 2023 © Luis Angel Ortega"
+copyright = "© Luis Angel Ortega"
 
 # Default language for the website
 defaultContentLanguage = "en"
