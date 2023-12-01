@@ -1,4 +1,11 @@
-<a href="{{ "" | relURL }}">Home</a>
-{{ range .Site.Menus.main }}
-<a href="{{ .URL }}">{{ .Name }}</a>
+{{ if eq site.LanguageCode "es-MX"  }}
+  <a href="{{ "" | relURL }}">Inicio</a>
+  {{ range .Site.Menus.principal }}
+    <a href="{{ .URL }}">{{ .Name }}</a>
+  {{ end }}
+{{ else }}
+  <a href="{{ "" | relURL }}">Home</a>
+  {{ range .Site.Menus.main }}
+    <a href="{{ .URL }}">{{ .Name }}</a>
+  {{ end }}
 {{ end }}
