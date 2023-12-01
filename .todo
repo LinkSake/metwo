@@ -1,0 +1,17 @@
+# TO-DO List
+
+## 01/12/23
+
+- [] Create shortcode for latest articles.
+- [] See if its possible a shortcode for Latest reads.
+- [] Add specific rss link to the blog subfolders.
+- [] Make archetypes for blog subcategories, garden and void stuff.
+
+## 29/11/23
+
+- [x] Add todo file.
+- [x] Create file structure.
+- [] Finish/polish design.
+- [] Migrate content.
+- [] Make localization to spanish work.
+- [] Make light and dark theme switching work.
