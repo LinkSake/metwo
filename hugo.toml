@@ -1,0 +1,108 @@
+baseurl = "https://luisangel.me"
+enableEmoji = true
+footnotereturnlinkcontents = "↩"
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+languageCode = "en-us"
+theme = "hugo-classic"
+title = "luis angel ortega"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+anchorLineNos = false
+codeFences = true
+guessSyntax = false
+lineAnchors = ""
+lineNoStart = 1
+lineNos = false
+lineNumbersInTable = true
+noClasses = true
+style = "monokai"
+tabWidth = 4
+
+[params]
+custom_css = ["css/theme-override.css"]
+
+[permalinks]
+post = "/post/:year/:month/:day/:slug/"
+
+[languages]
+  [languages.en]
+    contentDir = 'content/en'
+    disabled = false
+    languageCode = 'en-US'
+    languageDirection = 'ltr'
+    languageName = 'English'
+    weight = 0
+    [languages.en.params]
+      description = "A simple, minimal blog for those who love text."
+      footer = "Luis Angel Ortega © 2024 | [Español](/es) | Made with [hugo-classic](https://github.com/goodroot/hugo-classic)"
+    [languages.en.menus]
+      [[languages.en.menus.main]]
+        identifier = "home"
+        name = "home"
+        url = "/"
+        weight = 1
+      [[languages.en.menus.main]]
+        identifier = "categories"
+        name = "writings"
+        url = "/categories/"
+        weight = 2
+      [[languages.en.menus.main]]
+        identifier = "projects"
+        name = "projects"
+        url = "/projects"
+        weight = 3
+      [[languages.en.menus.main]]
+        identifier = "garden"
+        name = "garden"
+        url = "/garden"
+        weight = 4
+      [[languages.en.menus.main]]
+        identifier = "about"
+        name = "about-me"
+        url = "/about"
+        weight = 5
+      [[languages.en.menus.feed]]
+        name = "mastodon"
+        url = "https://vmst.io/@link"
+        weight = 1
+      [[languages.en.menus.feed]]
+        name = "rss"
+        url = "/index.xml"
+        weight = 2
+  [languages.es]
+    contentDir = 'content/es'
+    disabled = false
+    languageCode = 'es-MX'
+    languageDirection = 'ltr'
+    languageName = 'Español'
+    weight = 1
+    [languages.es.params]
+      description = "Esta es una descripción en español prros"
+      footer = "Luis Angel Ortega © 2024 | [English](/en) | Hecho con [hugo-classic](https://github.com/goodroot/hugo-classic)"
+    [languages.es.menus]
+      [[languages.es.menus.main]]
+        identifier = "home"
+        name = "inicio"
+        url = "/es"
+        weight = 1
+      [[languages.es.menus.main]]
+        identifier = "categories"
+        name = "categorias"
+        url = "/categories/"
+        weight = 2
+      [[languages.es.menus.main]]
+        identifier = "tags"
+        name = "etiquetas"
+        url = "/tags/"
+        weight = 3
+      [[languages.es.menus.feed]]
+        name = "mastodon"
+        url = "https://vmst.io/@link"
+        weight = 1
+      [[languages.es.menus.feed]]
+        name = "rss"
+        url = "/index.xml"
+        weight = 2
