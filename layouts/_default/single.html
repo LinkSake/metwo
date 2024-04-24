@@ -1,11 +1,16 @@
 {{ partial "header.html" . }}
 <div class="article-meta">
-<h1><span class="title">{{ .Title | markdownify }}</span></h1>
-<div class="after-title">
-  {{ i18n "by"}} {{ with .Params.author }}<span class="author">{{ . }}</span>{{ end }}
-  ({{ if .Params.date }}<i class="date">{{ .Date | time.Format ":date_full" }}</i>{{ end }})
-  | {{ .WordCount }} {{ i18n "words" }} / {{ .ReadingTime }} {{ i18n "minutes" }}
-</div>
+  <h1><span class="title">{{ .Title | markdownify }}</span></h1>
+  <div class="after-title">
+    {{ if not .Params.simple }}
+      {{ i18n "by"}} {{ with .Params.author }}<span class="author">{{ . }}</span>{{ end }}
+      {{ if .Params.date }}
+        <i class="date">({{ .Date | time.Format ":date_full" }})</i>
+      {{ end }}
+      | 
+      {{ .WordCount }} {{ i18n "words" }} / {{ .ReadingTime }} {{ i18n "minutes" }}
+    {{ end }}
+  </div>
 </div>
 
 {{ if .Params.toc }}
@@ -20,17 +25,20 @@
 <div class="content-wrapper">
   <main>
     {{ .Content }}
-    <p class="terms-single">「
-      {{ range $i := (slice "categories" "tags") }}
-        {{ with ($.Param $i) }}
-        <span>
-          {{ i18n $i | title }}: {{ range $k := . }}
-        </span>
-            <a href="{{ absLangURL (print "/" $i "/" $k | urlize) }}">{{$k}}</a> 
+    {{ if not .Params.simple }}
+      <p class="terms-single">「
+        {{ range $i := (slice "categories" "tags") }}
+          {{ with ($.Param $i) }}
+          <span>
+            {{ i18n $i | title }}: {{ range $k := . }}
+          </span>
+              <a href="{{ absLangURL (print "/" $i "/" $k | urlize) }}">{{$k}}</a> 
+            {{ end }}
           {{ end }}
         {{ end }}
+        」</p>
       {{ end }}
-      」</p>
   </main>
 </div>
 {{ partial "footer.html" . }}
+<a rel="me" href="https://vmst.io/@link" style="display: none;"></a>

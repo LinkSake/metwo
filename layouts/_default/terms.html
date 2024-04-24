@@ -1,13 +1,24 @@
 {{ partial "header.html" . }}
 
-<h1>{{ i18n .Title | markdownify }}</h1>
-
-<ul class="terms">
-  {{ range .Data.Terms }}
-  <li>
-    <a href="{{ absLangURL .Page.Permalink }}">{{ .Page.Title | markdownify}}</a> ({{ .Count }})
-  </li>
+<div class="content-wrapper">
+  <h1>{{ i18n .Title | markdownify }}</h1>
+  
+  {{ $term_desc := printf "%s_desc" .Title }}
+  {{ if  i18n $term_desc }}
+    <p> {{ i18n $term_desc }}</p>
   {{ end }}
-</ul>
+  
+  <ul class="terms">
+    {{ range .Data.Terms }}
+    <li>
+      <a href="{{ absLangURL .Page.Permalink }}">{{ .Page.Title | markdownify}}</a> ({{ .Count }})
+      {{ $item_desc := printf "%s_desc" .Page.Title }}
+      {{ if  i18n $item_desc }}
+        <span> - {{ i18n $item_desc }}</span>
+      {{ end }}
+    </li>
+    {{ end }}
+  </ul>
+</div>
 
 {{ partial "footer.html" . }}

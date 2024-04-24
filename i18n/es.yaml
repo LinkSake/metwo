@@ -1,19 +1,28 @@
-Tags:
-  other: "Etiquetas"
-tags:
-  other: "etiquetas"
-Posts:
-  other: "Publicaciónes"
-posts:
-  other: "publicaciónes"
-Categories:
-  other: "Categorias"
-categories:
-  other: "categorias"
-category:
-  other: "cateogria"
-by:
-  other: "por"
-words:
-  other: "palabras"
+# Terms
+Tags: "etiquetas"
+Tags_desc: "Aquí puedes encontrar todas las etiquetas del sitio __φ(。。)"
+tags_desc: "Aquí puedes encontrar todas las etiquetas del sitio __φ(。。)"
+tags: "etiquetas"
+Posts: "archivo"
+Posts_desc: "Aquí puedes encontrar el arichivo de todas las públicaciones del sitio __φ(。。)"
+posts_desc: "Aquí puedes encontrar el arichivo de todas las públicaciones del sitio __φ(。。)"
+posts: "archivo"
+Categories: "escritos"
+Categories_desc: "Aquí puedes encontrar las categorías de mis escritos __φ(。。)"
+categories_desc: "Aquí puedes encontrar las categorías de mis escritos __φ(。。)"
+categories: "escritos"
+
+# Caregories
+Blogpost_desc: "Pensamientos, quejas y un estilo más personal de publicación."
+blogpost_desc: "Pensamientos, quejas y un estilo más personal de publicación."
+Articles_desc: "Guías, ensayos y publicaciones más serias."
+articles_desc: "Guías, ensayos y publicaciones más serias."
+Reports_desc: "Reseñas de diferentes tipos de medios."
+reports_desc: "Reseñas de diferentes tipos de medios."
+Works_desc: "Publicaciones sobre mis obras... publicadas."
+works_desc: "Publicaciones sobre mis obras... publicadas."
+
+# Words
+by: "por"
+words: "palabras"
 minutes: "minutos"

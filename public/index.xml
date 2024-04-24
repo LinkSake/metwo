@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on luis angel ortega</title>
+    <title>home on luis angel ortega</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content in Home on luis angel ortega</description>
+    <description>Recent content in home on luis angel ortega</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 30 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Apr 2024 12:26:36 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>latest reads</title>
+      <link>http://localhost:1313/garden/latest-reads/</link>
+      <pubDate>Wed, 24 Apr 2024 12:26:36 -0500</pubDate>
+      <guid>http://localhost:1313/garden/latest-reads/</guid>
+      <description>2024 This is an example by Example - This is the summary/toughts of the article that i read (read on April 24) </description>
+    </item>
     <item>
       <title>Markdown Guide (modified)</title>
       <link>http://localhost:1313/post/2018/08/30/markdown-guide-modified/</link>
@@ -35,6 +42,20 @@
       <pubDate>Mon, 23 Jan 2012 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/post/2012/01/23/juicy-code/</guid>
       <description>Check out this JUICY! code:&#xA;def with_value_from_database(value) self.class.from_database(name, value, type) end def with_cast_value(value) self.class.with_cast_value(name, value, type) end def with_type(type) if changed_in_place? with_value_from_user(value).with_type(type) else self.class.new(name, value_before_type_cast, type, original_attribute) end end </description>
+    </item>
+    <item>
+      <title>about me</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>whoami I&amp;rsquo;m Luis Angel, a software developer and writter from Mexico. I&amp;rsquo;m a curious person, that has lead me to several things that I really enjoy like tech, films, music, videogames, literature, philosophy, gardening and gumpla. I write about a lot of those things in the writings section of this page, so I encoruage you to check them out.&#xA;contact Nowdays I really don&amp;rsquo;t use social media that much, but I would love to talk!</description>
+    </item>
+    <item>
+      <title>projects</title>
+      <link>http://localhost:1313/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/</guid>
+      <description>Over the years I&amp;rsquo;ve worked on several things, most of them are in spanish but here&amp;rsquo;s a list of them if you wanna check them out!&#xA;active(ish) startpage (repo): Minimal startpage based on several startpages I saw on r/startpages. Curcubita (colective): Art colective/studio founded along with some artist friends with the intention to have synergy with each other. luisangel.me v2 (website): The thing powering this words! archived Nerdverse (podcast | 2015 - 2016): It was my first podcast, I did it as a part of a podcasting community named Estudio Geek / XLR Studio and we (some colaborators and myself) talked about comics, videogames, movies and pop culture.</description>
     </item>
   </channel>
 </rss>

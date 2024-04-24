@@ -4,7 +4,7 @@ description: "Check out this JUICY! code"
 author: Luis Angel Ortega
 date: '2012-01-23'
 categories:
-  - Code
+  - Blogpost
 tags:
   - Juicy
 slug: juicy-code

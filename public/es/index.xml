@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Inicio on luis angel ortega</title>
+    <title>inicio on luis angel ortega</title>
     <link>http://localhost:1313/es/</link>
-    <description>Recent content in Inicio on luis angel ortega</description>
+    <description>Recent content in inicio on luis angel ortega</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-MX</language>
-    <lastBuildDate>Thu, 30 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Apr 2024 12:26:36 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/es/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>últimas lecturas</title>
+      <link>http://localhost:1313/es/garden/ultimas-lecturas/</link>
+      <pubDate>Wed, 24 Apr 2024 12:26:36 -0500</pubDate>
+      <guid>http://localhost:1313/es/garden/ultimas-lecturas/</guid>
+      <description>2024 Esto es un ejemplo por Ejemplo - Este es el resumen/pensamientos del artículo que leí (leído el 24 de abril) </description>
+    </item>
     <item>
       <title>Markdown Guide (modified)</title>
       <link>http://localhost:1313/es/post/2018/08/30/guia-md/</link>
@@ -35,6 +42,20 @@
       <pubDate>Mon, 23 Jan 2012 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/es/post/2012/01/23/codigo-jugoso/</guid>
       <description>Check out this JUICY! code:&#xA;def with_value_from_database(value) self.class.from_database(name, value, type) end def with_cast_value(value) self.class.with_cast_value(name, value, type) end def with_type(type) if changed_in_place? with_value_from_user(value).with_type(type) else self.class.new(name, value_before_type_cast, type, original_attribute) end end </description>
+    </item>
+    <item>
+      <title>proyectos</title>
+      <link>http://localhost:1313/es/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/es/projects/</guid>
+      <description>A lo largo de los años he trabajado en varias cosas, aquí tienes una lista de ellas por si quieres echarles un vistazo.&#xA;activo (más o menos) startpage (repositorio): Página de inicio minimalista basada en varias páginas que vi en r/startpages. Curcubita (colectivo): Colectivo/estudio de arte fundado junto con algunos amigos artistas con la intención de tener sinergia entre nosotros. luisangel.me v2 (web): ¡La cosa que está detrás de estas palabras!</description>
+    </item>
+    <item>
+      <title>sobre mí</title>
+      <link>http://localhost:1313/es/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/es/about/</guid>
+      <description>whoami Soy Luis Ángel, un desarrollador de software y escritor de México. Soy una persona curiosa, lo que me ha llevado a varias cosas que realmente disfruto como la tecnología, el cine, la música, los videojuegos, la literatura, la filosofía, la jardinería y el gumpla. Escribo sobre muchas de estas cosas en la sección de escritos de esta página, así que te animo a que las revises.&#xA;contacto Hoy en día realmente no uso mucho las redes sociales, pero ¡me encantaría conversar!</description>
     </item>
   </channel>
 </rss>

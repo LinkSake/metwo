@@ -1,19 +1,28 @@
-Tags:
-  other: "Tags"
-tags:
-  other: "tags"
-Posts:
-  other: "Posts"
-posts:
-  other: "posts"
-Categories:
-  other: "Categories"
-categories:
-  other: "categories"
-category:
-  other: "category"
-by:
-  other: "by"
-words:
-  other: "words"
+# Terms
+Tags: "tags"
+Tags_desc: "Here you can find all the tags of the site __φ(。。)"
+tags_desc: "Here you can find all the tags of the site __φ(。。)"
+tags: "tags"
+Posts: "archive"
+Posts_desc: "Here is the archive of all the post of the site __φ(。。)"
+posts_desc: "Here is the archive of all the post of the site __φ(。。)"
+posts: "archive"
+Categories: "writings"
+Categories_desc: "Here you can find all the categories of my writings __φ(。。)"
+categories_desc: "Here you can find all the categories of my writings __φ(。。)"
+categories: "writings"
+
+# Caregories
+Blogpost_desc: "Toughts, rants and a more personal style of post."
+blogpost_desc: "Toughts, rants and a more personal style of post."
+Articles_desc: "Guides, essays and more serious posts."
+articles_desc: "Guides, essays and more serious posts."
+Reports_desc: "Reviews for different kinds of media."
+reports_desc: "Reviews for different kinds of media."
+Works_desc: "Posts about my published works."
+works_desc: "Posts about my published works."
+
+# Words
+by: "by"
+words: "words"
 minutes: "minutes"

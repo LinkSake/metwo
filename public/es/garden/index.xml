@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jardín digital on luis angel ortega</title>
+    <link>http://localhost:1313/es/garden/</link>
+    <description>Recent content in jardín digital on luis angel ortega</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-MX</language>
+    <lastBuildDate>Wed, 24 Apr 2024 12:26:36 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/es/garden/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>últimas lecturas</title>
+      <link>http://localhost:1313/es/garden/ultimas-lecturas/</link>
+      <pubDate>Wed, 24 Apr 2024 12:26:36 -0500</pubDate>
+      <guid>http://localhost:1313/es/garden/ultimas-lecturas/</guid>
+      <description>2024 Esto es un ejemplo por Ejemplo - Este es el resumen/pensamientos del artículo que leí (leído el 24 de abril) </description>
+    </item>
+  </channel>
+</rss>

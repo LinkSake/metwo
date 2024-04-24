@@ -30,10 +30,10 @@
       <description></description>
     </item>
     <item>
-      <title>Code</title>
-      <link>http://localhost:1313/categories/code/</link>
+      <title>Blogpost</title>
+      <link>http://localhost:1313/categories/blogpost/</link>
       <pubDate>Mon, 23 Jan 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/code/</guid>
+      <guid>http://localhost:1313/categories/blogpost/</guid>
       <description></description>
     </item>
   </channel>
