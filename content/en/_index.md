@@ -43,9 +43,8 @@ Most of the content it's available in [English](/en) and [Spanish](/es)! Hopeful
 
 ## latest reads
 
-- [**This is an example by Example**](/) - This is the summary/toughts of the article that i read (read on April 24)
-- [**This is an example by Example**](/) - This is the summary/toughts of the article that i read (read on April 24)
-- [**This is an example by Example**](/) - This is the summary/toughts of the article that i read (read on April 24)
+- [**How teens benefit from being able to read ‘disturbing’ books that some want to ban by Gay Ivey**](https://theconversation.com/how-teens-benefit-from-being-able-to-read-disturbing-books-that-some-want-to-ban-223533)
+
 
 <div style="text-align: center; margin-bottom: 1rem;">
   <a href="/garden/latest-reads">

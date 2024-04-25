@@ -43,9 +43,7 @@ La mayoría del contenido está disponible en [inglés](/en) y [español](/es)! 
 
 ## últimas lecturas
 
-- [**Esto es un ejemplo por Ejemplo**](/) - Estos son el resumen/pensamientos del artículo que leí (leído el 24 de abril)
-- [**Esto es un ejemplo por Ejemplo**](/) - Estos son el resumen/pensamientos del artículo que leí (leído el 24 de abril)
-- [**Esto es un ejemplo por Ejemplo**](/) - Estos son el resumen/pensamientos del artículo que leí (leído el 24 de abril)
+- [**Cómo se benefician los adolescentes de poder leer libros 'perturbadores' que algunos quieren prohibir por Gay Ivey**](https://theconversation.com/how-teens-benefit-from-being-able-to-read-disturbing-books-that-some-want-to-ban-223533)
 
 <div style="text-align: center; margin-bottom: 1rem;">
   <a href="/garden/latest-reads">
