@@ -29,16 +29,12 @@ Most of the content it's available in [English](https://luisangel.me/en) and [Sp
 
 ## Known issues/todo list
 
-1. Right now i only list one RSS for the entire blog. I don't think it even works on the spanish side of things. Ideally there will be a link to a feed for each section.
+1. Right now we only list the RSS for the "archive", it's probably a good idea to have per term.
 
-2. Add the Mastadon stuff to get verified on it.
+2. Add favicon.
 
-3. Add favicon.
+3. Migrate content from the old blog + translate + add the new stuff (𖦹﹏𖦹;).
 
-4. Migrate content from the old blog + translate + add the new stuff (𖦹﹏𖦹;).
+4. Change domain records and anything else to make this the actual webpage.
 
-5. Add GH Action to deploy it.
-
-6. Change domain records and anything else to make this the actual webpage.
-
-7. I promise i had another important thing to add but i don't remember •ᴖ•.
+5. I promise i had another important thing to add but i don't remember •ᴖ•.

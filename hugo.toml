@@ -5,6 +5,7 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 languageCode = "en-us"
 theme = "hugo-classic"
 title = "luis angel ortega"
+copyright = "2024 Luis Angel Ortega Holguin All rights reserved"
 
 [markup.goldmark.renderer]
 unsafe = true
@@ -18,11 +19,14 @@ lineNoStart = 1
 lineNos = false
 lineNumbersInTable = true
 noClasses = true
-style = "monokai"
+style = "catppuccin-frappe"
 tabWidth = 4
 
 [params]
 custom_css = ["css/theme-override.css"]
+[params.author]
+  name = "Luis Angel Ortega"
+  email = "hey@luisangel.me"
 
 [permalinks]
 post = "/post/:year/:month/:day/:slug/"
@@ -70,7 +74,7 @@ post = "/post/:year/:month/:day/:slug/"
         weight = 1
       [[languages.en.menus.feed]]
         name = "rss"
-        url = "/index.xml"
+        url = "/post/index.xml"
         weight = 2
   [languages.es]
     contentDir = 'content/es'
@@ -114,5 +118,5 @@ post = "/post/:year/:month/:day/:slug/"
         weight = 1
       [[languages.es.menus.feed]]
         name = "rss"
-        url = "/index.xml"
+        url = "/es/post/index.xml"
         weight = 2
