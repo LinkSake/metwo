@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Do the new developers on your team take weeks to get the project running? Is getting the project to production an odyssey? Maybe Docker is the solution.">
+    
+    <title>
+      
+        Docker &#43; Rails: A Solution for Your Headaches
+      
+      | luis angel ortega
+    </title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="http://localhost:1313/css/theme-override.css">
+    <header>
+
+  <nav>
+    <ul>
+      
+      
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/">~/home</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/categories/">~/writings</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/projects">~/projects</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/garden">~/garden</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/about">~/about-me</a>
+      </li>
+      
+
+      
+      
+      <li class="pull-right">
+        <a href="https://vmst.io/@link">~/mastodon</a>
+      </li>
+      
+      
+      <li class="pull-right">
+        <a href="http://localhost:1313/post/index.xml">~/rss</a>
+      </li>
+      
+
+    </ul>
+  </nav>
+</header>
+
+  </head>
+
+  <body>
+    <br/>
+
+<div class="article-meta">
+  <h1><span class="title">Docker + Rails: A Solution for Your Headaches</span></h1>
+  <div class="after-title">
+    
+      by <span class="author">Luis Angel Ortega</span>
+      
+        <i class="date">(Thursday, September 2, 2021)</i>
+      
+      | 
+      2141 words / 11 minutes
+    
+  </div>
+</div>
+
+
+
+<div class="content-wrapper">
+  <main>
+    <p>Have you ever spent a week just trying to run the project you just joined? Or does your application not run in production as it did locally?
+There are a multitude of factors that can contribute to this, which is why <a href="https://www.docker.com/">Docker</a> offers us a solution with which we can have greater control over these variables across the necessary computers.</p>
+<p>With that said, in this article we will see how to make our lives easier by having our entire Ruby on Rails application running on Docker; including any necessary databases.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>To follow this guide, you will need to have <a href="https://docs.docker.com/get-docker/">Docker installed</a> as well as a project you want to <em>dockerize</em>. If you just want to practice, you can use <a href="https://github.com/LinkSake/docker-rails">this example project</a> which requires a connection to <a href="https://en.wikipedia.org/wiki/PostgreSQL">Postgres</a> and <a href="https://en.wikipedia.org/wiki/Redis">Redis</a> to function.</p>
+<p>Are you impatient? You can clone <a href="https://github.com/LinkSake/docker-rails/tree/docker">this branch</a> of the project where the necessary files to run the project inside Docker are already present!</p>
+<h2 id="first-comes-the-dockerfile">First Comes the Dockerfile</h2>
+<p>The first thing we will do is create a custom <a href="https://docs.docker.com/get-started/overview/#docker-objects">image</a> for our project, so we will create a file at the root of it called <code>Dockerfile</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch Dockerfile
+</span></span></code></pre></div><p>The first line of our file will define the image we will base on, in this case, it will be the <a href="https://hub.docker.com/_/ruby">official Ruby image</a>, but we will use the Alpine version to have a lighter image as a result.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span><span style="color:#a6d189"> ruby:3.0.1-alpine</span><span style="color:#e78284">
+</span></span></span></code></pre></div><blockquote>
+<p>⚠️ Make sure the Ruby version (ruby:X.X.X-alpine) is the same as in your project, or you will have errors when trying to build the image. You can find the version used by your project in your Gemfile.</p>
+</blockquote>
+<p>Next comes the most difficult part of this Dockerfile, installing the necessary dependencies for the project to function; those shown here are the ones that work for our <a href="https://github.com/LinkSake/docker-rails">example project</a>, which include the necessary ones to make a connection with Postgres, but you will have to discover which ones are necessary for your project.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span><span style="color:#a6d189"> ruby:3.0.1-alpine</span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">RUN</span> apk add --update --no-cache --virtual run-dependencies <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>build-base <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>postgresql-client <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>postgresql-dev <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>yarn <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>git <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>tzdata <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>libpq <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span><span style="color:#99d1db;font-weight:bold">&amp;&amp;</span> rm -rf /var/cache/apk/*<span style="color:#e78284">
+</span></span></span></code></pre></div><blockquote>
+<p>You can wait to build the image (<code>docker build .</code>) to check the error printed by Docker, with that you can find out what dependencies are missing 😉</p>
+</blockquote>
+<p>The last line (<code>rm -rf /var/cache/apk/*</code>) deletes the packages of the dependencies we just installed, this will save space in the image.</p>
+<p>Next, we need to create a directory inside the container where we can copy the code of our application for its execution, we will do this with the following command inside our Dockerfile.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span><span style="color:#a6d189"> ruby:3.0.1-alpine</span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">RUN</span> apk add --update --no-cache  --virtual run-dependencies <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>build-base <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>postgresql-client <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>postgresql-dev <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>yarn <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>git <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>tzdata <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>libpq <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span><span style="color:#99d1db;font-weight:bold">&amp;&amp;</span> rm -rf /var/cache/apk/*<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">WORKDIR</span><span style="color:#a6d189"> /docker-rails</span><span style="color:#e78284">
+</span></span></span></code></pre></div><blockquote>
+<p>Remember to change <code>docker-rails</code> to your project name!</p>
+</blockquote>
+<p>Just as we gave your project a home inside the container we will create, the gems of the same need a folder too. Therefore, we will inform <a href="https://bundler.io/">bundler</a> where to place them through an environment variable.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span><span style="color:#a6d189"> ruby:3.0.1-alpine</span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">RUN</span> apk add --update --no-cache  --virtual run-dependencies <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>build-base <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>postgresql-client <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>postgresql-dev <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>yarn <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>git <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>tzdata <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>libpq <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span><span style="color:#99d1db;font-weight:bold">&amp;&amp;</span> rm -rf /var/cache/apk/*<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">WORKDIR</span><span style="color:#a6d189"> /docker-rails</span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">ENV</span> BUNDLE_PATH /gems<span style="color:#e78284">
+</span></span></span></code></pre></div><p>And although we have already installed the necessary dependencies to run Rails within the container, your project will need some gems and some JavaScript packages to function correctly, we will take care of that as follows.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span><span style="color:#a6d189"> ruby:3.0.1-alpine</span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">RUN</span> apk add --update --no-cache  --virtual run-dependencies <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>build-base <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>postgresql-client <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>postgresql-dev <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>yarn <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>git <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>tzdata <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>libpq <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span><span style="color:#99d1db;font-weight:bold">&amp;&amp;</span> rm -rf /var/cache/apk/*<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">WORKDIR</span><span style="color:#a6d189"> /docker-rails</span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">ENV</span> BUNDLE_PATH /gems<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">COPY</span> package.json yarn.lock /docker-rails/<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">RUN</span> yarn install<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">COPY</span> Gemfile Gemfile.lock /docker-rails/<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">RUN</span> bundle install<span style="color:#e78284">
+</span></span></span></code></pre></div><p>Now that we have everything necessary for your project to function, we will copy the code to the container inside the folder we created with the <code>WORKDIR</code> command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span><span style="color:#a6d189"> ruby:3.0.1-alpine</span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">RUN</span> apk add --update --no-cache  --virtual run-dependencies <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>build-base <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>postgresql-client <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>postgresql-dev <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>yarn <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>git <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>tzdata <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>libpq <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span><span style="color:#99d1db;font-weight:bold">&amp;&amp;</span> rm -rf /var/cache/apk/*<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">WORKDIR</span><span style="color:#a6d189"> /docker-rails</span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">ENV</span> BUNDLE_PATH /gems<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">COPY</span> package.json yarn.lock /docker-rails/<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">RUN</span> yarn install<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">COPY</span> Gemfile Gemfile.lock /docker-rails/<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">RUN</span> bundle install<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">COPY</span> . /docker-rails/<span style="color:#e78284">
+</span></span></span></code></pre></div><blockquote>
+<p>Why do we first copy the manifests (package.json, Gemfile, etc.) and then the rest of the project? This avoids having to reinstall the dependencies (since they stay in the cache) after changing the base code and rebuilding the image; this way only when the manifests change will their installation commands be run again.</p>
+</blockquote>
+<p>Finally, we will tell Docker what command to run when we start our container (<code>rails</code>), as well as the arguments for it (<code>s -b 0.0.0.0</code>) and which port to expose so that we can access our application.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span><span style="color:#a6d189"> ruby:3.0.1-alpine</span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">RUN</span> apk add --update --no-cache  --virtual run-dependencies <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>build-base <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>postgresql-client <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>postgresql-dev <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>yarn <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>git <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>tzdata <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>libpq <span style="color:#8caaee">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span><span style="color:#99d1db;font-weight:bold">&amp;&amp;</span> rm -rf /var/cache/apk/*<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span>WORKROOM /docker-rails<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">ENV</span> BUNDLE_PATH /gems<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">COPY</span> package.json yarn.lock /docker-rails/<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">RUN</span> yarn install<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">COPY</span> Gemfile Gemfile.lock /docker-rails/<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">RUN</span> bundle install<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">COPY</span> . /docker-rails/<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">ENTRYPOINT</span> [<span style="color:#a6d189">&#34;bin/rails&#34;</span>]<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">CMD</span> [<span style="color:#a6d189">&#34;s&#34;</span>, <span style="color:#a6d189">&#34;-b&#34;</span>, <span style="color:#a6d189">&#34;0.0.0.0&#34;</span>]<span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284">
+</span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">EXPOSE</span><span style="color:#a6d189"> 3000</span><span style="color:#e78284">
+</span></span></span></code></pre></div><blockquote>
+<p>The default port over which Rails runs is 3000, but if you have designated another port within your application make sure to expose it correctly.</p>
+</blockquote>
+<p>And with this we have our Dockerfile ready, although we are far from having our application ready. If we build our image with <code>docker build .</code> and try to run it with <code>docker start docker-rails</code> we would encounter an error, since Rails does not find the databases it needs to start correctly; but we will soon take care of that.</p>
+<h2 id="then-the-docker-composeyml">Then the docker-compose.yml</h2>
+<p>To coordinate all the services we need for the correct functioning of our application (in this case 2 databases: Postgres and Redis) we will use <a href="https://docs.docker.com/compose/">docker-compose</a>, this Docker utility will help us create multiple containers from different images, <a href="https://docs.docker.com/compose/networking/">connect them</a>, give them <a href="https://docs.docker.com/compose/environment-variables/">environment variables</a> and even <a href="https://docs.docker.com/storage/volumes/">volumes</a>.</p>
+<p>We will start by creating a file called <code>docker-compose.yml</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch docker-compose.yml
+</span></span></code></pre></div><p>And on its first line we will specify which <a href="https://docs.docker.com/compose/compose-file/#compose-and-docker-compatibility-matrix">version</a> of the tool we want to use, in this case we will use the most recent at the time of writing this article.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ca9ee6">version</span>: <span style="color:#a6d189">&#39;3.8&#39;</span>
+</span></span></code></pre></div><p>Next, we will indicate the services we want docker-compose to run, we will do this under the <code>services</code> label. We will give each service a name, which will be important when we are configuring our image, so make sure to name it in a way that makes sense to you. Let&rsquo;s start with the Postgres service, which we will call <em>db</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ca9ee6">version</span>: <span style="color:#a6d189">&#39;3.8&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">db</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">image</span>: postgres:latest
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">container_name</span>: docker-rails-db
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">environment</span>:
+</span></span><span style="display:flex;"><span>      - POSTGRES_DB=docker-rails-dev
+</span></span><span style="display:flex;"><span>      - POSTGRES_PASSWORD=password
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ef9f76">5432</span>:<span style="color:#ef9f76">5432</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#a6d189">&#39;dbdata:/var/lib/postgresql/data&#39;</span>
+</span></span></code></pre></div><blockquote>
+<p>YAML files are sensitive to indentation, so make sure everything is in order and indented correctly.</p>
+</blockquote>
+<p>The <code>db</code> tag is the name we gave to the service and within which we will specify all the configuration for it.</p>
+<p>The first thing we encounter is <code>image</code>, which as its name indicates is the name of the image we want to use for that service, in this case it is the official Postgres image in its latest version (you can specify a version by replacing <code>latest</code> with another valid version).</p>
+<p>Then we encounter <code>container_name</code>, which is also self-explanatory and which will come in handy when checking our containers with <code>docker ps</code>.</p>
+<p><code>environment</code> refers to the environment variables, and if we refer to the <a href="https://hub.docker.com/_/postgres">Docker Postgres image documentation</a> we can see that the only mandatory variable is <code>POSTGRES_PASSWORD</code> but we will also define <code>POSTGRES_DB</code> to give a custom name to the database that the image creates by default.</p>
+<blockquote>
+<p>⚠️ Be sure to choose a secure password for the database!</p>
+</blockquote>
+<p><code>ports</code> are the ports that we will need to pass from inside the container to our machine, the ones indicated in the file are the ones that Postgres uses by default.</p>
+<p>Finally, the <code>volumes</code> are the persistent information we will need so as not to run the migrations every time we turn on the container, this is because Docker deletes all data once we shut down the information, if you want to learn more about this topic I recommend <a href="https://docs.docker.com/storage/volumes/">this</a> section of the documentation.</p>
+<p>Now, the next service is Redis but we will not delve much into it as it only has a couple of labels which we have already reviewed, for more information you can visit <a href="https://hub.docker.com/_/redis">the official image</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ca9ee6">version</span>: <span style="color:#a6d189">&#39;3.8&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">db</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">image</span>: postgres:latest
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">container_name</span>: docker-rails-db
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">environment</span>:
+</span></span><span style="display:flex;"><span>      - POSTGRES_DB=docker-rails-dev
+</span></span><span style="display:flex;"><span>      - POSTGRES_PASSWORD=password
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ef9f76">5432</span>:<span style="color:#ef9f76">5432</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#a6d189">&#39;dbdata:/var/lib/postgresql/data&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">redis</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">image</span>: redis:latest
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">container_name</span>: docker-rails-redis
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ef9f76">6379</span>:<span style="color:#ef9f76">6379</span>
+</span></span></code></pre></div><p>Our last service we will call <code>web</code> and it will be the image we have built with our <code>Dockerfile</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ca9ee6">version</span>: <span style="color:#a6d189">&#39;3.8&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">db</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">image</span>: postgres:latest
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">container_name</span>: docker-rails-db
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">environment</span>:
+</span></span><span style="display:flex;"><span>      - POSTGRES_DB=docker-rails-dev
+</span></span><span style="display:flex;"><span>      - POSTGRES_PASSWORD=password
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ef9f76">5432</span>:<span style="color:#ef9f76">5432</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#a6d189">&#39;dbdata:/var/lib/postgresql/data&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">redis</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">image</span>: redis:latest
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">container_name</span>: docker-rails-redis
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ef9f76">6379</span>:<span style="color:#ef9f76">6379</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">web</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">build</span>: .
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">image</span>: docker-rails
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">container_name</span>: docker-rails-web
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ef9f76">3000</span>:<span style="color:#ef9f76">3000</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">depends_on</span>:
+</span></span><span style="display:flex;"><span>      - db
+</span></span><span style="display:flex;"><span>      - redis
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">environment</span>:
+</span></span><span style="display:flex;"><span>      - POSTGRES_HOST=db
+</span></span><span style="display:flex;"><span>      - POSTGRES_USER=postgres
+</span></span><span style="display:flex;"><span>      - POSTGRES_PASSWORD=password
+</span></span><span style="display:flex;"><span>      - REDIS_URL=redis://redis:6379
+</span></span></code></pre></div><p>The first new tag we encounter is <code>build</code>, which indicates the directory where our Dockerfile is located; since our Dockerfile is at the root we will only put <code>.</code>; if your Dockerfile is not at the root or has another name it is advisable to read <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#build">this</a> section of the documentation to make sure Compose finds it.</p>
+<p>The <code>image</code> tag in this case will serve to name the image that Compose will build, since <code>build</code> is present it will not go to the repository to look for a pre-built image.</p>
+<p>Finally, the <code>depends_on</code> tag will inform Compose that it should not try to start the container until the <code>db</code> and <code>redis</code> services are created, as well as it will connect them internally so that we can access them through a URL (as can be seen in the Redis environment variable) or by their respective credentials (as is the case with Postgres), if you want to learn how Docker handles this you can read about <a href="https://docs.docker.com/compose/networking/">Docker Network</a>.</p>
+<p>Now that we have finished with the services, the only thing we must do is list the volumes we will use and which we <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes">named</a> in the following way.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ca9ee6">version</span>: <span style="color:#a6d189">&#39;3.8&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">db</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">image</span>: postgres:latest
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">container_name</span>: docker-rails-db
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">environment</span>:
+</span></span><span style="display:flex;"><span>      - POSTGRES_DB=docker-rails-dev
+</span></span><span style="display:flex;"><span>      - POSTGRES_PASSWORD=password
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ef9f76">5432</span>:<span style="color:#ef9f76">5432</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#a6d189">&#39;dbdata:/var/lib/postgresql/data&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">redis</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">image</span>: redis:latest
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">container_name</span>: docker-rails-redis
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ef9f76">6379</span>:<span style="color:#ef9f76">6379</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">web</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">build</span>: .
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">image</span>: docker-rails
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">container_name</span>: docker-rails-web
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ef9f76">3000</span>:<span style="color:#ef9f76">3000</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">depends_on</span>:
+</span></span><span style="display:flex;"><span>      - db
+</span></span><span style="display:flex;"><span>      - redis
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">environment</span>:
+</span></span><span style="display:flex;"><span>      - POSTGRES_HOST=db
+</span></span><span style="display:flex;"><span>      - POSTGRES_USER=postgres
+</span></span><span style="display:flex;"><span>      - POSTGRES_PASSWORD=password
+</span></span><span style="display:flex;"><span>      - REDIS_URL=redis://redis:6379
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">volumes</span>:
+</span></span><span style="display:flex;"><span>      - .:/app
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">volumes</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">dbdata</span>:
+</span></span></code></pre></div><p>And that&rsquo;s it! Our <code>docker-compose.yml</code> is ready, now there&rsquo;s only one step left to start creating our Docker-contained application.</p>
+<h2 id="out-of-sight-dockerignore-out-of-mind">Out of Sight, .dockerignore Out of Mind</h2>
+<p>Many times we do not want certain files to be in our Docker image because they are not necessary for its construction (or are generated in it) and only end up making the project larger than it needs to be, such as the <code>node_modules</code> and <code>.git</code> folder.
+To save this space, we will create a file called <code>.dockerignore</code> at the root of our project and add these two folders:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#99d1db">echo</span> <span style="color:#a6d189">&#34;.git \n node_modules&#34;</span> &gt;&gt; .dockerignore
+</span></span></code></pre></div><p>For more information on what a <code>.dockerignore</code> file can contain, you can consult the <a href="https://docs.docker.com/engine/reference/builder/#dockerignore-file">official Docker documentation</a></p>
+<h2 id="databases-2-go">Databases 2 Go</h2>
+<p>Before running the project it will be necessary to create the database that Rails expects, and creating it is so simple that it can be done in a single command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose run web db:create
+</span></span></code></pre></div><p>This command tells Docker to use the image (which it will build) to run a command, in this case <code>db:create</code>. Docker, with what is specified in the <code>docker-compose.yml</code>, knows that since <em>web</em> depends on <em>db</em> it will have to run the Postgres instance first, so the database will be created in this container.</p>
+<blockquote>
+<p>Why only <code>db:create</code> and not <code>rails db:create</code> or <code>rake db:create</code>? In our <code>Dockerfile</code> we gave <code>rails</code> as the entry point, so only the parameters are necessary. If we wanted to perform another command inside the container this would have to be through <a href="https://docs.docker.com/engine/reference/commandline/exec/">docker exec</a>.</p>
+</blockquote>
+<h2 id="our-application-in-a-container">Our Application in a Container</h2>
+<p>With the database created, there&rsquo;s only one command left that will run the containers in <a href="https://docs.docker.com/compose/reference/up/">detached mode</a> and we will be able to see the fruit of our labor.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose up -d
+</span></span></code></pre></div><p>And that&rsquo;s it! You can now access through your browser to <a href="http://localhost:3000/">localhost:3000</a> and see the Rails welcome page.</p>
+<p><img alt="Welcome to Rails!" src="/images/post/docker-rails-1.png"></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This whole process may be a bit intimidating at first, especially if you are not familiar with Docker, but the result is a much simpler development environment for everyone involved in the project, as now just by having Docker installed they can start programming; not to mention the benefits that this technology can bring to your production environment when combined with Kubernetes or Docker Swarm.</p>
+<p>I hope you found this useful, anything you can <a href="https://luisangel.me/es/about">contact me</a> and I will respond as soon as possible.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://docs.docker.com/samples/rails/">Docker Docs</a></li>
+<li><a href="https://gorails.com/episodes/docker-basics-for-gorails">Go Rails</a></li>
+</ul>
+
+    
+      <p class="terms-single">「
+        
+          
+          <span>
+            Writings: 
+          </span>
+              <a href="http://localhost:1313/categories/articles">Articles</a> 
+            
+          
+        
+          
+          <span>
+            Tags: 
+          </span>
+              <a href="http://localhost:1313/tags/rails">rails</a> 
+            
+          </span>
+              <a href="http://localhost:1313/tags/docker">docker</a> 
+            
+          </span>
+              <a href="http://localhost:1313/tags/web-development">web development</a> 
+            
+          
+        
+        」</p>
+      
+  </main>
+</div>
+    <footer>
+      
+<script>
+(function() {
+  function center_el(tagName) {
+    var tags = document.getElementsByTagName(tagName), i, tag;
+    for (i = 0; i < tags.length; i++) {
+      tag = tags[i];
+      var parent = tag.parentElement;
+      
+      if (parent.childNodes.length === 1) {
+        
+        if (parent.nodeName === 'A') {
+          parent = parent.parentElement;
+          if (parent.childNodes.length != 1) continue;
+        }
+        if (parent.nodeName === 'P') parent.style.textAlign = 'center';
+      }
+    }
+  }
+  var tagNames = ['img', 'embed', 'object'];
+  for (var i = 0; i < tagNames.length; i++) {
+    center_el(tagNames[i]);
+  }
+})();
+</script>
+
+      
+      <hr/>
+      Luis Angel Ortega © 2024 | <a href="/es">Español</a> | Made with <a href="https://github.com/goodroot/hugo-classic">hugo-classic</a>
+      
+    </footer>
+  </body>
+</html>
+
+<a rel="me" href="https://vmst.io/@link" style="display: none;"></a>

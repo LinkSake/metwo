@@ -75,16 +75,6 @@
   </url><url>
     <loc>http://localhost:1313/es/post/2022/11/05/dropdowns-y-toggles-con-css/</loc>
     <lastmod>2022-11-05T11:53:11-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:1313/post/2022/11/05/dropdowns-y-toggles-con-css/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-MX"
-                href="http://localhost:1313/es/post/2022/11/05/dropdowns-y-toggles-con-css/"
-                />
   </url><url>
     <loc>http://localhost:1313/es/post/</loc>
     <lastmod>2022-11-05T11:53:11-05:00</lastmod>
@@ -112,138 +102,101 @@
                 href="http://localhost:1313/es/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/categories/example/</loc>
-    <lastmod>2018-08-30T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/es/tags/docker/</loc>
+    <lastmod>2021-09-02T15:15:49-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/categories/example/"
+                href="http://localhost:1313/tags/docker/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/categories/example/"
+                href="http://localhost:1313/es/tags/docker/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/tags/markdown/</loc>
-    <lastmod>2018-08-30T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/es/post/2021/09/02/docker-y-rails/</loc>
+    <lastmod>2021-09-02T15:15:49-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/rails/</loc>
+    <lastmod>2021-09-02T15:15:49-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/tags/markdown/"
+                href="http://localhost:1313/tags/rails/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/tags/markdown/"
+                href="http://localhost:1313/es/tags/rails/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/post/2018/08/30/guia-md/</loc>
-    <lastmod>2018-08-30T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/es/post/2021/04/20/el-dilema-del-home-office/</loc>
+    <lastmod>2021-04-20T15:07:57-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/covid/</loc>
+    <lastmod>2021-04-20T15:07:57-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/post/2018/08/30/markdown-guide-modified/"
+                href="http://localhost:1313/tags/covid/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/post/2018/08/30/guia-md/"
+                href="http://localhost:1313/es/tags/covid/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/categories/bullhorn/</loc>
-    <lastmod>2012-04-23T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/es/tags/home-office/</loc>
+    <lastmod>2021-04-20T15:07:57-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/categories/bullhorn/"
+                href="http://localhost:1313/tags/home-office/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/categories/bullhorn/"
+                href="http://localhost:1313/es/tags/home-office/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/post/2012/04/23/hacker-cuernudo/</loc>
-    <lastmod>2012-04-23T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/es/categories/blogposts/</loc>
+    <lastmod>2020-08-11T13:50:59-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/post/2012/04/23/hacker-with-horn/"
+                href="http://localhost:1313/categories/blogposts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/post/2012/04/23/hacker-cuernudo/"
+                href="http://localhost:1313/es/categories/blogposts/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/categories/blog/</loc>
-    <lastmod>2012-03-12T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/es/tags/jaime-sabines/</loc>
+    <lastmod>2020-08-11T13:50:59-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/categories/blog/"
+                href="http://localhost:1313/tags/jaime-sabines/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/categories/blog/"
+                href="http://localhost:1313/es/tags/jaime-sabines/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/post/2012/03/12/cli-chido/</loc>
-    <lastmod>2012-03-12T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:1313/post/2012/03/12/command-line-awesomeness/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-MX"
-                href="http://localhost:1313/es/post/2012/03/12/cli-chido/"
-                />
+    <loc>http://localhost:1313/es/post/2020/08/11/lo-mejor-de-la-escuela-es-el-recreo/</loc>
+    <lastmod>2020-08-11T13:50:59-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/es/tags/html/</loc>
-    <lastmod>2012-03-12T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:1313/tags/html/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-MX"
-                href="http://localhost:1313/es/tags/html/"
-                />
+    <loc>http://localhost:1313/es/tags/pensamientos/</loc>
+    <lastmod>2020-08-11T13:50:59-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/es/categories/code/</loc>
-    <lastmod>2012-01-23T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/es/tags/poema/</loc>
+    <lastmod>2020-08-11T13:50:59-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/es/tags/juicy/</loc>
-    <lastmod>2012-01-23T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:1313/tags/juicy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-MX"
-                href="http://localhost:1313/es/tags/juicy/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/post/2012/01/23/codigo-jugoso/</loc>
-    <lastmod>2012-01-23T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:1313/post/2012/01/23/juicy-code/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-MX"
-                href="http://localhost:1313/es/post/2012/01/23/codigo-jugoso/"
-                />
+    <loc>http://localhost:1313/es/post/2020/07/26/el-domingo-que-duro-un-verano/</loc>
+    <lastmod>2020-07-26T13:34:27-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/es/projects/</loc>
     <xhtml:link

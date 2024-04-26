@@ -26,24 +26,66 @@
       <description></description>
     </item>
     <item>
-      <title>Markdown</title>
-      <link>http://localhost:1313/tags/markdown/</link>
+      <title>Docz</title>
+      <link>http://localhost:1313/tags/docz/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
-      <guid>http://localhost:1313/tags/markdown/</guid>
+      <guid>http://localhost:1313/tags/docz/</guid>
       <description></description>
     </item>
     <item>
-      <title>HTML</title>
-      <link>http://localhost:1313/tags/html/</link>
+      <title>Javascript</title>
+      <link>http://localhost:1313/tags/javascript/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
-      <guid>http://localhost:1313/tags/html/</guid>
+      <guid>http://localhost:1313/tags/javascript/</guid>
       <description></description>
     </item>
     <item>
-      <title>Juicy</title>
-      <link>http://localhost:1313/tags/juicy/</link>
+      <title>Docker</title>
+      <link>http://localhost:1313/tags/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
-      <guid>http://localhost:1313/tags/juicy/</guid>
+      <guid>http://localhost:1313/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rails</title>
+      <link>http://localhost:1313/tags/rails/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/tags/rails/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Covid</title>
+      <link>http://localhost:1313/tags/covid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/tags/covid/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Home Office</title>
+      <link>http://localhost:1313/tags/home-office/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/tags/home-office/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jaime Sabines</title>
+      <link>http://localhost:1313/tags/jaime-sabines/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/tags/jaime-sabines/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Poem</title>
+      <link>http://localhost:1313/tags/poem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/tags/poem/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Thoughts</title>
+      <link>http://localhost:1313/tags/thoughts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/tags/thoughts/</guid>
       <description></description>
     </item>
   </channel>

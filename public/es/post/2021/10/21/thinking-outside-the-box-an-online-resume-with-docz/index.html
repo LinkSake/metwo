@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Con un poco de creatividad y Docz, ¡puedes tener un nuevo CV en línea en minutos!">
+    
+    <title>
+      
+        Pensando fuera de la caja: un currículum en línea con Docz
+      
+      | luis angel ortega
+    </title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="http://localhost:1313/css/theme-override.css">
+    <header>
+
+  <nav>
+    <ul>
+      
+      
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/es">~/inicio</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/es/categories/">~/escritos</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/es/projects">~/proyectos</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/es/garden">~/jardin</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/es/about">~/sobre-mi</a>
+      </li>
+      
+
+      
+      
+      <li class="pull-right">
+        <a href="https://vmst.io/@link">~/mastodon</a>
+      </li>
+      
+      
+      <li class="pull-right">
+        <a href="http://localhost:1313/es/post/index.xml">~/rss</a>
+      </li>
+      
+
+    </ul>
+  </nav>
+</header>
+
+  </head>
+
+  <body>
+    <br/>
+
+<div class="article-meta">
+  <h1><span class="title">Pensando fuera de la caja: un currículum en línea con Docz</span></h1>
+  <div class="after-title">
+    
+      por <span class="author">Luis Angel Ortega</span>
+      
+        <i class="date">(jueves, 21 de octubre de 2021)</i>
+      
+      | 
+      625 palabras / 3 minutos
+    
+  </div>
+</div>
+
+
+
+<div class="content-wrapper">
+  <main>
+    <p>Una de las mejores cualidades de la humanidad es su curiosidad. Es tan humana que en honor a ella nombramos a un rover de Marte &ldquo;Curiosity&rdquo; en 2003.</p>
+<p>Hablando de curiosidad en el mundo de los desarrolladores, los proyectos de código abierto están a la cabeza, ya que por naturaleza nos invitan a experimentar, modificar y compartir qué más podemos hacer con ellos. Es por eso que propongo pensar un poco fuera de la caja con <a href="https://www.docz.site/">Docz</a> - una herramienta de documentación de software que es completamente de código abierto.</p>
+<h2 id="qué-es-docz">¿Qué es Docz?</h2>
+<p>Docz es un proyecto basado en <a href="https://www.gatsbyjs.com/">Gatsby</a> que simplifica el proceso de documentar otros proyectos sin preocuparse por la configuración, la velocidad y el soporte.</p>
+<p>Proporciona una biblioteca que permite escribir páginas MDX en lugar de archivos HTML o JSX, maneja el enrutamiento y ofrece complementos para todas las demás necesidades que puedas tener. ¡Todo esto resulta en proyectos a los que cualquiera puede contribuir!</p>
+<p>Es esta simplicidad y amabilidad lo que hace de Docz una gran opción para algo más que solo documentación.</p>
+<h2 id="creando-nuestro-proyecto-docz">Creando nuestro proyecto Docz</h2>
+<p>Antes de poder empezar con Docz, hay algunos requisitos previos que necesitarás tener para crear el proyecto:</p>
+<ul>
+<li><a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#overview">NodeJS</a></li>
+<li><a href="https://yarnpkg.com/getting-started/install">Yarn</a> o <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#overview">npm</a></li>
+</ul>
+<p>Ahora que tienes los requisitos previos, comencemos creando una nueva aplicación React con <code>create-react-app</code> (CRA)</p>
+<p>Ve a tu terminal y ejecuta:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx create-react-app mi-curriculum
+</span></span></code></pre></div><p>Si no tienes CRA instalado, npm te preguntará si está bien instalar <code>create-react-app</code> escribe <code>y</code> para continuar y deja que CRA cree el nuevo proyecto.</p>
+<blockquote>
+<p>Estamos usando el comando <code>npx</code> en lugar de <code>npm</code> ya que queremos ejecutar un paquete, no instalarlo en un proyecto. Puedes leer más sobre esto <a href="https://stackoverflow.com/questions/50605219/difference-between-npx-and-npm">aquí</a>.</p>
+</blockquote>
+<p>Ahora movámonos al directorio de nuestro proyecto e instalemos Docz.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#99d1db">cd</span> mi-curriculum
+</span></span><span style="display:flex;"><span>yarn add docz <span style="color:#737994;font-style:italic"># o npm install docz</span>
+</span></span></code></pre></div><p>Luego, eliminemos todo lo que CRA creó para nosotros dentro de la carpeta <code>src</code>, ya que no lo necesitamos.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm src/*
+</span></span></code></pre></div><p>También, es una buena idea agregar a .gitignore la carpeta .docz ya que solo la necesitamos para el desarrollo.</p>
+<pre tabindex="0"><code class="language-.gitignore" data-lang=".gitignore"># .gitignore
+
+# Archivos generados por Docz
+.docz/
+</code></pre><p>Vamos a crear un archivo llamado <code>index.mdx</code> y un encabezado <em>hola mundo</em> de la siguiente manera.</p>
+<pre tabindex="0"><code class="language-mdx" data-lang="mdx">&lt;!-- src/index.mdx --&gt;
+
+---
+name: Hola Mundo
+route: /
+---
+
+# ¡Hola mundo desde Docz!
+</code></pre><p>Y es hora de ejecutar nuestro servidor de desarrollo para ver lo que acabamos de crear.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yarn docz dev <span style="color:#737994;font-style:italic"># o npm run docz dev</span>
+</span></span></code></pre></div><blockquote>
+<p>Si obtienes un error <a href="https://github.com/gatsbyjs/gatsby/issues/19922">ERROR #98123</a> al intentar ejecutar el servidor de desarrollo, simplemente elimina tu <code>yarn.lock</code> o <code>package-json.lock</code> y la carpeta <code>node_modules</code> e instala las dependencias nuevamente.</p>
+</blockquote>
+<p><em>¡Et voila!</em> Hemos creado con éxito nuestro proyecto Docz.</p>
+<p><img alt="Hola desde Docz" src="/images/post/cv-docz-1.png"></p>
+<blockquote>
+<p>Ahora es un buen momento para hacer commit de tus archivos!</p>
+</blockquote>
+<h2 id="tu-momento-de-brillar">Tu momento de brillar</h2>
+<p>Antes de comenzar a agregar más páginas, creemos un archivo de configuración llamado <code>doczrc.js</code> en la raíz de nuestro proyecto. Esto nos ayudará a establecer algunas metaetiquetas fácilmente, pero gestiona <a href="https://www.docz.site/docs/project-configuration">toda la configuración</a> de nuestro proyecto.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">// doczrc.js
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">export</span> <span style="color:#ca9ee6">default</span> {
+</span></span><span style="display:flex;"><span>  title<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#a6d189">&#34;Luis Angel Ortega&#34;</span>,
+</span></span><span style="display:flex;"><span>  description<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#a6d189">&#34;Hola, soy Luis Angel y este es mi currículum hecho con Docz!&#34;</span>,
+</span></span><span style="display:flex;"><span>  ignore<span style="color:#99d1db;font-weight:bold">:</span> [<span style="color:#a6d189">&#34;README.md&#34;</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>La clave title establecerá el sufijo para nuestra <a href="https://www.w3schools.com/tags/tag_title.asp">etiqueta title</a> y cambiará el texto en la esquina superior izquierda de nuestro proyecto, ya que es un currículum en línea, recomiendo usar tu nombre en este campo.</p>
+<p>Luego, la clave description que agregamos modificará la <a href="https://moz.com/learn/seo/meta-description">etiqueta meta description</a> en nuestra página web para mostrarla cuando se busque o comparta en línea.</p>
+<p>La última clave le dirá a Docz que ignore algunos archivos y no los muestre en la página web, como es en este caso con el archivo README.</p>
+<p>Ahora vamos a agregar más páginas! Agregaré una página de contacto con mis redes sociales y una de currículum de la siguiente manera</p>
+
+    
+      <p class="terms-single">「
+        
+          
+          <span>
+            Categorías: 
+          </span>
+              <a href="http://localhost:1313/es/categories/art%C3%ADculos">Artículos</a> 
+            
+          
+        
+          
+          <span>
+            Etiquetas: 
+          </span>
+              <a href="http://localhost:1313/es/tags/docz">docz</a> 
+            
+          </span>
+              <a href="http://localhost:1313/es/tags/javascript">javascript</a> 
+            
+          </span>
+              <a href="http://localhost:1313/es/tags/desarrollo-web">desarrollo web</a> 
+            
+          
+        
+        」</p>
+      
+  </main>
+</div>
+    <footer>
+      
+<script>
+(function() {
+  function center_el(tagName) {
+    var tags = document.getElementsByTagName(tagName), i, tag;
+    for (i = 0; i < tags.length; i++) {
+      tag = tags[i];
+      var parent = tag.parentElement;
+      
+      if (parent.childNodes.length === 1) {
+        
+        if (parent.nodeName === 'A') {
+          parent = parent.parentElement;
+          if (parent.childNodes.length != 1) continue;
+        }
+        if (parent.nodeName === 'P') parent.style.textAlign = 'center';
+      }
+    }
+  }
+  var tagNames = ['img', 'embed', 'object'];
+  for (var i = 0; i < tagNames.length; i++) {
+    center_el(tagNames[i]);
+  }
+})();
+</script>
+
+      
+      <hr/>
+      Luis Angel Ortega © 2024 | <a href="/en">English</a> | Hecho con <a href="https://github.com/goodroot/hugo-classic">hugo-classic</a>
+      
+    </footer>
+  </body>
+</html>
+
+<a rel="me" href="https://vmst.io/@link" style="display: none;"></a>

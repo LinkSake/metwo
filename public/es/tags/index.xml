@@ -26,24 +26,52 @@
       <description></description>
     </item>
     <item>
-      <title>Markdown</title>
-      <link>http://localhost:1313/es/tags/markdown/</link>
+      <title>Docker</title>
+      <link>http://localhost:1313/es/tags/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
-      <guid>http://localhost:1313/es/tags/markdown/</guid>
+      <guid>http://localhost:1313/es/tags/docker/</guid>
       <description></description>
     </item>
     <item>
-      <title>HTML</title>
-      <link>http://localhost:1313/es/tags/html/</link>
+      <title>Rails</title>
+      <link>http://localhost:1313/es/tags/rails/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
-      <guid>http://localhost:1313/es/tags/html/</guid>
+      <guid>http://localhost:1313/es/tags/rails/</guid>
       <description></description>
     </item>
     <item>
-      <title>Juicy</title>
-      <link>http://localhost:1313/es/tags/juicy/</link>
+      <title>Covid</title>
+      <link>http://localhost:1313/es/tags/covid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
-      <guid>http://localhost:1313/es/tags/juicy/</guid>
+      <guid>http://localhost:1313/es/tags/covid/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Home Office</title>
+      <link>http://localhost:1313/es/tags/home-office/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/es/tags/home-office/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jaime Sabines</title>
+      <link>http://localhost:1313/es/tags/jaime-sabines/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/es/tags/jaime-sabines/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pensamientos</title>
+      <link>http://localhost:1313/es/tags/pensamientos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/es/tags/pensamientos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Poema</title>
+      <link>http://localhost:1313/es/tags/poema/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/es/tags/poema/</guid>
       <description></description>
     </item>
   </channel>

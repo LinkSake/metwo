@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="With a little bit of creativity and Docz, you can easly have a new online cv in minutes!">
+    
+    <title>
+      
+        Thinking Outside the Box an Online Resume With Docz
+      
+      | luis angel ortega
+    </title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="http://localhost:1313/css/theme-override.css">
+    <header>
+
+  <nav>
+    <ul>
+      
+      
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/">~/home</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/categories/">~/writings</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/projects">~/projects</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/garden">~/garden</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/about">~/about-me</a>
+      </li>
+      
+
+      
+      
+      <li class="pull-right">
+        <a href="https://vmst.io/@link">~/mastodon</a>
+      </li>
+      
+      
+      <li class="pull-right">
+        <a href="http://localhost:1313/post/index.xml">~/rss</a>
+      </li>
+      
+
+    </ul>
+  </nav>
+</header>
+
+  </head>
+
+  <body>
+    <br/>
+
+<div class="article-meta">
+  <h1><span class="title">Thinking Outside the Box an Online Resume With Docz</span></h1>
+  <div class="after-title">
+    
+      by <span class="author">Luis Angel Ortega</span>
+      
+        <i class="date">(Thursday, October 21, 2021)</i>
+      
+      | 
+      1550 words / 8 minutes
+    
+  </div>
+</div>
+
+
+
+<div class="content-wrapper">
+  <main>
+    <p>One of the best traits of humankind is its curiosity. It is so human that in honor of it we named a Mars rover &ldquo;Curiosity&rdquo; in 2003.</p>
+<p>Talking about curiosity in the developer world, open source projects top the list, since by nature they invite us to experiment, modify and share what else we can do with them. This is why I propose to think a little outside the box with <a href="https://www.docz.site/">Docz</a> - a software documentation tool that is completely open source.</p>
+<h2 id="what-is-docz">What is Docz?</h2>
+<p>Docz is a <a href="https://www.gatsbyjs.com/">Gatsby-based</a> project that simplifies the process of documenting other projects without worrying about configuration, speed and support.</p>
+<p>It provides a library that allows you to write MDX pages instead of HTML or JSX files, handles the routing and provides plugins for all the other needs that you may have. All of this results on projects anyone can contribute to!</p>
+<p>Is this simplicity and friendliness that makes Docz a great option for more than just docs.</p>
+<h2 id="creating-our-docz-project">Creating our Docz project</h2>
+<p>Before we can jump into Docz, there are some prerequisites that you will need have in order to create the project:</p>
+<ul>
+<li><a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#overview">NodeJS</a></li>
+<li><a href="https://yarnpkg.com/getting-started/install">Yarn</a> or <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#overview">npm</a></li>
+</ul>
+<p>Now that you have the prerequisites, let’s start by creating a new React app with <code>create-react-app</code> (CRA)</p>
+<p>Go to your terminal and run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx create-react-app my-resume
+</span></span></code></pre></div><p>If you don’t have CRA installed, npm will ask you if it’s okay to install <code>create-react-app</code> type <code>y</code> to continue and let CRA create the new project.</p>
+<blockquote>
+<p>We are using the command <code>npx</code> instead of <code>npm</code> since we want to execute a package, not install it to a project. You can read more about it <a href="https://stackoverflow.com/questions/50605219/difference-between-npx-and-npm">here</a>.</p>
+</blockquote>
+<p>Now lets move to the directory of our project and install Docz.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#99d1db">cd</span> my-resume
+</span></span><span style="display:flex;"><span>yarn add docz <span style="color:#737994;font-style:italic"># or npm install docz</span>
+</span></span></code></pre></div><p>Then let’s remove everything that CRA created for us inside the <code>src</code> folder, since we don’t need it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm src/*
+</span></span></code></pre></div><p>Also, it is a good idea to add to the .gitignore the .docz folder since we only needed for development.</p>
+<pre tabindex="0"><code class="language-.gitignore" data-lang=".gitignore"># .gitignore
+
+# Docz generated files
+.docz/
+</code></pre><p>Let’s go and create a file named <code>index.mdx</code> and a <em>hello world</em> header in the following way.</p>
+<pre tabindex="0"><code class="language-mdx" data-lang="mdx">&lt;!-- src/index.mdx --&gt;
+
+---
+name: Hello World
+route: /
+---
+
+# Hello world from Docz!
+</code></pre><p>And it’s time to run our development server to see what we have just created.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yarn docz dev <span style="color:#737994;font-style:italic"># or npm run docz dev</span>
+</span></span></code></pre></div><blockquote>
+<p>If you get an error <a href="https://github.com/gatsbyjs/gatsby/issues/19922">ERROR #98123</a> while trying to run the development server, just delete your <code>yarn.lock</code> or <code>package-json.lock</code> and the <code>node_modules</code> folder and install the dependencies again.</p>
+</blockquote>
+<p><em>Et voila!</em> We have successfully created our Docz project.</p>
+<p><img alt="Hello from Docz" src="/images/post/cv-docz-1.png"></p>
+<blockquote>
+<p>Now is a good time to commit your files!</p>
+</blockquote>
+<h2 id="your-time-to-shine">Your time to shine</h2>
+<p>Before we start adding more pages, let’s create a configuration file named <code>doczrc.js</code> on the root of our project. This will help us to set some meta tags easily, but it manages <a href="https://www.docz.site/docs/project-configuration">all the configuration</a> of our project.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">// doczrc.js
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">export</span> <span style="color:#ca9ee6">default</span> {
+</span></span><span style="display:flex;"><span>  title<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#a6d189">&#34;Luis Angel Ortega&#34;</span>,
+</span></span><span style="display:flex;"><span>  description<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#a6d189">&#34;Hello, I&#39;m Luis Angel and this is my resume made with Docz!&#34;</span>,
+</span></span><span style="display:flex;"><span>  ignore<span style="color:#99d1db;font-weight:bold">:</span> [<span style="color:#a6d189">&#34;README.md&#34;</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The title key will set the suffix for our <a href="https://www.w3schools.com/tags/tag_title.asp">title tag</a> and it will change the text on the top left corner of our project, since it’s an online resume I recommend using your name in this field.</p>
+<p>Then, the description key that we added will modify the <a href="https://moz.com/learn/seo/meta-description">meta description tag</a> on our webpage to display it when it’s looked up or shared online.</p>
+<p>The last key will tell Docz to ignore some files and don’t display them on the webpage, as is in this case with the README file.</p>
+<p>Now let’s add more pages! I’ll add a contact page with my socials and resume one in the following way</p>
+<pre tabindex="0"><code class="language-mdx" data-lang="mdx">&lt;!-- src/contact.mdx --&gt;
+
+---
+name: Contact
+route: /contact
+---
+
+# Contact me! 🗣
+
+---
+
+Let&#39;s talk! You can find me on these platforms:
+
+- ✉️ [Email](mailto:hey@luisangelme)
+- 🤝 [LinkedIn](https://www.linkedin.com/in/luisangel-ortega)
+- 🐙 [GitHub](https://github.com/LinkSake)
+- 🐦 [Twitter](https://twitter.com/LinkSake)
+- 🌐 [Website](https://luisangel.me)
+</code></pre><pre tabindex="0"><code class="language-mdx" data-lang="mdx">&lt;!-- src/resume.mdx --&gt;
+
+---
+name: Resume
+route: /resume
+---
+
+# Resume 💼
+
+---
+
+## Work Experience
+
+&lt;details&gt;
+  &lt;summary&gt;Software Developer. &lt;a href=&#39;growthconstant.co&#39; target=&#39;_blank&#39;&gt;Growth Constant&lt;/a&gt;, (Mar. 2021 - Currently)&lt;/summary&gt;
+  &lt;div style={{marginLeft: &#39;1em&#39;}}&gt;
+    &lt;li&gt; Full stack developer (Ruby on Rails) and copywriter for the first project of the start-up: &lt;a href=&#39;virtualdash.co&#39; target=&#39;_blank&#39;&gt;Virtual Dash &lt;/a&gt;.&lt;/li&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;details&gt;
+  &lt;summary&gt;Backend Developer Intern. &lt;a href=&#39;facturasamurai.com&#39; target=&#39;_blank&#39;&gt;Factura Samurai&lt;/a&gt;, (Aug. - Dec. 2020)&lt;/summary&gt;
+  &lt;div style={{marginLeft: &#39;1em&#39;}}&gt;
+    &lt;li&gt; Implemented the user authentication on the Elixir API. &lt;/li&gt;
+    &lt;li&gt; Learn and developed serverless services (Cloudflare Workers) with TypeScript. &lt;/li&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;details&gt;
+  &lt;summary&gt;Full Stack Web Developer. &lt;a href=&#39;biobot.farm&#39; target=&#39;_blank&#39;&gt;biobot.farm&lt;/a&gt;, (Aug. 2019 - Jun. 2020)&lt;/summary&gt;
+  &lt;div style={{marginLeft: &#39;1em&#39;}}&gt;
+    &lt;li&gt; Successfully launched a new service (web application) that was developed form scratch while learning React. &lt;/li&gt;
+    &lt;li&gt; Documented the web application and taught a colleague to mantener said application. &lt;/li&gt;
+    &lt;li&gt; Improved speed, functionality and readability of a Python API and micro-services. &lt;/li&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+## Education
+
+&lt;details&gt;
+  &lt;summary&gt;Bachelor&#39;s Degree in Information Technologies and Telecomunications. &lt;a href=&#39;ulsachihuahua.edu.mx/site&#39; target=&#39;_blank&#39;&gt;Universidad La Salle Chihuahua&lt;/a&gt;, (Aug. 2016 - Dic. 2020)&lt;/summary&gt;
+  &lt;div style={{marginLeft: &#39;1em&#39;}}&gt;
+    &lt;li&gt; Degree on engineering on information and telecommunication with specialization on mobile development. &lt;/li&gt;
+    &lt;li&gt; Academic exchange semester at La Salle Ramon Llull University (Barcelona, Spain) from January to June 2019 with the Computer Engineering degree. &lt;/li&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+## Skills
+
+&lt;details&gt;
+  &lt;summary&gt; Languages &lt;/summary&gt;
+  &lt;div style={{marginLeft: &#39;1em&#39;}}&gt;
+    &lt;li&gt;Spanish: Native&lt;/li&gt;
+    &lt;li&gt;English: Advanced (TOFEL ITP: 627)&lt;/li&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt; Tech &lt;/summary&gt;
+  &lt;div style={{marginLeft: &#39;1em&#39;}}&gt;
+    &lt;li&gt; &lt;b&gt; Professional level &lt;/b&gt; &lt;/li&gt;
+    &lt;div div style={{marginLeft: &#39;1em&#39;}}&gt;
+      &lt;li&gt;JavaScript (Node, React, Next)&lt;/li&gt;
+      &lt;li&gt;Ruby (Rails)&lt;/li&gt;
+      &lt;li&gt;SQL (MySQL, PostgreSQL)&lt;/li&gt;
+      &lt;li&gt;Version manager (Git)&lt;/li&gt;
+      &lt;li&gt;HTML &amp; CSS&lt;/li&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style={{marginLeft: &#39;1em&#39;}}&gt;
+    &lt;li&gt; &lt;b&gt; Novice Level &lt;/b&gt; &lt;/li&gt;
+    &lt;div style={{marginLeft: &#39;1em&#39;}}&gt;
+      &lt;li&gt;Python (Bottle)&lt;/li&gt;
+      &lt;li&gt;Docker&lt;/li&gt;
+      &lt;li&gt;UNIX&lt;/li&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+## Achivements
+
+- Essential part of the winning team of the following hackathons:
+  - Ideacon (2018)
+  - Reset (2018)
+- Essential part of the 2nd place team of the Blockchain Mobility Hackathon 2019 in Barcelona, Spain.
+</code></pre><p>As you can see, using MDX means that we can use <a href="https://www.markdownguide.org/">Markdown syntax</a> and <a href="https://es.reactjs.org/docs/introducing-jsx.html">JSX</a> in the same document, giving a lot of flexibility and customization to our Docz projects.</p>
+<p>At the end they will look something like this:</p>
+<p><img alt="Contact page" src="/images/post/cv-docz-2.png"></p>
+<p><img alt="Resume page" src="/images/post/cv-docz-3.png"></p>
+<h2 id="spice-it-adding-a-custom-component">Spice it! Adding a custom component</h2>
+<p>Now let’s focus on our <code>index.mdx</code> file. Let’s change it’s title to &ldquo;About me&rdquo;</p>
+<pre tabindex="0"><code class="language-mdx" data-lang="mdx">&lt;!-- src/index.mdx --&gt;
+---
+name: About me
+route: /
+---
+
+# Hello world from Docz!
+</code></pre><p>And then, create a <code>components</code> folder inside of the <code>src</code> directory. There create a <code>welcome.jsx</code> component, this will replace our Markdown heading to make the root page more interesting.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">// src/components/welcome.jsx
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">import</span> React from <span style="color:#a6d189">&#39;react&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">const</span> Welcome <span style="color:#99d1db;font-weight:bold">=</span> ( props ) =&gt; {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">const</span> style <span style="color:#99d1db;font-weight:bold">=</span> {
+</span></span><span style="display:flex;"><span>    container<span style="color:#99d1db;font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>      display<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#a6d189">&#39;flex&#39;</span>,
+</span></span><span style="display:flex;"><span>      flexDirection<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#a6d189">&#39;column&#39;</span>,
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    textContainer<span style="color:#99d1db;font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>      textAlign<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#a6d189">&#39;center&#39;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    imgContainer<span style="color:#99d1db;font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>      paddingTop<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#a6d189">&#39;1em&#39;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    img<span style="color:#99d1db;font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>      display<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#a6d189">&#39;flex&#39;</span>,
+</span></span><span style="display:flex;"><span>      margin<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#a6d189">&#39;auto&#39;</span>,
+</span></span><span style="display:flex;"><span>      maxWidth<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#a6d189">&#39;40%&#39;</span>,
+</span></span><span style="display:flex;"><span>      borderRadius<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#a6d189">&#39;50%&#39;</span>,
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ca9ee6">div</span> <span style="color:#8caaee">style</span><span style="color:#99d1db;font-weight:bold">=</span>{style.container}&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ca9ee6">div</span> <span style="color:#8caaee">style</span><span style="color:#99d1db;font-weight:bold">=</span>{style.textContainer}&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ca9ee6">h1</span>&gt;{props.title}&lt;/<span style="color:#ca9ee6">h1</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ca9ee6">span</span>&gt;{props.children}&lt;/<span style="color:#ca9ee6">span</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#ca9ee6">div</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ca9ee6">div</span> <span style="color:#8caaee">style</span><span style="color:#99d1db;font-weight:bold">=</span>{style.imgContainer}&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ca9ee6">img</span> <span style="color:#8caaee">style</span><span style="color:#99d1db;font-weight:bold">=</span>{style.img} <span style="color:#8caaee">src</span><span style="color:#99d1db;font-weight:bold">=</span>{props.img} <span style="color:#8caaee">alt</span><span style="color:#99d1db;font-weight:bold">=</span>{props.title}/&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#ca9ee6">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ca9ee6">div</span>&gt;
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">export</span> <span style="color:#ca9ee6">default</span> Welcome
+</span></span></code></pre></div><p>Here I just made a quick component that takes a title, some text and displays it all centered and the image as a circle, but you can make your creativity go wild on this one!</p>
+<p>Next, let’s change index.mdx to import our component and use it to give a warm welcome to all the visitors on our webpage, here is how it looks:</p>
+<p><img alt="Welcome page" src="/images/post/cv-docz-4.png"></p>
+<h2 id="its-alive-time-to-deploy">It&rsquo;s alive! Time to deploy</h2>
+<p>ow that we have our Docz project it’s time to build it and deploy it to GitHub Pages (since we already have the repository there).</p>
+<p>First we need to configure some things, go to your doczrc.js file and add a dest key with the value “/docs” and a base key the name of your repo as it’s value.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">// doczrc.js
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">export</span> <span style="color:#ca9ee6">default</span> {
+</span></span><span style="display:flex;"><span>  title<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#a6d189">&#34;Luis Angel Ortega&#34;</span>,
+</span></span><span style="display:flex;"><span>  description<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#a6d189">&#34;Hello, I&#39;m Luis Angel and this is my resume made with Docz!&#34;</span>,
+</span></span><span style="display:flex;"><span>  ignore<span style="color:#99d1db;font-weight:bold">:</span> [<span style="color:#a6d189">&#34;README.md&#34;</span>],
+</span></span><span style="display:flex;"><span>  dest<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#a6d189">&#34;/docs&#34;</span>,
+</span></span><span style="display:flex;"><span>  base<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#a6d189">&#34;docz-resume&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The first key is telling Docz to build the project into the docs directory, we’re doing this since GitHub Pages expects the static files to be on the root or docs directories.</p>
+<p>The base key is changing the base folder to match the name of the repo in order to make the public files and links to work in GitHub Pages.</p>
+<p>Once we have everything correctly configured, we need to build the project with the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yarn docz build <span style="color:#737994;font-style:italic"># or npm run docz build</span>
+</span></span></code></pre></div><p>When it is done, you will see a docs folder on your project. Commit and push everything to your repo. After that, let’s go to the settings tab on your project and in the left menu go to the Pages section.</p>
+<p><img alt="Repo page" src="/images/post/cv-docz-5.png"></p>
+<p><img alt="Settings page" src="/images/post/cv-docz-6.png"></p>
+<p>Then select your main branch (or the branch on which you are working on) and select the docs folder.</p>
+<p><img alt="Pages page" src="/images/post/cv-docz-7.png"></p>
+<p>And that is it! In a few minutes your website should be live on the link that GitHub has given you.</p>
+<p><img alt="Done!" src="/images/post/cv-docz-8.png"></p>
+<p><img alt="Handsome you" src="/images/post/cv-docz-9.png"></p>
+<h2 id="the-future-awaits">The future awaits</h2>
+<p>In this article we only scratched the surface of what Docz is capable of, so be sure to check their <a href="https://www.docz.site/docs/getting-started">documentation</a> to learn more.</p>
+<p>I encourage you to read about them to make your resume stand out from the crowd and always remember to support the creators of this amazing project and contribute if you can.</p>
+<p>Find the repo of the project <a href="https://github.com/LinkSake/docz-resume">here</a>. For end result, check out <a href="https://linksake.github.io/docz-resume/">GitHub</a>.</p>
+
+    
+      <p class="terms-single">「
+        
+          
+          <span>
+            Writings: 
+          </span>
+              <a href="http://localhost:1313/categories/articles">Articles</a> 
+            
+          
+        
+          
+          <span>
+            Tags: 
+          </span>
+              <a href="http://localhost:1313/tags/docz">docz</a> 
+            
+          </span>
+              <a href="http://localhost:1313/tags/javascript">javascript</a> 
+            
+          </span>
+              <a href="http://localhost:1313/tags/web-development">web development</a> 
+            
+          
+        
+        」</p>
+      
+  </main>
+</div>
+    <footer>
+      
+<script>
+(function() {
+  function center_el(tagName) {
+    var tags = document.getElementsByTagName(tagName), i, tag;
+    for (i = 0; i < tags.length; i++) {
+      tag = tags[i];
+      var parent = tag.parentElement;
+      
+      if (parent.childNodes.length === 1) {
+        
+        if (parent.nodeName === 'A') {
+          parent = parent.parentElement;
+          if (parent.childNodes.length != 1) continue;
+        }
+        if (parent.nodeName === 'P') parent.style.textAlign = 'center';
+      }
+    }
+  }
+  var tagNames = ['img', 'embed', 'object'];
+  for (var i = 0; i < tagNames.length; i++) {
+    center_el(tagNames[i]);
+  }
+})();
+</script>
+
+      
+      <hr/>
+      Luis Angel Ortega © 2024 | <a href="/es">Español</a> | Made with <a href="https://github.com/goodroot/hugo-classic">hugo-classic</a>
+      
+    </footer>
+  </body>
+</html>
+
+<a rel="me" href="https://vmst.io/@link" style="display: none;"></a>

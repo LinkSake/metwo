@@ -19,31 +19,10 @@
       <description></description>
     </item>
     <item>
-      <title>Example</title>
-      <link>http://localhost:1313/categories/example/</link>
+      <title>Blogposts</title>
+      <link>http://localhost:1313/categories/blogposts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
-      <guid>http://localhost:1313/categories/example/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Bullhorn</title>
-      <link>http://localhost:1313/categories/bullhorn/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
-      <guid>http://localhost:1313/categories/bullhorn/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Blog</title>
-      <link>http://localhost:1313/categories/blog/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
-      <guid>http://localhost:1313/categories/blog/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Blogpost</title>
-      <link>http://localhost:1313/categories/blogpost/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
-      <guid>http://localhost:1313/categories/blogpost/</guid>
+      <guid>http://localhost:1313/categories/blogposts/</guid>
       <description></description>
     </item>
   </channel>
