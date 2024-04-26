@@ -13,11 +13,11 @@ Soy **Luis Angel**, un desarrollador, escritor y poeta mexicano de la ciudad de 
 
 Aquí tienes un resumen del sitio:
 
-- [**Escritos**](/writings): Un lugar para todo mi contenido escrito.
-  - [**Blogposts**](/writings/blogposts): Pensamientos, quejas y un estilo más personal de publicación.
-  - [**Artículos**](/writings/articles): Guías, ensayos y publicaciones más serias.
-  - [**Reseñas**](/writings/reports): Reseñas de diferentes tipos de medios.
-  - [**Trabajos**](/writings/works): Publicaciones sobre mis obras... publicadas.
+- [**Escritos**](/categories): Un lugar para todo mi contenido escrito.
+  - [**Blogposts**](/categories/blogposts): Pensamientos, quejas y un estilo más personal de publicación.
+  - [**Artículos**](/categories/articulos): Guías, ensayos y publicaciones más serias.
+  - [**Reseñas**](/categories/reportes): Reseñas de diferentes tipos de medios.
+  - [**Trabajos**](/categories/trabajos): Publicaciones sobre mis obras... publicadas.
 - [**Archivo**](/post): Un listado de todas las publicaciones en el sitio.
 - [**Etiquetas**](/tags): Un listado de todas las etiquetas en el sitio.
 - [**Proyectos**](/projects): Un listado de todos mis proyectos (relacionados con tecnología o no).
