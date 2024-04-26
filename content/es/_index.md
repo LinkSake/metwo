@@ -24,14 +24,14 @@ Aquí tienes un resumen del sitio:
 - [**Jardín**](/garden): Mi jardín digital ([leer más](https://abyss.j3s.sh/hypha/digital_abyss)).
 - [**Sobre mí**](/about): Es, ya sabes, sobre de mí.
 
-La mayoría del contenido está disponible en [inglés](/en) y [español](/es)! Espero algún día aprender otro idioma lo suficientemente bien como para listar aquí.
+¡La mayoría del contenido está disponible en [inglés](/en) y [español](/es)! Espero algún día aprender otro idioma lo suficientemente bien como para listar aquí.
 
 ---
 
 ## actualmente
 
-- **Leyendo:** *Proyecto Hail Mary* por *Andy Weir* w(°ｏ°)w
-- **Jugando:**  *Super Mario RPG* en el Switch (ｑ･_･)ｑ
+- **Leyendo:** *[Proyecto Hail Mary](https://en.m.wikipedia.org/wiki/Project_Hail_Mary)* por *Andy Weir* w(°ｏ°)w
+- **Jugando:**  *[Super Mario RPG](https://www.metacritic.com/game/super-mario-rpg/)* en el Switch (ｑ･_･)ｑ
 
 <div style="text-align: center; margin-bottom: 1rem;">
   <a href="/categories/report">
@@ -43,7 +43,7 @@ La mayoría del contenido está disponible en [inglés](/en) y [español](/es)! 
 
 ## últimas lecturas
 
-- [**Cómo se benefician los adolescentes de poder leer libros 'perturbadores' que algunos quieren prohibir por Gay Ivey**](https://theconversation.com/how-teens-benefit-from-being-able-to-read-disturbing-books-that-some-want-to-ban-223533)
+- [*Cómo se benefician los adolescentes de poder leer libros 'perturbadores' que algunos quieren prohibir*](https://theconversation.com/how-teens-benefit-from-being-able-to-read-disturbing-books-that-some-want-to-ban-223533) por Gay Ivey (The Conversation)
 
 <div style="text-align: center; margin-bottom: 1rem;">
   <a href="/garden/latest-reads">

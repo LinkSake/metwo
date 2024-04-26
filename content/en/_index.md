@@ -13,11 +13,11 @@ I'm **Luis Angel**, a Mexican developer, writer and poet from the city of Chihua
 
 Here's a quick round up of the site:
 
-- [**Writings**](/writings): Umbrella category for all my written content.
-  - [**Blogposts**](/writings/blogposts): Toughts, rants and a more personal style of post.
-  - [**Articles**](/writings/articles): Guides, essays and more serious posts.
-  - [**Reports**](/writings/reports): Reviews for different kinds of media.
-  - [**Works**](/writings/works): Posts about my published works.
+- [**Writings**](/categories): Umbrella category for all my written content.
+  - [**Blogposts**](/categories/blogposts): Toughts, rants and a more personal style of post.
+  - [**Articles**](/categories/articles): Guides, essays and more serious posts.
+  - [**Reports**](/categories/reports): Reviews for different kinds of media.
+  - [**Works**](/categories/works): Posts about my published works.
 - [**Archive**](/post): A listing of all the posts on the site.
 - [**Tags**](/tags): A listing of all the tags on the site.
 - [**Projects**](/projects): A listing of all my projects (tech related or not).
@@ -30,8 +30,8 @@ Most of the content it's available in [English](/en) and [Spanish](/es)! Hopeful
 
 ## currently
 
-- **Reading:** *Project Hail Mary* by *Andy Weir* w(°ｏ°)w
-- **Playing:**  *Super Mario RPG* on the Switch (ｑ･_･)ｑ
+- **Reading:** *[Project Hail Mary](https://en.m.wikipedia.org/wiki/Project_Hail_Mary)* by *Andy Weir* w(°ｏ°)w
+- **Playing:**  *[Super Mario RPG](https://www.metacritic.com/game/super-mario-rpg/)* on the Switch (ｑ･_･)ｑ
 
 <div style="text-align: center; margin-bottom: 1rem;">
   <a href="/categories/report">
@@ -43,7 +43,7 @@ Most of the content it's available in [English](/en) and [Spanish](/es)! Hopeful
 
 ## latest reads
 
-- [**How teens benefit from being able to read ‘disturbing’ books that some want to ban by Gay Ivey**](https://theconversation.com/how-teens-benefit-from-being-able-to-read-disturbing-books-that-some-want-to-ban-223533)
+- [*"How teens benefit from being able to read ‘disturbing’ books that some want to ban"*](https://theconversation.com/how-teens-benefit-from-being-able-to-read-disturbing-books-that-some-want-to-ban-223533) by Gay Ivey (The Conversation)
 
 
 <div style="text-align: center; margin-bottom: 1rem;">

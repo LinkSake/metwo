@@ -11,10 +11,11 @@ Categories: "writings"
 Categories_desc: "Here you can find all the categories of my writings __φ(。。)"
 categories_desc: "Here you can find all the categories of my writings __φ(。。)"
 categories: "writings"
+see_all_posts: "see all the posts"
 
 # Caregories
-Blogpost_desc: "Toughts, rants and a more personal style of post."
-blogpost_desc: "Toughts, rants and a more personal style of post."
+Blogposts_desc: "Toughts, rants and a more personal style of post."
+blogposts_desc: "Toughts, rants and a more personal style of post."
 Articles_desc: "Guides, essays and more serious posts."
 articles_desc: "Guides, essays and more serious posts."
 Reports_desc: "Reviews for different kinds of media."
