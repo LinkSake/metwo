@@ -33,8 +33,6 @@ Most of the content it's available in [English](https://luisangel.me/en) and [Sp
 
 2. Add favicon.
 
-3. Migrate content from the old blog + translate + add the new stuff (𖦹﹏𖦹;).
+3. Change domain records and anything else to make this the actual webpage.
 
-4. Change domain records and anything else to make this the actual webpage.
-
-5. I promise i had another important thing to add but i don't remember •ᴖ•.
+4. I promise i had another important thing to add but i don't remember •ᴖ•.
