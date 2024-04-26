@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bullhorn on luis angel ortega</title>
+    <title>bullhorn on luis angel ortega</title>
     <link>http://localhost:1313/categories/bullhorn/</link>
-    <description>Recent content in Bullhorn on luis angel ortega</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent  Bullhorn on luis angel ortega</description>
+    <generator>Hugo</generator>
     <language>en-US</language>
+    <managingEditor>hey@luisangel.me (Luis Angel Ortega)</managingEditor>
+    <webMaster>hey@luisangel.me (Luis Angel Ortega)</webMaster>
+    <copyright>2024 Luis Angel Ortega Holguin All rights reserved</copyright>
     <lastBuildDate>Mon, 23 Apr 2012 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/bullhorn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hacker with Bullhorn</title>
       <link>http://localhost:1313/post/2012/04/23/hacker-with-horn/</link>
-      <pubDate>Mon, 23 Apr 2012 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 23 Apr 2012 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/post/2012/04/23/hacker-with-horn/</guid>
-      <description>Hacker with bullhorn: &amp;ldquo;Save your money! Accept one of our free tanks! It is invulnerable, and can drive across rocks and swamps at ninety miles an hour while getting a hundred miles to the gallon!&amp;rdquo;&#xA;Prospective station wagon buyer: &amp;ldquo;I know what you say is true&amp;hellip;but&amp;hellip;er&amp;hellip;I don&amp;rsquo;t know how to maintain a tank!&amp;rdquo;&#xA;Bullhorn: &amp;ldquo;You don&amp;rsquo;t know how to maintain a station wagon either!&amp;rdquo;&#xA;Buyer: &amp;ldquo;But this dealership has mechanics on staff.</description>
+      <description>&lt;p&gt;Hacker with bullhorn: &amp;ldquo;Save your money! Accept one of our free tanks! It is invulnerable, and can drive across rocks and swamps at ninety miles an hour while getting a hundred miles to the gallon!&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;Prospective station wagon buyer: &amp;ldquo;I know what you say is true&amp;hellip;but&amp;hellip;er&amp;hellip;I don&amp;rsquo;t know how to maintain a tank!&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;Bullhorn: &amp;ldquo;You don&amp;rsquo;t know how to maintain a station wagon either!&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;Buyer: &amp;ldquo;But this dealership has mechanics on staff. If something goes wrong with my station wagon, I can take a day off work, bring it here, and pay them to work on it while I sit in the waiting room for hours, listening to elevator music.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;Bullhorn: &amp;ldquo;But if you accept one of our free tanks we will send volunteers to your house to fix it for free while you sleep!&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;Buyer: &amp;ldquo;Stay away from my house, you freak!&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;Bullhorn: &amp;ldquo;But&amp;hellip;&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;Buyer: &amp;ldquo;Can&amp;rsquo;t you see that everyone is buying station wagons?&amp;rdquo;&lt;/p&gt;&#xA;</description>
     </item>
   </channel>
 </rss>

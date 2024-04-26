@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Articles on luis angel ortega</title>
+    <link>http://localhost:1313/es/categories/articles/</link>
+    <description>Recent content in Articles on luis angel ortega</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-MX</language>
+    <managingEditor>hey@luisangel.me (Luis Angel Ortega)</managingEditor>
+    <webMaster>hey@luisangel.me (Luis Angel Ortega)</webMaster>
+    <copyright>2024 Luis Angel Ortega Holguin All rights reserved</copyright>
+    <lastBuildDate>Sat, 05 Nov 2022 11:53:11 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/es/categories/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dropdowns y Toggles con puro CSS</title>
+      <link>http://localhost:1313/es/post/2022/11/05/dropdowns-y-toggles-con-css/</link>
+      <pubDate>Sat, 05 Nov 2022 11:53:11 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/es/post/2022/11/05/dropdowns-y-toggles-con-css/</guid>
+      <description>Podríamos imaginar las tecnologías de la plataforma en la cual trabajo, Build It, como un platillo; donde Ruby on Rails es nuestro platillo principal pero está acompañada de una buena porción al lado de JavaScript a través de Stimulus JS, y mientras esta trae la funcionalidad y ese sentimiento mágico de una aplicación de una sola página (SPA, por sus siglas en inglés) hay cosas que queremos mantener simple en lugar de usar una bomba para matar una hormiga, como un profesor de la universidad solía decir.</description>
+    </item>
+  </channel>
+</rss>

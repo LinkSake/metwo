@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="No need to use JavaScript in your project, you can have interactive and stylish menus with CSS only">
+    
+    <title>
+      
+        Dropdowns and Toggles with Pure CSS
+      
+      | luis angel ortega
+    </title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="http://localhost:1313/css/theme-override.css">
+    <header>
+
+  <nav>
+    <ul>
+      
+      
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/">~/home</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/categories/">~/writings</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/projects">~/projects</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/garden">~/garden</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/about">~/about-me</a>
+      </li>
+      
+
+      
+      
+      <li class="pull-right">
+        <a href="https://vmst.io/@link">~/mastodon</a>
+      </li>
+      
+      
+      <li class="pull-right">
+        <a href="http://localhost:1313/post/index.xml">~/rss</a>
+      </li>
+      
+
+    </ul>
+  </nav>
+</header>
+
+  </head>
+
+  <body>
+    <br/>
+
+<div class="article-meta">
+  <h1><span class="title">Dropdowns and Toggles with Pure CSS</span></h1>
+  <div class="after-title">
+    
+      by <span class="author">Luis Angel Ortega</span>
+      
+        <i class="date">(Saturday, November 5, 2022)</i>
+      
+      | 
+      488 words / 3 minutes
+    
+  </div>
+</div>
+
+
+
+<div class="content-wrapper">
+  <main>
+    <p>We could imagine the technologies of the platform on which I work, <a href="https://www.joinbuildit.com/">Build It</a>, as a dish; where Ruby on Rails is our main dish but is accompanied by a good portion of JavaScript through <a href="https://stimulus.hotwired.dev/">Stimulus JS</a>, and while this brings the functionality and that magical feeling of a single page application (SPA), there are things we want to keep simple instead of using a sledgehammer to kill an ant, as a university professor used to say. Therefore, we decided to take a page from <a href="https://apple.com/mx">Apple</a> when handling dropdown menus or dropdowns and do it through pure CSS and HTML; without requiring a line of JavaScript.</p>
+<h2 id="the-pillars">The Pillars</h2>
+<p>Our two pillars in the view will be <code>&lt;input&gt;</code> elements of checkbox type and <code>&lt;label&gt;</code> tags. We will form our basic skeleton as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ca9ee6">input</span> <span style="color:#8caaee">id</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;toggle&#34;</span> <span style="color:#8caaee">type</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;checkbox&#34;</span>&gt;&lt;/<span style="color:#ca9ee6">input</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ca9ee6">label</span> <span style="color:#8caaee">for</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;toggle&#34;</span>&gt;&lt;/<span style="color:#ca9ee6">label</span>&gt;
+</span></span></code></pre></div><p>We will be using the checked property of checkbox-type inputs to control the content we show and when we show it. For this, we will be relying on the <code>&lt;label&gt;</code> element since by linking it through its <code>for</code> property it will also be affected by the class change when the checked property of our checkbox is present.</p>
+<p>All our code will really be inside <code>&lt;label&gt;</code> in two sections: container and toggle as shown below.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ca9ee6">input</span> <span style="color:#8caaee">id</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;toggle&#34;</span> <span style="color:#8caaee">type</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;checkbox&#34;</span>&gt;&lt;/<span style="color:#ca9ee6">input</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ca9ee6">label</span> <span style="color:#8caaee">for</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;toggle&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ca9ee6">div</span> <span style="color:#8caaee">class</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;toggle&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">&lt;!-- The element with which the user will interact --&gt;</span>
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#ca9ee6">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ca9ee6">div</span> <span style="color:#8caaee">class</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;container&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">&lt;!-- What we want to show--&gt;</span>
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#ca9ee6">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ca9ee6">label</span>&gt;
+</span></span></code></pre></div><h2 id="the-magic">The Magic</h2>
+<p>Now that we have our HTML skeleton ready, it&rsquo;s time to add the CSS that will give our component the magical touch:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#<span style="color:#ef9f76">toggle</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">display</span>: <span style="color:#ef9f76">none</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#e5c890">container</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">display</span>: <span style="color:#ef9f76">none</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#<span style="color:#ef9f76">toggle</span>:<span style="color:#8caaee;font-weight:bold">checked</span> <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#ca9ee6">label</span> .<span style="color:#e5c890">container</span> { 
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">display</span>: <span style="color:#ef9f76">inherit</span>; 
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Our input with the toggle id will never be shown so that we do not have the checkbox present on our page, what we will show and with which the user interacts is what is inside our div with toggle class. Once they click on our toggle, the input will have the value of checked and with <code>#toggle:checked+label</code> we affect the style of our <code>&lt;label&gt;</code> to obtain a result like the following</p>
+<p><img alt="Demo 1" src="/images/post/dropdowns-toggle-css-1.gif"></p>
+<p>And with a little more style (courtesy of Thulio Philipe) we can have results like this</p>
+<p><img alt="Demo 2" src="/images/post/dropdowns-toggle-css-2.gif"></p>
+<p>Or as the examples we have inside Build It</p>
+<p><img alt="Demo 3" src="/images/post/dropdowns-toggle-css-3.gif"></p>
+<p>A small popover that is always present, giving vital information to the user</p>
+<p><img alt="Demo 4" src="/images/post/dropdowns-toggle-css-4.gif"></p>
+<p>Or a filter menu that can be shown easily.</p>
+<p>As we can see, modern CSS allows us to make interactive pages without the need for a script for it; giving us a new solution to a problem with endless ways to solve it, so it will be necessary to consider the needs of the project and what is most suitable.</p>
+<p>Finally, I leave you <a href="https://github.com/LinkSake/toggle-dropdown-css">a repository</a> with a couple of examples seen in this article for future reference and I invite you to visit <a href="https://www.joinbuildit.com/early_access/client">the platform</a> and especially <a href="https://www.joinbuildit.com/u/luis-ortega-160">my profile</a>, where we can connect for future projects.</p>
+
+    
+      <p class="terms-single">「
+        
+          
+          <span>
+            Writings: 
+          </span>
+              <a href="http://localhost:1313/categories/articles">Articles</a> 
+            
+          
+        
+          
+          <span>
+            Tags: 
+          </span>
+              <a href="http://localhost:1313/tags/web-development">web development</a> 
+            
+          </span>
+              <a href="http://localhost:1313/tags/css">css</a> 
+            
+          
+        
+        」</p>
+      
+  </main>
+</div>
+    <footer>
+      
+<script>
+(function() {
+  function center_el(tagName) {
+    var tags = document.getElementsByTagName(tagName), i, tag;
+    for (i = 0; i < tags.length; i++) {
+      tag = tags[i];
+      var parent = tag.parentElement;
+      
+      if (parent.childNodes.length === 1) {
+        
+        if (parent.nodeName === 'A') {
+          parent = parent.parentElement;
+          if (parent.childNodes.length != 1) continue;
+        }
+        if (parent.nodeName === 'P') parent.style.textAlign = 'center';
+      }
+    }
+  }
+  var tagNames = ['img', 'embed', 'object'];
+  for (var i = 0; i < tagNames.length; i++) {
+    center_el(tagNames[i]);
+  }
+})();
+</script>
+
+      
+      <hr/>
+      Luis Angel Ortega © 2024 | <a href="/es">Español</a> | Made with <a href="https://github.com/goodroot/hugo-classic">hugo-classic</a>
+      
+    </footer>
+  </body>
+</html>
+
+<a rel="me" href="https://vmst.io/@link" style="display: none;"></a>

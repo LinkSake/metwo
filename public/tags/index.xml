@@ -1,31 +1,48 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on luis angel ortega</title>
+    <title>tags on luis angel ortega</title>
     <link>http://localhost:1313/tags/</link>
-    <description>Recent content in Tags on luis angel ortega</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent  Tags on luis angel ortega</description>
+    <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 30 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <managingEditor>hey@luisangel.me (Luis Angel Ortega)</managingEditor>
+    <webMaster>hey@luisangel.me (Luis Angel Ortega)</webMaster>
+    <copyright>2024 Luis Angel Ortega Holguin All rights reserved</copyright>
+    <lastBuildDate>Sat, 05 Nov 2022 11:53:11 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Css</title>
+      <link>http://localhost:1313/tags/css/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Development</title>
+      <link>http://localhost:1313/tags/web-development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/tags/web-development/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Markdown</title>
       <link>http://localhost:1313/tags/markdown/</link>
-      <pubDate>Thu, 30 Aug 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/tags/markdown/</guid>
       <description></description>
     </item>
     <item>
       <title>HTML</title>
       <link>http://localhost:1313/tags/html/</link>
-      <pubDate>Mon, 12 Mar 2012 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/tags/html/</guid>
       <description></description>
     </item>
     <item>
       <title>Juicy</title>
       <link>http://localhost:1313/tags/juicy/</link>
-      <pubDate>Mon, 23 Jan 2012 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/tags/juicy/</guid>
       <description></description>
     </item>

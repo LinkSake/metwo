@@ -3,17 +3,20 @@
   <channel>
     <title>jardín digital on luis angel ortega</title>
     <link>http://localhost:1313/es/garden/</link>
-    <description>Recent content in jardín digital on luis angel ortega</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent  jardín digital on luis angel ortega</description>
+    <generator>Hugo</generator>
     <language>es-MX</language>
-    <lastBuildDate>Wed, 24 Apr 2024 12:26:36 -0500</lastBuildDate>
+    <managingEditor>hey@luisangel.me (Luis Angel Ortega)</managingEditor>
+    <webMaster>hey@luisangel.me (Luis Angel Ortega)</webMaster>
+    <copyright>2024 Luis Angel Ortega Holguin All rights reserved</copyright>
+    <lastBuildDate>Thu, 25 Apr 2024 12:26:36 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/es/garden/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>últimas lecturas</title>
       <link>http://localhost:1313/es/garden/ultimas-lecturas/</link>
-      <pubDate>Wed, 24 Apr 2024 12:26:36 -0500</pubDate>
+      <pubDate>Thu, 25 Apr 2024 12:26:36 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/es/garden/ultimas-lecturas/</guid>
-      <description>2024 Esto es un ejemplo por Ejemplo - Este es el resumen/pensamientos del artículo que leí (leído el 24 de abril) </description>
+      <description>&lt;h2 id=&#34;2024&#34;&gt;2024&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://theconversation.com/how-teens-benefit-from-being-able-to-read-disturbing-books-that-some-want-to-ban-223533&#34;&gt;&lt;strong&gt;Cómo se benefician los adolescentes de poder leer libros &amp;lsquo;perturbadores&amp;rsquo; que algunos quieren prohibir por Gay Ivey&lt;/strong&gt;&lt;/a&gt; - Me gusta mucho la idea de permitir que los estudiantes elijan sus lecturas en lugar de obligarlos a un catálogo preseleccionado. Muchos de mis libros favoritos provienen de un montón en el escritorio de la maestra donde ella simplemente nos decía &amp;ldquo;escojan&amp;rdquo; (leído el 25 de abril).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;</description>
     </item>
   </channel>
 </rss>

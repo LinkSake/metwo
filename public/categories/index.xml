@@ -1,38 +1,48 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on luis angel ortega</title>
+    <title>categories on luis angel ortega</title>
     <link>http://localhost:1313/categories/</link>
-    <description>Recent content in Categories on luis angel ortega</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent  Categories on luis angel ortega</description>
+    <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 30 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <managingEditor>hey@luisangel.me (Luis Angel Ortega)</managingEditor>
+    <webMaster>hey@luisangel.me (Luis Angel Ortega)</webMaster>
+    <copyright>2024 Luis Angel Ortega Holguin All rights reserved</copyright>
+    <lastBuildDate>Sat, 05 Nov 2022 11:53:11 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Articles</title>
+      <link>http://localhost:1313/categories/articles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/categories/articles/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Example</title>
       <link>http://localhost:1313/categories/example/</link>
-      <pubDate>Thu, 30 Aug 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/categories/example/</guid>
       <description></description>
     </item>
     <item>
       <title>Bullhorn</title>
       <link>http://localhost:1313/categories/bullhorn/</link>
-      <pubDate>Mon, 23 Apr 2012 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/categories/bullhorn/</guid>
       <description></description>
     </item>
     <item>
       <title>Blog</title>
       <link>http://localhost:1313/categories/blog/</link>
-      <pubDate>Mon, 12 Mar 2012 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/categories/blog/</guid>
       <description></description>
     </item>
     <item>
       <title>Blogpost</title>
       <link>http://localhost:1313/categories/blogpost/</link>
-      <pubDate>Mon, 23 Jan 2012 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/categories/blogpost/</guid>
       <description></description>
     </item>
