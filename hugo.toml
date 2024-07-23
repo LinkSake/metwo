@@ -1,4 +1,5 @@
-baseurl = "https://luisangel.me"
+baseurl = "https://luisangel.me/"
+baseURL = "https://luisangel.me/"
 enableEmoji = true
 footnotereturnlinkcontents = "↩"
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
