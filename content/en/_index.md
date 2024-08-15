@@ -43,8 +43,11 @@ Most of the content it's available in [English](/en) and [Spanish](/es)! Hopeful
 
 ## latest reads
 
-- [*"How teens benefit from being able to read ‘disturbing’ books that some want to ban"*](https://theconversation.com/how-teens-benefit-from-being-able-to-read-disturbing-books-that-some-want-to-ban-223533) by Gay Ivey (The Conversation)
+- [Parasites Are Everywhere. Why Do So Few Researchers Study Them?](https://www.smithsonianmag.com/science-nature/parasites-are-everywhere-so-why-do-so-few-researchers-study-them-180984753/): A deepdive into the world of parasites, something that it seems we dont think enough about.
 
+- [My Obsidian Note-Taking Workflow](https://www.ssp.sh/blog/obsidian-note-taking-workflow/): Very detailed setup and workflow, it has some nice ideas and back links that I want to check out later.
+
+- [Generate EPUB documents from RSS feeds and URLs and take your e-book reader offline](https://dimitris.cc/posts/generate-epub-documents-from-rss-feeds-and-urls-and-take-your-e-book-reader-offline.html): Interesting workflow if you want to about your e-reader to have access to the internet
 
 <div style="text-align: center; margin-bottom: 1rem;">
   <a href="/garden/latest-reads">
