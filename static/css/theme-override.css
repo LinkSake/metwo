@@ -71,3 +71,14 @@ li {
 
 }
 
+/* For devices larger than a phablet */
+@media (min-width: 550px) {
+}
+
+/* For devices smaller than a phablet */
+@media (max-width: 550px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
