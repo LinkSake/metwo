@@ -26,98 +26,90 @@ tabWidth = 4
 [params]
 custom_css = ["css/theme-override.css"]
 [params.author]
-  name = "Luis Angel Ortega"
-  email = "hey@luisangel.me"
+name = "Luis Angel Ortega"
+email = "hey@luisangel.me"
 
 [permalinks]
 post = "/post/:year/:month/:day/:slug/"
 
 [languages]
-  [languages.en]
-    contentDir = 'content/en'
-    disabled = false
-    languageCode = 'en-US'
-    languageDirection = 'ltr'
-    languageName = 'English'
-    weight = 0
-    [languages.en.params]
-      description = "Hello there! I'm Luis Angel, a Mexican developer, writer and poet from the city of Chihuahua, Mexico. In the absense of joy in social media, this webpage is my effort to create and share more to the world."
-      footer = "Luis Angel Ortega © 2024 | [Español](/es) | Made with [hugo-classic](https://github.com/goodroot/hugo-classic)"
-    [languages.en.menus]
-      [[languages.en.menus.main]]
-        identifier = "home"
-        name = "home"
-        url = "/"
-        weight = 1
-      [[languages.en.menus.main]]
-        identifier = "categories"
-        name = "writings"
-        url = "/categories/"
-        weight = 2
-      [[languages.en.menus.main]]
-        identifier = "projects"
-        name = "projects"
-        url = "/projects"
-        weight = 3
-      [[languages.en.menus.main]]
-        identifier = "garden"
-        name = "garden"
-        url = "/garden"
-        weight = 4
-      [[languages.en.menus.main]]
-        identifier = "about"
-        name = "about-me"
-        url = "/about"
-        weight = 5
-      [[languages.en.menus.feed]]
-        name = "mastodon"
-        url = "https://vmst.io/@link"
-        weight = 1
-      [[languages.en.menus.feed]]
-        name = "rss"
-        url = "/post/index.xml"
-        weight = 2
-  [languages.es]
-    contentDir = 'content/es'
-    disabled = false
-    languageCode = 'es-MX'
-    languageDirection = 'ltr'
-    languageName = 'Español'
-    weight = 1
-    [languages.es.params]
-      description = "Soy Luis Angel, un desarrollador, escritor y poeta mexicano de la ciudad de Chihuahua. No me gusta el estado actual de las redes sociales así que esta página web es mi esfuerzo para crear y compartir más con el mundo."
-      footer = "Luis Angel Ortega © 2024 | [English](/en) | Hecho con [hugo-classic](https://github.com/goodroot/hugo-classic)"
-    [languages.es.menus]
-      [[languages.es.menus.main]]
-        identifier = "home"
-        name = "inicio"
-        url = "/es"
-        weight = 1
-      [[languages.es.menus.main]]
-        identifier = "categories"
-        name = "escritos"
-        url = "/categories/"
-        weight = 2
-       [[languages.es.menus.main]]
-        identifier = "projects"
-        name = "proyectos"
-        url = "/projects"
-        weight = 3
-      [[languages.es.menus.main]]
-        identifier = "garden"
-        name = "jardin"
-        url = "/garden"
-        weight = 4
-      [[languages.es.menus.main]]
-        identifier = "about"
-        name = "sobre-mi"
-        url = "/about"
-        weight = 5
-      [[languages.es.menus.feed]]
-        name = "mastodon"
-        url = "https://vmst.io/@link"
-        weight = 1
-      [[languages.es.menus.feed]]
-        name = "rss"
-        url = "/es/post/index.xml"
-        weight = 2
+[languages.en]
+contentDir = 'content/en'
+disabled = false
+languageCode = 'en-US'
+languageDirection = 'ltr'
+languageName = 'English'
+weight = 0
+[languages.en.params]
+description = "Hello there! I'm Luis Angel, a Mexican developer, writer and poet from the city of Chihuahua, Mexico. In the absense of joy in social media, this webpage is my effort to create and share more to the world."
+footer = "Luis Angel Ortega © 2024 | [Español](/es) | Made with [hugo-classic](https://github.com/goodroot/hugo-classic)"
+[languages.en.menus]
+[[languages.en.menus.main]]
+identifier = "home"
+name = "home"
+url = "/"
+weight = 1
+[[languages.en.menus.main]]
+identifier = "categories"
+name = "writings"
+url = "/categories/"
+weight = 2
+[[languages.en.menus.main]]
+identifier = "projects"
+name = "projects"
+url = "/projects"
+weight = 3
+[[languages.en.menus.main]]
+identifier = "garden"
+name = "garden"
+url = "/garden"
+weight = 4
+[[languages.en.menus.main]]
+identifier = "about"
+name = "about-me"
+url = "/about"
+weight = 5
+[[languages.en.menus.feed]]
+name = "rss"
+url = "/post/index.xml"
+weight = 2
+[languages.es]
+contentDir = 'content/es'
+disabled = false
+languageCode = 'es-MX'
+languageDirection = 'ltr'
+languageName = 'Español'
+weight = 1
+[languages.es.params]
+description = "Soy Luis Angel, un desarrollador, escritor y poeta mexicano de la ciudad de Chihuahua. No me gusta el estado actual de las redes sociales así que esta página web es mi esfuerzo para crear y compartir más con el mundo."
+footer = "Luis Angel Ortega © 2024 | [English](/en) | Hecho con [hugo-classic](https://github.com/goodroot/hugo-classic)"
+[languages.es.menus]
+[[languages.es.menus.main]]
+identifier = "home"
+name = "inicio"
+url = "/es"
+weight = 1
+[[languages.es.menus.main]]
+identifier = "categories"
+name = "escritos"
+url = "/categories/"
+weight = 2
+[[languages.es.menus.main]]
+identifier = "projects"
+name = "proyectos"
+url = "/projects"
+weight = 3
+[[languages.es.menus.main]]
+identifier = "garden"
+name = "jardin"
+url = "/garden"
+weight = 4
+[[languages.es.menus.main]]
+identifier = "about"
+name = "sobre-mi"
+url = "/about"
+weight = 5
+[[languages.es.menus.feed]]
+name = "rss"
+url = "/es/post/index.xml"
+weight = 2

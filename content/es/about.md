@@ -11,4 +11,4 @@ Soy Luis Ángel, un desarrollador de software y escritor de México. Soy una per
 
 ## contacto
 
-Hoy en día realmente no uso mucho las redes sociales, pero ¡me encantaría conversar! Así que la mejor manera de ponerse en contacto es por correo electrónico ([hey@luisangel.me](mailto:hey@luisangel.me)) o Mastodon ([@link@vmst.io](https://vmst.io/@link)) (￣▽￣)ノ
+Hoy en día realmente no uso mucho las redes sociales, pero ¡me encantaría conversar! Así que la mejor manera de ponerse en contacto es por correo electrónico ([hey@luisangel.me](mailto:hey@luisangel.me)), Mastodon ([@link@vmst.io](https://vmst.io/@link)) o Bluesky ([@linksake.bsky.social](https://bsky.app/profile/linksake.bsky.social)) (￣▽￣)ノ
