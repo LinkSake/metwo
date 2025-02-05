@@ -34,7 +34,7 @@ Aquí tienes un resumen del sitio:
 - **Jugando:**  *[The Legend of Zelda: Echoes of Wisdom](https://www.metacritic.com/game/the-legend-of-zelda-echoes-of-wisdom/)* en el Switch (ｑ･_･)ｑ
 
 <div style="text-align: center; margin-bottom: 1rem;">
-  <a href="es/categories/reportes">
+  <a href="/categories/reportes">
     ver otras reseñas
   </a>
 </div>
