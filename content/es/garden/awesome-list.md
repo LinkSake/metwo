@@ -1,9 +1,9 @@
 +++
 title = 'recursos para nerds'
 description = 'foo'
-date = 
 slug = 'lista-para-nerds'
 simple = true
+draft = true
 +++
 
 Esta es una lista que empecé a curar en el semestre de Agosto - Diciembre del 2024 cuando empecé a dar clases a nivel universidad con recursos que pensé que podrían ser de interés para mis alumnos. Incluye más que nada cosas relacionadas con tecnología y desarrollo de software.
@@ -14,7 +14,7 @@ Esta es una lista que empecé a curar en el semestre de Agosto - Diciembre del 2
 
 - [Hacker News](https://news.ycombinator.com/): Un agregador de noticias, articulos y posts sobre tecnología, ciencia y desarrollo de software (inglés).
 - [404 Media](https://404media.co/): Noticias de tecnología, enfoque periodistico. También tienen un podcast. (inglés).
-- [gHacks](https://ghacks.net/): Noticias de tecnología, enfoque de software (inglés). 
+- [gHacks](https://ghacks.net/): Noticias de tecnología, enfoque de software (inglés).
 - [Xataka México](https://xataka.com.mx/): Noticias de ciencia y tecnología de México. También tienen un podcast. (español).
 
 ### Blogs
@@ -53,7 +53,7 @@ Esta es una lista que empecé a curar en el semestre de Agosto - Diciembre del 2
 - [Technology Connections]():
 - [The 8-Bit Guy]():
 - [This Does Not Compute]():
-- [Veronica Explains](): 
+- [Veronica Explains]():
 - [Wolfgang's Channel]():
 - [Zack Freedman/Voidstar Labs]():
 

@@ -30,8 +30,8 @@ Aquí tienes un resumen del sitio:
 
 ## actualmente
 
-- **Leyendo:** *[Proyecto Hail Mary](https://en.m.wikipedia.org/wiki/Project_Hail_Mary)* por *Andy Weir* w(°ｏ°)w
-- **Jugando:**  *[Super Mario RPG](https://www.metacritic.com/game/super-mario-rpg/)* en el Switch (ｑ･_･)ｑ
+- **Leyendo:** *[Por qué fracasan los países](https://es.wikipedia.org/wiki/Por_qu%C3%A9_fracasan_los_pa%C3%ADses)* por *Daron Acemoglu y James A. Robinson* w(°ｏ°)w
+- **Jugando:**  *[The Legend of Zelda: Echoes of Wisdom](https://www.metacritic.com/game/the-legend-of-zelda-echoes-of-wisdom/)* en el Switch (ｑ･_･)ｑ
 
 <div style="text-align: center; margin-bottom: 1rem;">
   <a href="/categories/report">
