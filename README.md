@@ -1,11 +1,5 @@
 # luisangel.me
 
-<p align="center">
- <a href="https://github.com/LinkSake/metwo">
-  <img src="public/img/logo.png" height="200" alt="luisangel.me">
- </a>
-</p>
-
 Hello there! This is my personal blog/website. It was made using [Hugo](https://gohugo.io/) with a modified version of the theme [hugo-classic](https://github.com/goodroot/hugo-classics).
 
 The logo/icon was made by the amazing [Horse Wizard](http://instagram.com/horse.wizard).
@@ -31,8 +25,6 @@ Most of the content it's available in [English](https://luisangel.me/en) and [Sp
 
 1. Right now we only list the RSS for the "archive", it's probably a good idea to have per term.
 
-2. Add favicon.
+2. Fix favicon.
 
-3. Change domain records and anything else to make this the actual webpage.
-
-4. I promise i had another important thing to add but i don't remember •ᴖ•.
+3. I promise i had another important thing to add but i don't remember •ᴖ•.
