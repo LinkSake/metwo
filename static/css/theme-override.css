@@ -76,6 +76,10 @@ li {
         color: #f2ae49;
     }
 
+    header a:hover {
+        color: #ffd173;
+    }
+
     .article-meta,
     .menu a {
         background: #f8f9fa;
