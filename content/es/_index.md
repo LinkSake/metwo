@@ -4,6 +4,7 @@ description: "Soy Luis Angel, un desarrollador, escritor y poeta mexicano de la 
 ---
 <img
   id="avatar"
+  class="hide-on-mobile"
   src="/images/index/gala.jpg"
   alt="¡Esa es Gala! ¡Mi perro! No tengo una buena foto de mí por el momento">
 

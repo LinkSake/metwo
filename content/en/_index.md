@@ -4,6 +4,7 @@ description: "I'm Luis Angel, a Mexican developer, writer and poet from the city
 ---
 <img
   id="avatar"
+  class="hide-on-mobile"
   src="/images/index/gala.jpg"
   alt="That's Gala! My dog! I don't have a good pic of me atm">
 

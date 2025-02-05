@@ -88,6 +88,10 @@ li {
 
 /* For devices smaller than a phablet */
 @media (max-width: 550px) {
+    h1 {
+        font-size: 3em;
+    }
+
     .hide-on-mobile {
         display: none;
     }
