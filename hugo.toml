@@ -6,7 +6,7 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 languageCode = "en-us"
 theme = "hugo-classic"
 title = "luis angel ortega"
-copyright = "2024 Luis Angel Ortega Holguin All rights reserved"
+copyright = "2025 Luis Angel Ortega Holguin All rights reserved"
 
 [markup.goldmark.renderer]
 unsafe = true
