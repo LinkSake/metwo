@@ -4,7 +4,7 @@ description = "Mi opinion sobre el libro de ciencia ficción de Andy Weir."
 date = 2025-02-05T17:00:00-00:00
 slug = "project-hail-mary"
 author = "Luis Angel Ortega"
-categories = ["Report"]
+categories = ["Reportes"]
 tags = ["reporte", "libro", "scifi"]
 +++
 
