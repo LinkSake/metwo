@@ -1,29 +1,22 @@
 {{ partial "header.html" . }}
 
 <div class="content-wrapper">
-{{if not .IsHome }}
-  {{ if i18n .Title }}
+    {{if not .IsHome }} {{ if i18n .Title }}
     <h1>{{ i18n .Title | markdownify }}</h1>
-  {{ else }}
+    {{ else }}
     <h1>{{ .Title | markdownify }}</h1>
-  {{ end}}
-{{ end }}
+    {{ end}} {{ end }} {{ .Content }}
 
-  {{ .Content }}
-
-  <ul>
-     {{ $pages := .Pages }}
-     {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
-     {{ range (where $pages "Section" "!=" "") }}
-     <li>
-       <span class="date">「{{ .Date.Format "Jan/08" }}」</span>
-       <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
-       {{ if .Description }}
-       -
-       {{ end }}
-       <span class="desc">{{ .Description | markdownify }}</span>
-     </li>
-     {{ end }}
-   </ul>
+    <ul>
+        {{ $pages := .Pages }} {{ if .IsHome }}{{ $pages = .Site.RegularPages
+        }}{{ end }} {{ range (where $pages "Section" "!=" "") }}
+        <li>
+            <span class="date">「{{ .Date.Format "02.01.06" }}」</span>
+            <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+            {{ if .Description }} - {{ end }}
+            <span class="desc">{{ .Description | markdownify }}</span>
+        </li>
+        {{ end }}
+    </ul>
 </div>
 {{ partial "footer.html" . }}

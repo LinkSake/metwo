@@ -30,11 +30,11 @@ Most of the content it's available in [English](/en) and [Spanish](/es)! Hopeful
 
 ## currently
 
-- **Reading:** *[Project Hail Mary](https://en.m.wikipedia.org/wiki/Project_Hail_Mary)* by *Andy Weir* w(°ｏ°)w
-- **Playing:**  *[Super Mario RPG](https://www.metacritic.com/game/super-mario-rpg/)* on the Switch (ｑ･_･)ｑ
+- **Reading:** *[Why Nations Fail](https://en.wikipedia.org/wiki/Why_Nations_Fail)* by *Daron Acemoglu and James A. Robinson* w(°ｏ°)w
+- **Playing:**  *[The Legend of Zelda: Echoes of Wisdom](https://www.metacritic.com/game/the-legend-of-zelda-echoes-of-wisdom/)* on the Switch (ｑ･_･)ｑ
 
 <div style="text-align: center; margin-bottom: 1rem;">
-  <a href="/categories/report">
+  <a href="categories/report">
     see other reports
   </a>
 </div>
