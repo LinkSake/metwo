@@ -8,83 +8,146 @@
     <language>en-US</language>
     <managingEditor>hey@luisangel.me (Luis Angel Ortega)</managingEditor>
     <webMaster>hey@luisangel.me (Luis Angel Ortega)</webMaster>
-    <copyright>2024 Luis Angel Ortega Holguin All rights reserved</copyright>
-    <lastBuildDate>Sat, 05 Nov 2022 11:53:11 -0500</lastBuildDate>
+    <copyright>2025 Luis Angel Ortega Holguin All rights reserved</copyright>
+    <lastBuildDate>Wed, 05 Feb 2025 17:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Book</title>
+      <link>http://localhost:1313/tags/book/</link>
+      <pubDate>Wed, 05 Feb 2025 17:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/tags/book/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Report</title>
+      <link>http://localhost:1313/tags/report/</link>
+      <pubDate>Wed, 05 Feb 2025 17:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/tags/report/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scifi</title>
+      <link>http://localhost:1313/tags/scifi/</link>
+      <pubDate>Wed, 05 Feb 2025 17:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/tags/scifi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blogging</title>
+      <link>http://localhost:1313/tags/blogging/</link>
+      <pubDate>Wed, 31 Jul 2024 17:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/tags/blogging/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>http://localhost:1313/tags/hugo/</link>
+      <pubDate>Wed, 31 Jul 2024 17:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nextra</title>
+      <link>http://localhost:1313/tags/nextra/</link>
+      <pubDate>Wed, 31 Jul 2024 17:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/tags/nextra/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fiction</title>
+      <link>http://localhost:1313/tags/fiction/</link>
+      <pubDate>Wed, 24 Apr 2024 15:15:49 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/tags/fiction/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Short Story</title>
+      <link>http://localhost:1313/tags/short-story/</link>
+      <pubDate>Wed, 24 Apr 2024 15:15:49 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/tags/short-story/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Poem</title>
+      <link>http://localhost:1313/tags/poem/</link>
+      <pubDate>Thu, 07 Mar 2024 15:15:49 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/tags/poem/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Css</title>
       <link>http://localhost:1313/tags/css/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <pubDate>Sat, 05 Nov 2022 11:53:11 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/tags/css/</guid>
       <description></description>
     </item>
     <item>
       <title>Web Development</title>
       <link>http://localhost:1313/tags/web-development/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <pubDate>Sat, 05 Nov 2022 11:53:11 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/tags/web-development/</guid>
       <description></description>
     </item>
     <item>
       <title>Docz</title>
       <link>http://localhost:1313/tags/docz/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <pubDate>Thu, 21 Oct 2021 15:32:45 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/tags/docz/</guid>
       <description></description>
     </item>
     <item>
       <title>Javascript</title>
       <link>http://localhost:1313/tags/javascript/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <pubDate>Thu, 21 Oct 2021 15:32:45 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/tags/javascript/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
       <link>http://localhost:1313/tags/docker/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <pubDate>Thu, 02 Sep 2021 15:15:49 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Rails</title>
       <link>http://localhost:1313/tags/rails/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <pubDate>Thu, 02 Sep 2021 15:15:49 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/tags/rails/</guid>
       <description></description>
     </item>
     <item>
       <title>Covid</title>
       <link>http://localhost:1313/tags/covid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <pubDate>Tue, 20 Apr 2021 15:07:57 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/tags/covid/</guid>
       <description></description>
     </item>
     <item>
       <title>Home Office</title>
       <link>http://localhost:1313/tags/home-office/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <pubDate>Tue, 20 Apr 2021 15:07:57 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/tags/home-office/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Anthology</title>
+      <link>http://localhost:1313/tags/anthology/</link>
+      <pubDate>Sat, 19 Sep 2020 15:15:49 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/tags/anthology/</guid>
       <description></description>
     </item>
     <item>
       <title>Jaime Sabines</title>
       <link>http://localhost:1313/tags/jaime-sabines/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <pubDate>Tue, 11 Aug 2020 13:50:59 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/tags/jaime-sabines/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Poem</title>
-      <link>http://localhost:1313/tags/poem/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
-      <guid>http://localhost:1313/tags/poem/</guid>
       <description></description>
     </item>
     <item>
       <title>Thoughts</title>
       <link>http://localhost:1313/tags/thoughts/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <pubDate>Tue, 11 Aug 2020 13:50:59 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/tags/thoughts/</guid>
       <description></description>
     </item>

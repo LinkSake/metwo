@@ -49,18 +49,13 @@
       
       
       <li class="pull-left ">
-        <a href="http://localhost:1313/about">~/about-me</a>
+        <a href="http://localhost:1313/about">~/about</a>
       </li>
       
 
       
       
-      <li class="pull-right">
-        <a href="https://vmst.io/@link">~/mastodon</a>
-      </li>
-      
-      
-      <li class="pull-right">
+      <li class="pull-right hide-on-mobile">
         <a href="http://localhost:1313/post/index.xml">~/rss</a>
       </li>
       
@@ -109,8 +104,7 @@
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx create-react-app my-resume
 </span></span></code></pre></div><p>If you don’t have CRA installed, npm will ask you if it’s okay to install <code>create-react-app</code> type <code>y</code> to continue and let CRA create the new project.</p>
 <blockquote>
-<p>We are using the command <code>npx</code> instead of <code>npm</code> since we want to execute a package, not install it to a project. You can read more about it <a href="https://stackoverflow.com/questions/50605219/difference-between-npx-and-npm">here</a>.</p>
-</blockquote>
+<p>We are using the command <code>npx</code> instead of <code>npm</code> since we want to execute a package, not install it to a project. You can read more about it <a href="https://stackoverflow.com/questions/50605219/difference-between-npx-and-npm">here</a>.</p></blockquote>
 <p>Now lets move to the directory of our project and install Docz.</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#99d1db">cd</span> my-resume
 </span></span><span style="display:flex;"><span>yarn add docz <span style="color:#737994;font-style:italic"># or npm install docz</span>
@@ -133,13 +127,11 @@ route: /
 </code></pre><p>And it’s time to run our development server to see what we have just created.</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yarn docz dev <span style="color:#737994;font-style:italic"># or npm run docz dev</span>
 </span></span></code></pre></div><blockquote>
-<p>If you get an error <a href="https://github.com/gatsbyjs/gatsby/issues/19922">ERROR #98123</a> while trying to run the development server, just delete your <code>yarn.lock</code> or <code>package-json.lock</code> and the <code>node_modules</code> folder and install the dependencies again.</p>
-</blockquote>
+<p>If you get an error <a href="https://github.com/gatsbyjs/gatsby/issues/19922">ERROR #98123</a> while trying to run the development server, just delete your <code>yarn.lock</code> or <code>package-json.lock</code> and the <code>node_modules</code> folder and install the dependencies again.</p></blockquote>
 <p><em>Et voila!</em> We have successfully created our Docz project.</p>
-<p><img alt="Hello from Docz" src="/images/post/cv-docz-1.png"></p>
+<p><img src="/images/post/cv-docz-1.png" alt="Hello from Docz"></p>
 <blockquote>
-<p>Now is a good time to commit your files!</p>
-</blockquote>
+<p>Now is a good time to commit your files!</p></blockquote>
 <h2 id="your-time-to-shine">Your time to shine</h2>
 <p>Before we start adding more pages, let’s create a configuration file named <code>doczrc.js</code> on the root of our project. This will help us to set some meta tags easily, but it manages <a href="https://www.docz.site/docs/project-configuration">all the configuration</a> of our project.</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">// doczrc.js
@@ -257,8 +249,8 @@ route: /resume
 - Essential part of the 2nd place team of the Blockchain Mobility Hackathon 2019 in Barcelona, Spain.
 </code></pre><p>As you can see, using MDX means that we can use <a href="https://www.markdownguide.org/">Markdown syntax</a> and <a href="https://es.reactjs.org/docs/introducing-jsx.html">JSX</a> in the same document, giving a lot of flexibility and customization to our Docz projects.</p>
 <p>At the end they will look something like this:</p>
-<p><img alt="Contact page" src="/images/post/cv-docz-2.png"></p>
-<p><img alt="Resume page" src="/images/post/cv-docz-3.png"></p>
+<p><img src="/images/post/cv-docz-2.png" alt="Contact page"></p>
+<p><img src="/images/post/cv-docz-3.png" alt="Resume page"></p>
 <h2 id="spice-it-adding-a-custom-component">Spice it! Adding a custom component</h2>
 <p>Now let’s focus on our <code>index.mdx</code> file. Let’s change it’s title to &ldquo;About me&rdquo;</p>
 <pre tabindex="0"><code class="language-mdx" data-lang="mdx">&lt;!-- src/index.mdx --&gt;
@@ -310,7 +302,7 @@ route: /
 </span></span><span style="display:flex;"><span><span style="color:#ca9ee6">export</span> <span style="color:#ca9ee6">default</span> Welcome
 </span></span></code></pre></div><p>Here I just made a quick component that takes a title, some text and displays it all centered and the image as a circle, but you can make your creativity go wild on this one!</p>
 <p>Next, let’s change index.mdx to import our component and use it to give a warm welcome to all the visitors on our webpage, here is how it looks:</p>
-<p><img alt="Welcome page" src="/images/post/cv-docz-4.png"></p>
+<p><img src="/images/post/cv-docz-4.png" alt="Welcome page"></p>
 <h2 id="its-alive-time-to-deploy">It&rsquo;s alive! Time to deploy</h2>
 <p>ow that we have our Docz project it’s time to build it and deploy it to GitHub Pages (since we already have the repository there).</p>
 <p>First we need to configure some things, go to your doczrc.js file and add a dest key with the value “/docs” and a base key the name of your repo as it’s value.</p>
@@ -328,13 +320,13 @@ route: /
 <p>Once we have everything correctly configured, we need to build the project with the following command:</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yarn docz build <span style="color:#737994;font-style:italic"># or npm run docz build</span>
 </span></span></code></pre></div><p>When it is done, you will see a docs folder on your project. Commit and push everything to your repo. After that, let’s go to the settings tab on your project and in the left menu go to the Pages section.</p>
-<p><img alt="Repo page" src="/images/post/cv-docz-5.png"></p>
-<p><img alt="Settings page" src="/images/post/cv-docz-6.png"></p>
+<p><img src="/images/post/cv-docz-5.png" alt="Repo page"></p>
+<p><img src="/images/post/cv-docz-6.png" alt="Settings page"></p>
 <p>Then select your main branch (or the branch on which you are working on) and select the docs folder.</p>
-<p><img alt="Pages page" src="/images/post/cv-docz-7.png"></p>
+<p><img src="/images/post/cv-docz-7.png" alt="Pages page"></p>
 <p>And that is it! In a few minutes your website should be live on the link that GitHub has given you.</p>
-<p><img alt="Done!" src="/images/post/cv-docz-8.png"></p>
-<p><img alt="Handsome you" src="/images/post/cv-docz-9.png"></p>
+<p><img src="/images/post/cv-docz-8.png" alt="Done!"></p>
+<p><img src="/images/post/cv-docz-9.png" alt="Handsome you"></p>
 <h2 id="the-future-awaits">The future awaits</h2>
 <p>In this article we only scratched the surface of what Docz is capable of, so be sure to check their <a href="https://www.docz.site/docs/getting-started">documentation</a> to learn more.</p>
 <p>I encourage you to read about them to make your resume stand out from the crowd and always remember to support the creators of this amazing project and contribute if you can.</p>

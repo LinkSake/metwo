@@ -49,18 +49,13 @@
       
       
       <li class="pull-left ">
-        <a href="http://localhost:1313/about">~/about-me</a>
+        <a href="http://localhost:1313/about">~/about</a>
       </li>
       
 
       
       
-      <li class="pull-right">
-        <a href="https://vmst.io/@link">~/mastodon</a>
-      </li>
-      
-      
-      <li class="pull-right">
+      <li class="pull-right hide-on-mobile">
         <a href="http://localhost:1313/post/index.xml">~/rss</a>
       </li>
       
@@ -104,8 +99,7 @@ There are a multitude of factors that can contribute to this, which is why <a hr
 </span></span></code></pre></div><p>The first line of our file will define the image we will base on, in this case, it will be the <a href="https://hub.docker.com/_/ruby">official Ruby image</a>, but we will use the Alpine version to have a lighter image as a result.</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span><span style="color:#a6d189"> ruby:3.0.1-alpine</span><span style="color:#e78284">
 </span></span></span></code></pre></div><blockquote>
-<p>⚠️ Make sure the Ruby version (ruby:X.X.X-alpine) is the same as in your project, or you will have errors when trying to build the image. You can find the version used by your project in your Gemfile.</p>
-</blockquote>
+<p>⚠️ Make sure the Ruby version (ruby:X.X.X-alpine) is the same as in your project, or you will have errors when trying to build the image. You can find the version used by your project in your Gemfile.</p></blockquote>
 <p>Next comes the most difficult part of this Dockerfile, installing the necessary dependencies for the project to function; those shown here are the ones that work for our <a href="https://github.com/LinkSake/docker-rails">example project</a>, which include the necessary ones to make a connection with Postgres, but you will have to discover which ones are necessary for your project.</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span><span style="color:#a6d189"> ruby:3.0.1-alpine</span><span style="color:#e78284">
 </span></span></span><span style="display:flex;"><span><span style="color:#e78284">
@@ -119,8 +113,7 @@ There are a multitude of factors that can contribute to this, which is why <a hr
 </span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span>libpq <span style="color:#8caaee">\
 </span></span></span><span style="display:flex;"><span><span style="color:#8caaee"></span><span style="color:#99d1db;font-weight:bold">&amp;&amp;</span> rm -rf /var/cache/apk/*<span style="color:#e78284">
 </span></span></span></code></pre></div><blockquote>
-<p>You can wait to build the image (<code>docker build .</code>) to check the error printed by Docker, with that you can find out what dependencies are missing 😉</p>
-</blockquote>
+<p>You can wait to build the image (<code>docker build .</code>) to check the error printed by Docker, with that you can find out what dependencies are missing 😉</p></blockquote>
 <p>The last line (<code>rm -rf /var/cache/apk/*</code>) deletes the packages of the dependencies we just installed, this will save space in the image.</p>
 <p>Next, we need to create a directory inside the container where we can copy the code of our application for its execution, we will do this with the following command inside our Dockerfile.</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span><span style="color:#a6d189"> ruby:3.0.1-alpine</span><span style="color:#e78284">
@@ -137,8 +130,7 @@ There are a multitude of factors that can contribute to this, which is why <a hr
 </span></span></span><span style="display:flex;"><span><span style="color:#e78284">
 </span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">WORKDIR</span><span style="color:#a6d189"> /docker-rails</span><span style="color:#e78284">
 </span></span></span></code></pre></div><blockquote>
-<p>Remember to change <code>docker-rails</code> to your project name!</p>
-</blockquote>
+<p>Remember to change <code>docker-rails</code> to your project name!</p></blockquote>
 <p>Just as we gave your project a home inside the container we will create, the gems of the same need a folder too. Therefore, we will inform <a href="https://bundler.io/">bundler</a> where to place them through an environment variable.</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span><span style="color:#a6d189"> ruby:3.0.1-alpine</span><span style="color:#e78284">
 </span></span></span><span style="display:flex;"><span><span style="color:#e78284">
@@ -200,8 +192,7 @@ There are a multitude of factors that can contribute to this, which is why <a hr
 </span></span></span><span style="display:flex;"><span><span style="color:#e78284">
 </span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">COPY</span> . /docker-rails/<span style="color:#e78284">
 </span></span></span></code></pre></div><blockquote>
-<p>Why do we first copy the manifests (package.json, Gemfile, etc.) and then the rest of the project? This avoids having to reinstall the dependencies (since they stay in the cache) after changing the base code and rebuilding the image; this way only when the manifests change will their installation commands be run again.</p>
-</blockquote>
+<p>Why do we first copy the manifests (package.json, Gemfile, etc.) and then the rest of the project? This avoids having to reinstall the dependencies (since they stay in the cache) after changing the base code and rebuilding the image; this way only when the manifests change will their installation commands be run again.</p></blockquote>
 <p>Finally, we will tell Docker what command to run when we start our container (<code>rails</code>), as well as the arguments for it (<code>s -b 0.0.0.0</code>) and which port to expose so that we can access our application.</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span><span style="color:#a6d189"> ruby:3.0.1-alpine</span><span style="color:#e78284">
 </span></span></span><span style="display:flex;"><span><span style="color:#e78284">
@@ -231,8 +222,7 @@ There are a multitude of factors that can contribute to this, which is why <a hr
 </span></span></span><span style="display:flex;"><span><span style="color:#e78284">
 </span></span></span><span style="display:flex;"><span><span style="color:#e78284"></span><span style="color:#ca9ee6">EXPOSE</span><span style="color:#a6d189"> 3000</span><span style="color:#e78284">
 </span></span></span></code></pre></div><blockquote>
-<p>The default port over which Rails runs is 3000, but if you have designated another port within your application make sure to expose it correctly.</p>
-</blockquote>
+<p>The default port over which Rails runs is 3000, but if you have designated another port within your application make sure to expose it correctly.</p></blockquote>
 <p>And with this we have our Dockerfile ready, although we are far from having our application ready. If we build our image with <code>docker build .</code> and try to run it with <code>docker start docker-rails</code> we would encounter an error, since Rails does not find the databases it needs to start correctly; but we will soon take care of that.</p>
 <h2 id="then-the-docker-composeyml">Then the docker-compose.yml</h2>
 <p>To coordinate all the services we need for the correct functioning of our application (in this case 2 databases: Postgres and Redis) we will use <a href="https://docs.docker.com/compose/">docker-compose</a>, this Docker utility will help us create multiple containers from different images, <a href="https://docs.docker.com/compose/networking/">connect them</a>, give them <a href="https://docs.docker.com/compose/environment-variables/">environment variables</a> and even <a href="https://docs.docker.com/storage/volumes/">volumes</a>.</p>
@@ -254,15 +244,13 @@ There are a multitude of factors that can contribute to this, which is why <a hr
 </span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">volumes</span>:
 </span></span><span style="display:flex;"><span>      - <span style="color:#a6d189">&#39;dbdata:/var/lib/postgresql/data&#39;</span>
 </span></span></code></pre></div><blockquote>
-<p>YAML files are sensitive to indentation, so make sure everything is in order and indented correctly.</p>
-</blockquote>
+<p>YAML files are sensitive to indentation, so make sure everything is in order and indented correctly.</p></blockquote>
 <p>The <code>db</code> tag is the name we gave to the service and within which we will specify all the configuration for it.</p>
 <p>The first thing we encounter is <code>image</code>, which as its name indicates is the name of the image we want to use for that service, in this case it is the official Postgres image in its latest version (you can specify a version by replacing <code>latest</code> with another valid version).</p>
 <p>Then we encounter <code>container_name</code>, which is also self-explanatory and which will come in handy when checking our containers with <code>docker ps</code>.</p>
 <p><code>environment</code> refers to the environment variables, and if we refer to the <a href="https://hub.docker.com/_/postgres">Docker Postgres image documentation</a> we can see that the only mandatory variable is <code>POSTGRES_PASSWORD</code> but we will also define <code>POSTGRES_DB</code> to give a custom name to the database that the image creates by default.</p>
 <blockquote>
-<p>⚠️ Be sure to choose a secure password for the database!</p>
-</blockquote>
+<p>⚠️ Be sure to choose a secure password for the database!</p></blockquote>
 <p><code>ports</code> are the ports that we will need to pass from inside the container to our machine, the ones indicated in the file are the ones that Postgres uses by default.</p>
 <p>Finally, the <code>volumes</code> are the persistent information we will need so as not to run the migrations every time we turn on the container, this is because Docker deletes all data once we shut down the information, if you want to learn more about this topic I recommend <a href="https://docs.docker.com/storage/volumes/">this</a> section of the documentation.</p>
 <p>Now, the next service is Redis but we will not delve much into it as it only has a couple of labels which we have already reviewed, for more information you can visit <a href="https://hub.docker.com/_/redis">the official image</a>.</p>
@@ -365,13 +353,12 @@ To save this space, we will create a file called <code>.dockerignore</code> at t
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose run web db:create
 </span></span></code></pre></div><p>This command tells Docker to use the image (which it will build) to run a command, in this case <code>db:create</code>. Docker, with what is specified in the <code>docker-compose.yml</code>, knows that since <em>web</em> depends on <em>db</em> it will have to run the Postgres instance first, so the database will be created in this container.</p>
 <blockquote>
-<p>Why only <code>db:create</code> and not <code>rails db:create</code> or <code>rake db:create</code>? In our <code>Dockerfile</code> we gave <code>rails</code> as the entry point, so only the parameters are necessary. If we wanted to perform another command inside the container this would have to be through <a href="https://docs.docker.com/engine/reference/commandline/exec/">docker exec</a>.</p>
-</blockquote>
+<p>Why only <code>db:create</code> and not <code>rails db:create</code> or <code>rake db:create</code>? In our <code>Dockerfile</code> we gave <code>rails</code> as the entry point, so only the parameters are necessary. If we wanted to perform another command inside the container this would have to be through <a href="https://docs.docker.com/engine/reference/commandline/exec/">docker exec</a>.</p></blockquote>
 <h2 id="our-application-in-a-container">Our Application in a Container</h2>
 <p>With the database created, there&rsquo;s only one command left that will run the containers in <a href="https://docs.docker.com/compose/reference/up/">detached mode</a> and we will be able to see the fruit of our labor.</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose up -d
 </span></span></code></pre></div><p>And that&rsquo;s it! You can now access through your browser to <a href="http://localhost:3000/">localhost:3000</a> and see the Rails welcome page.</p>
-<p><img alt="Welcome to Rails!" src="/images/post/docker-rails-1.png"></p>
+<p><img src="/images/post/docker-rails-1.png" alt="Welcome to Rails!"></p>
 <h2 id="conclusion">Conclusion</h2>
 <p>This whole process may be a bit intimidating at first, especially if you are not familiar with Docker, but the result is a much simpler development environment for everyone involved in the project, as now just by having Docker installed they can start programming; not to mention the benefits that this technology can bring to your production environment when combined with Kubernetes or Docker Swarm.</p>
 <p>I hope you found this useful, anything you can <a href="https://luisangel.me/es/about">contact me</a> and I will respond as soon as possible.</p>

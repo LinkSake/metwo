@@ -8,70 +8,161 @@
     <language>es-MX</language>
     <managingEditor>hey@luisangel.me (Luis Angel Ortega)</managingEditor>
     <webMaster>hey@luisangel.me (Luis Angel Ortega)</webMaster>
-    <copyright>2024 Luis Angel Ortega Holguin All rights reserved</copyright>
-    <lastBuildDate>Sat, 05 Nov 2022 11:53:11 -0500</lastBuildDate>
+    <copyright>2025 Luis Angel Ortega Holguin All rights reserved</copyright>
+    <lastBuildDate>Wed, 05 Feb 2025 17:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/es/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Libro</title>
+      <link>http://localhost:1313/es/tags/libro/</link>
+      <pubDate>Wed, 05 Feb 2025 17:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/es/tags/libro/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reporte</title>
+      <link>http://localhost:1313/es/tags/reporte/</link>
+      <pubDate>Wed, 05 Feb 2025 17:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/es/tags/reporte/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rpg</title>
+      <link>http://localhost:1313/es/tags/rpg/</link>
+      <pubDate>Wed, 05 Feb 2025 17:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/es/tags/rpg/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scifi</title>
+      <link>http://localhost:1313/es/tags/scifi/</link>
+      <pubDate>Wed, 05 Feb 2025 17:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/es/tags/scifi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Videojuego</title>
+      <link>http://localhost:1313/es/tags/videojuego/</link>
+      <pubDate>Wed, 05 Feb 2025 17:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/es/tags/videojuego/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blogging</title>
+      <link>http://localhost:1313/es/tags/blogging/</link>
+      <pubDate>Wed, 31 Jul 2024 17:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/es/tags/blogging/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>http://localhost:1313/es/tags/hugo/</link>
+      <pubDate>Wed, 31 Jul 2024 17:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/es/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nextra</title>
+      <link>http://localhost:1313/es/tags/nextra/</link>
+      <pubDate>Wed, 31 Jul 2024 17:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/es/tags/nextra/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cuento</title>
+      <link>http://localhost:1313/es/tags/cuento/</link>
+      <pubDate>Wed, 24 Apr 2024 15:15:49 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/es/tags/cuento/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ficción</title>
+      <link>http://localhost:1313/es/tags/ficci%C3%B3n/</link>
+      <pubDate>Wed, 24 Apr 2024 15:15:49 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/es/tags/ficci%C3%B3n/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Microficción</title>
+      <link>http://localhost:1313/es/tags/microficci%C3%B3n/</link>
+      <pubDate>Wed, 24 Apr 2024 15:15:49 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/es/tags/microficci%C3%B3n/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cuento Corto</title>
+      <link>http://localhost:1313/es/tags/cuento-corto/</link>
+      <pubDate>Thu, 07 Mar 2024 15:15:49 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/es/tags/cuento-corto/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Poema</title>
+      <link>http://localhost:1313/es/tags/poema/</link>
+      <pubDate>Thu, 07 Mar 2024 15:15:49 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/es/tags/poema/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Css</title>
       <link>http://localhost:1313/es/tags/css/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <pubDate>Sat, 05 Nov 2022 11:53:11 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/es/tags/css/</guid>
       <description></description>
     </item>
     <item>
       <title>Desarrollo Web</title>
       <link>http://localhost:1313/es/tags/desarrollo-web/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <pubDate>Sat, 05 Nov 2022 11:53:11 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/es/tags/desarrollo-web/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
       <link>http://localhost:1313/es/tags/docker/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <pubDate>Thu, 02 Sep 2021 15:15:49 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/es/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Rails</title>
       <link>http://localhost:1313/es/tags/rails/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <pubDate>Thu, 02 Sep 2021 15:15:49 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/es/tags/rails/</guid>
       <description></description>
     </item>
     <item>
       <title>Covid</title>
       <link>http://localhost:1313/es/tags/covid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <pubDate>Tue, 20 Apr 2021 15:07:57 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/es/tags/covid/</guid>
       <description></description>
     </item>
     <item>
       <title>Home Office</title>
       <link>http://localhost:1313/es/tags/home-office/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <pubDate>Tue, 20 Apr 2021 15:07:57 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/es/tags/home-office/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Antologia</title>
+      <link>http://localhost:1313/es/tags/antologia/</link>
+      <pubDate>Sat, 19 Sep 2020 15:15:49 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>http://localhost:1313/es/tags/antologia/</guid>
       <description></description>
     </item>
     <item>
       <title>Jaime Sabines</title>
       <link>http://localhost:1313/es/tags/jaime-sabines/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <pubDate>Tue, 11 Aug 2020 13:50:59 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/es/tags/jaime-sabines/</guid>
       <description></description>
     </item>
     <item>
       <title>Pensamientos</title>
       <link>http://localhost:1313/es/tags/pensamientos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <pubDate>Tue, 11 Aug 2020 13:50:59 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
       <guid>http://localhost:1313/es/tags/pensamientos/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Poema</title>
-      <link>http://localhost:1313/es/tags/poema/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
-      <guid>http://localhost:1313/es/tags/poema/</guid>
       <description></description>
     </item>
   </channel>

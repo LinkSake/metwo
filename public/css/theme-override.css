@@ -1,73 +1,102 @@
-footer { font-size: 90%; }
+footer {
+    font-size: 90%;
+}
 h1 {
-   margin-top: .5rem; 
-   margin-bottom: 0rem; 
-  }
+    margin-top: 0.5rem;
+    margin-bottom: 0rem;
+}
 li {
-  margin-top: .3rem;
-  margin-bottom: .3rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
 }
 #avatar {
-  min-width: 40px;
-  min-height: 40px;
-  max-width: 204px;
-  max-height: 204px;
-  float: right;
-  padding: 10px;
-  display: block;
-} 
-.after-title { margin-bottom: .5rem;}
-.content-wrapper {min-height: 85vh;}
-.terms-single { 
-  font-size: .9em; 
-  text-align: center;
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 204px;
+    max-height: 204px;
+    float: right;
+    padding: 10px;
+    display: block;
+}
+.after-title {
+    margin-bottom: 0.5rem;
+}
+.content-wrapper {
+    min-height: 85vh;
+}
+.terms-single {
+    font-size: 0.9em;
+    text-align: center;
 }
 .terms-single span:nth-of-type(2)::before {
-  content: "//";
+    content: "//";
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
-    background-color: #1F2430;
-    color: white;
-  }
+    body {
+        background-color: #1f2430;
+        color: white;
+    }
 
-  blockquote {
-    background: #1F2430;
-  }
+    blockquote {
+        background: #1f2430;
+    }
 
-  a {
-    color: #FFD173;
-  }
+    a {
+        color: #ffd173;
+    }
 
-  header {
-    background: #1F2430;
-    border-bottom: 2px dotted #FFD173;
-  }
+    header {
+        background: #1f2430;
+        border-bottom: 2px dotted #ffd173;
+    }
 
-  .article-meta, .menu a {
-    background: #1F2430;
-  }
+    .article-meta,
+    .menu a {
+        background: #1f2430;
+    }
 }
 
 /* Light mode */
 @media (prefers-color-scheme: light) {
-  blockquote {
-    background: #F8F9FA;
-  }
+    blockquote {
+        background: #f8f9fa;
+    }
 
-  a {
-    color: #F2AE49;
-  }
+    a {
+        color: #f2ae49;
+    }
 
-  header {
-    background: #F8F9FA;
-    border-bottom: 2px dotted #F2AE49;
-  }
+    header {
+        background: white;
+        border-bottom: 2px dotted #f2ae49;
+    }
 
-  .article-meta, .menu a {
-    background: #F8F9FA;
-  }
+    header a {
+        color: #f2ae49;
+    }
 
+    header a:hover {
+        color: #ffd173;
+    }
+
+    .article-meta,
+    .menu a {
+        background: #f8f9fa;
+    }
 }
 
+/* For devices larger than a phablet */
+@media (min-width: 550px) {
+}
+
+/* For devices smaller than a phablet */
+@media (max-width: 550px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    .hide-on-mobile {
+        display: none;
+    }
+}

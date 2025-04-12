@@ -58,4 +58,24 @@ Most of the content it's available in [English](/en) and [Spanish](/es)! Hopeful
 
 ---
 
+## webrings
+
+I think [webrings](https://indieweb.org/webring) are pretty cool! Check them out.
+
+<div style="text-align: center;">
+  <a href="https://applianceri.ng/" target="_blank">
+    Appliance Ring
+  </a>
+</div>
+<a href="https://applianceri.ng/next?host=luisangel.me" target="_blank" >
+  <img src="/images/index/appliance-ring.png" alt="Black + Decker 12-Cup* Programmable Coffeemaker With Vortex Technology" height="150" width="150" />
+</a>
+<div style="text-align: center;">
+  <a href="https://applianceri.ng/previous?host=luisangel.me" target="_blank"> < prev </a>
+  |
+  <a href="https://applianceri.ng/next?host=luisangel.me" target="_blank"> next > </a>
+</div>
+
+---
+
 ## latest posts

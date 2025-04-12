@@ -2,21 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/garden/</loc>
-    <lastmod>2024-04-25T12:26:36-05:00</lastmod>
+    <loc>http://localhost:1313/tags/book/</loc>
+    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/garden/"
+                href="http://localhost:1313/es/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/garden/"
+                href="http://localhost:1313/categories/"
                 />
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-04-25T12:26:36-05:00</lastmod>
+    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
@@ -28,8 +31,134 @@
                 href="http://localhost:1313/"
                 />
   </url><url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="http://localhost:1313/es/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/post/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/tags/report/</loc>
+    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/2025/02/05/project-hail-mary/</loc>
+    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="http://localhost:1313/es/post/2025/02/05/project-hail-mary/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/post/2025/02/05/project-hail-mary/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/categories/reports/</loc>
+    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/scifi/</loc>
+    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="http://localhost:1313/es/tags/scifi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/tags/scifi/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="http://localhost:1313/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/tags/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/tags/blogging/</loc>
+    <lastmod>2024-07-31T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="http://localhost:1313/es/tags/blogging/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/tags/blogging/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/categories/blogposts/</loc>
+    <lastmod>2024-07-31T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="http://localhost:1313/es/categories/blogposts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/categories/blogposts/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/post/2024/07/31/goodbye-nextra-hello-hugo/</loc>
+    <lastmod>2024-07-31T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/hugo/</loc>
+    <lastmod>2024-07-31T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="http://localhost:1313/es/tags/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/tags/hugo/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/tags/nextra/</loc>
+    <lastmod>2024-07-31T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="http://localhost:1313/es/tags/nextra/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/tags/nextra/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/garden/</loc>
+    <lastmod>2024-05-24T12:26:36-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="http://localhost:1313/es/garden/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/garden/"
+                />
+  </url><url>
     <loc>http://localhost:1313/garden/latest-reads/</loc>
-    <lastmod>2024-04-25T12:26:36-05:00</lastmod>
+    <lastmod>2024-05-24T12:26:36-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
@@ -41,21 +170,46 @@
                 href="http://localhost:1313/garden/latest-reads/"
                 />
   </url><url>
-    <loc>http://localhost:1313/categories/articles/</loc>
-    <lastmod>2022-11-05T11:53:11-05:00</lastmod>
+    <loc>http://localhost:1313/tags/fiction/</loc>
+    <lastmod>2024-04-24T15:15:49-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2022-11-05T11:53:11-05:00</lastmod>
+    <loc>http://localhost:1313/tags/short-story/</loc>
+    <lastmod>2024-04-24T15:15:49-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/2024/04/24/titan/</loc>
+    <lastmod>2024-04-24T15:15:49-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/categories/"
+                href="http://localhost:1313/es/post/2024/04/24/titan/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/categories/"
+                href="http://localhost:1313/post/2024/04/24/titan/"
                 />
+  </url><url>
+    <loc>http://localhost:1313/categories/works/</loc>
+    <lastmod>2024-04-24T15:15:49-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/2024/03/07/aventuras-de-papel/</loc>
+    <lastmod>2024-03-07T15:15:49-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="http://localhost:1313/es/post/2024/03/07/aventuras-de-papel/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/post/2024/03/07/aventuras-de-papel/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/tags/poem/</loc>
+    <lastmod>2024-03-07T15:15:49-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/articles/</loc>
+    <lastmod>2022-11-05T11:53:11-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/css/</loc>
     <lastmod>2022-11-05T11:53:11-05:00</lastmod>
@@ -72,32 +226,6 @@
   </url><url>
     <loc>http://localhost:1313/post/2022/11/05/dropdowns-and-toggles-with-css/</loc>
     <lastmod>2022-11-05T11:53:11-05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2022-11-05T11:53:11-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-MX"
-                href="http://localhost:1313/es/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:1313/post/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2022-11-05T11:53:11-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-MX"
-                href="http://localhost:1313/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:1313/tags/"
-                />
   </url><url>
     <loc>http://localhost:1313/tags/web-development/</loc>
     <lastmod>2022-11-05T11:53:11-05:00</lastmod>
@@ -169,18 +297,11 @@
     <loc>http://localhost:1313/post/2021/04/20/the-issue-with-home-office/</loc>
     <lastmod>2021-04-20T15:07:57-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/blogposts/</loc>
-    <lastmod>2020-08-11T13:50:59-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-MX"
-                href="http://localhost:1313/es/categories/blogposts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:1313/categories/blogposts/"
-                />
+    <loc>http://localhost:1313/post/2020/09/19/a-teaspoon-of-sun/</loc>
+    <lastmod>2020-09-19T15:15:49-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/anthology/</loc>
+    <lastmod>2020-09-19T15:15:49-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/jaime-sabines/</loc>
     <lastmod>2020-08-11T13:50:59-05:00</lastmod>
@@ -194,9 +315,6 @@
                 hreflang="en-US"
                 href="http://localhost:1313/tags/jaime-sabines/"
                 />
-  </url><url>
-    <loc>http://localhost:1313/tags/poem/</loc>
-    <lastmod>2020-08-11T13:50:59-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/2020/08/11/the-best-part-of-school-is-recess/</loc>
     <lastmod>2020-08-11T13:50:59-05:00</lastmod>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The story of how do I migrate this site from Nextra into Hugo, also how I&#39;m thinking about blogging now.">
+    
+    <title>
+      
+        Goodbye Nextra, hello Hugo
+      
+      | luis angel ortega
+    </title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="http://localhost:1313/css/theme-override.css">
+    <header>
+
+  <nav>
+    <ul>
+      
+      
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/">~/home</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/categories/">~/writings</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/projects">~/projects</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/garden">~/garden</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="http://localhost:1313/about">~/about</a>
+      </li>
+      
+
+      
+      
+      <li class="pull-right hide-on-mobile">
+        <a href="http://localhost:1313/post/index.xml">~/rss</a>
+      </li>
+      
+
+    </ul>
+  </nav>
+</header>
+
+  </head>
+
+  <body>
+    <br/>
+
+<div class="article-meta">
+  <h1><span class="title">Goodbye Nextra, hello Hugo</span></h1>
+  <div class="after-title">
+    
+      by <span class="author">Luis Angel Ortega</span>
+      
+        <i class="date">(Wednesday, July 31, 2024)</i>
+      
+      | 
+      885 words / 5 minutes
+    
+  </div>
+</div>
+
+
+
+<div class="content-wrapper">
+  <main>
+    <p>This blog has been abandoned for years at this point. Since I stopped writing on <a href="https://aviyel.com">Aviyel</a>, I haven’t done anything very technical, and for more personal writings, I&rsquo;ve been advised not to publish them online as freely as I used to, because some submissions consider a story &ldquo;published&rdquo; if it’s available on a website.</p>
+<p>That doesn&rsquo;t mean I&rsquo;ve lost interest in the topic during these years; quite the opposite. Thanks to Hacker News and Mastodon, I’ve discovered a bunch of blogs that I love and that have inspired me for the next stage of my own.</p>
+<h2 id="the-big-static-site-generator-change">The Big Static Site Generator Change</h2>
+<p>Previously, my website used <a href="https://github.com/shuding/nextra">Nextra</a> and was hosted on <a href="https://vercel.com/">Vercel</a>. Honestly, this combo made development and deployment very easy, as well as adding my custom domain. But since I adopted Nextra in a very early stage, customization was minimal. Now it seems more focused on project documentation pages, and the style can be changed through <a href="https://tailwindcss.com/">Tailwind</a> helpers.</p>
+<p>Even so, during my inactive time, I came across Hugo and started playing around with it. I created several test projects with different themes and goals as practice, and while Hugo has many advantages in terms of speed for generating the website thanks to being built in Go, what caught my attention was the number of pre-made themes and how easy they are to customize. From simple things like colors or other styles via a CSS file to being able to modify essential parts of the theme like headers, the navbar, and the RSS feed. I finally settled on the <a href="https://github.com/goodroot/hugo-classic">hugo-classic</a> theme with modifications to everything mentioned above.</p>
+<p>For hosting, I switched from Vercel to GitHub Pages for the convenience of having everything related to the blog in one place. The domain migration wasn&rsquo;t complex but had its details—nothing that deleting all the records in <a href="https://porkbun.com/">Porkbun</a> and adding them again couldn’t fix. On the other hand, deployment was more complex. Hugo has a <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#prose">guide</a> in its documentation on how to deploy through an action, but in my opinion, it&rsquo;s incomplete. It misses things like ensuring to include the git submodule if using a theme, among other small tweaks you might need. As of writing this, the site is free of these types of errors, although there are still some style issues on mobile screens.</p>
+<p>Overall, despite the multiple attempts it took to get the site up correctly, I’m very happy with the new setup and recommend it to anyone thinking of following this path.</p>
+<h2 id="the-new-blog-organization-and-philosophy">The New Blog Organization and Philosophy</h2>
+<p>When I first created the website, I didn’t have much experience reading or following other people’s blogs, so I structured it as best I could. Now things have changed; I know what I like and don’t like, what and how to share.</p>
+<p>For now, the layout of the pages will be as follows. Since the main focus of the site is as a blog, the most extensive section will be the writings. Although the RSS feed will group all posts in one place, I didn’t want them to live like that on the site. Blogposts will be for these types of things—simply writings into the void of the internet. Articles are for guides and more technical stuff. Reviews are for writing about movies, books, games, etc. Finally, Works are for my published pieces, though at the moment there’s only one, I hope it will be one of the most extensive.</p>
+<p>Outside of the writings, Projects is a showcase of my work, like a small CV of my online footprint. About Me is, well, a short biography, and finally, The Garden is something strange and complex, but basically, it’s where everything else lives. Honestly, it’s the best section.</p>
+<p>In the index, I also list what I’m “doing”—what I’m playing, reading, listening to, and watching. It’s just a way to share what I’m passionate about at the moment, with the hope that many of those bullet points will turn into reviews. It also has my latest readings, articles that I find interesting to share and/or comment on.</p>
+<p>As for the blog’s philosophy, specifically with the &ldquo;blogposts,&rdquo; I want to write more. I want to capture the spirit of the blogs I follow with how they share things, without necessarily writing essays or technical guides. I’d also like to write more reviews, share my notes, my favorite quotes. Stop consuming without thinking.</p>
+<p>In summary, I want the page to be an excuse to keep writing and sharing.</p>
+<h2 id="the-difference-with-social-media">The Difference with Social Media</h2>
+<p>Finally, I’m doing this because I no longer enjoy social media as much as I used to. What was once Twitter has fragmented, Facebook and Instagram have a horrible feed full of ads. Really, where I spend my time now is YouTube and TikTok.</p>
+<p>Besides the fact that it’s just not the same anymore, knowing that all my contacts see what I publish in their feed has made me hesitant to post. Here, it’s still public; I can keep sharing the things I’m passionate about without the certainty that everyone will see it. Everyone <em>can</em> see it, but no one is forced to.</p>
+<p>This post was just to share these thoughts, document the change this page has gone through—a rant and monologue into the air. I don’t have a real conclusion, so I’ll leave it at that.</p>
+
+    
+      <p class="terms-single">「
+        
+          
+          <span>
+            Writings: 
+          </span>
+              <a href="http://localhost:1313/categories/blogposts">Blogposts</a> 
+            
+          
+        
+          
+          <span>
+            Tags: 
+          </span>
+              <a href="http://localhost:1313/tags/hugo">hugo</a> 
+            
+          </span>
+              <a href="http://localhost:1313/tags/nextra">nextra</a> 
+            
+          </span>
+              <a href="http://localhost:1313/tags/blogging">blogging</a> 
+            
+          
+        
+        」</p>
+      
+  </main>
+</div>
+    <footer>
+      
+<script>
+(function() {
+  function center_el(tagName) {
+    var tags = document.getElementsByTagName(tagName), i, tag;
+    for (i = 0; i < tags.length; i++) {
+      tag = tags[i];
+      var parent = tag.parentElement;
+      
+      if (parent.childNodes.length === 1) {
+        
+        if (parent.nodeName === 'A') {
+          parent = parent.parentElement;
+          if (parent.childNodes.length != 1) continue;
+        }
+        if (parent.nodeName === 'P') parent.style.textAlign = 'center';
+      }
+    }
+  }
+  var tagNames = ['img', 'embed', 'object'];
+  for (var i = 0; i < tagNames.length; i++) {
+    center_el(tagNames[i]);
+  }
+})();
+</script>
+
+      
+      <hr/>
+      Luis Angel Ortega © 2024 | <a href="/es">Español</a> | Made with <a href="https://github.com/goodroot/hugo-classic">hugo-classic</a>
+      
+    </footer>
+  </body>
+</html>
+
+<a rel="me" href="https://vmst.io/@link" style="display: none;"></a>
