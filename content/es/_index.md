@@ -54,4 +54,24 @@ Aquí tienes un resumen del sitio:
 
 ---
 
+## webrings
+
+Me gustan los [webrings](https://indieweb.org/webring) y soy parte de los siguientes (contenido en su mayor parte en inglés):
+
+<div style="text-align: center;">
+  <a href="https://applianceri.ng/" target="_blank">
+    Appliance Ring
+  </a>
+</div>
+<a href="https://applianceri.ng/next?host=luisangel.me" target="_blank" >
+  <img src="/images/index/appliance-ring.png" alt="Black + Decker 12-Cup* Programmable Coffeemaker With Vortex Technology" height="150" width="150" />
+</a>
+<div style="text-align: center;">
+  <a href="https://applianceri.ng/previous?host=luisangel.me" target="_blank"> < anterior </a>
+  |
+  <a href="https://applianceri.ng/next?host=luisangel.me" target="_blank"> siguiente > </a>
+</div>
+
+---
+
 ## últimas publicaciones
