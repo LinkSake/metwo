@@ -21,10 +21,18 @@ I like to be organized, that's why I made specific spaces for specific kinds of 
 
 Most of the content it's available in [English](https://luisangel.me/en) and [Spanish](https://luisangel.me/es)! Hopefully someday I'll learn another language good enough to list it here.
 
+## Scripts
+
+The blog includes a simple automation system for managing the "latest reads" section, which syncs bookmarks (last 50, it appends them) from Raindrop.io to both English and Spanish files.
+
+**Usage:**
+```bash
+# 1. Set up credentials
+cp .env.example .env
+# 2. Run the sync
+./scripts/sync-raindrop-reads.sh
+```
+
 ## Known issues/todo list
 
-1. Right now we only list the RSS for the "archive", it's probably a good idea to have per term.
-
-2. Fix favicon.
-
-3. I promise i had another important thing to add but i don't remember •ᴖ•.
+- Right now we only list the RSS for the "archive", it's probably a good idea to have per term.

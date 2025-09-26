@@ -45,7 +45,10 @@ Aquí tienes un resumen del sitio:
 
 ## últimas lecturas
 
-- [*Cómo se benefician los adolescentes de poder leer libros 'perturbadores' que algunos quieren prohibir*](https://theconversation.com/how-teens-benefit-from-being-able-to-read-disturbing-books-that-some-want-to-ban-223533) por Gay Ivey (The Conversation)
+- (24/09/25) [Learning Persian with Anki, ChatGPT and YouTube](https://cjauvin.github.io/posts/learning-persian/)
+- (18/09/25) [KDE is now my favorite desktop — kokada](https://kokada.dev/blog/kde-is-now-my-favorite-desktop/)
+- (17/09/25) [Adios Chicos, 25 Years of KDE – Jonathan Riddell's Diary](https://jriddell.org/2025/09/14/adios-chicos-25-years-of-kde/)
+
 
 <div style="text-align: center; margin-bottom: 1rem;">
   <a href="/garden/latest-reads">
