@@ -60,13 +60,7 @@
                 href="http://localhost:1313/es/post/2025/02/05/project-hail-mary/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/post/2025/02/05/super-mario-rpg/</loc>
-    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/es/categories/reportes/</loc>
-    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/es/tags/rpg/</loc>
     <lastmod>2025-02-05T17:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/es/tags/scifi/</loc>
@@ -94,9 +88,6 @@
                 hreflang="es-MX"
                 href="http://localhost:1313/es/tags/"
                 />
-  </url><url>
-    <loc>http://localhost:1313/es/tags/videojuego/</loc>
-    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/es/post/2024/07/31/adios-nextra-hola-hugo/</loc>
     <lastmod>2024-07-31T17:00:00+00:00</lastmod>
@@ -342,8 +333,6 @@
                 hreflang="es-MX"
                 href="http://localhost:1313/es/projects/"
                 />
-  </url><url>
-    <loc>http://localhost:1313/es/garden/lista-para-nerds/</loc>
   </url><url>
     <loc>http://localhost:1313/es/about/</loc>
     <xhtml:link

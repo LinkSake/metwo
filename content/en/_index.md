@@ -5,8 +5,8 @@ description: "I'm Luis Angel, a Mexican developer, writer and poet from the city
 <img
   id="avatar"
   class="hide-on-mobile"
-  src="/images/index/gala.jpg"
-  alt="That's Gala! My dog! I don't have a good pic of me atm">
+  src="/images/index/avatar.jpeg"
+  alt="A photo of me">
 
 # welcome, friend (^０^)ノ
 
@@ -31,8 +31,9 @@ Most of the content it's available in [English](/en) and [Spanish](/es)! Hopeful
 
 ## currently
 
-- **Reading:** *[Why Nations Fail](https://en.wikipedia.org/wiki/Why_Nations_Fail)* by *Daron Acemoglu and James A. Robinson* w(°ｏ°)w
-- **Playing:**  *[The Legend of Zelda: Echoes of Wisdom](https://www.metacritic.com/game/the-legend-of-zelda-echoes-of-wisdom/)* on the Switch (ｑ･_･)ｑ
+- **Reading:** *[The Scorpions](https://es.wikipedia.org/wiki/Sara_Barquinero)* by *Sara Barquinero* w(°ｏ°)w
+- **Watching :** *[Star Trek: Deep Space Nine](https://en.wikipedia.org/wiki/Star_Trek:_Deep_Space_Nine)* (˶˃ ᵕ ˂˶) .ᐟ.ᐟ
+- **Playing:**  *[Hollow Knight](https://www.metacritic.com/game/hollow-knight)*  & *[Slay the Spire](https://www.metacritic.com/game/slay-the-spire)* (ｑ･_･)ｑ
 
 <div style="text-align: center; margin-bottom: 1rem;">
   <a href="categories/report">
@@ -54,26 +55,6 @@ Most of the content it's available in [English](/en) and [Spanish](/es)! Hopeful
   <a href="/garden/latest-reads">
     see more
   </a>
-</div>
-
----
-
-## webrings
-
-I think [webrings](https://indieweb.org/webring) are pretty cool! Check them out.
-
-<div style="text-align: center;">
-  <a href="https://applianceri.ng/" target="_blank">
-    Appliance Ring
-  </a>
-</div>
-<a href="https://applianceri.ng/next?host=luisangel.me" target="_blank" >
-  <img src="/images/index/appliance-ring.png" alt="Black + Decker 12-Cup* Programmable Coffeemaker With Vortex Technology" height="150" width="150" />
-</a>
-<div style="text-align: center;">
-  <a href="https://applianceri.ng/previous?host=luisangel.me" target="_blank"> < prev </a>
-  |
-  <a href="https://applianceri.ng/next?host=luisangel.me" target="_blank"> next > </a>
 </div>
 
 ---

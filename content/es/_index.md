@@ -5,8 +5,8 @@ description: "Soy Luis Angel, un desarrollador, escritor y poeta mexicano de la 
 <img
   id="avatar"
   class="hide-on-mobile"
-  src="/images/index/gala.jpg"
-  alt="¡Esa es Gala! ¡Mi perro! No tengo una buena foto de mí por el momento">
+  src="/images/index/avatar.jpeg"
+  alt="Una foto mía">
 
 # bienvenido, amigo (^０^)ノ
 
@@ -31,8 +31,9 @@ Aquí tienes un resumen del sitio:
 
 ## actualmente
 
-- **Leyendo:** *[Por qué fracasan los países](https://es.wikipedia.org/wiki/Por_qu%C3%A9_fracasan_los_pa%C3%ADses)* por *Daron Acemoglu y James A. Robinson* w(°ｏ°)w
-- **Jugando:**  *[The Legend of Zelda: Echoes of Wisdom](https://www.metacritic.com/game/the-legend-of-zelda-echoes-of-wisdom/)* en el Switch (ｑ･_･)ｑ
+- **Leyendo:** *[Los escorpiones](https://es.wikipedia.org/wiki/Sara_Barquinero)* por *Sara Barquinero* w(°ｏ°)w
+- **Viendo:** *[Star Trek: Deep Space Nine](https://es.wikipedia.org/wiki/Star_Trek:_Deep_Space_Nine)* (˶˃ ᵕ ˂˶) .ᐟ.ᐟ
+- **Jugando:**  *[Hollow Knight](https://www.metacritic.com/game/hollow-knight)*  & *[Slay the Spire](https://www.metacritic.com/game/slay-the-spire)* (ｑ･_･)ｑ
 
 <div style="text-align: center; margin-bottom: 1rem;">
   <a href="categories/reportes">
@@ -50,26 +51,6 @@ Aquí tienes un resumen del sitio:
   <a href="/garden/latest-reads">
     ver más
   </a>
-</div>
-
----
-
-## webrings
-
-Me gustan los [webrings](https://indieweb.org/webring) y soy parte de los siguientes (contenido en su mayor parte en inglés):
-
-<div style="text-align: center;">
-  <a href="https://applianceri.ng/" target="_blank">
-    Appliance Ring
-  </a>
-</div>
-<a href="https://applianceri.ng/next?host=luisangel.me" target="_blank" >
-  <img src="/images/index/appliance-ring.png" alt="Black + Decker 12-Cup* Programmable Coffeemaker With Vortex Technology" height="150" width="150" />
-</a>
-<div style="text-align: center;">
-  <a href="https://applianceri.ng/previous?host=luisangel.me" target="_blank"> < anterior </a>
-  |
-  <a href="https://applianceri.ng/next?host=luisangel.me" target="_blank"> siguiente > </a>
 </div>
 
 ---

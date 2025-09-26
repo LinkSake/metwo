@@ -18,6 +18,16 @@ li {
     padding: 10px;
     display: block;
 }
+#gala {
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 204px;
+    max-height: 204px;
+    float: left;
+    padding: 10px;
+    display: block;
+    margin-bottom: 2rem;
+}
 .after-title {
     margin-bottom: 0.5rem;
 }
