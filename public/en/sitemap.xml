@@ -2,11 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/book/</loc>
-    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/ai/</loc>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/blogposts/</loc>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="http://localhost:1313/es/categories/blogposts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/categories/blogposts/"
+                />
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
@@ -18,8 +31,11 @@
                 href="http://localhost:1313/categories/"
                 />
   </url><url>
+    <loc>http://localhost:1313/tags/education/</loc>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
@@ -32,7 +48,7 @@
                 />
   </url><url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
@@ -43,6 +59,44 @@
                 hreflang="en-US"
                 href="http://localhost:1313/post/"
                 />
+  </url><url>
+    <loc>http://localhost:1313/tags/rant/</loc>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="http://localhost:1313/es/tags/rant/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/tags/rant/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="http://localhost:1313/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/tags/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/post/2025/10/03/lack-of-joy-with-ai/</loc>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/essay/</loc>
+    <lastmod>2025-06-26T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/2025/06/26/digitalizing-education/</loc>
+    <lastmod>2025-06-26T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/book/</loc>
+    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/report/</loc>
     <lastmod>2025-02-05T17:00:00+00:00</lastmod>
@@ -76,19 +130,6 @@
                 href="http://localhost:1313/tags/scifi/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-MX"
-                href="http://localhost:1313/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:1313/tags/"
-                />
-  </url><url>
     <loc>http://localhost:1313/tags/blogging/</loc>
     <lastmod>2024-07-31T17:00:00+00:00</lastmod>
     <xhtml:link
@@ -100,19 +141,6 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="http://localhost:1313/tags/blogging/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/categories/blogposts/</loc>
-    <lastmod>2024-07-31T17:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-MX"
-                href="http://localhost:1313/es/categories/blogposts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:1313/categories/blogposts/"
                 />
   </url><url>
     <loc>http://localhost:1313/post/2024/07/31/goodbye-nextra-hello-hugo/</loc>

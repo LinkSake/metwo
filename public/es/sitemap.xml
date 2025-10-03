@@ -65,6 +65,16 @@
   </url><url>
     <loc>http://localhost:1313/es/tags/rant/</loc>
     <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/tags/rant/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="http://localhost:1313/es/tags/rant/"
+                />
   </url><url>
     <loc>http://localhost:1313/es/tags/</loc>
     <lastmod>2025-10-03T17:00:00+00:00</lastmod>
