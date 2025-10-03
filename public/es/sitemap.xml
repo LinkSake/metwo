@@ -2,8 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/es/categories/blogposts/</loc>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/categories/blogposts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="http://localhost:1313/es/categories/blogposts/"
+                />
+  </url><url>
     <loc>http://localhost:1313/es/categories/</loc>
-    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -15,8 +28,14 @@
                 href="http://localhost:1313/es/categories/"
                 />
   </url><url>
+    <loc>http://localhost:1313/es/tags/educaci%C3%B3n/</loc>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/ia/</loc>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/es/</loc>
-    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -28,11 +47,11 @@
                 href="http://localhost:1313/es/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/tags/libro/</loc>
-    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/es/post/2025/10/03/falta-alegria-con-la-ia/</loc>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/es/post/</loc>
-    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -43,6 +62,31 @@
                 hreflang="es-MX"
                 href="http://localhost:1313/es/post/"
                 />
+  </url><url>
+    <loc>http://localhost:1313/es/tags/rant/</loc>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/</loc>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="http://localhost:1313/es/tags/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/es/post/2025/06/26/digitalizando-la-educacion/</loc>
+    <lastmod>2025-06-26T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/ensayo/</loc>
+    <lastmod>2025-06-26T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/libro/</loc>
+    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/es/tags/reporte/</loc>
     <lastmod>2025-02-05T17:00:00+00:00</lastmod>
@@ -60,7 +104,13 @@
                 href="http://localhost:1313/es/post/2025/02/05/project-hail-mary/"
                 />
   </url><url>
+    <loc>http://localhost:1313/es/post/2025/02/05/super-mario-rpg/</loc>
+    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/es/categories/reportes/</loc>
+    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/rpg/</loc>
     <lastmod>2025-02-05T17:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/es/tags/scifi/</loc>
@@ -76,18 +126,8 @@
                 href="http://localhost:1313/es/tags/scifi/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/tags/</loc>
+    <loc>http://localhost:1313/es/tags/videojuego/</loc>
     <lastmod>2025-02-05T17:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:1313/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-MX"
-                href="http://localhost:1313/es/tags/"
-                />
   </url><url>
     <loc>http://localhost:1313/es/post/2024/07/31/adios-nextra-hola-hugo/</loc>
     <lastmod>2024-07-31T17:00:00+00:00</lastmod>
@@ -103,19 +143,6 @@
                 rel="alternate"
                 hreflang="es-MX"
                 href="http://localhost:1313/es/tags/blogging/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/categories/blogposts/</loc>
-    <lastmod>2024-07-31T17:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:1313/categories/blogposts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-MX"
-                href="http://localhost:1313/es/categories/blogposts/"
                 />
   </url><url>
     <loc>http://localhost:1313/es/tags/hugo/</loc>
@@ -333,6 +360,8 @@
                 hreflang="es-MX"
                 href="http://localhost:1313/es/projects/"
                 />
+  </url><url>
+    <loc>http://localhost:1313/es/garden/lista-para-nerds/</loc>
   </url><url>
     <loc>http://localhost:1313/es/about/</loc>
     <xhtml:link
