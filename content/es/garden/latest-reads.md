@@ -5,6 +5,10 @@ date = 2024-05-24T12:26:36-05:00
 slug ='ultimas-lecturas'
 simple = true
 +++
+- (01/10/25) [My petty gripe: not only am I losing my livelihood to AI – now it’s stealing my em dashes too](https://www.theguardian.com/lifeandstyle/2025/oct/01/artificial-intelligence-em-dashes-ai-stealing-my-livelihood)
+- (01/10/25) [This is where The Booker Prize nominees write: from kitchen tables to a cemetery bench](https://www.wallpaper.com/design-interiors/booker-prize-2025-longlist-writers-desks)
+- (30/09/25) [Remember: Kurt Vonnegut was 47](https://www.joanwestenberg.com/p/remember-kurt-vonnegut-was-47)
+- (30/09/25) [Cuentos imprescindibles del siglo XX de América Latina - Literal Magazine](https://literalmagazine.com/cuentos-imprescindibles-del-siglo-xx-de-america-latina/)
 
 - (24/09/25) [Learning Persian with Anki, ChatGPT and YouTube](https://cjauvin.github.io/posts/learning-persian/)
 - (18/09/25) [KDE is now my favorite desktop — kokada](https://kokada.dev/blog/kde-is-now-my-favorite-desktop/)
