@@ -4,7 +4,7 @@ description = "Desde hace más de dos décadas, hablar de transformación digita
 date = 2025-06-26T17:00:00-00:00
 slug = "digitalizando-la-educacion"
 author = "Luis Angel Ortega"
-categories = ["Blogposts"]
+categories = ["Articulos"]
 tags = ["educación", "ensayo"]
 draft = false
 +++

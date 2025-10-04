@@ -4,7 +4,7 @@ description = "For more than two decades, talking about digital transformation i
 date = 2025-06-26T17:00:00-00:00
 slug = "digitalizing-education"
 author = "Luis Angel Ortega"
-categories = ["Blogposts"]
+categories = ["Articles"]
 tags = ["education", "essay"]
 draft = false
 +++
