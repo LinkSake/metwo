@@ -28,6 +28,15 @@ notes: "notes"
 notes_desc: "Short thoughts, links, and observations. No title required."
 see_all_notes: "see all notes"
 
+# Landing page
+landing_lately: "lately"
+landing_lately_book: "reading"
+landing_lately_film: "watching"
+landing_lately_link: "link"
+landing_see_more: "see more"
+landing_posts: "writing"
+landing_project: "project"
+
 # Words
 by: "by"
 words: "words"

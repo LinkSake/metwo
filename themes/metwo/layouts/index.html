@@ -1,0 +1,142 @@
+{{ define "main" }}
+{{ $socials := .Site.Params.socials }}
+
+<div class="landing">
+
+  {{/* ------------------------------------------------------------------ */}}
+  {{/* Bio card                                                            */}}
+  {{/* ------------------------------------------------------------------ */}}
+  <section class="bio h-card" aria-label="about">
+    <div class="bio-body">
+      <h1 class="bio-name p-name">Luis Angel Ortega</h1>
+      <p class="bio-text p-note">{{ .Params.bio | markdownify }}</p>
+
+      <ul class="socials" aria-label="social links">
+        {{ with $socials.email }}
+        <li><a class="u-email" href="mailto:{{ . }}">email</a></li>
+        {{ end }}
+        {{ with $socials.mastodon }}
+        <li><a class="u-url" rel="me" href="{{ . }}" target="_blank" rel="noopener">mastodon</a></li>
+        {{ end }}
+        {{ with $socials.bluesky }}
+        <li><a class="u-url" rel="me" href="{{ . }}" target="_blank" rel="noopener">bluesky</a></li>
+        {{ end }}
+        {{ with $socials.instagram }}
+        <li><a class="u-url" href="{{ . }}" target="_blank" rel="noopener">instagram</a></li>
+        {{ end }}
+        {{ with $socials.substack_en }}
+        <li><a class="u-url" href="{{ . }}" target="_blank" rel="noopener">substack (en)</a></li>
+        {{ end }}
+        {{ with $socials.substack_es }}
+        <li><a class="u-url" href="{{ . }}" target="_blank" rel="noopener">substack (es)</a></li>
+        {{ end }}
+      </ul>
+    </div>
+
+    {{ with .Params.avatar }}
+    <img class="bio-avatar u-photo" src="{{ . }}" alt="Photo of Luis Angel Ortega">
+    {{ end }}
+  </section>
+
+  {{/* ------------------------------------------------------------------ */}}
+  {{/* Latest notes                                                        */}}
+  {{/* ------------------------------------------------------------------ */}}
+  {{ $notes := where .Site.RegularPages "Section" "notes" }}
+  {{ if $notes }}
+  <section class="landing-section" aria-label="{{ i18n "notes" }}">
+    <h2 class="section-label">{{ i18n "notes" }}</h2>
+    <div class="notes-stream">
+      {{ range first 3 $notes }}
+      <article class="note-card h-entry">
+        <time class="note-date dt-published" datetime="{{ .Date.Format "2006-01-02" }}">
+          {{ .Date.Format "02 Jan 2006" }}
+        </time>
+        <div class="note-body e-content">{{ .Content }}</div>
+      </article>
+      {{ end }}
+    </div>
+    <a class="see-more" href="{{ absLangURL "/notes" }}">{{ i18n "see_all_notes" }} &rarr;</a>
+  </section>
+  {{ end }}
+
+  {{/* ------------------------------------------------------------------ */}}
+  {{/* Lately                                                              */}}
+  {{/* ------------------------------------------------------------------ */}}
+  {{ with .Site.Data.lately }}
+  <section class="landing-section" aria-label="{{ i18n "landing_lately" }}">
+    <h2 class="section-label">{{ i18n "landing_lately" }}</h2>
+    <ul class="lately-list">
+
+      {{ with .book }}
+      <li class="lately-item">
+        <span class="lately-label">{{ i18n "landing_lately_book" }}</span>
+        <span class="lately-content">
+          <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
+          {{ with .author }}<span class="lately-by">by {{ . }}</span>{{ end }}
+        </span>
+      </li>
+      {{ end }}
+
+      {{ with .film }}
+      <li class="lately-item">
+        <span class="lately-label">{{ i18n "landing_lately_film" }}</span>
+        <span class="lately-content">
+          <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
+          {{ with .stars }}<span class="lately-rating" aria-label="rating">{{ . }}</span>{{ end }}
+        </span>
+      </li>
+      {{ end }}
+
+      {{ with .links }}
+        {{ range first 3 . }}
+        <li class="lately-item">
+          <span class="lately-label">{{ i18n "landing_lately_link" }}</span>
+          <span class="lately-content">
+            <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
+          </span>
+        </li>
+        {{ end }}
+      {{ end }}
+
+    </ul>
+    <a class="see-more" href="{{ absLangURL "/garden/latest-reads" }}">{{ i18n "landing_see_more" }} &rarr;</a>
+  </section>
+  {{ end }}
+
+  {{/* ------------------------------------------------------------------ */}}
+  {{/* Latest posts                                                        */}}
+  {{/* ------------------------------------------------------------------ */}}
+  {{ $posts := where .Site.RegularPages "Section" "post" }}
+  {{ if $posts }}
+  <section class="landing-section" aria-label="{{ i18n "landing_posts" }}">
+    <h2 class="section-label">{{ i18n "landing_posts" }}</h2>
+    <ul class="post-list">
+      {{ range first 3 $posts }}
+      <li class="post-item">
+        <a class="post-title" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+        <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
+          {{ .Date.Format "Jan 2006" }}
+        </time>
+      </li>
+      {{ end }}
+    </ul>
+    <a class="see-more" href="{{ absLangURL "/post" }}">{{ i18n "see_all_posts" }} &rarr;</a>
+  </section>
+  {{ end }}
+
+  {{/* ------------------------------------------------------------------ */}}
+  {{/* Featured project                                                    */}}
+  {{/* ------------------------------------------------------------------ */}}
+  {{ $project := index .Site.Data (lower .Site.Language.Lang) "featured_project" }}
+  {{ with $project }}
+  <section class="landing-section" aria-label="{{ i18n "landing_project" }}">
+    <h2 class="section-label">{{ i18n "landing_project" }}</h2>
+    <div class="project-card">
+      <a class="project-name" href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
+      <p class="project-desc">{{ .description }}</p>
+    </div>
+  </section>
+  {{ end }}
+
+</div>
+{{ end }}

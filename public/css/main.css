@@ -568,3 +568,254 @@ footer hr { display: none; } /* footer already has border-top */
   .hide-on-mobile { display: none; }
   .content-wrapper { padding: 0 var(--space-sm); }
 }
+
+/* ==========================================================================
+   Landing page — Phase 3
+   ========================================================================== */
+
+.landing {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+/* --------------------------------------------------------------------------
+   Bio card
+   -------------------------------------------------------------------------- */
+
+.bio {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-xl);
+}
+
+.bio-body { flex: 1; }
+
+.bio-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 var(--space-sm);
+  color: var(--color-heading);
+}
+
+.bio-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin: 0 0 var(--space-md);
+}
+.bio-text strong { font-weight: 700; color: var(--color-heading); }
+
+.bio-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--color-border);
+}
+
+.socials {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-md);
+}
+
+.socials li { margin: 0; }
+
+.socials a {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.socials a:hover {
+  color: var(--color-accent-h);
+  border-color: var(--color-accent-h);
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   Landing sections — shared
+   -------------------------------------------------------------------------- */
+
+.landing-section { display: flex; flex-direction: column; gap: var(--space-md); }
+
+.section-label {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin: 0;
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.see-more {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  text-decoration: none;
+  align-self: flex-start;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.see-more:hover {
+  color: var(--color-accent-h);
+  border-color: var(--color-accent-h);
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   Notes stream
+   -------------------------------------------------------------------------- */
+
+.notes-stream { display: flex; flex-direction: column; gap: var(--space-lg); }
+
+.note-card { display: flex; flex-direction: column; gap: var(--space-xs); }
+
+.note-date {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+.note-body {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text);
+}
+.note-body p { margin: 0; }
+.note-body p + p { margin-top: var(--space-sm); }
+
+/* --------------------------------------------------------------------------
+   Lately
+   -------------------------------------------------------------------------- */
+
+.lately-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.lately-item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-md);
+  margin: 0;
+}
+
+.lately-label {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  min-width: 5rem;
+  flex-shrink: 0;
+}
+
+.lately-content { font-size: 0.95rem; }
+.lately-content a { color: var(--color-text); font-weight: 400; }
+.lately-content a:hover { color: var(--color-link-h); }
+
+.lately-by {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-left: var(--space-xs);
+}
+
+.lately-rating {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  margin-left: var(--space-xs);
+  letter-spacing: -0.05em;
+}
+
+/* --------------------------------------------------------------------------
+   Latest posts
+   -------------------------------------------------------------------------- */
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.post-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin: 0;
+}
+
+.post-title {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  font-weight: 400;
+  flex: 1;
+}
+.post-title:hover { color: var(--color-link-h); }
+
+.post-date {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Featured project
+   -------------------------------------------------------------------------- */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.project-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-heading);
+}
+.project-name:hover { color: var(--color-link-h); }
+
+.project-desc {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Landing responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 550px) {
+  .landing { padding: var(--space-lg) var(--space-sm); gap: var(--space-xl); }
+
+  .bio { flex-direction: column-reverse; gap: var(--space-md); }
+  .bio-avatar { width: 72px; height: 72px; }
+
+  .post-item { flex-direction: column; gap: var(--space-xs); }
+  .lately-label { min-width: 4rem; }
+}
