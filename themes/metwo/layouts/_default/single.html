@@ -1,12 +1,12 @@
 {{ define "main" }}
-<article class="article-page{{ if .Params.simple }} article-page--simple{{ end }}">
+<article class="article-page{{ if .Params.simple }} article-page--simple{{ end }} h-entry">
 
   <header class="article-header">
-    <h1 class="article-title">{{ .Title | markdownify }}</h1>
+    <h1 class="article-title p-name">{{ .Title | markdownify }}</h1>
     {{ if not .Params.simple }}
     <div class="article-meta">
       {{ if .Params.date }}
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
+      <time class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
       {{ end }}
       <span class="article-meta-sep">&middot;</span>
       <span>{{ .WordCount }} {{ i18n "words" }} &middot; {{ .ReadingTime }} {{ i18n "minutes" }}</span>
@@ -27,9 +27,10 @@
   {{ end }}
   {{ end }}
 
-  <div class="article-body">
+  <div class="article-body e-content">
     {{ .Content }}
   </div>
+  <a class="u-url" href="{{ .Permalink }}" style="display:none;">{{ .Permalink }}</a>
 
   {{ if not .Params.simple }}
   {{ $cats := .Params.categories }}
