@@ -1,24 +1,38 @@
 {{ define "main" }}
-{{ if not .IsHome }}
-  {{ if i18n .Title }}
-    <h1>{{ i18n .Title | markdownify }}</h1>
-  {{ else }}
-    <h1>{{ .Title | markdownify }}</h1>
+<div class="list-page">
+
+  {{ if not .IsHome }}
+  <header class="list-header">
+    <h1 class="list-title">
+      {{ if i18n .Title }}{{ i18n .Title }}{{ else }}{{ .Title | markdownify }}{{ end }}
+    </h1>
+    {{ $desc_key := printf "%s_desc" .Title }}
+    {{ if i18n $desc_key }}
+    <p class="list-desc">{{ i18n $desc_key }}</p>
+    {{ else if .Description }}
+    <p class="list-desc">{{ .Description }}</p>
+    {{ end }}
+  </header>
   {{ end }}
-{{ end }}
 
-{{ .Content }}
+  {{ .Content }}
 
-<ul>
   {{ $pages := .Pages }}
   {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
-  {{ range (where $pages "Section" "!=" "") }}
-  <li>
-    <span class="date">「{{ .Date.Format "02.01.06" }}」</span>
-    <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
-    {{ if .Description }} — {{ end }}
-    <span class="desc">{{ .Description | markdownify }}</span>
-  </li>
+  {{ $pages = where $pages "Section" "!=" "" }}
+
+  {{ if $pages }}
+  <ul class="entry-list">
+    {{ range $pages }}
+    <li class="entry-item">
+      <a class="entry-title" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+      <time class="entry-date" datetime="{{ .Date.Format "2006-01-02" }}">
+        {{ .Date.Format "Jan 2006" }}
+      </time>
+    </li>
+    {{ end }}
+  </ul>
   {{ end }}
-</ul>
+
+</div>
 {{ end }}

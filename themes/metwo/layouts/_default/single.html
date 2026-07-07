@@ -1,40 +1,62 @@
 {{ define "main" }}
-<div class="article-meta">
-  <h1><span class="title">{{ .Title | markdownify }}</span></h1>
-  <div class="after-title">
+<article class="article-page{{ if .Params.simple }} article-page--simple{{ end }}">
+
+  <header class="article-header">
+    <h1 class="article-title">{{ .Title | markdownify }}</h1>
     {{ if not .Params.simple }}
-      {{ i18n "by" }} {{ with .Params.author }}<span class="author">{{ . }}</span>{{ end }}
+    <div class="article-meta">
       {{ if .Params.date }}
-        <i class="date">({{ .Date | time.Format ":date_full" }})</i>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
       {{ end }}
-      |
-      {{ .WordCount }} {{ i18n "words" }} / {{ .ReadingTime }} {{ i18n "minutes" }}
+      <span class="article-meta-sep">&middot;</span>
+      <span>{{ .WordCount }} {{ i18n "words" }} &middot; {{ .ReadingTime }} {{ i18n "minutes" }}</span>
+      {{ with .Params.author }}
+      <span class="article-meta-sep">&middot;</span>
+      <span>{{ i18n "by" }} {{ . }}</span>
+      {{ end }}
+    </div>
     {{ end }}
-  </div>
-</div>
+  </header>
 
-{{ if .Params.toc }}
+  {{ if .Params.toc }}
   {{ with .TableOfContents }}
-  <div id="table-of-contents">
-    <h2>Table of Contents</h2>
+  <nav id="table-of-contents" aria-label="table of contents">
+    <h2>Contents</h2>
     {{ . | safeHTML }}
-  </div>
+  </nav>
   {{ end }}
-{{ end }}
+  {{ end }}
 
-<main>
-  {{ .Content }}
+  <div class="article-body">
+    {{ .Content }}
+  </div>
+
   {{ if not .Params.simple }}
-  <p class="terms-single">「
-    {{ range $i := (slice "categories" "tags") }}
-      {{ with ($.Param $i) }}
-      <span>{{ i18n $i | title }}:</span>
-        {{ range $k := . }}
-          <a href="{{ absLangURL (print "/" $i "/" $k | urlize) }}">{{ $k }}</a>
+  {{ $cats := .Params.categories }}
+  {{ $tags := .Params.tags }}
+  {{ if or $cats $tags }}
+  <footer class="article-footer">
+    <div class="article-tags">
+      {{ with $cats }}
+      <span class="tag-group">
+        <span class="tag-label">{{ i18n "categories" | title }}</span>
+        {{ range . }}
+        <a class="tag" href="{{ absLangURL (print "/categories/" . | urlize) }}">{{ . }}</a>
         {{ end }}
+      </span>
       {{ end }}
-    {{ end }}
-    」</p>
+      {{ with $tags }}
+      <span class="tag-group">
+        <span class="tag-label">{{ i18n "tags" | title }}</span>
+        {{ range . }}
+        <a class="tag" href="{{ absLangURL (print "/tags/" . | urlize) }}">{{ . }}</a>
+        {{ end }}
+      </span>
+      {{ end }}
+    </div>
+  </footer>
   {{ end }}
-</main>
+  {{ end }}
+
+</article>
 {{ end }}

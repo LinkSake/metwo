@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="list-page">
+
+  <header class="list-header">
+    <h1 class="list-title">{{ i18n "notes" }}</h1>
+    <p class="list-desc">{{ i18n "notes_desc" }}</p>
+  </header>
+
+  {{ if .Pages }}
+  <div class="notes-stream notes-stream--full">
+    {{ range .Pages }}
+    <article class="note-card h-entry">
+      <time class="note-date dt-published" datetime="{{ .Date.Format "2006-01-02" }}">
+        {{ .Date.Format "02 Jan 2006" }}
+      </time>
+      <div class="note-body e-content">{{ .Content }}</div>
+      <a class="note-permalink u-url" href="{{ .RelPermalink }}" aria-label="permalink">#</a>
+    </article>
+    {{ end }}
+  </div>
+  {{ else }}
+  <p class="empty-state">No notes yet.</p>
+  {{ end }}
+
+</div>
+{{ end }}
