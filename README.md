@@ -4,7 +4,7 @@ Hello there! This is my personal website. It was made using [Hugo](https://gohug
 
 The logo/icon was made by the amazing [Horse Wizard](http://instagram.com/horse.wizard).
 
-> **Redesign in progress** on branch `redesign/posse-landing`. See [`CONTEXT.md`](CONTEXT.md) for intent and [`PLAN.md`](PLAN.md) for the full roadmap.
+> **Redesign in progress** on branch `redesign/posse-landing` — Phase 1 (custom theme) in progress. See [`CONTEXT.md`](CONTEXT.md) for intent and [`PLAN.md`](PLAN.md) for the full roadmap.
 
 ## Sections
 
@@ -50,10 +50,11 @@ Syncs the last 50 Raindrop.io bookmarks into the full garden `latest-reads` page
 ./scripts/sync-raindrop-reads.sh
 ```
 
-### `import-substack.sh` — One-time Substack migration
+### `import-substack.py` — Substack migration
 
-Imports posts from both Substacks (*tiny engines* EN, *pequeños motores* ES) into `content/*/post/` as Hugo markdown files with proper frontmatter. Idempotent — safe to re-run.
+Imports posts from both Substacks (*tiny engines* EN, *pequeños motores* ES) into `content/*/post/` as Hugo markdown files with proper frontmatter (`categories = ["Works"]`, `original_url`). Pure Python 3 stdlib — no dependencies. Idempotent via `.imported-substack-guids`.
 
 ```bash
-./scripts/import-substack.sh
+python3 scripts/import-substack.py
+python3 scripts/import-substack.py --dry-run  # preview only
 ```
