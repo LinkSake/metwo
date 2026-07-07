@@ -1,6 +1,7 @@
 baseurl = "https://luisangel.me/"
 baseURL = "https://luisangel.me/"
 enableEmoji = true
+enableRobotsTXT = true
 footnotereturnlinkcontents = "↩"
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 languageCode = "en-us"
