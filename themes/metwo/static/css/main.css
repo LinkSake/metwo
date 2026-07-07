@@ -819,3 +819,318 @@ footer hr { display: none; } /* footer already has border-top */
   .post-item { flex-direction: column; gap: var(--space-xs); }
   .lately-label { min-width: 4rem; }
 }
+
+/* ==========================================================================
+   Inner pages — Phase 4
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Shared list/single page wrapper
+   -------------------------------------------------------------------------- */
+
+.list-page,
+.article-page {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+}
+
+/* --------------------------------------------------------------------------
+   List pages (archive, categories, tags, garden, etc.)
+   -------------------------------------------------------------------------- */
+
+.list-header {
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.list-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin: 0 0 var(--space-xs);
+}
+
+.list-desc {
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.entry-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.entry-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  margin: 0;
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.entry-item:last-child { border-bottom: none; }
+
+.entry-title {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  font-weight: 400;
+  flex: 1;
+  line-height: 1.4;
+}
+.entry-title:hover { color: var(--color-link-h); text-decoration: none; }
+
+.entry-date {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.list-footer {
+  margin-top: var(--space-xl);
+  text-align: center;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+}
+
+/* --------------------------------------------------------------------------
+   Terms pages (categories, tags)
+   -------------------------------------------------------------------------- */
+
+.terms-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.terms-item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin: 0;
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.terms-item:last-child { border-bottom: none; }
+
+.terms-name {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  font-weight: 400;
+}
+.terms-name:hover { color: var(--color-link-h); }
+
+.terms-count {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+.terms-desc {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Single article page
+   -------------------------------------------------------------------------- */
+
+.article-header {
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.article-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  line-height: 1.25;
+  margin: 0 0 var(--space-sm);
+}
+
+.article-meta {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs);
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  text-align: left;
+}
+
+.article-meta-sep { color: var(--color-border); }
+
+.article-body {
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.article-body > * + * { margin-top: var(--space-md); }
+.article-body h2 { margin-top: var(--space-2xl); }
+.article-body h3, .article-body h4 { margin-top: var(--space-xl); }
+
+/* Images inside articles: allow caption via paragraph after img */
+.article-body img + em {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  text-align: center;
+  margin-top: calc(-1 * var(--space-sm));
+}
+
+.article-footer {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+}
+
+.tag-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.tag-label {
+  color: var(--color-muted);
+  margin-right: var(--space-xs);
+}
+
+.tag {
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.15em 0.5em;
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.tag:hover {
+  color: var(--color-accent-h);
+  border-color: var(--color-accent-h);
+  text-decoration: none;
+}
+
+/* Simple pages (about, garden, projects) — no header border */
+.article-page--simple .article-header {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: var(--space-lg);
+}
+
+/* --------------------------------------------------------------------------
+   Notes list (full stream on /notes page)
+   -------------------------------------------------------------------------- */
+
+.notes-stream--full {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.notes-stream--full .note-card {
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--color-border);
+}
+.notes-stream--full .note-card:last-child { border-bottom: none; }
+
+.note-permalink {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--color-border);
+  text-decoration: none;
+  margin-top: var(--space-sm);
+  display: inline-block;
+}
+.note-permalink:hover { color: var(--color-muted); }
+
+.empty-state {
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  text-align: center;
+  padding: var(--space-2xl) 0;
+}
+
+/* --------------------------------------------------------------------------
+   404
+   -------------------------------------------------------------------------- */
+
+.error-page {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-md);
+  text-align: center;
+}
+
+.error-code {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--color-border);
+  margin: 0 0 var(--space-md);
+  line-height: 1;
+}
+
+.error-msg {
+  font-size: 1rem;
+  color: var(--color-muted);
+  margin: 0 0 var(--space-lg);
+}
+
+.error-nav {
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--color-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Inner page responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 550px) {
+  .list-page,
+  .article-page {
+    padding: var(--space-lg) var(--space-sm);
+  }
+
+  .article-title { font-size: 1.35rem; }
+
+  .entry-item {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .article-tags { gap: var(--space-sm); }
+}
