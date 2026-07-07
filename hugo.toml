@@ -65,14 +65,23 @@ name = "garden"
 url = "/garden"
 weight = 4
 [[languages.en.menus.main]]
+identifier = "notes"
+name = "notes"
+url = "/notes"
+weight = 5
+[[languages.en.menus.main]]
 identifier = "about"
 name = "about"
 url = "/about"
-weight = 5
+weight = 6
 [[languages.en.menus.feed]]
 name = "rss"
 url = "/post/index.xml"
 weight = 2
+[[languages.en.menus.feed]]
+name = "notes rss"
+url = "/notes/index.xml"
+weight = 3
 [languages.es]
 contentDir = 'content/es'
 disabled = false
@@ -105,11 +114,20 @@ name = "jardin"
 url = "/garden"
 weight = 4
 [[languages.es.menus.main]]
+identifier = "notes"
+name = "notas"
+url = "/es/notes"
+weight = 5
+[[languages.es.menus.main]]
 identifier = "about"
 name = "yo"
 url = "/about"
-weight = 5
+weight = 6
 [[languages.es.menus.feed]]
 name = "rss"
 url = "/es/post/index.xml"
 weight = 2
+[[languages.es.menus.feed]]
+name = "notas rss"
+url = "/es/notes/index.xml"
+weight = 3

@@ -23,6 +23,11 @@ reports_desc: "Reviews for different kinds of media."
 Works_desc: "Posts about my published works."
 works_desc: "Posts about my published works."
 
+# Notes
+notes: "notes"
+notes_desc: "Short thoughts, links, and observations. No title required."
+see_all_notes: "see all notes"
+
 # Words
 by: "by"
 words: "words"
