@@ -17,6 +17,11 @@ All decisions resolved. See `CONTEXT.md` for full rationale.
 - [x] **0.3 — Theme strategy:** Option A — build custom theme from scratch at `/themes/metwo`.
 - [x] **0.4 — Short-form notes:** Yes. Hugo `notes` content type, ~300 words max, no title required. Syndicate to Bluesky (and Mastodon when a new instance is set up).
 
+> **Note — automating `sync-lately.sh`:** Investigate running the script on a schedule without a always-on server. Two options to evaluate later:
+> 1. **GitHub Actions scheduled workflow** (`on: schedule: cron`) — free for public repos, limited minutes for private. Would commit the updated `data/lately.yaml` back to the branch and trigger a Hugo rebuild. Simple, no infrastructure.
+> 2. **Cron on a cheap/free host** — e.g. a free-tier fly.io machine, a Raspberry Pi, or the same VM this site runs on if it has one. More flexible but more to maintain.
+> GH Actions is likely the right first answer. Revisit after the theme is done.
+
 ---
 
 ### Phase 0.5 — Data & content prep (new, before Phase 1)
