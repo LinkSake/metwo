@@ -9,6 +9,9 @@
   El pájaro herido | luis angel ortega
 </title>
 
+<link rel="preload" href="/fonts/lora.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/lora-italic.woff2" as="font" type="font/woff2" crossorigin>
+
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 <link rel="stylesheet" href="/css/main.css">
 
@@ -24,37 +27,39 @@
       
       
       
+      
         
-        <li class="pull-left ">
+        <li class="">
           <a href="https://luisangel.me/es">~/inicio</a>
         </li>
       
         
-        <li class="pull-left ">
+        <li class="">
           <a href="https://luisangel.me/es/categories/">~/escritos</a>
         </li>
       
         
-        <li class="pull-left ">
+        <li class="">
           <a href="https://luisangel.me/es/projects">~/proyectos</a>
         </li>
       
         
-        <li class="pull-left ">
+        <li class="">
           <a href="https://luisangel.me/es/garden">~/jardin</a>
         </li>
       
         
-        <li class="pull-left ">
+        <li class="">
           <a href="https://luisangel.me/es/notes">~/notas</a>
         </li>
       
         
-        <li class="pull-left ">
+        <li class="">
           <a href="https://luisangel.me/es/about">~/yo</a>
         </li>
       
 
+      
       
         <li class="pull-right hide-on-mobile">
           <a href="https://luisangel.me/es/post/index.xml">~/rss</a>
@@ -64,9 +69,64 @@
           <a href="https://luisangel.me/es/notes/index.xml">~/notas rss</a>
         </li>
       
+
+      
+      
+
+      
+      <li class="pull-right">
+        <button
+          id="theme-toggle"
+          aria-label="toggle colour theme"
+          title="toggle colour theme"
+        >~/dark</button>
+      </li>
     </ul>
   </nav>
 </header>
+
+<script>
+(function () {
+  var STORAGE_KEY = 'metwo-theme';
+  var btn = document.getElementById('theme-toggle');
+  var html = document.documentElement;
+
+  function prefersDark() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+
+  function getStored() {
+    try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
+  }
+
+  function setStored(v) {
+    try { localStorage.setItem(STORAGE_KEY, v); } catch (e) {}
+  }
+
+  function applyTheme(theme) {
+    html.setAttribute('data-theme', theme);
+    
+    btn.textContent = '~/' + (theme === 'dark' ? 'light' : 'dark');
+  }
+
+  
+  var stored = getStored();
+  var initial = stored ? stored : (prefersDark() ? 'dark' : 'light');
+  applyTheme(initial);
+
+  btn.addEventListener('click', function () {
+    var current = html.getAttribute('data-theme');
+    var next = current === 'dark' ? 'light' : 'dark';
+    setStored(next);
+    applyTheme(next);
+  });
+
+  
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+    if (!getStored()) applyTheme(e.matches ? 'dark' : 'light');
+  });
+})();
+</script>
 
     <div class="content-wrapper">
 <div class="article-meta">

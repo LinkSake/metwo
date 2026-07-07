@@ -1,47 +1,346 @@
 /* ==========================================================================
-   metwo theme — main.css
-   Phase 1: faithful port of hugo-classic + theme-override
-   Phase 2 will replace this file with design tokens + Ayu palette
+   metwo — main.css
+   Phase 2: design tokens, Lora typeface, light/dark toggle
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   Fonts — Inter (self-hosted via rsms CDN for now; Phase 2 will change this)
+   Fonts — Lora (self-hosted, variable font, covers weight 400–700)
    -------------------------------------------------------------------------- */
-@import url('https://rsms.me/inter/inter.css');
 
-html {
-  font-family: 'Inter', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/lora-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+                 U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF,
+                 U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+                 U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: 'Inter var', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  }
+
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/lora.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+                 U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F,
+                 U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+                 U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/lora-italic-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+                 U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF,
+                 U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+                 U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/lora-italic.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+                 U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F,
+                 U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+                 U+FEFF, U+FFFD;
 }
 
 /* --------------------------------------------------------------------------
-   Base / reset
+   Design tokens — Ayu Light (default)
    -------------------------------------------------------------------------- */
-*, *::before, *::after { box-sizing: border-box; }
 
-body {
-  max-width: 800px;
-  margin: auto;
-  padding: 0.2em;
-  line-height: 1.5em;
+:root {
+  /* Fonts */
+  --font-body:    'Lora', Georgia, 'Times New Roman', serif;
+  --font-ui:      -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+                  Arial, sans-serif;
+  --font-mono:    ui-monospace, 'Cascadia Code', 'JetBrains Mono',
+                  'Fira Code', Menlo, monospace;
+
+  /* Spacing */
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2.5rem;
+  --space-2xl: 4rem;
+
+  /* Layout */
+  --measure:      65ch;
+  --content-max:  800px;
+  --radius-sm:    4px;
+  --radius-md:    8px;
+
+  /* Ayu Light colours */
+  --color-bg:       #fafafa;
+  --color-surface:  #f3f4f6;
+  --color-border:   #e5e7eb;
+  --color-text:     #5c6166;
+  --color-heading:  #3d424a;
+  --color-muted:    #8a9099;
+  --color-accent:   #f2ae49;
+  --color-accent-h: #ff9940;
+  --color-link:     #f2ae49;
+  --color-link-h:   #ff9940;
+  --color-nav-bg:   #fafafa;
+  --color-nav-text: #f2ae49;
+  --color-nav-bdr:  #f2ae49;
+  --color-code-bg:  #f3f4f6;
+  --color-code-bdr: #e5e7eb;
+  --color-pre-bdr:  #f2ae49;
+  --color-quote-bdr:#d1d5db;
+  --color-quote-bg: #f9fafb;
+  --color-tr-alt:   #f3f4f6;
 }
 
-h1 {
-  line-height: 1.5em;
-  margin-top: 0.5rem;
-  margin-bottom: 0;
+/* Ayu Mirage — dark preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg:       #1f2430;
+    --color-surface:  #2d3347;
+    --color-border:   #3d4663;
+    --color-text:     #cbccc6;
+    --color-heading:  #e6e1cf;
+    --color-muted:    #707a8c;
+    --color-accent:   #ffcc66;
+    --color-accent-h: #ffd173;
+    --color-link:     #ffd173;
+    --color-link-h:   #ffcc66;
+    --color-nav-bg:   #1f2430;
+    --color-nav-text: #ffd173;
+    --color-nav-bdr:  #ffd173;
+    --color-code-bg:  #2d3347;
+    --color-code-bdr: #3d4663;
+    --color-pre-bdr:  #ffd173;
+    --color-quote-bdr:#3d4663;
+    --color-quote-bg: #252b3a;
+    --color-tr-alt:   #252b3a;
+  }
+}
+
+/* Manual overrides — applied by the theme toggle JS */
+[data-theme="light"] {
+  --color-bg:       #fafafa;
+  --color-surface:  #f3f4f6;
+  --color-border:   #e5e7eb;
+  --color-text:     #5c6166;
+  --color-heading:  #3d424a;
+  --color-muted:    #8a9099;
+  --color-accent:   #f2ae49;
+  --color-accent-h: #ff9940;
+  --color-link:     #f2ae49;
+  --color-link-h:   #ff9940;
+  --color-nav-bg:   #fafafa;
+  --color-nav-text: #f2ae49;
+  --color-nav-bdr:  #f2ae49;
+  --color-code-bg:  #f3f4f6;
+  --color-code-bdr: #e5e7eb;
+  --color-pre-bdr:  #f2ae49;
+  --color-quote-bdr:#d1d5db;
+  --color-quote-bg: #f9fafb;
+  --color-tr-alt:   #f3f4f6;
+}
+
+[data-theme="dark"] {
+  --color-bg:       #1f2430;
+  --color-surface:  #2d3347;
+  --color-border:   #3d4663;
+  --color-text:     #cbccc6;
+  --color-heading:  #e6e1cf;
+  --color-muted:    #707a8c;
+  --color-accent:   #ffcc66;
+  --color-accent-h: #ffd173;
+  --color-link:     #ffd173;
+  --color-link-h:   #ffcc66;
+  --color-nav-bg:   #1f2430;
+  --color-nav-text: #ffd173;
+  --color-nav-bdr:  #ffd173;
+  --color-code-bg:  #2d3347;
+  --color-code-bdr: #3d4663;
+  --color-pre-bdr:  #ffd173;
+  --color-quote-bdr:#3d4663;
+  --color-quote-bg: #252b3a;
+  --color-tr-alt:   #252b3a;
+}
+
+/* --------------------------------------------------------------------------
+   Reset & base
+   -------------------------------------------------------------------------- */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--space-sm);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* --------------------------------------------------------------------------
+   Typography
+   -------------------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-body);
+  color: var(--color-heading);
+  line-height: 1.3;
+  font-weight: 700;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-sm);
+}
+
+h1 { font-size: 1.75rem; margin-top: var(--space-md); }
+h2 { font-size: 1.35rem; }
+h3 { font-size: 1.15rem; }
+h4, h5, h6 { font-size: 1rem; }
+
+p {
+  margin-top: 0;
+  margin-bottom: var(--space-md);
 }
 
 a {
+  color: var(--color-link);
   text-decoration: none;
 }
 a:hover {
+  color: var(--color-link-h);
   text-decoration: underline;
 }
+
+strong, b { font-weight: 700; }
+em, i     { font-style: italic; }
+
+small, .small {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: var(--space-xl) 0;
+}
+
+/* --------------------------------------------------------------------------
+   Code & pre
+   -------------------------------------------------------------------------- */
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--color-code-bg);
+  border: 1px solid var(--color-code-bdr);
+  border-radius: var(--radius-sm);
+  padding: 0.1em 0.35em;
+}
+
+pre {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  background: var(--color-code-bg);
+  border: 1px solid var(--color-pre-bdr);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  overflow-x: auto;
+  margin: var(--space-lg) 0;
+}
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* Poetry pre blocks — no code styling, just preserve whitespace */
+pre:not([class]) {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background: none;
+  border: none;
+  border-left: 3px solid var(--color-border);
+  border-radius: 0;
+  padding: var(--space-sm) var(--space-md);
+  white-space: pre-wrap;
+}
+
+/* --------------------------------------------------------------------------
+   Blockquote
+   -------------------------------------------------------------------------- */
+
+blockquote {
+  background: var(--color-quote-bg);
+  border-left: 4px solid var(--color-quote-bdr);
+  margin: var(--space-lg) 0;
+  padding: var(--space-sm) var(--space-md);
+  color: var(--color-muted);
+  font-style: italic;
+}
+blockquote p:last-child { margin-bottom: 0; }
+
+/* --------------------------------------------------------------------------
+   Lists
+   -------------------------------------------------------------------------- */
+
+ul, ol {
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+li {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+/* --------------------------------------------------------------------------
+   Tables
+   -------------------------------------------------------------------------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-lg) 0;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+}
+th, td {
+  padding: var(--space-sm) var(--space-md);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+thead th {
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-border);
+  color: var(--color-heading);
+}
+tr:nth-child(even) { background: var(--color-tr-alt); }
+
+/* --------------------------------------------------------------------------
+   Images
+   -------------------------------------------------------------------------- */
 
 img, iframe, video {
   max-width: 100%;
@@ -51,203 +350,221 @@ img, iframe, video {
   margin-right: auto;
 }
 
-/* --------------------------------------------------------------------------
-   Header / nav
-   -------------------------------------------------------------------------- */
-header {
-  position: relative;
-  width: 100%;
-  height: 1.75rem;
-  font-size: 1rem;
-}
-header ul, header ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-header nav { padding: 0 0.5rem; }
-header a {
-  color: #fff;
-  line-height: 1.75rem;
-  padding: 0 0.5rem;
-}
-header a:hover, header .current a { color: #fff; }
-
-.pull-left  { float: left; }
-.pull-right { float: right; }
-
-.menu li { display: inline-block; }
-
-/* --------------------------------------------------------------------------
-   Content
-   -------------------------------------------------------------------------- */
-.content-wrapper {
-  padding: 0 12px;
-  min-height: 85vh;
-}
-
-main {
-  hyphens: auto;
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.7em;
-  display: block;
-  font-size: 1.1em;
-}
-main a { font-weight: bold; }
-
-.article-meta { text-align: center; }
-.article-meta .after-title { margin-bottom: 0.5rem; }
-.title { font-size: 1.1em; }
-
-/* --------------------------------------------------------------------------
-   Typography helpers
-   -------------------------------------------------------------------------- */
-blockquote {
-  border-left: 5px solid #ccc;
-  padding: 3px 1em;
-}
-
-pre {
-  padding: 1em;
-  overflow-x: auto;
-}
-pre code { background: none; }
-
-code {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-  font-size: 85%;
-}
-
-li {
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
-}
-
-/* --------------------------------------------------------------------------
-   Lists / terms
-   -------------------------------------------------------------------------- */
-.terms { font-size: 0.9em; }
-.terms-single {
-  font-size: 0.9em;
-  text-align: center;
-}
-.terms-single span:nth-of-type(2)::before { content: "//"; }
-
-/* --------------------------------------------------------------------------
-   Taxonomy & archive
-   -------------------------------------------------------------------------- */
-.article-meta, .menu a {
-  text-decoration: none;
-  padding: 5px;
-  border-radius: 5px;
-  border-style: dotted;
-  border-width: 1px;
-  margin-bottom: 20px;
-}
-.menu, .article-meta, footer { text-align: center; }
-footer { font-size: 90%; }
-footer a { text-decoration: none; }
-
-/* --------------------------------------------------------------------------
-   Images
-   -------------------------------------------------------------------------- */
 #avatar {
   min-width: 40px;
-  min-height: 40px;
-  max-width: 204px;
-  max-height: 204px;
+  max-width: 180px;
   float: right;
-  padding: 10px;
-  display: block;
+  padding: var(--space-sm);
+  border-radius: var(--radius-md);
 }
 #gala {
   min-width: 40px;
-  min-height: 40px;
-  max-width: 204px;
-  max-height: 204px;
+  max-width: 180px;
   float: left;
-  padding: 10px;
-  display: block;
-  margin-bottom: 2rem;
+  padding: var(--space-sm);
+  margin-bottom: var(--space-lg);
 }
+
+/* --------------------------------------------------------------------------
+   Header / nav
+   -------------------------------------------------------------------------- */
+
+header {
+  width: 100%;
+  background: var(--color-nav-bg);
+  border-bottom: 2px dotted var(--color-nav-bdr);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+header nav ul,
+header nav ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0 var(--space-sm);
+  gap: 0;
+  min-height: 1.75rem;
+}
+
+header nav li { display: flex; align-items: center; }
+
+header nav a,
+header nav button {
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  color: var(--color-nav-text);
+  text-decoration: none;
+  line-height: 1.75rem;
+  padding: 0 var(--space-sm);
+  white-space: nowrap;
+}
+header nav a:hover,
+header nav button:hover {
+  color: var(--color-accent-h);
+  text-decoration: none;
+}
+
+header nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 var(--space-sm);
+}
+
+.pull-left  { margin-right: auto; }
+.pull-right { margin-left: auto; }
+
+/* keep the nav-right items on the right without pushing earlier items */
+li.pull-right { margin-left: 0; }
+li.pull-right ~ li.pull-right { margin-left: 0; }
+
+/* Language + theme controls — right side */
+.nav-controls {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Content wrapper
+   -------------------------------------------------------------------------- */
+
+.content-wrapper {
+  padding: 0 var(--space-md);
+  min-height: 85vh;
+}
+
+/* --------------------------------------------------------------------------
+   Prose / article body
+   -------------------------------------------------------------------------- */
+
+main {
+  max-width: var(--measure);
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  hyphens: auto;
+}
+main a { font-weight: 600; }
+
+/* --------------------------------------------------------------------------
+   Article meta (single pages)
+   -------------------------------------------------------------------------- */
+
+.article-meta {
+  text-align: center;
+  font-family: var(--font-ui);
+  margin-bottom: var(--space-lg);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  border: 1px dotted var(--color-border);
+}
+.article-meta .title {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+.article-meta .after-title {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-top: var(--space-xs);
+}
+
+/* --------------------------------------------------------------------------
+   Terms / taxonomy
+   -------------------------------------------------------------------------- */
+
+.terms      { font-size: 0.9rem; }
+.terms-single {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  text-align: center;
+  margin-top: var(--space-xl);
+}
+.terms-single span:nth-of-type(2)::before { content: " // "; }
+
+/* --------------------------------------------------------------------------
+   Archive lists
+   -------------------------------------------------------------------------- */
+
+.menu, .article-meta-nav, footer { text-align: center; }
+
+ul.archive-list { list-style: none; padding: 0; }
+ul.archive-list li { margin: var(--space-sm) 0; }
+
+.date {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+.desc {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+footer {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-lg) var(--space-md);
+  margin-top: var(--space-xl);
+  text-align: center;
+}
+footer a {
+  color: var(--color-muted);
+  text-decoration: none;
+}
+footer a:hover { color: var(--color-link-h); }
+footer hr { display: none; } /* footer already has border-top */
 
 /* --------------------------------------------------------------------------
    Table of Contents
    -------------------------------------------------------------------------- */
+
 #TableOfContents, #TOC {
-  border: 1px solid #eee;
-  border-radius: 5px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.9rem;
+  font-family: var(--font-ui);
+  margin: var(--space-lg) 0;
 }
+
 @media screen and (min-width: 768px) {
   #table-of-contents {
     position: fixed;
     top: 50%;
-    right: 15px;
+    right: 1rem;
     transform: translateY(-50%);
-    background-color: #f0f0f0;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    width: 250px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    width: 220px;
     max-height: 70vh;
     overflow-y: auto;
+    font-size: 0.85rem;
+    font-family: var(--font-ui);
   }
-}
-
-/* --------------------------------------------------------------------------
-   Tables
-   -------------------------------------------------------------------------- */
-table {
-  margin: auto;
-  border-top: 1px solid #666;
-  border-bottom: 1px solid #666;
-}
-table thead th { border-bottom: 1px solid #ddd; }
-th, td { padding: 5px; }
-
-/* --------------------------------------------------------------------------
-   Colour schemes — Ayu Light (light) + Ayu Mirage (dark)
-   Phase 2 will convert these to CSS custom properties with a theme toggle.
-   -------------------------------------------------------------------------- */
-
-/* --- Light: Ayu Light --- */
-@media (prefers-color-scheme: light) {
-  body        { background-color: #fafafa; color: #5c6166; }
-  a           { color: #f2ae49; }
-  a:hover     { color: #ff9940; }
-  blockquote  { background: #f8f9fa; }
-  pre         { border: 2px solid #f2ae49; }
-  tr:nth-child(even) { background: #eee; }
-
-  header      { background: #fafafa; border-bottom: 2px dotted #f2ae49; }
-  header a    { color: #f2ae49; }
-  header a:hover { color: #ff9940; }
-
-  .article-meta,
-  .menu a     { background: #fafafa; color: #5c6166; }
-}
-
-/* --- Dark: Ayu Mirage --- */
-@media (prefers-color-scheme: dark) {
-  body        { background-color: #1f2430; color: #cbccc6; }
-  a           { color: #ffd173; }
-  a:hover     { color: #ffcc66; }
-  blockquote  { background: #1f2430; }
-  pre         { border: 2px solid #ffd173; }
-  tr:nth-child(even) { background: #2d3346; }
-
-  header      { background: #1f2430; border-bottom: 2px dotted #ffd173; }
-  header a    { color: #ffd173; }
-
-  .article-meta,
-  .menu a     { background: #1f2430; color: #cbccc6; }
 }
 
 /* --------------------------------------------------------------------------
    Responsive
    -------------------------------------------------------------------------- */
+
 @media (max-width: 550px) {
-  h1 { font-size: 3em; }
+  h1 { font-size: 1.5rem; }
   .hide-on-mobile { display: none; }
+  .content-wrapper { padding: 0 var(--space-sm); }
 }

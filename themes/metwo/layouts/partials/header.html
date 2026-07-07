@@ -1,20 +1,81 @@
 <header>
   <nav>
     <ul>
+      {{/* Left-side main nav links */}}
       {{ $title   := lower .Title }}
       {{ $section := lower .Section }}
       {{ range .Site.Menus.main }}
         {{ $name := lower .Name }}
-        <li class="pull-left {{ if eq $name $title }}hide-on-mobile{{ else if eq $section $name }}current{{ else if eq $title (pluralize $name) }}current{{ end }}">
+        <li class="{{ if eq $name $title }}hide-on-mobile{{ else if eq $section $name }}current{{ else if eq $title (pluralize $name) }}current{{ end }}">
           <a href="{{ absLangURL .URL }}">~/{{ lower .Name }}</a>
         </li>
       {{ end }}
 
+      {{/* Right-side controls: feed links, language switcher, theme toggle */}}
       {{ range .Site.Menus.feed }}
         <li class="pull-right hide-on-mobile">
           <a href="{{ absLangURL .URL }}">~/{{ lower .Name }}</a>
         </li>
       {{ end }}
+
+      {{/* Language switcher — links to translated versions (excludes current language) */}}
+      {{ range .Translations }}
+        <li class="pull-right">
+          <a href="{{ .Permalink }}">~/{{ lower .Language.LanguageName }}</a>
+        </li>
+      {{ end }}
+
+      {{/* Theme toggle — label shows where you'll go, JS handles the rest */}}
+      <li class="pull-right">
+        <button
+          id="theme-toggle"
+          aria-label="toggle colour theme"
+          title="toggle colour theme"
+        >~/dark</button>
+      </li>
     </ul>
   </nav>
 </header>
+
+<script>
+(function () {
+  var STORAGE_KEY = 'metwo-theme';
+  var btn = document.getElementById('theme-toggle');
+  var html = document.documentElement;
+
+  function prefersDark() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+
+  function getStored() {
+    try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
+  }
+
+  function setStored(v) {
+    try { localStorage.setItem(STORAGE_KEY, v); } catch (e) {}
+  }
+
+  function applyTheme(theme) {
+    html.setAttribute('data-theme', theme);
+    // Label shows the opposite (where you'll go on next click)
+    btn.textContent = '~/' + (theme === 'dark' ? 'light' : 'dark');
+  }
+
+  // On load: stored preference wins, then OS preference
+  var stored = getStored();
+  var initial = stored ? stored : (prefersDark() ? 'dark' : 'light');
+  applyTheme(initial);
+
+  btn.addEventListener('click', function () {
+    var current = html.getAttribute('data-theme');
+    var next = current === 'dark' ? 'light' : 'dark';
+    setStored(next);
+    applyTheme(next);
+  });
+
+  // Keep in sync if OS preference changes while the page is open
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+    if (!getStored()) applyTheme(e.matches ? 'dark' : 'light');
+  });
+})();
+</script>
