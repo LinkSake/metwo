@@ -4,86 +4,73 @@
 
 **Luis Angel Ortega** — Mexican developer, writer, and poet from Chihuahua. Active on Mastodon (`@link@vmst.io`), Bluesky (`@linksake.bsky.social`), and Instagram (`@linksake`). Prefers personal, independent web over social media platforms.
 
-## The site today
+## The site now
 
-- **Stack:** Hugo, `hugo-classic` theme (single custom theme in `/themes/hugo-classic`), bilingual EN/ES.
+- **Stack:** Hugo, custom theme `themes/metwo`, bilingual EN/ES.
 - **URL:** `luisangel.me`
-- **Content sections:**
-  - **Writings** (blogposts, articles, reports, works)
-  - **Archive** — flat list of all posts
-  - **Projects**
-  - **Garden** — digital garden, includes a `latest-reads` file synced from Raindrop.io
-  - **About**
-- **Existing automations:** `scripts/sync-raindrop-reads.sh` pulls the last 50 bookmarks from Raindrop.io and writes them to both EN and ES garden files, and also injects a preview into `_index.md`.
-- **Current landing page (`content/en/_index.md`):** A welcome header, a bullet-list site map, a "currently" section (reading/watching/playing), a latest reads preview, and a latest posts preview. Functional but navigation-heavy, feels more like a directory than a front door.
+- **Content sections:** Writings (blogposts, articles, reports, works), Notes, Projects, Garden, About.
+- **Automations:** `sync-lately.sh` (GoodReads + Letterboxd + Raindrop → `data/lately.yaml`), `sync-raindrop-reads.sh` (full reads list to garden pages).
 
 ## The intent
 
-Refresh the landing page to act as a **presentation card** — the page should answer "who is this person and what are they up to" at a glance, before the visitor decides where to go next. This aligns with the **POSSE principle** (Publish on your Own Site, Syndicate Elsewhere): the homepage becomes the canonical hub of Luis's online identity.
+Refresh the landing page to act as a **presentation card** — the page should answer "who is this person and what are they up to" at a glance. This aligns with the **POSSE principle** (Publish on your Own Site, Syndicate Elsewhere): the homepage becomes the canonical hub of Luis's online identity.
 
-**POSSE reference:** https://indieweb.org/POSSE
+Reference: https://indieweb.org/POSSE
 
 ## Inspirational sites
 
-Sites Luis likes for **structure and idea** (not necessarily aesthetics):
+Sites Luis likes for structure and idea (not aesthetics):
 
 | Site | What's notable |
 |---|---|
-| [macwright.com](https://macwright.com) | Short bio + recent items (posts, notes, projects) in a clean grid. Developer/writer hybrid model. |
-| [jamesg.blog](https://jamesg.blog) | IndieWeb-native. Streams all content types (posts, bookmarks, replies, likes) from a single owned source. |
-| [paco.me](https://paco.me) | Polished card feel. Minimal bio, strong typographic hierarchy, links to things he's made. |
-| [leerob.com](https://leerob.com) | Bio-first. The nav IS the taxonomy. Fast, no fluff. |
-| [notesbylex.com](https://notesbylex.com) | Personal and warm. Good example of making a site feel like a real person, not a portfolio. |
+| [macwright.com](https://macwright.com) | Short bio + recent items in a clean layout. Developer/writer hybrid model. |
+| [jamesg.blog](https://jamesg.blog) | IndieWeb-native. Streams all content types from one owned source. |
+| [paco.me](https://paco.me) | Polished card feel. Minimal bio, strong typographic hierarchy. |
+| [leerob.com](https://leerob.com) | Bio-first. The nav is the taxonomy. Fast, no fluff. |
+| [notesbylex.com](https://notesbylex.com) | Personal and warm. Feels like a real person, not a portfolio. |
 
-Layout inspiration specifically from **paco.me** and **jamesg.blog**: bio card at top, then named sections below as compact lists with "see more" links.
+Layout inspiration specifically from paco.me and jamesg.blog: bio card at top, named sections below as compact lists with "see more" links.
 
-## Three common threads identified
+## Three common threads
 
-1. **One paragraph that says who you are** — not deferred to an /about page, present on the landing itself.
-2. **A unified stream or sections for all content types** — posts, notes, projects, reads — surfaced on the front page. Reflects POSSE's "own your stuff" idea.
-3. **No hero, no fold** — everything meaningful is immediately visible or one obvious click away. No marketing-style above-the-fold sections.
+1. One paragraph that says who you are — on the landing itself, not deferred to /about.
+2. A unified set of sections for all content types — posts, notes, projects, reads — surfaced on the front page.
+3. No hero, no fold — everything meaningful is immediately visible or one click away.
 
 ## What has been built (branch: `redesign/posse-landing`)
 
 | Task | Status | Notes |
 |---|---|---|
-| Phase 0 decisions | ✅ Done | See below |
-| `scripts/sync-lately.sh` | ✅ Done | GoodReads + Letterboxd + Raindrop → `data/lately.yaml` |
-| `data/lately.yaml` | ✅ Done | Auto-generated, committed as seed |
-| `archetypes/notes.md` | ✅ Done | Minimal frontmatter, no title |
-| `content/*/notes/` + `_index.md` | ✅ Done | EN + ES |
-| Notes menus + RSS feeds | ✅ Done | `hugo.toml` updated |
-| Notes i18n strings | ✅ Done | `en.yaml` + `es.yaml` |
-| `scripts/import-substack.py` | ✅ Done | 38 posts imported (19 EN + 19 ES), idempotent via `.imported-substack-guids` |
-| Custom theme `/themes/metwo` | 🚧 Next | Phase 1 |
-
-## What already maps well to the new direction
-
-- The "currently" section (reading/watching/playing) is exactly the kind of personal signal that makes a landing page feel alive — merging into automated "Lately" section.
-- `latest-reads` (Raindrop sync) is a POSSE-friendly data stream — surface it more prominently.
-- `latest posts` preview already exists — needs better visual treatment, not removal.
-- The one-paragraph bio in `_index.md` is solid copy; refine, don't rewrite.
-- Bilingual support (EN/ES) must be preserved in any redesign.
+| Phase 0 decisions | Done | See below |
+| `scripts/sync-lately.sh` | Done | GoodReads + Letterboxd + Raindrop → `data/lately.yaml` |
+| `scripts/sync-raindrop-reads.sh` | Done (pre-existing) | Full reads list to garden pages |
+| `archetypes/notes.md` | Done | Minimal frontmatter, no title |
+| `content/*/notes/` + `_index.md` | Done | EN + ES |
+| Notes menus + RSS feeds | Done | `hugo.toml` updated |
+| Notes i18n strings | Done | `en.yaml` + `es.yaml` |
+| `scripts/import-substack.py` | Done | 38 posts imported (19 EN + 19 ES), idempotent via `.imported-substack-guids` |
+| Custom theme `/themes/metwo` | Done | Phase 1 complete — 106 pages, 0 build errors |
+| Typography + design tokens | Next | Phase 2 |
 
 ## External data sources (all verified)
 
 | Source | Feed URL | Data available |
 |---|---|---|
-| GoodReads | `https://www.goodreads.com/review/list_rss/76567849?shelf=currently-reading` | Title, author, cover image |
-| Letterboxd | `https://letterboxd.com/linksake/rss/` | Film title, year, rating, watched date, poster |
-| Raindrop.io | (existing script, uses API token) | Link title, URL, date |
-| Substack EN | `https://linksake.substack.com/feed` | *tiny engines* — poetry & short stories |
-| Substack ES | `https://luisangelortega.substack.com/feed` | *pequeños motores* — poetry & short stories |
+| GoodReads | `https://www.goodreads.com/review/list_rss/76567849?shelf=currently-reading` | Title, author |
+| Letterboxd | `https://letterboxd.com/linksake/rss/` | Film title, year, rating, watched date |
+| Raindrop.io | API (token in `.env`) | Link title, URL, date |
+| Substack EN | `https://linksake.substack.com/feed` | *tiny engines* — poetry and short stories |
+| Substack ES | `https://luisangelortega.substack.com/feed` | *pequeños motores* — poetry and short stories |
 
 ## Social presences
 
-| Platform | Handle/URL | POSSE strategy |
+| Platform | Handle | POSSE strategy |
 |---|---|---|
-| Mastodon | `@link@vmst.io` | Cross-post notes; add `rel="me"` for identity verification |
-| Bluesky | `@linksake.bsky.social` | Cross-post notes via AT Protocol CLI |
-| Instagram | `@linksake` | Social link only — no public RSS/API; full POSSE would require major workflow shift |
-| Substack EN | `linksake.substack.com` (*tiny engines*) | Migrate existing posts to site; write on site first going forward, cross-post to Substack |
-| Substack ES | `luisangelortega.substack.com` (*pequeños motores*) | Same as above |
+| Mastodon | `@link@vmst.io` | Cross-post notes; `rel="me"` in `<head>` (done in Phase 1) |
+| Bluesky | `@linksake.bsky.social` | Cross-post notes via AT Protocol script (Phase 5) |
+| Instagram | `@linksake` | Social link only — no public RSS/API |
+| Substack EN | `linksake.substack.com` | Write on site first, cross-post to Substack |
+| Substack ES | `luisangelortega.substack.com` | Same |
 
 ## Phase 0 decisions (resolved)
 
@@ -97,39 +84,36 @@ Layout inspiration specifically from **paco.me** and **jamesg.blog**: bio card a
 
 ### 0.2 — Content on the landing
 
-All sections show **2–3 items max + a "see more" link**. The page is alive without being a wall.
-
-Final landing page hierarchy:
+All sections show 2–3 items max + a "see more" link.
 
 ```
-[ Bio + social links ]     ← primary card; always visible; the handshake
-[ Latest notes ]           ← short-form (~300 words max), newest first
-[ Lately ]                 ← books (GoodReads) + films (Letterboxd) + links (Raindrop); no gaming (not automatable)
-[ Latest posts ]           ← 3 most recent writings; title + date only
-[ Featured project ]       ← one highlighted project
+[ Bio + social links ]     primary card; the handshake
+[ Latest notes ]           short-form (~300 words max), newest first
+[ Lately ]                 book (GoodReads) + film (Letterboxd) + links (Raindrop)
+[ Latest posts ]           3 most recent writings; title + date only
+[ Featured project ]       one highlighted project
 ```
 
 ### 0.3 — Theme strategy
-**Option A: Build custom theme from scratch** at `/themes/metwo`. Clean break, full control, no inherited cruft from `hugo-classic`.
+Build custom theme from scratch at `/themes/metwo`. Done — hugo-classic submodule removed.
 
 ### 0.4 — Short-form notes
-**Yes.** A `notes` content type will be added. Max ~300 words — anything without a title that doesn't warrant a full post. Syndicate to Bluesky (and Mastodon when a new instance is chosen). This fills the Twitter-shaped hole without depending on any platform.
+Added as `notes` content type. Max ~300 words, no title required. Syndicate to Bluesky (Phase 5).
+
+## Theme architecture (`/themes/metwo`)
+
+Hugo `baseof.html` block pattern. Partials: `head.html` (meta, RSS, `rel="me"`), `header.html` (nav), `footer.html`, `foot_custom.html` (image-centering script). Page templates all use `{{ define "main" }}`. Single CSS file at `static/css/main.css` — Ayu Light and Ayu Mirage via `prefers-color-scheme`. Phase 2 will replace the flat CSS with custom properties and add the manual toggle.
 
 ## Notes content type
 
-Added as a first-class Hugo content type in `content/en/notes/` and `content/es/notes/`. Archetype at `archetypes/notes.md` — date-only frontmatter, no title field. Menu weight 5 in both languages, dedicated RSS feeds at `/notes/index.xml` and `/es/notes/index.xml`. i18n keys: `notes`, `notes_desc`, `see_all_notes`.
+First-class Hugo content type in `content/en/notes/` and `content/es/notes/`. Archetype at `archetypes/notes.md` — date-only frontmatter, no title. Menu weight 5 in both languages. RSS feeds at `/notes/index.xml` and `/es/notes/index.xml`.
 
-To create a new note:
 ```bash
 hugo new notes/$(date +%Y-%m-%d)-slug.md
 ```
 
 ## Substack migration
 
-Done. `scripts/import-substack.py` — pure Python 3 stdlib, no external dependencies. Handles poetry `<pre>` blocks, extracts original S3 image URLs from Substack CDN wrappers, strips subscribe widgets and share buttons, converts all inline formatting. Idempotent via `.imported-substack-guids`. Re-run as you publish new pieces to Substack.
+`scripts/import-substack.py` — pure Python 3 stdlib, no external dependencies. Converts Substack HTML to Hugo markdown: preserves poetry `<pre>` blocks, extracts original S3 image URLs, strips subscribe widgets and share buttons. Idempotent via `.imported-substack-guids`. Re-run after publishing new pieces to Substack.
 
 Going forward: write on the site first (`categories = ["Works"]`), then cross-post to Substack.
-
-## Theme architecture (Phase 1 target)
-
-Replacing `hugo-classic` (git submodule, empty in CI) with a custom theme at `/themes/metwo`. Using Hugo's `baseof.html` block pattern — cleaner than the current 

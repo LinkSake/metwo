@@ -1,26 +1,39 @@
 # luisangel.me
 
-Hello there! This is my personal website. It was made using [Hugo](https://gohugo.io/) with a custom theme (`themes/metwo`), bilingual in English and Spanish.
+Personal website of Luis Angel Ortega — developer, writer, and poet from Chihuahua, Mexico. Built with [Hugo](https://gohugo.io/), custom theme (`themes/metwo`), bilingual English and Spanish.
 
-The logo/icon was made by the amazing [Horse Wizard](http://instagram.com/horse.wizard).
+The logo/icon was made by [Horse Wizard](http://instagram.com/horse.wizard).
 
-> **Redesign in progress** on branch `redesign/posse-landing` — Phase 1 (custom theme) in progress. See [`CONTEXT.md`](CONTEXT.md) for intent and [`PLAN.md`](PLAN.md) for the full roadmap.
+> **Redesign in progress** on branch `redesign/posse-landing` — Phase 2 (typography and design tokens) next. See [`CONTEXT.md`](CONTEXT.md) for intent and [`PLAN.md`](PLAN.md) for the full roadmap.
 
 ## Sections
 
-- [**Writings**](https://luisangel.me/categories): Umbrella category for all written content.
+- [**Writings**](https://luisangel.me/categories): All written content.
   - **Blogposts** — thoughts, rants, personal style posts
   - **Articles** — guides, essays, more serious posts
   - **Reports** — reviews for different kinds of media
   - **Works** — published literary works (poetry, short stories)
 - [**Notes**](https://luisangel.me/notes): Short-form, untitled posts (~300 words max). The POSSE-native microblog.
-- [**Projects**](https://luisangel.me/projects): A listing of all projects.
+- [**Projects**](https://luisangel.me/projects): All projects.
 - [**Garden**](https://luisangel.me/garden): Digital garden — links, reads, notes.
 - [**About**](https://luisangel.me/about): About me.
 
 ## Languages
 
 Most content is available in [English](https://luisangel.me/en) and [Spanish](https://luisangel.me/es).
+
+## Theme
+
+Custom Hugo theme at `themes/metwo`. No external submodule dependency. Structure:
+
+```
+themes/metwo/
+  layouts/_default/   baseof.html, single.html, list.html, terms.html, rss.xml
+  layouts/partials/   head.html, header.html, footer.html, foot_custom.html
+  layouts/            404.html
+  static/css/         main.css
+  theme.toml
+```
 
 ## Scripts
 
@@ -34,9 +47,9 @@ cp .env.example .env
 ### `sync-lately.sh` — Lately section data
 
 Fetches the landing page "Lately" data and writes `data/lately.yaml`:
-- 📖 Currently-reading book from GoodReads (public RSS — no credentials needed)
-- 🎬 Most recently watched film from Letterboxd (public RSS — no credentials needed)
-- 🔗 Last 5 bookmarks from Raindrop.io (requires `.env`)
+- Book: currently-reading shelf from GoodReads (public RSS, no credentials needed)
+- Film: most recently watched from Letterboxd (public RSS, no credentials needed)
+- Links: last 5 bookmarks from Raindrop.io (requires `.env`)
 
 ```bash
 ./scripts/sync-lately.sh
