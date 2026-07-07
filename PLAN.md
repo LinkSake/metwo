@@ -10,78 +10,79 @@ Replace the current blog-centric homepage with a presentation card landing page 
 
 ### Phase 0 — Decide before touching code ✅
 
-- [x] **0.1** Ayu Light / Ayu Mirage palette / system default + toggle / Lora serif body + system-ui UI / airy density
-- [x] **0.2** Landing hierarchy: Bio + socials → Notes → Lately → Latest posts → Featured project. 2–3 items per section + "see more" link.
-- [x] **0.3** Custom theme from scratch at `/themes/metwo`.
-- [x] **0.4** `notes` content type, ~300 words max, no title. Syndicate to Bluesky (Phase 5).
+- [x] Ayu Light / Ayu Mirage / system default + toggle / Lora serif body + system-ui UI / airy density
+- [x] Landing: Bio + socials → Notes → Lately → Latest posts → Featured project. 2–3 items + "see more".
+- [x] Custom theme from scratch at `/themes/metwo`.
+- [x] `notes` content type, ~300 words max, no title. Syndicate to Bluesky (Phase 5).
 
-> **Note — automating `sync-lately.sh`:** GH Actions scheduled workflow (`on: schedule: cron`) is the right first answer — free for public repos, commits updated `data/lately.yaml` back and triggers a rebuild. Revisit after the theme is done.
+> **Note — automating `sync-lately.sh`:** GH Actions scheduled workflow is the right first answer. Revisit after the theme is done.
 
 ---
 
 ### Phase 0.5 — Data & content prep ✅
 
-- [x] **0.5.1** `scripts/import-substack.py` — 38 posts imported (19 EN + 19 ES). Idempotent via `.imported-substack-guids`.
-- [x] **0.5.2** `scripts/sync-lately.sh` — GoodReads + Letterboxd + Raindrop → `data/lately.yaml`.
-- [x] **0.5.3** Notes content type — archetype, `_index.md` EN + ES, menus, RSS feeds, i18n strings.
+- [x] `scripts/import-substack.py` — 38 posts (19 EN + 19 ES). Idempotent via `.imported-substack-guids`.
+- [x] `scripts/sync-lately.sh` — GoodReads + Letterboxd + Raindrop → `data/lately.yaml`.
+- [x] Notes content type — archetype, sections EN + ES, menus, RSS feeds, i18n strings.
 
 ---
 
 ### Phase 1 — Theme scaffold ✅
 
-Custom theme `/themes/metwo` built from scratch. `hugo-classic` submodule removed.
-
-- [x] `baseof.html` block pattern with proper partials (`head.html`, `header.html`, `footer.html`, `foot_custom.html`)
-- [x] All page templates using `{{ define "main" }}` blocks
-- [x] CSS consolidated into `themes/metwo/static/css/main.css`
-- [x] `hugo.toml`: `theme = "metwo"`, `custom_css` param removed
-- [x] Root `layouts/` and `static/css/theme-override.css` deleted
-- [x] Build: 106 pages EN + ES, 0 errors
+- [x] `baseof.html` block pattern, proper partials, all page templates via `{{ define "main" }}`.
+- [x] CSS consolidated into `themes/metwo/static/css/main.css`. Root `layouts/` and old CSS removed.
+- [x] `hugo.toml`: `theme = "metwo"`, submodule removed. Build: 106 pages, 0 errors.
 
 ---
 
 ### Phase 2 — Typography & design tokens ✅
 
-- [x] **2.1** Lora (variable font, self-hosted) — 4 WOFF2 files (normal + italic, latin + latin-ext, ~118KB). Preload hints in `<head>`.
-- [x] **2.2** CSS custom properties: full token set (`--color-*`, `--font-*`, `--space-*`, `--measure`, `--radius-*`). Ayu Light on `:root`, Ayu Mirage under `prefers-color-scheme: dark` and `[data-theme="dark"]`. `[data-theme="light"]` override for the toggle.
-- [x] **2.3** Typographic baseline: body 1rem/1.65, prose 1.05rem/1.75/65ch, heading scale 1rem–1.75rem.
-- [x] **2.4** Base element styles: headings, links, code, pre, blockquote, lists, tables, images. Poetry `<pre>` blocks get serif font + left border rule.
-- [x] **2.5** Theme toggle (`~/dark` / `~/light`) + language switcher (`~/español` / `~/english`) in the nav. Toggle reads `localStorage`, falls back to `prefers-color-scheme`, stays in sync with OS changes.
+- [x] Lora self-hosted variable WOFF2 (4 files, latin + latin-ext, ~118KB). Preload hints in `<head>`.
+- [x] CSS custom properties: full Ayu Light / Mirage token sets on `:root` / `[data-theme]` / `prefers-color-scheme`.
+- [x] Typographic baseline: body 1rem/1.65, prose 1.05rem/1.75/65ch, heading scale.
+- [x] Base element styles: headings, links, code, pre, blockquote, lists, tables. Poetry `<pre>` with left border.
+- [x] Theme toggle (`~/dark` / `~/light`) + language switcher (`~/español` / `~/english`) in nav.
 
 ---
 
-### Phase 3 — Landing page layout ← current
+### Phase 3 — Landing page layout ✅
 
-The core of the redesign. Inspired by paco.me (card feel) and jamesg.blog (multi-stream).
-
-- [ ] **3.1 — Bio card**
-  Name, one-paragraph description, avatar, social links (email, Mastodon, Bluesky, Instagram, Substack EN/ES). Handshake, not resume. `h-card` microformat markup.
-
-- [ ] **3.2 — Latest notes**
-  Short-form stream from `content/*/notes/`. Newest first, date + body, no title. Link to `/notes` for full list.
-
-- [ ] **3.3 — Lately**
-  Driven by `data/lately.yaml`. Three rows: book, film, links (last 3). "See more" link to `/garden/latest-reads`.
-
-- [ ] **3.4 — Latest posts**
-  3 most recent posts. Title + date only, no excerpts. Link to `/post` archive.
-
-- [ ] **3.5 — Featured project**
-  One highlighted project, manually curated in `data/featured-project.yaml`. Name, one-line description, link.
-
-- [ ] **3.6** Wire up EN and ES versions. All UI strings through `i18n/en.yaml` and `i18n/es.yaml`.
+- [x] `themes/metwo/layouts/index.html` — dedicated home template.
+- [x] Bio card: name, bio text, avatar, 6 social links, `h-card` microformat.
+- [x] Latest notes section (renders when notes exist).
+- [x] Lately: book + film from `data/lately.yaml`; links when Raindrop is wired.
+- [x] Latest posts: 3 most recent, title + date only.
+- [x] Featured project: from `data/{lang}/featured_project.yaml`, bilingual.
+- [x] `_index.md` EN + ES stripped to front matter (bio + avatar params).
+- [x] `hugo.toml`: `params.socials` added, footer updated.
+- [x] Landing CSS: bio card, notes stream, lately list, post list, project card, section labels, mobile responsive.
 
 ---
 
-### Phase 4 — Inner pages
+### Phase 4 — Inner pages ← current
 
-- [ ] **4.1** Post/article single page — title, date, reading time, body, tags.
-- [ ] **4.2** List/archive pages (writings categories, post archive, tags).
-- [ ] **4.3** Notes list page — reverse-chron stream, paginated.
-- [ ] **4.4** Projects page.
-- [ ] **4.5** Garden pages (index + individual notes + latest-reads).
-- [ ] **4.6** About page — lighter now that the bio is on the landing.
-- [ ] **4.7** 404 page.
+Style the rest of the site to match the new theme. The templates already exist from Phase 1; this phase is about making them look intentional.
+
+- [ ] **4.1 — Single post page**
+  Title prominent, metadata (date, reading time, author) in a subdued row, prose body in Lora at comfortable measure, tags at bottom.
+
+- [ ] **4.2 — List / archive pages**
+  Post archive (`/post`), category pages (`/categories/*`), tag pages (`/tags/*`). Clean scannable lists, consistent date formatting, section description where available.
+
+- [ ] **4.3 — Notes list page**
+  Reverse-chronological stream. Notes have no title so each entry is date + body. Paginate if needed.
+
+- [ ] **4.4 — Projects page**
+  The existing `projects.md` content renders as a single page. Make it read well with the new typography.
+
+- [ ] **4.5 — Garden pages**
+  Garden index + `latest-reads` page. Both are simple content pages — typography pass.
+
+- [ ] **4.6 — About page**
+  Simple content page. Should feel lighter now that the bio card lives on the landing.
+
+- [ ] **4.7 — 404 page**
+  Friendly, on-brand.
 
 ---
 
@@ -89,7 +90,7 @@ The core of the redesign. Inspired by paco.me (card feel) and jamesg.blog (multi
 
 - [ ] **5.1** RSS/Atom feeds for every content type. Per-section feeds for writings subcategories.
 - [ ] **5.2** `rel="me"` links to Mastodon and Bluesky in `<head>` — done in Phase 1, verify.
-- [ ] **5.3** Microformats2: `h-card` on bio card, `h-entry` on posts and notes.
+- [ ] **5.3** Microformats2: `h-card` on bio card (done), `h-entry` on posts and notes.
 - [ ] **5.4** Review `sitemap.xml` and `robots.txt`.
 - [ ] **5.5** Bluesky cross-posting for notes via AT Protocol API script.
 - [ ] **5.6** *(Stretch)* Webmentions endpoint and/or display.
@@ -112,4 +113,5 @@ The core of the redesign. Inspired by paco.me (card feel) and jamesg.blog (multi
 - Phase 0.5 done
 - Phase 1 done — custom theme, 106 pages building clean
 - Phase 2 done — Lora, design tokens, theme toggle, language switcher
-- **Next: Phase 3** — landing page layout
+- Phase 3 done — landing page, all sections, bilingual, data-driven
+- **Next: Phase 4** — inner page styles
