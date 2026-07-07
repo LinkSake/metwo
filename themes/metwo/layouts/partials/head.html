@@ -6,6 +6,9 @@
   {{ if i18n .Title }}{{ i18n .Title }}{{ else }}{{ .Title }}{{ end }}{{ if not .IsHome }} | {{ .Site.Title }}{{ end }}
 </title>
 
+<link rel="preload" href="/fonts/lora.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/lora-italic.woff2" as="font" type="font/woff2" crossorigin>
+
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 <link rel="stylesheet" href="{{ "/css/main.css" | relURL }}">
 
