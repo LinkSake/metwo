@@ -4,7 +4,7 @@ Personal website of Luis Angel Ortega — developer, writer, and poet from Chihu
 
 The logo/icon was made by [Horse Wizard](http://instagram.com/horse.wizard).
 
-> **Redesign in progress** on branch `redesign/posse-landing` — Phase 2 (typography and design tokens) next. See [`CONTEXT.md`](CONTEXT.md) for intent and [`PLAN.md`](PLAN.md) for the full roadmap.
+> **Redesign in progress** on branch `redesign/posse-landing` — Phase 3 (landing page) next. See [`CONTEXT.md`](CONTEXT.md) for intent and [`PLAN.md`](PLAN.md) for the full roadmap.
 
 ## Sections
 
@@ -20,11 +20,11 @@ The logo/icon was made by [Horse Wizard](http://instagram.com/horse.wizard).
 
 ## Languages
 
-Most content is available in [English](https://luisangel.me/en) and [Spanish](https://luisangel.me/es).
+Most content is available in [English](https://luisangel.me/en) and [Spanish](https://luisangel.me/es). The nav includes a language switcher linking to the translated version of the current page.
 
 ## Theme
 
-Custom Hugo theme at `themes/metwo`. No external submodule dependency. Structure:
+Custom Hugo theme at `themes/metwo`. No external submodule dependency.
 
 ```
 themes/metwo/
@@ -32,8 +32,11 @@ themes/metwo/
   layouts/partials/   head.html, header.html, footer.html, foot_custom.html
   layouts/            404.html
   static/css/         main.css
+  static/fonts/       lora.woff2, lora-italic.woff2 (+ latin-ext variants)
   theme.toml
 ```
+
+Design tokens live in `main.css` as CSS custom properties. Ayu Light (default) and Ayu Mirage (dark) palettes, switchable via OS preference or the `~/dark` / `~/light` nav toggle.
 
 ## Scripts
 
