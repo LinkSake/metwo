@@ -23,6 +23,11 @@ reportes_desc: "Reseñas de diferentes tipos de medios."
 Trabajos_desc: "Publicaciones sobre mis obras... publicadas."
 trabajos_desc: "Publicaciones sobre mis obras... publicadas."
 
+# Notes
+notes: "notas"
+notes_desc: "Pensamientos cortos, enlaces y observaciones. Sin título."
+see_all_notes: "ver todas las notas"
+
 # Words
 by: "por"
 words: "palabras"
