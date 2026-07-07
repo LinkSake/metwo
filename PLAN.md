@@ -27,7 +27,7 @@ All decisions resolved. See `CONTEXT.md` for full rationale.
 ### Phase 0.5 — Data & content prep (new, before Phase 1)
 Groundwork that doesn't require the theme to exist yet.
 
-- [ ] **0.5.1 — Substack import script**
+- [ ] **0.5.1 — Substack import script** ← next
   Write a script (`scripts/import-substack.sh`) that:
   - Fetches both Substack RSS feeds (EN: `linksake.substack.com/feed`, ES: `luisangelortega.substack.com/feed`)
   - Strips Substack-specific HTML (subscribe widgets, share buttons, Substack image CDN wrappers)
@@ -36,19 +36,15 @@ Groundwork that doesn't require the theme to exist yet.
   - Places files in `content/en/post/` and `content/es/post/` respectively
   - Is idempotent (won't duplicate posts on re-run, uses `guid` as dedup key)
 
-- [ ] **0.5.2 — Expand sync-raindrop script into a unified "Lately" script**
-  Refactor `scripts/sync-raindrop-reads.sh` into `scripts/sync-lately.sh` that pulls from three sources and writes to a Hugo data file (`data/lately.yaml` or `data/en/lately.yaml` + `data/es/lately.yaml`):
-  - 📖 **Book:** GoodReads currently-reading shelf RSS (`…/review/list_rss/76567849?shelf=currently-reading`) — title, author
-  - 🎬 **Film:** Letterboxd RSS (`letterboxd.com/linksake/rss/`) — most recent entry, title, rating
-  - 🔗 **Links:** Raindrop.io API (existing logic) — last 5 bookmarks, title, URL, date
-  - No gaming entry (not automatable, removed by decision)
+- [x] **0.5.2 — Unified "Lately" sync script** — `scripts/sync-lately.sh`
+  Pulls from GoodReads (currently-reading RSS), Letterboxd (watched RSS), and Raindrop.io (API). Writes `data/lately.yaml`. Ratings converted to ★ strings. Gracefully skips Raindrop if `.env` not set.
 
-- [ ] **0.5.3 — Notes content type scaffold**
-  Add the `notes` content type to Hugo:
-  - Create `content/en/notes/` and `content/es/notes/`
-  - Create `archetypes/notes.md` with minimal frontmatter (date, no title field)
-  - Add notes to both language menus in `hugo.toml`
-  - Add notes RSS feed entry
+- [x] **0.5.3 — Notes content type scaffold**
+  - `content/en/notes/` + `content/es/notes/` with `_index.md`
+  - `archetypes/notes.md` — minimal frontmatter (date only, no title)
+  - Notes added to both language menus (weight 5) in `hugo.toml`
+  - Notes RSS feeds: `/notes/index.xml` + `/es/notes/index.xml`
+  - i18n strings added to `en.yaml` + `es.yaml`
 
 ---
 
@@ -143,6 +139,9 @@ Make the site a first-class IndieWeb citizen.
 
 ---
 
-## Immediate next step
+## Current status
 
-**Phase 0.5** — data and content prep. Start with `0.5.2` (the unified Lately sync script) since the feeds are verified and it unblocks the landing page section early. Then `0.5.3` (notes scaffold), then `0.5.1` (Substack import). None of these require the new theme to exist.
+- Phase 0 ✅ — all decisions locked
+- Phase 0.5.2 ✅ — `sync-lately.sh` live, `data/lately.yaml` generating correctly
+- Phase 0.5.3 ✅ — notes content type scaffolded
+- **Next:** Phase 0.5.1 — Substack import script, then Phase 1 (theme scaffold)
