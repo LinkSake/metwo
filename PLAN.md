@@ -8,40 +8,49 @@ Replace the current blog-centric homepage with a **presentation card** landing p
 
 ## Phases
 
-### Phase 0 — Decide before touching code
-These decisions need answers before any layout or theming work begins. They can be resolved through conversation or quick experiments.
+### Phase 0 — Decide before touching code ✅
 
-- [ ] **0.1 — Aesthetics direction**
-  Pick a visual language. Some axes to decide on:
-  - Light / Dark / System-default / Both?
-  - Typographic personality: serif (literary, warm) vs. sans-serif (clean, dev-ish) vs. mixed?
-  - Color: monochrome + one accent / full palette / pastel / high contrast?
-  - Density: airy and spacious vs. compact and information-rich?
-  - Reference: look at the five inspiration sites and note what *feels* right, not just what *works*.
+All decisions resolved. See `CONTEXT.md` for full rationale.
 
-- [ ] **0.2 — Content types to surface on landing**
-  Confirm which streams appear on the homepage. Candidates:
-  - Latest posts (writings)
-  - Currently (reading/watching/playing) — strong candidate, keep
-  - Latest reads (Raindrop sync)
-  - Projects (featured, not full list)
-  - Notes / short-form? (does this exist or is it a new content type?)
-  - Social links (Mastodon, Bluesky, email)
+- [x] **0.1 — Aesthetics:** System default + manual toggle / Mixed type (serif body, sans/mono UI) / Ayu Light + Ayu Mirage palette / Airy density
+- [x] **0.2 — Content on landing:** Bio + socials (primary) → Notes → Lately → Latest posts → Featured project. All sections: 2–3 items + "see more" link.
+- [x] **0.3 — Theme strategy:** Option A — build custom theme from scratch at `/themes/metwo`.
+- [x] **0.4 — Short-form notes:** Yes. Hugo `notes` content type, ~300 words max, no title required. Syndicate to Bluesky (and Mastodon when a new instance is set up).
 
-- [ ] **0.3 — Theme strategy**
-  - Option A: Build a custom Hugo theme from scratch in `/themes/metwo` (clean break, full control).
-  - Option B: Fork `hugo-classic`, rename it, strip it down, and rebuild on top of it (lower risk, preserves existing template logic).
-  - Recommendation: Option A — the existing theme is minimal enough that forking adds no real advantage, and a clean theme directory is easier to maintain long-term.
+---
 
-- [ ] **0.4 — Short-form / notes**
-  POSSE works best when you have a short-form content type (equivalent to tweets/toots) that you own and then syndicate. Decide: do you want to add a `notes` or `microblog` section? If yes, this shapes both the landing page layout and the Hugo content model.
+### Phase 0.5 — Data & content prep (new, before Phase 1)
+Groundwork that doesn't require the theme to exist yet.
+
+- [ ] **0.5.1 — Substack import script**
+  Write a script (`scripts/import-substack.sh`) that:
+  - Fetches both Substack RSS feeds (EN: `linksake.substack.com/feed`, ES: `luisangelortega.substack.com/feed`)
+  - Strips Substack-specific HTML (subscribe widgets, share buttons, Substack image CDN wrappers)
+  - Converts content to clean markdown
+  - Generates Hugo frontmatter: `title`, `date`, `lang`, `categories: [works]`, `original_url` (for canonical reference)
+  - Places files in `content/en/post/` and `content/es/post/` respectively
+  - Is idempotent (won't duplicate posts on re-run, uses `guid` as dedup key)
+
+- [ ] **0.5.2 — Expand sync-raindrop script into a unified "Lately" script**
+  Refactor `scripts/sync-raindrop-reads.sh` into `scripts/sync-lately.sh` that pulls from three sources and writes to a Hugo data file (`data/lately.yaml` or `data/en/lately.yaml` + `data/es/lately.yaml`):
+  - 📖 **Book:** GoodReads currently-reading shelf RSS (`…/review/list_rss/76567849?shelf=currently-reading`) — title, author
+  - 🎬 **Film:** Letterboxd RSS (`letterboxd.com/linksake/rss/`) — most recent entry, title, rating
+  - 🔗 **Links:** Raindrop.io API (existing logic) — last 5 bookmarks, title, URL, date
+  - No gaming entry (not automatable, removed by decision)
+
+- [ ] **0.5.3 — Notes content type scaffold**
+  Add the `notes` content type to Hugo:
+  - Create `content/en/notes/` and `content/es/notes/`
+  - Create `archetypes/notes.md` with minimal frontmatter (date, no title field)
+  - Add notes to both language menus in `hugo.toml`
+  - Add notes RSS feed entry
 
 ---
 
 ### Phase 1 — Theme scaffold
-Create the new custom theme and migrate the site to it without changing any content or layout yet. This is a purely structural step — the site should look identical (or close enough) after it.
+Create the new custom theme and migrate the site to it without changing any content or layout yet.
 
-- [ ] **1.1** Create `/themes/metwo` with the standard Hugo theme structure.
+- [ ] **1.1** Create `/themes/metwo` with the standard Hugo theme structure (`layouts/`, `static/`, `theme.toml`).
 - [ ] **1.2** Port all existing layouts (`_default`, partials, 404) into the new theme.
 - [ ] **1.3** Move `static/css/theme-override.css` into the new theme's CSS. Remove the old override pattern.
 - [ ] **1.4** Update `hugo.toml` to point `theme = "metwo"`.
@@ -50,73 +59,85 @@ Create the new custom theme and migrate the site to it without changing any cont
 ---
 
 ### Phase 2 — Typography & design tokens
-Before building any layout, establish the visual foundation. Work in CSS custom properties so every later decision is easy to change globally.
+Establish the visual foundation before any layout work. Everything in CSS custom properties.
 
-- [ ] **2.1** Choose and load typefaces (Google Fonts, Bunny Fonts, or self-hosted).
-- [ ] **2.2** Define CSS variables: `--font-body`, `--font-heading`, `--font-mono`, `--color-bg`, `--color-text`, `--color-accent`, `--color-muted`, `--space-*`, `--radius`.
-- [ ] **2.3** Set a baseline: body font-size, line-height, measure (max-width for prose), paragraph spacing.
-- [ ] **2.4** Style headings, links, blockquotes, code blocks — the basic HTML elements. Posts should look good before any custom component work.
-- [ ] **2.5** Light/dark mode (if decided in Phase 0) via `prefers-color-scheme` media query or a toggle.
+- [ ] **2.1** Choose and load typefaces. Candidates to evaluate:
+  - Body/headings serif: *Lora*, *Playfair Display*, *Literata*, *Source Serif 4*
+  - UI/labels sans: *Inter*, *DM Sans*, system-ui stack
+  - Mono: *JetBrains Mono*, *Fira Code*, system mono stack
+  - Self-host via Bunny Fonts or manual download (no Google Fonts for privacy).
+- [ ] **2.2** Define CSS custom properties:
+  ```css
+  --font-body, --font-heading, --font-mono
+  --color-bg, --color-surface, --color-text, --color-muted, --color-accent, --color-border
+  --space-xs through --space-2xl
+  --radius-sm, --radius-md
+  --measure (max prose width)
+  ```
+  Implement both light (Ayu Light) and dark (Ayu Mirage) token sets, switched via `prefers-color-scheme` and a `data-theme` attribute for the manual toggle.
+- [ ] **2.3** Baseline: body font-size (`1rem`/`16px`), line-height (`1.65`), measure (`65ch`), paragraph spacing.
+- [ ] **2.4** Style base HTML: `h1–h6`, `p`, `a`, `blockquote`, `code`, `pre`, `ul/ol`, `hr`, `img`. Posts should look good before any component work.
+- [ ] **2.5** Implement the light/dark toggle: a small button in the header that sets `data-theme="light"|"dark"` on `<html>` and persists to `localStorage`.
 
 ---
 
 ### Phase 3 — Landing page layout
-This is the core of the redesign. Build the new `index.html` layout.
+The core of the redesign. Inspired by paco.me (card feel) and jamesg.blog (multi-stream).
 
 - [ ] **3.1 — Bio card**
-  Top section: name, one-paragraph description, avatar (optional — currently hidden on mobile anyway), social links (email, Mastodon, Bluesky). Should feel like a handshake, not a resume.
+  Name, one-paragraph description, avatar, social links (email, Mastodon, Bluesky, Instagram, Substack EN, Substack ES). Handshake, not resume. `h-card` microformat markup.
 
-- [ ] **3.2 — Currently section**
-  Preserve the reading/watching/playing block. Consider making it data-driven (YAML front matter or a Hugo data file) instead of hardcoded markdown so it's easier to update.
+- [ ] **3.2 — Latest notes**
+  Short-form stream from `content/*/notes/`. Newest first, date + body, no title. Link to `/notes` for full list.
 
-- [ ] **3.3 — Latest posts**
-  Show the 3–5 most recent posts with title, date, and optionally a one-line description. No excerpts — keep it scannable.
+- [ ] **3.3 — Lately**
+  Driven by `data/lately.yaml` (output of `sync-lately.sh`). Three sub-rows: 📖 book, 🎬 film, 🔗 links (last 3). Single "see more" link to `/garden/latest-reads`.
 
-- [ ] **3.4 — Latest reads**
-  Surface the Raindrop-synced reads directly on the landing. 3–5 items with title and date. Link to the full garden page.
+- [ ] **3.4 — Latest posts**
+  3 most recent posts. Title + date. No excerpts. Link to `/post` archive.
 
-- [ ] **3.5 — Projects teaser** *(optional based on Phase 0.2)*
-  Featured project(s) — not a full list. One card or a two-column micro-grid.
+- [ ] **3.5 — Featured project**
+  One highlighted project, manually curated in a Hugo data file (`data/featured-project.yaml`). Name, one-line description, link.
 
-- [ ] **3.6 — Notes / microblog feed** *(only if Phase 0.4 decides yes)*
-  Short-form stream, newest first. Dates, no titles.
-
-- [ ] **3.7** Wire up both EN and ES versions. Use Hugo's `i18n` strings for any UI labels.
+- [ ] **3.6** Wire up EN and ES versions fully. All UI strings go through `i18n/en.yaml` and `i18n/es.yaml`.
 
 ---
 
 ### Phase 4 — Inner pages
 Style the rest of the site to match the new theme.
 
-- [ ] **4.1** Post/article single page layout.
-- [ ] **4.2** List/archive pages (writings, posts, tags).
-- [ ] **4.3** Projects page.
-- [ ] **4.4** Garden pages (index + individual notes + latest-reads).
-- [ ] **4.5** About page — consider making it lighter now that the landing carries the bio.
-- [ ] **4.6** 404 page.
+- [ ] **4.1** Post/article single page — title, date, reading time, body, tags.
+- [ ] **4.2** List/archive pages (writings categories, post archive, tags).
+- [ ] **4.3** Notes list page — reverse-chron stream, paginated.
+- [ ] **4.4** Projects page.
+- [ ] **4.5** Garden pages (index + individual notes + latest-reads).
+- [ ] **4.6** About page — lighter now that the bio is on the landing.
+- [ ] **4.7** 404 page.
 
 ---
 
 ### Phase 5 — POSSE plumbing
-Make the site a better first-class citizen of the IndieWeb.
+Make the site a first-class IndieWeb citizen.
 
-- [ ] **5.1** Ensure every post type has a clean RSS/Atom feed. Consider per-section feeds (writings, notes, reads).
-- [ ] **5.2** Add `rel="me"` links to Mastodon and Bluesky for identity verification.
-- [ ] **5.3** Add basic microformats2 markup (`h-card` on the bio card, `h-entry` on posts) for IndieWeb compatibility.
+- [ ] **5.1** RSS/Atom feeds for every content type: posts (already exists), notes (new), garden reads. Per-section feeds for writings subcategories.
+- [ ] **5.2** Add `rel="me"` links to Mastodon and Bluesky in the `<head>` for identity verification.
+- [ ] **5.3** Microformats2: `h-card` on bio card, `h-entry` on posts and notes.
 - [ ] **5.4** Review `sitemap.xml` and `robots.txt`.
-- [ ] **5.5** *(Stretch)* Add a Webmention endpoint or display Webmentions on posts.
+- [ ] **5.5** Bluesky cross-posting for notes — evaluate `atp` CLI or a simple script using the AT Protocol API.
+- [ ] **5.6** *(Stretch)* Webmentions — add endpoint and/or display received Webmentions on posts.
 
 ---
 
 ### Phase 6 — Polish & ship
-- [ ] **6.1** Performance pass: image optimization, CSS size, font loading strategy.
-- [ ] **6.2** Accessibility check: contrast ratios, keyboard nav, semantic HTML.
-- [ ] **6.3** Mobile review: all layouts tested at small viewport.
-- [ ] **6.4** Cross-browser sanity check.
+
+- [ ] **6.1** Performance: image optimization, CSS bundle size, font loading (`font-display: swap`).
+- [ ] **6.2** Accessibility: contrast ratios (WCAG AA minimum), keyboard navigation, semantic HTML, `aria` where needed.
+- [ ] **6.3** Mobile: all layouts reviewed at 375px, 390px, 768px viewports.
+- [ ] **6.4** Cross-browser sanity check (Firefox, Safari, Chrome).
 - [ ] **6.5** Merge `redesign/posse-landing` → `main`, deploy.
 
 ---
 
 ## Immediate next step
 
-**Answer Phase 0 questions.** Nothing should be built until the aesthetic direction and content scope are decided. A short conversation or a quick mood-board pass over the five reference sites is enough to unblock Phase 1.
+**Phase 0.5** — data and content prep. Start with `0.5.2` (the unified Lately sync script) since the feeds are verified and it unblocks the landing page section early. Then `0.5.3` (notes scaffold), then `0.5.1` (Substack import). None of these require the new theme to exist.
