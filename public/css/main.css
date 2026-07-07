@@ -1,0 +1,253 @@
+/* ==========================================================================
+   metwo theme — main.css
+   Phase 1: faithful port of hugo-classic + theme-override
+   Phase 2 will replace this file with design tokens + Ayu palette
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Fonts — Inter (self-hosted via rsms CDN for now; Phase 2 will change this)
+   -------------------------------------------------------------------------- */
+@import url('https://rsms.me/inter/inter.css');
+
+html {
+  font-family: 'Inter', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Base / reset
+   -------------------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 0.2em;
+  line-height: 1.5em;
+}
+
+h1 {
+  line-height: 1.5em;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+img, iframe, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Header / nav
+   -------------------------------------------------------------------------- */
+header {
+  position: relative;
+  width: 100%;
+  height: 1.75rem;
+  font-size: 1rem;
+}
+header ul, header ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header nav { padding: 0 0.5rem; }
+header a {
+  color: #fff;
+  line-height: 1.75rem;
+  padding: 0 0.5rem;
+}
+header a:hover, header .current a { color: #fff; }
+
+.pull-left  { float: left; }
+.pull-right { float: right; }
+
+.menu li { display: inline-block; }
+
+/* --------------------------------------------------------------------------
+   Content
+   -------------------------------------------------------------------------- */
+.content-wrapper {
+  padding: 0 12px;
+  min-height: 85vh;
+}
+
+main {
+  hyphens: auto;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7em;
+  display: block;
+  font-size: 1.1em;
+}
+main a { font-weight: bold; }
+
+.article-meta { text-align: center; }
+.article-meta .after-title { margin-bottom: 0.5rem; }
+.title { font-size: 1.1em; }
+
+/* --------------------------------------------------------------------------
+   Typography helpers
+   -------------------------------------------------------------------------- */
+blockquote {
+  border-left: 5px solid #ccc;
+  padding: 3px 1em;
+}
+
+pre {
+  padding: 1em;
+  overflow-x: auto;
+}
+pre code { background: none; }
+
+code {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  font-size: 85%;
+}
+
+li {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+/* --------------------------------------------------------------------------
+   Lists / terms
+   -------------------------------------------------------------------------- */
+.terms { font-size: 0.9em; }
+.terms-single {
+  font-size: 0.9em;
+  text-align: center;
+}
+.terms-single span:nth-of-type(2)::before { content: "//"; }
+
+/* --------------------------------------------------------------------------
+   Taxonomy & archive
+   -------------------------------------------------------------------------- */
+.article-meta, .menu a {
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  border-style: dotted;
+  border-width: 1px;
+  margin-bottom: 20px;
+}
+.menu, .article-meta, footer { text-align: center; }
+footer { font-size: 90%; }
+footer a { text-decoration: none; }
+
+/* --------------------------------------------------------------------------
+   Images
+   -------------------------------------------------------------------------- */
+#avatar {
+  min-width: 40px;
+  min-height: 40px;
+  max-width: 204px;
+  max-height: 204px;
+  float: right;
+  padding: 10px;
+  display: block;
+}
+#gala {
+  min-width: 40px;
+  min-height: 40px;
+  max-width: 204px;
+  max-height: 204px;
+  float: left;
+  padding: 10px;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+/* --------------------------------------------------------------------------
+   Table of Contents
+   -------------------------------------------------------------------------- */
+#TableOfContents, #TOC {
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+@media screen and (min-width: 768px) {
+  #table-of-contents {
+    position: fixed;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    width: 250px;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tables
+   -------------------------------------------------------------------------- */
+table {
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+table thead th { border-bottom: 1px solid #ddd; }
+th, td { padding: 5px; }
+
+/* --------------------------------------------------------------------------
+   Colour schemes — Ayu Light (light) + Ayu Mirage (dark)
+   Phase 2 will convert these to CSS custom properties with a theme toggle.
+   -------------------------------------------------------------------------- */
+
+/* --- Light: Ayu Light --- */
+@media (prefers-color-scheme: light) {
+  body        { background-color: #fafafa; color: #5c6166; }
+  a           { color: #f2ae49; }
+  a:hover     { color: #ff9940; }
+  blockquote  { background: #f8f9fa; }
+  pre         { border: 2px solid #f2ae49; }
+  tr:nth-child(even) { background: #eee; }
+
+  header      { background: #fafafa; border-bottom: 2px dotted #f2ae49; }
+  header a    { color: #f2ae49; }
+  header a:hover { color: #ff9940; }
+
+  .article-meta,
+  .menu a     { background: #fafafa; color: #5c6166; }
+}
+
+/* --- Dark: Ayu Mirage --- */
+@media (prefers-color-scheme: dark) {
+  body        { background-color: #1f2430; color: #cbccc6; }
+  a           { color: #ffd173; }
+  a:hover     { color: #ffcc66; }
+  blockquote  { background: #1f2430; }
+  pre         { border: 2px solid #ffd173; }
+  tr:nth-child(even) { background: #2d3346; }
+
+  header      { background: #1f2430; border-bottom: 2px dotted #ffd173; }
+  header a    { color: #ffd173; }
+
+  .article-meta,
+  .menu a     { background: #1f2430; color: #cbccc6; }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 550px) {
+  h1 { font-size: 3em; }
+  .hide-on-mobile { display: none; }
+}

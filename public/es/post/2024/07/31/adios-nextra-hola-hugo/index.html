@@ -1,71 +1,74 @@
 <!DOCTYPE html>
-<html lang="es-MX">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-
+<html lang="es-MX" data-theme="">
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="La historia de la migración de este blog de Nextra a Hugo, más como lo estoy restructurando conceptualmente.">
-    
-    <title>
-      
-        Adiós Nextra, hola Hugo
-      
-      | luis angel ortega
-    </title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
-    <link rel="stylesheet" href="http://localhost:1313/css/theme-override.css">
-    <header>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="La historia de la migración de este blog de Nextra a Hugo, más como lo estoy restructurando conceptualmente.">
 
+<title>
+  Adiós Nextra, hola Hugo | luis angel ortega
+</title>
+
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="me" href="https://vmst.io/@link">
+<link rel="me" href="https://bsky.app/profile/linksake.bsky.social">
+
+  </head>
+  <body>
+    <header>
   <nav>
     <ul>
       
       
       
+        
+        <li class="pull-left ">
+          <a href="https://luisangel.me/es">~/inicio</a>
+        </li>
       
-      <li class="pull-left ">
-        <a href="http://localhost:1313/es">~/inicio</a>
-      </li>
+        
+        <li class="pull-left ">
+          <a href="https://luisangel.me/es/categories/">~/escritos</a>
+        </li>
       
+        
+        <li class="pull-left ">
+          <a href="https://luisangel.me/es/projects">~/proyectos</a>
+        </li>
       
-      <li class="pull-left ">
-        <a href="http://localhost:1313/es/categories/">~/escritos</a>
-      </li>
+        
+        <li class="pull-left ">
+          <a href="https://luisangel.me/es/garden">~/jardin</a>
+        </li>
       
+        
+        <li class="pull-left ">
+          <a href="https://luisangel.me/es/notes">~/notas</a>
+        </li>
       
-      <li class="pull-left ">
-        <a href="http://localhost:1313/es/projects">~/proyectos</a>
-      </li>
-      
-      
-      <li class="pull-left ">
-        <a href="http://localhost:1313/es/garden">~/jardin</a>
-      </li>
-      
-      
-      <li class="pull-left ">
-        <a href="http://localhost:1313/es/about">~/yo</a>
-      </li>
-      
-
-      
-      
-      <li class="pull-right hide-on-mobile">
-        <a href="http://localhost:1313/es/post/index.xml">~/rss</a>
-      </li>
+        
+        <li class="pull-left ">
+          <a href="https://luisangel.me/es/about">~/yo</a>
+        </li>
       
 
+      
+        <li class="pull-right hide-on-mobile">
+          <a href="https://luisangel.me/es/post/index.xml">~/rss</a>
+        </li>
+      
+        <li class="pull-right hide-on-mobile">
+          <a href="https://luisangel.me/es/notes/index.xml">~/notas rss</a>
+        </li>
+      
     </ul>
   </nav>
 </header>
 
-  </head>
-
-  <body>
-    <br/>
-
+    <div class="content-wrapper">
 <div class="article-meta">
   <h1><span class="title">Adiós Nextra, hola Hugo</span></h1>
   <div class="after-title">
@@ -74,7 +77,7 @@
       
         <i class="date">(miércoles, 31 de julio de 2024)</i>
       
-      | 
+      |
       952 palabras / 5 minutos
     
   </div>
@@ -82,9 +85,8 @@
 
 
 
-<div class="content-wrapper">
-  <main>
-    <p>Este blog ha estado abandonado años para este punto. Desde que dejé de escribir en <a href="https://aviyel.com">Aviyel</a> no he hecho nada muy técnico y sobre escritos más personales se me ha aconsejado no publicarlos en línea de manera tan libre como lo solía hacer, ya que hay convocatorias que cuentan como publicado un cuento si se encuentra en una web.</p>
+<main>
+  <p>Este blog ha estado abandonado años para este punto. Desde que dejé de escribir en <a href="https://aviyel.com">Aviyel</a> no he hecho nada muy técnico y sobre escritos más personales se me ha aconsejado no publicarlos en línea de manera tan libre como lo solía hacer, ya que hay convocatorias que cuentan como publicado un cuento si se encuentra en una web.</p>
 <p>Eso no quiere decir que durante estos años me haya desinteresado el tema, al contrario. Gracias a Hacker News y Mastodon he conocido un montón de blogs que me encantan y de donde he estado tomando inspiración para la siguiente etapa del mío.</p>
 <h2 id="el-gran-cambio-de-generador-de-sitios-estáticos">El gran cambio de generador de sitios estáticos</h2>
 <p>Anteriormente mi web se usaba <a href="https://github.com/shuding/nextra">Nextra</a> y estaba <em>hosteada</em> en<a href="https://vercel.com/"> Vercel</a>. La verdad es que este combo hizo que el desarrollo y el <em>deploy</em> fuera muy sencillo, así como agregar mi dominio personalizado. Pero dado a que adopté el Nextra en una etapa muy temprana la personalización que se podía hacer era mínima. Ahora parece estar más enfocado en páginas de documentación de proyectos y el estilo puede ser cambiado a través de los <em>helpers</em> de <a href="https://tailwindcss.com/">Tailwind</a>.</p>
@@ -103,68 +105,55 @@
 <p>Aparte de que simplemente ya no es lo mismo, el saber que todos mis contactos ven lo que publique en su feed me ha dado un pesar al publicar. Aquí sigue siendo público, puedo seguir compartiendo las cosas que me apasionan sin la certeza de que todo mundo lo va a ver, todo mundo lo <em>puede</em> ver pero a nadie se le va a servir forzosamente.</p>
 <p>Este post era solamente para compartir estas cosas, documentar el cambio que sufrió esta página, un rant y monólogo al aire. No tengo una verdadera conclusión, así que con esto los dejo.</p>
 
+  
+  <p class="terms-single">「
     
-      <p class="terms-single">「
-        
-          
-          <span>
-            Categorías: 
-          </span>
-              <a href="http://localhost:1313/es/categories/blogposts">Blogposts</a> 
-            
-          
-        
-          
-          <span>
-            Etiquetas: 
-          </span>
-              <a href="http://localhost:1313/es/tags/hugo">hugo</a> 
-            
-          </span>
-              <a href="http://localhost:1313/es/tags/nextra">nextra</a> 
-            
-          </span>
-              <a href="http://localhost:1313/es/tags/blogging">blogging</a> 
-            
-          
-        
-        」</p>
       
-  </main>
-</div>
+      <span>Categorías:</span>
+        
+          <a href="https://luisangel.me/es/categories/blogposts">Blogposts</a>
+        
+      
+    
+      
+      <span>Etiquetas:</span>
+        
+          <a href="https://luisangel.me/es/tags/hugo">hugo</a>
+        
+          <a href="https://luisangel.me/es/tags/nextra">nextra</a>
+        
+          <a href="https://luisangel.me/es/tags/blogging">blogging</a>
+        
+      
+    
+    」</p>
+  
+</main>
+
+    </div>
     <footer>
-      
+  
 <script>
 (function() {
-  function center_el(tagName) {
-    var tags = document.getElementsByTagName(tagName), i, tag;
-    for (i = 0; i < tags.length; i++) {
-      tag = tags[i];
-      var parent = tag.parentElement;
-      
-      if (parent.childNodes.length === 1) {
-        
-        if (parent.nodeName === 'A') {
-          parent = parent.parentElement;
-          if (parent.childNodes.length != 1) continue;
-        }
-        if (parent.nodeName === 'P') parent.style.textAlign = 'center';
+  var tags = ['img', 'embed', 'object'];
+  for (var i = 0; i < tags.length; i++) {
+    var els = document.getElementsByTagName(tags[i]);
+    for (var j = 0; j < els.length; j++) {
+      var el = els[j], p = el.parentElement;
+      if (p.childNodes.length === 1) {
+        if (p.nodeName === 'A') { p = p.parentElement; if (p.childNodes.length !== 1) continue; }
+        if (p.nodeName === 'P') p.style.textAlign = 'center';
       }
     }
-  }
-  var tagNames = ['img', 'embed', 'object'];
-  for (var i = 0; i < tagNames.length; i++) {
-    center_el(tagNames[i]);
   }
 })();
 </script>
 
-      
-      <hr/>
-      Luis Angel Ortega © 2024 | <a href="/en">English</a> | Hecho con <a href="https://github.com/goodroot/hugo-classic">hugo-classic</a>
-      
-    </footer>
+  
+  <hr>
+  Luis Angel Ortega © 2024 | <a href="/en">English</a> | Hecho con <a href="https://github.com/goodroot/hugo-classic">hugo-classic</a>
+  
+</footer>
+
   </body>
 </html>
-
-<a rel="me" href="https://vmst.io/@link" style="display: none;"></a>

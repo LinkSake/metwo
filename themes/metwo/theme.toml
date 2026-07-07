@@ -1,0 +1,11 @@
+name = "metwo"
+license = "MIT"
+licenselink = "https://opensource.org/licenses/MIT"
+description = "Custom theme for luisangel.me"
+homepage = "https://luisangel.me"
+tags = ["personal", "blog", "minimal"]
+features = ["notes", "posse"]
+
+[author]
+  name = "Luis Angel Ortega"
+  homepage = "https://luisangel.me"
