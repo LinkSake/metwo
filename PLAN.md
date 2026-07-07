@@ -27,7 +27,8 @@ All decisions resolved. See `CONTEXT.md` for full rationale.
 ### Phase 0.5 — Data & content prep (new, before Phase 1)
 Groundwork that doesn't require the theme to exist yet.
 
-- [ ] **0.5.1 — Substack import script** ← next
+- [x] **0.5.1 — Substack import script** — `scripts/import-substack.py`
+  Pure Python 3 stdlib HTML→markdown converter. Handles poetry `<pre>` blocks, Substack CDN image extraction, subscribe widget stripping. 38 posts imported (19 EN + 19 ES). Idempotent via `.imported-substack-guids`.
   Write a script (`scripts/import-substack.sh`) that:
   - Fetches both Substack RSS feeds (EN: `linksake.substack.com/feed`, ES: `luisangelortega.substack.com/feed`)
   - Strips Substack-specific HTML (subscribe widgets, share buttons, Substack image CDN wrappers)
@@ -48,14 +49,16 @@ Groundwork that doesn't require the theme to exist yet.
 
 ---
 
-### Phase 1 — Theme scaffold
+### Phase 1 — Theme scaffold ← current
 Create the new custom theme and migrate the site to it without changing any content or layout yet.
 
-- [ ] **1.1** Create `/themes/metwo` with the standard Hugo theme structure (`layouts/`, `static/`, `theme.toml`).
-- [ ] **1.2** Port all existing layouts (`_default`, partials, 404) into the new theme.
-- [ ] **1.3** Move `static/css/theme-override.css` into the new theme's CSS. Remove the old override pattern.
-- [ ] **1.4** Update `hugo.toml` to point `theme = "metwo"`.
-- [ ] **1.5** Verify all existing pages render correctly. Fix any regressions.
+- [ ] **1.1** Create `/themes/metwo` with `theme.toml`, `layouts/`, `static/css/`.
+- [ ] **1.2** Introduce `baseof.html` block pattern. Split the current monolithic `header.html` (which contains the full `<!DOCTYPE>`…`<body>`) into proper partials: `head.html`, `header.html`, `footer.html`, `foot_custom.html`.
+- [ ] **1.3** Port `_default/single.html`, `list.html`, `terms.html`, `rss.xml`, `404.html` using `{{ define "main" }}` blocks.
+- [ ] **1.4** Consolidate CSS: merge `hugo-classic/static/css/style.css` + `fonts.css` + `static/css/theme-override.css` into `/themes/metwo/static/css/main.css`. Remove `custom_css` param from `hugo.toml`.
+- [ ] **1.5** Update `hugo.toml`: `theme = "metwo"`. Remove `.gitmodules` submodule entry.
+- [ ] **1.6** Delete the now-redundant root `layouts/` files and `static/css/theme-override.css`.
+- [ ] **1.7** Verify all existing pages render correctly. Fix any regressions.
 
 ---
 
@@ -142,6 +145,7 @@ Make the site a first-class IndieWeb citizen.
 ## Current status
 
 - Phase 0 ✅ — all decisions locked
-- Phase 0.5.2 ✅ — `sync-lately.sh` live, `data/lately.yaml` generating correctly
+- Phase 0.5.1 ✅ — Substack import (38 posts, EN + ES)
+- Phase 0.5.2 ✅ — `sync-lately.sh` live, `data/lately.yaml` generating
 - Phase 0.5.3 ✅ — notes content type scaffolded
-- **Next:** Phase 0.5.1 — Substack import script, then Phase 1 (theme scaffold)
+- **Next:** Phase 1 — custom theme scaffold (`/themes/metwo`)

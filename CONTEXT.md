@@ -54,8 +54,8 @@ Layout inspiration specifically from **paco.me** and **jamesg.blog**: bio card a
 | `content/*/notes/` + `_index.md` | ✅ Done | EN + ES |
 | Notes menus + RSS feeds | ✅ Done | `hugo.toml` updated |
 | Notes i18n strings | ✅ Done | `en.yaml` + `es.yaml` |
-| `scripts/import-substack.sh` | 🚧 Next | 0.5.1 |
-| Custom theme `/themes/metwo` | ⏳ Pending | Phase 1 |
+| `scripts/import-substack.py` | ✅ Done | 38 posts imported (19 EN + 19 ES), idempotent via `.imported-substack-guids` |
+| Custom theme `/themes/metwo` | 🚧 Next | Phase 1 |
 
 ## What already maps well to the new direction
 
@@ -126,6 +126,10 @@ hugo new notes/$(date +%Y-%m-%d)-slug.md
 
 ## Substack migration
 
-Luis has published literary works (poetry, short stories) on both Substacks that don't exist on the site yet. These map naturally to the `categories/works` section. Plan:
-1. One-time import script: fetch both Substack RSS feeds, strip Substack HTML, convert to Hugo markdown with proper frontmatter (title, date, language, category: works).
-2. Going forward: write on the site first, cross-post to Substack.
+Done. `scripts/import-substack.py` — pure Python 3 stdlib, no external dependencies. Handles poetry `<pre>` blocks, extracts original S3 image URLs from Substack CDN wrappers, strips subscribe widgets and share buttons, converts all inline formatting. Idempotent via `.imported-substack-guids`. Re-run as you publish new pieces to Substack.
+
+Going forward: write on the site first (`categories = ["Works"]`), then cross-post to Substack.
+
+## Theme architecture (Phase 1 target)
+
+Replacing `hugo-classic` (git submodule, empty in CI) with a custom theme at `/themes/metwo`. Using Hugo's `baseof.html` block pattern — cleaner than the current 
