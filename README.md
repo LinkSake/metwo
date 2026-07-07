@@ -23,13 +23,23 @@ Most of the content it's available in [English](https://luisangel.me/en) and [Sp
 
 ## Scripts
 
-The blog includes a simple automation system for managing the "latest reads" section, which syncs bookmarks (last 50, it appends them) from Raindrop.io to both English and Spanish files.
+### `sync-lately.sh` (landing page data)
 
-**Usage:**
+Fetches the "Lately" section data for the landing page from three sources and writes `data/lately.yaml`:
+- 📖 Currently-reading book from GoodReads
+- 🎬 Most recently watched film from Letterboxd
+- 🔗 Last 5 bookmarks from Raindrop.io
+
 ```bash
-# 1. Set up credentials
-cp .env.example .env
-# 2. Run the sync
+cp .env.example .env  # add RAINDROP_TOKEN and RAINDROP_COLLECTION_ID
+./scripts/sync-lately.sh
+```
+
+### `sync-raindrop-reads.sh` (garden / latest reads)
+
+Syncs the last 50 Raindrop.io bookmarks into the full `latest-reads` garden pages and injects a preview into both `_index.md` files.
+
+```bash
 ./scripts/sync-raindrop-reads.sh
 ```
 
