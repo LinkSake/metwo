@@ -43,6 +43,20 @@ Layout inspiration specifically from **paco.me** and **jamesg.blog**: bio card a
 2. **A unified stream or sections for all content types** — posts, notes, projects, reads — surfaced on the front page. Reflects POSSE's "own your stuff" idea.
 3. **No hero, no fold** — everything meaningful is immediately visible or one obvious click away. No marketing-style above-the-fold sections.
 
+## What has been built (branch: `redesign/posse-landing`)
+
+| Task | Status | Notes |
+|---|---|---|
+| Phase 0 decisions | ✅ Done | See below |
+| `scripts/sync-lately.sh` | ✅ Done | GoodReads + Letterboxd + Raindrop → `data/lately.yaml` |
+| `data/lately.yaml` | ✅ Done | Auto-generated, committed as seed |
+| `archetypes/notes.md` | ✅ Done | Minimal frontmatter, no title |
+| `content/*/notes/` + `_index.md` | ✅ Done | EN + ES |
+| Notes menus + RSS feeds | ✅ Done | `hugo.toml` updated |
+| Notes i18n strings | ✅ Done | `en.yaml` + `es.yaml` |
+| `scripts/import-substack.sh` | 🚧 Next | 0.5.1 |
+| Custom theme `/themes/metwo` | ⏳ Pending | Phase 1 |
+
 ## What already maps well to the new direction
 
 - The "currently" section (reading/watching/playing) is exactly the kind of personal signal that makes a landing page feel alive — merging into automated "Lately" section.
@@ -100,6 +114,15 @@ Final landing page hierarchy:
 
 ### 0.4 — Short-form notes
 **Yes.** A `notes` content type will be added. Max ~300 words — anything without a title that doesn't warrant a full post. Syndicate to Bluesky (and Mastodon when a new instance is chosen). This fills the Twitter-shaped hole without depending on any platform.
+
+## Notes content type
+
+Added as a first-class Hugo content type in `content/en/notes/` and `content/es/notes/`. Archetype at `archetypes/notes.md` — date-only frontmatter, no title field. Menu weight 5 in both languages, dedicated RSS feeds at `/notes/index.xml` and `/es/notes/index.xml`. i18n keys: `notes`, `notes_desc`, `see_all_notes`.
+
+To create a new note:
+```bash
+hugo new notes/$(date +%Y-%m-%d)-slug.md
+```
 
 ## Substack migration
 

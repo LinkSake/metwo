@@ -1,48 +1,59 @@
 # luisangel.me
 
-Hello there! This is my personal blog/website. It was made using [Hugo](https://gohugo.io/) with a modified version of the theme [hugo-classic](https://github.com/goodroot/hugo-classics).
+Hello there! This is my personal website. It was made using [Hugo](https://gohugo.io/) with a custom theme (`themes/metwo`), bilingual in English and Spanish.
 
 The logo/icon was made by the amazing [Horse Wizard](http://instagram.com/horse.wizard).
 
+> **Redesign in progress** on branch `redesign/posse-landing`. See [`CONTEXT.md`](CONTEXT.md) for intent and [`PLAN.md`](PLAN.md) for the full roadmap.
+
 ## Sections
 
-I like to be organized, that's why I made specific spaces for specific kinds of content. Here's a quick round up of it:
-
-- [**Writings**](https://luisangel.me/writings): Umbrella category for all my written content.
-  - [**Blogposts**](https://luisangel.me/writings/blogposts): Toughts, rants and a more personal style of post.
-  - [**Articles**](https://luisangel.me/writings/articles): Guides, essays and more serious posts.
-  - [**Reports**](https://luisangel.me/writings/reports): Reviews for different kinds of media.
-  - [**Works**](https://luisangel.me/writings/works): Posts about my published works.
-- [**Projects**](https://luisangel.me/projects): A listing of all my projects (tech related or not).
-- [**Garden**](https://luisangel.me/garden): My digital garden ([read more](https://abyss.j3s.sh/hypha/digital_abyss)).
-- [**About**](https://luisangel.me/about): It's, you know, about me.
+- [**Writings**](https://luisangel.me/categories): Umbrella category for all written content.
+  - **Blogposts** — thoughts, rants, personal style posts
+  - **Articles** — guides, essays, more serious posts
+  - **Reports** — reviews for different kinds of media
+  - **Works** — published literary works (poetry, short stories)
+- [**Notes**](https://luisangel.me/notes): Short-form, untitled posts (~300 words max). The POSSE-native microblog.
+- [**Projects**](https://luisangel.me/projects): A listing of all projects.
+- [**Garden**](https://luisangel.me/garden): Digital garden — links, reads, notes.
+- [**About**](https://luisangel.me/about): About me.
 
 ## Languages
 
-Most of the content it's available in [English](https://luisangel.me/en) and [Spanish](https://luisangel.me/es)! Hopefully someday I'll learn another language good enough to list it here.
+Most content is available in [English](https://luisangel.me/en) and [Spanish](https://luisangel.me/es).
 
 ## Scripts
 
-### `sync-lately.sh` (landing page data)
-
-Fetches the "Lately" section data for the landing page from three sources and writes `data/lately.yaml`:
-- 📖 Currently-reading book from GoodReads
-- 🎬 Most recently watched film from Letterboxd
-- 🔗 Last 5 bookmarks from Raindrop.io
+All scripts live in `scripts/` and read credentials from a `.env` file (copy from `.env.example`).
 
 ```bash
-cp .env.example .env  # add RAINDROP_TOKEN and RAINDROP_COLLECTION_ID
+cp .env.example .env
+# fill in RAINDROP_TOKEN and RAINDROP_COLLECTION_ID
+```
+
+### `sync-lately.sh` — Lately section data
+
+Fetches the landing page "Lately" data and writes `data/lately.yaml`:
+- 📖 Currently-reading book from GoodReads (public RSS — no credentials needed)
+- 🎬 Most recently watched film from Letterboxd (public RSS — no credentials needed)
+- 🔗 Last 5 bookmarks from Raindrop.io (requires `.env`)
+
+```bash
 ./scripts/sync-lately.sh
 ```
 
-### `sync-raindrop-reads.sh` (garden / latest reads)
+### `sync-raindrop-reads.sh` — Garden latest reads
 
-Syncs the last 50 Raindrop.io bookmarks into the full `latest-reads` garden pages and injects a preview into both `_index.md` files.
+Syncs the last 50 Raindrop.io bookmarks into the full garden `latest-reads` pages (EN + ES) and injects a 3-item preview into both `_index.md` files.
 
 ```bash
 ./scripts/sync-raindrop-reads.sh
 ```
 
-## Known issues/todo list
+### `import-substack.sh` — One-time Substack migration
 
-- Right now we only list the RSS for the "archive", it's probably a good idea to have per term.
+Imports posts from both Substacks (*tiny engines* EN, *pequeños motores* ES) into `content/*/post/` as Hugo markdown files with proper frontmatter. Idempotent — safe to re-run.
+
+```bash
+./scripts/import-substack.sh
+```
