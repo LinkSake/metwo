@@ -48,7 +48,8 @@ Layout inspiration: paco.me and jamesg.blog — bio card at top, named sections 
 | CSS design tokens | Done | Full Ayu Light / Mirage token sets |
 | Theme toggle + lang switcher | Done | localStorage + prefers-color-scheme |
 | Landing page | Done | Phase 3 — bio, lately, notes, posts, project |
-| Inner pages | Next | Phase 4 |
+| Inner pages | Done | Phase 4 — single, list, notes stream, terms, 404 |
+| POSSE plumbing | Next | Phase 5 |
 
 ## External data sources (all verified)
 

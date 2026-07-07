@@ -49,51 +49,44 @@ Replace the current blog-centric homepage with a presentation card landing page 
 
 - [x] `themes/metwo/layouts/index.html` — dedicated home template.
 - [x] Bio card: name, bio text, avatar, 6 social links, `h-card` microformat.
-- [x] Latest notes section (renders when notes exist).
 - [x] Lately: book + film from `data/lately.yaml`; links when Raindrop is wired.
 - [x] Latest posts: 3 most recent, title + date only.
 - [x] Featured project: from `data/{lang}/featured_project.yaml`, bilingual.
-- [x] `_index.md` EN + ES stripped to front matter (bio + avatar params).
-- [x] `hugo.toml`: `params.socials` added, footer updated.
-- [x] Landing CSS: bio card, notes stream, lately list, post list, project card, section labels, mobile responsive.
+- [x] `_index.md` EN + ES stripped to front matter. `hugo.toml`: `params.socials` added, footer updated.
+- [x] Landing CSS: bio card, lately list, post list, project card, section labels, mobile responsive.
 
 ---
 
-### Phase 4 — Inner pages ← current
+### Phase 4 — Inner pages ✅
 
-Style the rest of the site to match the new theme. The templates already exist from Phase 1; this phase is about making them look intentional.
-
-- [ ] **4.1 — Single post page**
-  Title prominent, metadata (date, reading time, author) in a subdued row, prose body in Lora at comfortable measure, tags at bottom.
-
-- [ ] **4.2 — List / archive pages**
-  Post archive (`/post`), category pages (`/categories/*`), tag pages (`/tags/*`). Clean scannable lists, consistent date formatting, section description where available.
-
-- [ ] **4.3 — Notes list page**
-  Reverse-chronological stream. Notes have no title so each entry is date + body. Paginate if needed.
-
-- [ ] **4.4 — Projects page**
-  The existing `projects.md` content renders as a single page. Make it read well with the new typography.
-
-- [ ] **4.5 — Garden pages**
-  Garden index + `latest-reads` page. Both are simple content pages — typography pass.
-
-- [ ] **4.6 — About page**
-  Simple content page. Should feel lighter now that the bio card lives on the landing.
-
-- [ ] **4.7 — 404 page**
-  Friendly, on-brand.
+- [x] `single.html` rewritten: left-aligned title, `<time>` + reading time in muted metadata row, semantic structure, tag pills in `<footer>`.
+- [x] `list.html` cleaned up: title left / date right, border separators, dropped bracket decoration.
+- [x] `notes/list.html` created: full stream layout (date + body, no titles), permalink anchor, empty state.
+- [x] `terms.html` cleaned up: proper classes, no inline styles.
+- [x] `404.html` rewritten: text-only, go-back / go-home nav.
+- [x] Inner page CSS: ~120 lines covering all list, article, terms, notes, and 404 pages. Mobile responsive.
 
 ---
 
-### Phase 5 — POSSE plumbing
+### Phase 5 — POSSE plumbing ← current
 
-- [ ] **5.1** RSS/Atom feeds for every content type. Per-section feeds for writings subcategories.
-- [ ] **5.2** `rel="me"` links to Mastodon and Bluesky in `<head>` — done in Phase 1, verify.
-- [ ] **5.3** Microformats2: `h-card` on bio card (done), `h-entry` on posts and notes.
-- [ ] **5.4** Review `sitemap.xml` and `robots.txt`.
-- [ ] **5.5** Bluesky cross-posting for notes via AT Protocol API script.
-- [ ] **5.6** *(Stretch)* Webmentions endpoint and/or display.
+- [ ] **5.1 — RSS feeds audit**
+  Verify feeds exist and are well-formed for every content type: posts, notes, garden reads. Check per-section feeds for writings subcategories. Add any missing.
+
+- [ ] **5.2 — `rel="me"` verification**
+  Confirm `rel="me"` links to Mastodon and Bluesky are correct in `<head>`. These were added in Phase 1 — verify they match the live handles.
+
+- [ ] **5.3 — Microformats2 on posts and notes**
+  Add `h-entry` markup to `single.html` and `notes/list.html`. Landing bio card already has `h-card`.
+
+- [ ] **5.4 — `sitemap.xml` and `robots.txt` review**
+  Confirm Hugo is generating both correctly for the bilingual site.
+
+- [ ] **5.5 — Bluesky cross-posting script**
+  Write `scripts/post-to-bluesky.sh` (or `.py`). Takes a note file path, reads date + body, posts to Bluesky via the AT Protocol API. Run manually after `hugo new notes/...`.
+
+- [ ] **5.6 — *(Stretch)* Webmentions**
+  Add a Webmention endpoint and/or display received Webmentions on posts.
 
 ---
 
@@ -114,4 +107,5 @@ Style the rest of the site to match the new theme. The templates already exist f
 - Phase 1 done — custom theme, 106 pages building clean
 - Phase 2 done — Lora, design tokens, theme toggle, language switcher
 - Phase 3 done — landing page, all sections, bilingual, data-driven
-- **Next: Phase 4** — inner page styles
+- Phase 4 done — inner page templates and styles
+- **Next: Phase 5** — POSSE plumbing
