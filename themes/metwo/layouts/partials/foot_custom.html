@@ -1,0 +1,16 @@
+<!-- Auto-centers solo images. Credit: Yihui Xie -->
+<script>
+(function() {
+  var tags = ['img', 'embed', 'object'];
+  for (var i = 0; i < tags.length; i++) {
+    var els = document.getElementsByTagName(tags[i]);
+    for (var j = 0; j < els.length; j++) {
+      var el = els[j], p = el.parentElement;
+      if (p.childNodes.length === 1) {
+        if (p.nodeName === 'A') { p = p.parentElement; if (p.childNodes.length !== 1) continue; }
+        if (p.nodeName === 'P') p.style.textAlign = 'center';
+      }
+    }
+  }
+})();
+</script>

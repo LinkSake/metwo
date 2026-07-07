@@ -4,7 +4,7 @@ enableEmoji = true
 footnotereturnlinkcontents = "↩"
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 languageCode = "en-us"
-theme = "hugo-classic"
+theme = "metwo"
 title = "luis angel ortega"
 copyright = "2025 Luis Angel Ortega Holguin All rights reserved"
 
@@ -24,7 +24,6 @@ style = "catppuccin-frappe"
 tabWidth = 4
 
 [params]
-custom_css = ["css/theme-override.css"]
 [params.author]
 name = "Luis Angel Ortega"
 email = "hey@luisangel.me"

@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
+
+<title>
+  {{ if i18n .Title }}{{ i18n .Title }}{{ else }}{{ .Title }}{{ end }}{{ if not .IsHome }} | {{ .Site.Title }}{{ end }}
+</title>
+
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<link rel="stylesheet" href="{{ "/css/main.css" | relURL }}">
+
+{{- with .OutputFormats.Get "RSS" }}
+<link rel="alternate" type="{{ .MediaType }}" href="{{ .Permalink }}" title="{{ $.Site.Title }}">
+{{- end }}
+
+{{- range .AlternativeOutputFormats }}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | absLangURL }}">
+{{- end }}
+
+<!-- IndieWeb identity -->
+<link rel="me" href="https://vmst.io/@link">
+<link rel="me" href="https://bsky.app/profile/linksake.bsky.social">

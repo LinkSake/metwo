@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>categories on luis angel ortega</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://luisangel.me/categories/</link>
     <description>Recent  Categories on luis angel ortega</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <managingEditor>hey@luisangel.me (Luis Angel Ortega)</managingEditor>
     <webMaster>hey@luisangel.me (Luis Angel Ortega)</webMaster>
     <copyright>2025 Luis Angel Ortega Holguin All rights reserved</copyright>
-    <lastBuildDate>Fri, 03 Oct 2025 17:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Blogposts</title>
-      <link>http://localhost:1313/categories/blogposts/</link>
-      <pubDate>Fri, 03 Oct 2025 17:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
-      <guid>http://localhost:1313/categories/blogposts/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Reports</title>
-      <link>http://localhost:1313/categories/reports/</link>
-      <pubDate>Wed, 05 Feb 2025 17:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
-      <guid>http://localhost:1313/categories/reports/</guid>
-      <description></description>
-    </item>
+    <lastBuildDate>Thu, 14 May 2026 16:53:22 +0000</lastBuildDate>
+    <atom:link href="https://luisangel.me/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Works</title>
-      <link>http://localhost:1313/categories/works/</link>
-      <pubDate>Wed, 24 Apr 2024 15:15:49 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
-      <guid>http://localhost:1313/categories/works/</guid>
+      <link>https://luisangel.me/categories/works/</link>
+      <pubDate>Thu, 14 May 2026 16:53:22 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>https://luisangel.me/categories/works/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blogposts</title>
+      <link>https://luisangel.me/categories/blogposts/</link>
+      <pubDate>Fri, 03 Oct 2025 17:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>https://luisangel.me/categories/blogposts/</guid>
       <description></description>
     </item>
     <item>
       <title>Articles</title>
-      <link>http://localhost:1313/categories/articles/</link>
-      <pubDate>Sat, 05 Nov 2022 11:53:11 -0500</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
-      <guid>http://localhost:1313/categories/articles/</guid>
+      <link>https://luisangel.me/categories/articles/</link>
+      <pubDate>Thu, 26 Jun 2025 17:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>https://luisangel.me/categories/articles/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reports</title>
+      <link>https://luisangel.me/categories/reports/</link>
+      <pubDate>Wed, 05 Feb 2025 17:00:00 +0000</pubDate><author>hey@luisangel.me (Luis Angel Ortega)</author>
+      <guid>https://luisangel.me/categories/reports/</guid>
       <description></description>
     </item>
   </channel>

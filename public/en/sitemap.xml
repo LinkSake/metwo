@@ -2,379 +2,488 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/ai/</loc>
-    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/blogposts/</loc>
-    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+    <loc>https://luisangel.me/categories/</loc>
+    <lastmod>2026-05-14T16:53:22+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/categories/blogposts/"
+                href="https://luisangel.me/es/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/categories/blogposts/"
+                href="https://luisangel.me/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+    <loc>https://luisangel.me/</loc>
+    <lastmod>2026-05-14T16:53:22+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/categories/"
+                href="https://luisangel.me/es/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/categories/"
+                href="https://luisangel.me/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/education/</loc>
-    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+    <loc>https://luisangel.me/post/</loc>
+    <lastmod>2026-05-14T16:53:22+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/"
+                href="https://luisangel.me/es/post/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/"
+                href="https://luisangel.me/post/"
                 />
   </url><url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+    <loc>https://luisangel.me/post/2026/05/14/without-warning/</loc>
+    <lastmod>2026-05-14T16:53:22+00:00</lastmod>
+  </url><url>
+    <loc>https://luisangel.me/categories/works/</loc>
+    <lastmod>2026-05-14T16:53:22+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/post/"
+                href="https://luisangel.me/es/categories/works/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/post/"
+                href="https://luisangel.me/categories/works/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/rant/</loc>
-    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+    <loc>https://luisangel.me/post/2026/05/04/knowingly/</loc>
+    <lastmod>2026-05-04T16:27:08+00:00</lastmod>
+  </url><url>
+    <loc>https://luisangel.me/post/2026/03/19/times/</loc>
+    <lastmod>2026-03-19T17:30:49+00:00</lastmod>
+  </url><url>
+    <loc>https://luisangel.me/post/2026/02/10/lilac-for-rita/</loc>
+    <lastmod>2026-02-10T17:31:16+00:00</lastmod>
+  </url><url>
+    <loc>https://luisangel.me/post/2026/02/08/january-in-poetry/</loc>
+    <lastmod>2026-02-08T19:30:34+00:00</lastmod>
+  </url><url>
+    <loc>https://luisangel.me/post/2026/02/05/drywall-wall/</loc>
+    <lastmod>2026-02-05T19:32:12+00:00</lastmod>
+  </url><url>
+    <loc>https://luisangel.me/post/2026/02/03/january/</loc>
+    <lastmod>2026-02-03T17:31:02+00:00</lastmod>
+  </url><url>
+    <loc>https://luisangel.me/post/2026/01/29/desire-path/</loc>
+    <lastmod>2026-01-29T17:30:51+00:00</lastmod>
+  </url><url>
+    <loc>https://luisangel.me/post/2026/01/22/kiosk/</loc>
+    <lastmod>2026-01-22T17:30:46+00:00</lastmod>
+  </url><url>
+    <loc>https://luisangel.me/post/2026/01/20/agave/</loc>
+    <lastmod>2026-01-20T17:41:19+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/tags/rant/"
+                href="https://luisangel.me/es/post/2026/01/20/agave/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/tags/rant/"
+                href="https://luisangel.me/post/2026/01/20/agave/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+    <loc>https://luisangel.me/post/2026/01/13/sycamore/</loc>
+    <lastmod>2026-01-13T19:37:53+00:00</lastmod>
+  </url><url>
+    <loc>https://luisangel.me/post/2026/01/07/migraine/</loc>
+    <lastmod>2026-01-07T17:35:46+00:00</lastmod>
+  </url><url>
+    <loc>https://luisangel.me/post/2026/01/05/london-fog/</loc>
+    <lastmod>2026-01-05T17:35:21+00:00</lastmod>
+  </url><url>
+    <loc>https://luisangel.me/post/2026/01/02/rosemary/</loc>
+    <lastmod>2026-01-02T17:35:25+00:00</lastmod>
+  </url><url>
+    <loc>https://luisangel.me/post/2025/12/09/ocotillo/</loc>
+    <lastmod>2025-12-09T18:53:21+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/tags/"
+                href="https://luisangel.me/es/post/2025/12/09/ocotillo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/tags/"
+                href="https://luisangel.me/post/2025/12/09/ocotillo/"
                 />
   </url><url>
-    <loc>http://localhost:1313/post/2025/10/03/lack-of-joy-with-ai/</loc>
+    <loc>https://luisangel.me/post/2025/12/08/645/</loc>
+    <lastmod>2025-12-08T23:42:51+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="https://luisangel.me/es/post/2025/12/08/645/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://luisangel.me/post/2025/12/08/645/"
+                />
+  </url><url>
+    <loc>https://luisangel.me/post/2025/12/07/roof-shadows/</loc>
+    <lastmod>2025-12-07T17:07:39+00:00</lastmod>
+  </url><url>
+    <loc>https://luisangel.me/post/2025/12/06/first-cold/</loc>
+    <lastmod>2025-12-06T17:30:51+00:00</lastmod>
+  </url><url>
+    <loc>https://luisangel.me/post/2025/12/04/the-wounded-bird/</loc>
+    <lastmod>2025-12-04T21:55:45+00:00</lastmod>
+  </url><url>
+    <loc>https://luisangel.me/tags/ai/</loc>
     <lastmod>2025-10-03T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/essay/</loc>
+    <loc>https://luisangel.me/categories/blogposts/</loc>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="https://luisangel.me/es/categories/blogposts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://luisangel.me/categories/blogposts/"
+                />
+  </url><url>
+    <loc>https://luisangel.me/tags/education/</loc>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://luisangel.me/tags/rant/</loc>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="https://luisangel.me/es/tags/rant/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://luisangel.me/tags/rant/"
+                />
+  </url><url>
+    <loc>https://luisangel.me/tags/</loc>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="https://luisangel.me/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://luisangel.me/tags/"
+                />
+  </url><url>
+    <loc>https://luisangel.me/post/2025/10/03/lack-of-joy-with-ai/</loc>
+    <lastmod>2025-10-03T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://luisangel.me/categories/articles/</loc>
     <lastmod>2025-06-26T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/2025/06/26/digitalizing-education/</loc>
+    <loc>https://luisangel.me/tags/essay/</loc>
     <lastmod>2025-06-26T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/book/</loc>
+    <loc>https://luisangel.me/post/2025/06/26/digitalizing-education/</loc>
+    <lastmod>2025-06-26T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://luisangel.me/tags/book/</loc>
     <lastmod>2025-02-05T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/report/</loc>
+    <loc>https://luisangel.me/tags/report/</loc>
     <lastmod>2025-02-05T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/2025/02/05/project-hail-mary/</loc>
-    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-MX"
-                href="http://localhost:1313/es/post/2025/02/05/project-hail-mary/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:1313/post/2025/02/05/project-hail-mary/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/categories/reports/</loc>
-    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/scifi/</loc>
+    <loc>https://luisangel.me/post/2025/02/05/project-hail-mary/</loc>
     <lastmod>2025-02-05T17:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/tags/scifi/"
+                href="https://luisangel.me/es/post/2025/02/05/project-hail-mary/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/tags/scifi/"
+                href="https://luisangel.me/post/2025/02/05/project-hail-mary/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/blogging/</loc>
+    <loc>https://luisangel.me/categories/reports/</loc>
+    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://luisangel.me/tags/scifi/</loc>
+    <lastmod>2025-02-05T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="https://luisangel.me/es/tags/scifi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://luisangel.me/tags/scifi/"
+                />
+  </url><url>
+    <loc>https://luisangel.me/tags/blogging/</loc>
     <lastmod>2024-07-31T17:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/tags/blogging/"
+                href="https://luisangel.me/es/tags/blogging/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/tags/blogging/"
+                href="https://luisangel.me/tags/blogging/"
                 />
   </url><url>
-    <loc>http://localhost:1313/post/2024/07/31/goodbye-nextra-hello-hugo/</loc>
+    <loc>https://luisangel.me/post/2024/07/31/goodbye-nextra-hello-hugo/</loc>
     <lastmod>2024-07-31T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
-    <lastmod>2024-07-31T17:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-MX"
-                href="http://localhost:1313/es/tags/hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:1313/tags/hugo/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/tags/nextra/</loc>
+    <loc>https://luisangel.me/tags/hugo/</loc>
     <lastmod>2024-07-31T17:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/tags/nextra/"
+                href="https://luisangel.me/es/tags/hugo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/tags/nextra/"
+                href="https://luisangel.me/tags/hugo/"
                 />
   </url><url>
-    <loc>http://localhost:1313/garden/</loc>
+    <loc>https://luisangel.me/tags/nextra/</loc>
+    <lastmod>2024-07-31T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="https://luisangel.me/es/tags/nextra/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://luisangel.me/tags/nextra/"
+                />
+  </url><url>
+    <loc>https://luisangel.me/garden/</loc>
     <lastmod>2024-05-24T12:26:36-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/garden/"
+                href="https://luisangel.me/es/garden/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/garden/"
+                href="https://luisangel.me/garden/"
                 />
   </url><url>
-    <loc>http://localhost:1313/garden/latest-reads/</loc>
+    <loc>https://luisangel.me/garden/latest-reads/</loc>
     <lastmod>2024-05-24T12:26:36-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/garden/ultimas-lecturas/"
+                href="https://luisangel.me/es/garden/ultimas-lecturas/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/garden/latest-reads/"
+                href="https://luisangel.me/garden/latest-reads/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/fiction/</loc>
+    <loc>https://luisangel.me/tags/fiction/</loc>
     <lastmod>2024-04-24T15:15:49-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/short-story/</loc>
+    <loc>https://luisangel.me/tags/short-story/</loc>
     <lastmod>2024-04-24T15:15:49-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/2024/04/24/titan/</loc>
+    <loc>https://luisangel.me/post/2024/04/24/titan/</loc>
     <lastmod>2024-04-24T15:15:49-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/post/2024/04/24/titan/"
+                href="https://luisangel.me/es/post/2024/04/24/titan/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/post/2024/04/24/titan/"
+                href="https://luisangel.me/post/2024/04/24/titan/"
                 />
   </url><url>
-    <loc>http://localhost:1313/categories/works/</loc>
-    <lastmod>2024-04-24T15:15:49-05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/2024/03/07/aventuras-de-papel/</loc>
+    <loc>https://luisangel.me/post/2024/03/07/aventuras-de-papel/</loc>
     <lastmod>2024-03-07T15:15:49-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/post/2024/03/07/aventuras-de-papel/"
+                href="https://luisangel.me/es/post/2024/03/07/aventuras-de-papel/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/post/2024/03/07/aventuras-de-papel/"
+                href="https://luisangel.me/post/2024/03/07/aventuras-de-papel/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/poem/</loc>
+    <loc>https://luisangel.me/tags/poem/</loc>
     <lastmod>2024-03-07T15:15:49-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/articles/</loc>
-    <lastmod>2022-11-05T11:53:11-05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/css/</loc>
+    <loc>https://luisangel.me/tags/css/</loc>
     <lastmod>2022-11-05T11:53:11-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/tags/css/"
+                href="https://luisangel.me/es/tags/css/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/tags/css/"
+                href="https://luisangel.me/tags/css/"
                 />
   </url><url>
-    <loc>http://localhost:1313/post/2022/11/05/dropdowns-and-toggles-with-css/</loc>
+    <loc>https://luisangel.me/post/2022/11/05/dropdowns-and-toggles-with-css/</loc>
     <lastmod>2022-11-05T11:53:11-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/web-development/</loc>
+    <loc>https://luisangel.me/tags/web-development/</loc>
     <lastmod>2022-11-05T11:53:11-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/docz/</loc>
+    <loc>https://luisangel.me/tags/docz/</loc>
     <lastmod>2021-10-21T15:32:45-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/javascript/</loc>
+    <loc>https://luisangel.me/tags/javascript/</loc>
     <lastmod>2021-10-21T15:32:45-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/2021/10/21/thinking-outside-the-box-an-online-resume-with-docz/</loc>
+    <loc>https://luisangel.me/post/2021/10/21/thinking-outside-the-box-an-online-resume-with-docz/</loc>
     <lastmod>2021-10-21T15:32:45-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/docker/</loc>
+    <loc>https://luisangel.me/tags/docker/</loc>
     <lastmod>2021-09-02T15:15:49-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/tags/docker/"
+                href="https://luisangel.me/es/tags/docker/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/tags/docker/"
+                href="https://luisangel.me/tags/docker/"
                 />
   </url><url>
-    <loc>http://localhost:1313/post/2021/09/02/docker-and-rails/</loc>
+    <loc>https://luisangel.me/post/2021/09/02/docker-and-rails/</loc>
     <lastmod>2021-09-02T15:15:49-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/rails/</loc>
+    <loc>https://luisangel.me/tags/rails/</loc>
     <lastmod>2021-09-02T15:15:49-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/tags/rails/"
+                href="https://luisangel.me/es/tags/rails/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/tags/rails/"
+                href="https://luisangel.me/tags/rails/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/covid/</loc>
+    <loc>https://luisangel.me/tags/covid/</loc>
     <lastmod>2021-04-20T15:07:57-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/tags/covid/"
+                href="https://luisangel.me/es/tags/covid/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/tags/covid/"
+                href="https://luisangel.me/tags/covid/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/home-office/</loc>
+    <loc>https://luisangel.me/tags/home-office/</loc>
     <lastmod>2021-04-20T15:07:57-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/tags/home-office/"
+                href="https://luisangel.me/es/tags/home-office/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/tags/home-office/"
+                href="https://luisangel.me/tags/home-office/"
                 />
   </url><url>
-    <loc>http://localhost:1313/post/2021/04/20/the-issue-with-home-office/</loc>
+    <loc>https://luisangel.me/post/2021/04/20/the-issue-with-home-office/</loc>
     <lastmod>2021-04-20T15:07:57-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/2020/09/19/a-teaspoon-of-sun/</loc>
+    <loc>https://luisangel.me/post/2020/09/19/a-teaspoon-of-sun/</loc>
     <lastmod>2020-09-19T15:15:49-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/anthology/</loc>
+    <loc>https://luisangel.me/tags/anthology/</loc>
     <lastmod>2020-09-19T15:15:49-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/jaime-sabines/</loc>
+    <loc>https://luisangel.me/tags/jaime-sabines/</loc>
     <lastmod>2020-08-11T13:50:59-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/tags/jaime-sabines/"
+                href="https://luisangel.me/es/tags/jaime-sabines/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/tags/jaime-sabines/"
+                href="https://luisangel.me/tags/jaime-sabines/"
                 />
   </url><url>
-    <loc>http://localhost:1313/post/2020/08/11/the-best-part-of-school-is-recess/</loc>
+    <loc>https://luisangel.me/post/2020/08/11/the-best-part-of-school-is-recess/</loc>
     <lastmod>2020-08-11T13:50:59-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/thoughts/</loc>
+    <loc>https://luisangel.me/tags/thoughts/</loc>
     <lastmod>2020-08-11T13:50:59-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/2020/07/26/the-sunday-that-lasted-a-summer/</loc>
+    <loc>https://luisangel.me/post/2020/07/26/the-sunday-that-lasted-a-summer/</loc>
     <lastmod>2020-07-26T13:34:27-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://luisangel.me/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/about/"
+                href="https://luisangel.me/es/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/about/"
+                href="https://luisangel.me/about/"
                 />
   </url><url>
-    <loc>http://localhost:1313/projects/</loc>
+    <loc>https://luisangel.me/notes/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/es/projects/"
+                href="https://luisangel.me/es/notes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/projects/"
+                href="https://luisangel.me/notes/"
+                />
+  </url><url>
+    <loc>https://luisangel.me/projects/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-MX"
+                href="https://luisangel.me/es/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://luisangel.me/projects/"
                 />
   </url>
 </urlset>

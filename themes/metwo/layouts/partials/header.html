@@ -1,0 +1,20 @@
+<header>
+  <nav>
+    <ul>
+      {{ $title   := lower .Title }}
+      {{ $section := lower .Section }}
+      {{ range .Site.Menus.main }}
+        {{ $name := lower .Name }}
+        <li class="pull-left {{ if eq $name $title }}hide-on-mobile{{ else if eq $section $name }}current{{ else if eq $title (pluralize $name) }}current{{ end }}">
+          <a href="{{ absLangURL .URL }}">~/{{ lower .Name }}</a>
+        </li>
+      {{ end }}
+
+      {{ range .Site.Menus.feed }}
+        <li class="pull-right hide-on-mobile">
+          <a href="{{ absLangURL .URL }}">~/{{ lower .Name }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>

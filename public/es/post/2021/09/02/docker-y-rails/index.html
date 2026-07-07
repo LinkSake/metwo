@@ -1,71 +1,74 @@
 <!DOCTYPE html>
-<html lang="es-MX">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-
+<html lang="es-MX" data-theme="">
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="¿Los nuevos desarrolladores de tu equipo tardan semanas en poder correr el proyecto? ¿Hacer que el proyecto llegue a producción es una odisea? Tal vez Docker sea la solución.">
-    
-    <title>
-      
-        Docker &#43; Rails: Una solución para tus dolores de cabeza
-      
-      | luis angel ortega
-    </title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
-    <link rel="stylesheet" href="http://localhost:1313/css/theme-override.css">
-    <header>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="¿Los nuevos desarrolladores de tu equipo tardan semanas en poder correr el proyecto? ¿Hacer que el proyecto llegue a producción es una odisea? Tal vez Docker sea la solución.">
 
+<title>
+  Docker &#43; Rails: Una solución para tus dolores de cabeza | luis angel ortega
+</title>
+
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="me" href="https://vmst.io/@link">
+<link rel="me" href="https://bsky.app/profile/linksake.bsky.social">
+
+  </head>
+  <body>
+    <header>
   <nav>
     <ul>
       
       
       
+        
+        <li class="pull-left ">
+          <a href="https://luisangel.me/es">~/inicio</a>
+        </li>
       
-      <li class="pull-left ">
-        <a href="http://localhost:1313/es">~/inicio</a>
-      </li>
+        
+        <li class="pull-left ">
+          <a href="https://luisangel.me/es/categories/">~/escritos</a>
+        </li>
       
+        
+        <li class="pull-left ">
+          <a href="https://luisangel.me/es/projects">~/proyectos</a>
+        </li>
       
-      <li class="pull-left ">
-        <a href="http://localhost:1313/es/categories/">~/escritos</a>
-      </li>
+        
+        <li class="pull-left ">
+          <a href="https://luisangel.me/es/garden">~/jardin</a>
+        </li>
       
+        
+        <li class="pull-left ">
+          <a href="https://luisangel.me/es/notes">~/notas</a>
+        </li>
       
-      <li class="pull-left ">
-        <a href="http://localhost:1313/es/projects">~/proyectos</a>
-      </li>
-      
-      
-      <li class="pull-left ">
-        <a href="http://localhost:1313/es/garden">~/jardin</a>
-      </li>
-      
-      
-      <li class="pull-left ">
-        <a href="http://localhost:1313/es/about">~/yo</a>
-      </li>
-      
-
-      
-      
-      <li class="pull-right hide-on-mobile">
-        <a href="http://localhost:1313/es/post/index.xml">~/rss</a>
-      </li>
+        
+        <li class="pull-left ">
+          <a href="https://luisangel.me/es/about">~/yo</a>
+        </li>
       
 
+      
+        <li class="pull-right hide-on-mobile">
+          <a href="https://luisangel.me/es/post/index.xml">~/rss</a>
+        </li>
+      
+        <li class="pull-right hide-on-mobile">
+          <a href="https://luisangel.me/es/notes/index.xml">~/notas rss</a>
+        </li>
+      
     </ul>
   </nav>
 </header>
 
-  </head>
-
-  <body>
-    <br/>
-
+    <div class="content-wrapper">
 <div class="article-meta">
   <h1><span class="title">Docker + Rails: Una solución para tus dolores de cabeza</span></h1>
   <div class="after-title">
@@ -74,7 +77,7 @@
       
         <i class="date">(jueves, 2 de septiembre de 2021)</i>
       
-      | 
+      |
       2138 palabras / 11 minutos
     
   </div>
@@ -82,9 +85,8 @@
 
 
 
-<div class="content-wrapper">
-  <main>
-    <p>¿Has llegado a pasar una semana solamente tratando de correr el proyecto al que te acabas de unir? ¿O tu aplicación no corre en producción como corría en local?<br>
+<main>
+  <p>¿Has llegado a pasar una semana solamente tratando de correr el proyecto al que te acabas de unir? ¿O tu aplicación no corre en producción como corría en local?<br>
 Hay una multitud de factores que pueden contribuir esto, por ello <a href="https://www.docker.com/">Docker</a> nos ofrece una solución con la cual podemos tener un mayor control sobre estas variables a través de las computadoras que sean necesarias.</p>
 <p>Dicho esto, en este articulo veremos como falicitarnos la vida al tener toda nuestra aplicación de Ruby on Rails corriendo sobre Docker; incluidas las bases de datos que sean necesarias.</p>
 <h2 id="prerequisitos">Prerequisitos</h2>
@@ -365,68 +367,55 @@ Para ahorrarnos este espacio crearemos un archivo llamado <code>.dockerignore</c
 <li><a href="https://gorails.com/episodes/docker-basics-for-gorails">Go Rails</a></li>
 </ul>
 
+  
+  <p class="terms-single">「
     
-      <p class="terms-single">「
-        
-          
-          <span>
-            Categorías: 
-          </span>
-              <a href="http://localhost:1313/es/categories/articulos">Articulos</a> 
-            
-          
-        
-          
-          <span>
-            Etiquetas: 
-          </span>
-              <a href="http://localhost:1313/es/tags/rails">rails</a> 
-            
-          </span>
-              <a href="http://localhost:1313/es/tags/docker">docker</a> 
-            
-          </span>
-              <a href="http://localhost:1313/es/tags/desarrollo-web">desarrollo web</a> 
-            
-          
-        
-        」</p>
       
-  </main>
-</div>
+      <span>Categorías:</span>
+        
+          <a href="https://luisangel.me/es/categories/articulos">Articulos</a>
+        
+      
+    
+      
+      <span>Etiquetas:</span>
+        
+          <a href="https://luisangel.me/es/tags/rails">rails</a>
+        
+          <a href="https://luisangel.me/es/tags/docker">docker</a>
+        
+          <a href="https://luisangel.me/es/tags/desarrollo-web">desarrollo web</a>
+        
+      
+    
+    」</p>
+  
+</main>
+
+    </div>
     <footer>
-      
+  
 <script>
 (function() {
-  function center_el(tagName) {
-    var tags = document.getElementsByTagName(tagName), i, tag;
-    for (i = 0; i < tags.length; i++) {
-      tag = tags[i];
-      var parent = tag.parentElement;
-      
-      if (parent.childNodes.length === 1) {
-        
-        if (parent.nodeName === 'A') {
-          parent = parent.parentElement;
-          if (parent.childNodes.length != 1) continue;
-        }
-        if (parent.nodeName === 'P') parent.style.textAlign = 'center';
+  var tags = ['img', 'embed', 'object'];
+  for (var i = 0; i < tags.length; i++) {
+    var els = document.getElementsByTagName(tags[i]);
+    for (var j = 0; j < els.length; j++) {
+      var el = els[j], p = el.parentElement;
+      if (p.childNodes.length === 1) {
+        if (p.nodeName === 'A') { p = p.parentElement; if (p.childNodes.length !== 1) continue; }
+        if (p.nodeName === 'P') p.style.textAlign = 'center';
       }
     }
-  }
-  var tagNames = ['img', 'embed', 'object'];
-  for (var i = 0; i < tagNames.length; i++) {
-    center_el(tagNames[i]);
   }
 })();
 </script>
 
-      
-      <hr/>
-      Luis Angel Ortega © 2024 | <a href="/en">English</a> | Hecho con <a href="https://github.com/goodroot/hugo-classic">hugo-classic</a>
-      
-    </footer>
+  
+  <hr>
+  Luis Angel Ortega © 2024 | <a href="/en">English</a> | Hecho con <a href="https://github.com/goodroot/hugo-classic">hugo-classic</a>
+  
+</footer>
+
   </body>
 </html>
-
-<a rel="me" href="https://vmst.io/@link" style="display: none;"></a>
