@@ -28,6 +28,15 @@ notes: "notas"
 notes_desc: "Pensamientos cortos, enlaces y observaciones. Sin título."
 see_all_notes: "ver todas las notas"
 
+# Landing page
+landing_lately: "últimamente"
+landing_lately_book: "leyendo"
+landing_lately_film: "viendo"
+landing_lately_link: "enlace"
+landing_see_more: "ver más"
+landing_posts: "escritura"
+landing_project: "proyecto"
+
 # Words
 by: "por"
 words: "palabras"

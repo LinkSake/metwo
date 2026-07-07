@@ -25,8 +25,16 @@ tabWidth = 4
 
 [params]
 [params.author]
-name = "Luis Angel Ortega"
+name  = "Luis Angel Ortega"
 email = "hey@luisangel.me"
+
+[params.socials]
+email       = "hey@luisangel.me"
+mastodon    = "https://vmst.io/@link"
+bluesky     = "https://bsky.app/profile/linksake.bsky.social"
+instagram   = "https://instagram.com/linksake"
+substack_en = "https://linksake.substack.com"
+substack_es = "https://luisangelortega.substack.com"
 
 [permalinks]
 post = "/post/:year/:month/:day/:slug/"
@@ -41,7 +49,7 @@ languageName = 'English'
 weight = 0
 [languages.en.params]
 description = "Hello there! I'm Luis Angel, a Mexican developer, writer and poet from the city of Chihuahua, Mexico. In the absense of joy in social media, this webpage is my effort to create and share more to the world."
-footer = "Luis Angel Ortega © 2024 | [Español](/es) | Made with [hugo-classic](https://github.com/goodroot/hugo-classic)"
+footer = "Luis Angel Ortega © 2025 | [Español](/es)"
 [languages.en.menus]
 [[languages.en.menus.main]]
 identifier = "home"
@@ -90,7 +98,7 @@ languageName = 'Español'
 weight = 1
 [languages.es.params]
 description = "Soy Luis Angel, un desarrollador, escritor y poeta mexicano de la ciudad de Chihuahua. No me gusta el estado actual de las redes sociales así que esta página web es mi esfuerzo para crear y compartir más con el mundo."
-footer = "Luis Angel Ortega © 2024 | [English](/en) | Hecho con [hugo-classic](https://github.com/goodroot/hugo-classic)"
+footer = "Luis Angel Ortega © 2025 | [English](/en)"
 [languages.es.menus]
 [[languages.es.menus.main]]
 identifier = "home"
