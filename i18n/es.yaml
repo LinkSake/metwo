@@ -37,6 +37,10 @@ landing_see_more: "ver más"
 landing_posts: "escritura"
 landing_project: "proyecto"
 
+# Theme toggle
+theme_dark: "Oscuro"
+theme_light: "Claro"
+
 # Words
 by: "por"
 words: "palabras"

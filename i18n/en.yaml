@@ -37,6 +37,10 @@ landing_see_more: "see more"
 landing_posts: "writing"
 landing_project: "project"
 
+# Theme toggle
+theme_dark: "Dark"
+theme_light: "Light"
+
 # Words
 by: "by"
 words: "words"
