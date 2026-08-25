@@ -1,14 +1,14 @@
 +++
 title = 'plática: indieweb y posse en el gluch'
-description = 'resumen de la plática sobre la web independiente y POSSE que voy a dar en el Grupo de Usuarios de Linux de Chihuahua'
+description = 'resumen de la plática sobre la web independiente y POSSE que di en el Grupo de Usuarios de Linux de Chihuahua'
 date = 2026-08-25T00:00:00-06:00
 slug = 'platica-indieweb-posse-gluch'
 simple = true
 +++
 
-El 27 de agosto de 2026 voy a dar una plática para el **GLUCH** (Grupo de Usuarios de Linux de Chihuahua) sobre la IndieWeb y POSSE. Aquí va un resumen de los temas que voy a cubrir.
+El 27 de agosto de 2026 di una plática para el **[GLUCH](https://gluch.org.mx)** (Grupo de Usuarios de Linux de Chihuahua) sobre la IndieWeb y POSSE. Aquí va un resumen de los temas que cubrí.
 
-Las diapositivas estarán disponibles aquí en [PDF](/docs/platica-indieweb-posse-gluch.pdf) — por ahora es un placeholder, subiré las definitivas después de la plática.
+Las diapositivas están disponibles en [PDF](/docs/platica-indieweb-posse-gluch.pdf).
 
 ## ¿qué es la indieweb?
 
@@ -49,9 +49,9 @@ Una comunidad de sitios web independientes y personales conectados por estándar
 
 [sadgrl.online](https://sadgrl.online/) · [neocities.org](https://neocities.org/) · [100r.co](https://100r.co/site/home.html) · [j3s.sh](https://j3s.sh/) · [cyberia.club](https://cyberia.club/) · [veronicaexplains.net](https://veronicaexplains.net/) · [directorio de indieweb.org](https://indieweb.org/directory#Examples_In_The_Wild)
 
-## propuesta: un webring para el gluch
+## propuesta: un webring para el [gluch](https://gluch.org.mx)
 
-Cerré la plática proponiendo crear un webring del GLUCH: una colección de sitios enlazados entre sí en forma circular, con al menos tres puntos de acceso — una página de inicio, una página `/siguiente/` y una página `/anterior/`.
+Cerré la plática proponiendo crear un webring del [GLUCH](https://gluch.org.mx): una colección de sitios enlazados entre sí en forma circular, con al menos tres puntos de acceso — una página de inicio, una página `/siguiente/` y una página `/anterior/`.
 
 ## referencias
 
