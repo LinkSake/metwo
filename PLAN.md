@@ -74,7 +74,7 @@ Replace the current blog-centric homepage with a presentation card landing page 
   Verify feeds exist and are well-formed for every content type: posts, notes, garden reads. Check per-section feeds for writings subcategories. Add any missing.
 
 - [ ] **5.2 — `rel="me"` verification**
-  Confirm `rel="me"` links to Mastodon and Bluesky are correct in `<head>`. These were added in Phase 1 — verify they match the live handles.
+  Confirm the `rel="me"` link to Bluesky is correct in `<head>`. Mastodon was removed (no longer active) — verify no lingering references remain.
 
 - [ ] **5.3 — Microformats2 on posts and notes**
   Add `h-entry` markup to `single.html` and `notes/list.html`. Landing bio card already has `h-card`.

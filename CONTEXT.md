@@ -2,7 +2,7 @@
 
 ## Who is this for
 
-**Luis Angel Ortega** — Mexican developer, writer, and poet from Chihuahua. Active on Mastodon (`@link@vmst.io`), Bluesky (`@linksake.bsky.social`), and Instagram (`@linksake`). Prefers personal, independent web over social media platforms.
+**Luis Angel Ortega** — Mexican developer, writer, and poet from Chihuahua. Active on Bluesky (`@linksake.bsky.social`) and Instagram (`@linksake`). Prefers personal, independent web over social media platforms.
 
 ## The site now
 
@@ -65,7 +65,6 @@ Layout inspiration: paco.me and jamesg.blog — bio card at top, named sections 
 
 | Platform | Handle | POSSE strategy |
 |---|---|---|
-| Mastodon | `@link@vmst.io` | Cross-post notes; `rel="me"` in `<head>` (done) |
 | Bluesky | `@linksake.bsky.social` | Cross-post notes via AT Protocol script (Phase 5) |
 | Instagram | `@linksake` | Social link only — no public RSS/API |
 | Substack EN | `linksake.substack.com` | Write on site first, cross-post to Substack |

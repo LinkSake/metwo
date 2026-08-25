@@ -31,7 +31,6 @@ email = "hey@luisangel.me"
 
 [params.socials]
 email       = "hey@luisangel.me"
-mastodon    = "https://vmst.io/@link"
 bluesky     = "https://bsky.app/profile/linksake.bsky.social"
 instagram   = "https://instagram.com/linksake"
 substack_en = "https://linksake.substack.com"
