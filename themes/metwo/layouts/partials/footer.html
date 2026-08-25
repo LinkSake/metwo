@@ -1,31 +1,19 @@
 <footer>
   {{ partial "foot_custom.html" . }}
-  {{ with .Site.Params.footer }}
   <hr>
-  {{ . | markdownify }}
-  {{ end }}
-
-  <ul class="footer-controls">
+  <p class="footer-line">
+    {{ with .Site.Params.footer }}{{ . }}{{ end -}}
     {{/* Language switcher — links to translated versions (excludes current language) */}}
-    {{ range .Translations }}
-      <li><a href="{{ .Permalink }}">~/{{ lower .Language.LanguageName }}</a></li>
-    {{ end }}
-
+    {{- range .Translations }} | <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>{{ end -}}
+    {{/* RSS feed links */}}
+    {{- range .Site.Menus.feed }} | <a href="{{ absLangURL .URL }}">{{ replace (title .Name) "Rss" "RSS" }}</a>{{ end -}}
     {{/* Theme toggle — label shows where you'll go, JS handles the rest */}}
-    <li>
-      <button
+    | <button
         id="theme-toggle"
         aria-label="toggle colour theme"
         title="toggle colour theme"
-      >~/dark</button>
-    </li>
-  </ul>
-
-  <ul class="footer-controls">
-    {{ range .Site.Menus.feed }}
-      <li><a href="{{ absLangURL .URL }}">~/{{ lower .Name }}</a></li>
-    {{ end }}
-  </ul>
+      >Dark</button>
+  </p>
 </footer>
 
 <script>
@@ -49,7 +37,7 @@
   function applyTheme(theme) {
     html.setAttribute('data-theme', theme);
     // Label shows the opposite (where you'll go on next click)
-    btn.textContent = '~/' + (theme === 'dark' ? 'light' : 'dark');
+    btn.textContent = theme === 'dark' ? 'Light' : 'Dark';
   }
 
   // On load: stored preference wins, then OS preference
