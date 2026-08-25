@@ -2,7 +2,7 @@
 title = "Lila (para Rita)"
 date = 2026-02-10T17:25:48Z
 slug = "lila-para-rita"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://luisangelortega.substack.com/p/lila-para-rita"

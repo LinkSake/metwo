@@ -2,7 +2,7 @@
 title = "January"
 date = 2026-02-03T17:31:02Z
 slug = "january"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://linksake.substack.com/p/january"

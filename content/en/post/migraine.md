@@ -2,7 +2,7 @@
 title = "Migraine"
 date = 2026-01-07T17:35:46Z
 slug = "migraine"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://linksake.substack.com/p/migraine"

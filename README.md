@@ -1,6 +1,6 @@
 # luisangel.me
 
-Personal website of Luis Angel Ortega — developer, writer, and poet from Chihuahua, Mexico. Built with [Hugo](https://gohugo.io/), custom theme (`themes/metwo`), bilingual English and Spanish.
+Personal website of Luis Ángel Ortega — developer, writer, and poet from Chihuahua, Mexico. Built with [Hugo](https://gohugo.io/), custom theme (`themes/metwo`), bilingual English and Spanish.
 
 The logo/icon was made by [Horse Wizard](http://instagram.com/horse.wizard).
 

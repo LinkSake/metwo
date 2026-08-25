@@ -3,7 +3,7 @@ title = "Report: Project Hail Mary by Andy Weir"
 description = "My take on this great sci-fi book."
 date = 2025-02-05T17:00:00-00:00
 slug = "project-hail-mary"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Reports"]
 tags = ["report", "book", "scifi"]
 +++

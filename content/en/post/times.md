@@ -2,7 +2,7 @@
 title = "Times"
 date = 2026-03-19T17:30:49Z
 slug = "times"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://linksake.substack.com/p/times"

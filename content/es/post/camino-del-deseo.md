@@ -2,7 +2,7 @@
 title = "Camino del deseo"
 date = 2026-01-29T17:25:15Z
 slug = "camino-del-deseo"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://luisangelortega.substack.com/p/camino-del-deseo"

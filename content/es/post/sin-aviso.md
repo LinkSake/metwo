@@ -2,7 +2,7 @@
 title = "Sin aviso"
 date = 2026-05-14T16:53:08Z
 slug = "sin-aviso"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://luisangelortega.substack.com/p/sin-aviso"

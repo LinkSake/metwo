@@ -2,7 +2,7 @@
 title = "Roof Shadows"
 date = 2025-12-07T17:07:39Z
 slug = "roof-shadows"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://linksake.substack.com/p/roof-shadows"

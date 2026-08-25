@@ -3,7 +3,7 @@ title = "Dropdowns y Toggles con puro CSS"
 description = "Sin necesidad de usar JavaScript en tu proyecto, puedes tener menus interactivos y estileros solamente con CSS"
 date = 2022-11-05T11:53:11-05:00
 slug = "dropdowns-y-toggles-con-css"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Articulos"]
 tags = ["desarrollo web", "css"]
 +++

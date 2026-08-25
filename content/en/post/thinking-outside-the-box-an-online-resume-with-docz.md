@@ -3,7 +3,7 @@ title = "Thinking Outside the Box an Online Resume With Docz"
 description = "With a little bit of creativity and Docz, you can easly have a new online cv in minutes!"
 date = 2021-10-21T15:32:45-05:00
 slug = "thinking-outside-the-box-an-online-resume-with-docz"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Articles"]
 tags = ["docz", "javascript", "web development"]
 draft = false
@@ -98,8 +98,8 @@ Before we start adding more pages, let’s create a configuration file named `do
 // doczrc.js
 
 export default {
-  title: "Luis Angel Ortega",
-  description: "Hello, I'm Luis Angel and this is my resume made with Docz!",
+  title: "Luis Ángel Ortega",
+  description: "Hello, I'm Luis Ángel and this is my resume made with Docz!",
   ignore: ["README.md"]
 }
 ```
@@ -302,8 +302,8 @@ First we need to configure some things, go to your doczrc.js file and add a dest
 // doczrc.js
 
 export default {
-  title: "Luis Angel Ortega",
-  description: "Hello, I'm Luis Angel and this is my resume made with Docz!",
+  title: "Luis Ángel Ortega",
+  description: "Hello, I'm Luis Ángel and this is my resume made with Docz!",
   ignore: ["README.md"],
   dest: "/docs",
   base: "docz-resume"

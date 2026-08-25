@@ -2,7 +2,7 @@
 title = "January in Poetry"
 date = 2026-02-08T19:30:34Z
 slug = "january-in-poetry"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://linksake.substack.com/p/january-in-poetry"

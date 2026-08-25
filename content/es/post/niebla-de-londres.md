@@ -2,7 +2,7 @@
 title = "Niebla de Londres"
 date = 2026-01-05T17:30:36Z
 slug = "niebla-de-londres"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://luisangelortega.substack.com/p/niebla-de-londres"

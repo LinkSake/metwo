@@ -2,7 +2,7 @@
 title = "Without Warning"
 date = 2026-05-14T16:53:22Z
 slug = "without-warning"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://linksake.substack.com/p/without-warning"

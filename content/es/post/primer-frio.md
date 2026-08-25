@@ -2,7 +2,7 @@
 title = "Primer frio"
 date = 2025-12-06T17:30:51Z
 slug = "primer-frio"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://luisangelortega.substack.com/p/primer-frio"

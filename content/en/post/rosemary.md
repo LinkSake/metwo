@@ -2,7 +2,7 @@
 title = "Rosemary"
 date = 2026-01-02T17:35:25Z
 slug = "rosemary"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://linksake.substack.com/p/rosemary"

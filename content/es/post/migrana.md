@@ -2,7 +2,7 @@
 title = "Migraña"
 date = 2026-01-07T17:30:35Z
 slug = "migrana"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://luisangelortega.substack.com/p/migrana"

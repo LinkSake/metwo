@@ -2,7 +2,7 @@
 title = "Temporales"
 date = 2026-03-19T17:25:48Z
 slug = "temporales"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://luisangelortega.substack.com/p/temporales"

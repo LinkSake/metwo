@@ -2,7 +2,7 @@
 title = "Sombras en las azoteas"
 date = 2025-12-07T17:07:42Z
 slug = "sombras-en-las-azoteas"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://luisangelortega.substack.com/p/sombras-en-las-azoteas"

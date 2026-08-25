@@ -2,7 +2,7 @@
 
 ## Who is this for
 
-**Luis Angel Ortega** — Mexican developer, writer, and poet from Chihuahua. Active on Bluesky (`@linksake.bsky.social`) and Instagram (`@linksake`). Prefers personal, independent web over social media platforms.
+**Luis Ángel Ortega** — Mexican developer, writer, and poet from Chihuahua. Active on Bluesky (`@linksake.bsky.social`) and Instagram (`@linksake`). Prefers personal, independent web over social media platforms.
 
 ## The site now
 
@@ -100,15 +100,16 @@ Custom theme from scratch at `/themes/metwo`. Done — hugo-classic submodule re
 
 ## Theme architecture (`/themes/metwo`)
 
-`baseof.html` block pattern. Partials: `head.html` (meta, RSS autodiscovery, `rel="me"` links, font preloads), `header.html` (nav + theme toggle JS + language switcher), `footer.html`, `foot_custom.html`. Page templates use `{{ define "main" }}`. `index.html` is the dedicated landing page template.
+`baseof.html` block pattern. Partials: `head.html` (meta, RSS autodiscovery, `rel="me"` links, font preloads), `header.html` (main nav only), `footer.html` (theme toggle JS, language switcher, RSS links, copyright), `foot_custom.html`. Page templates use `{{ define "main" }}`. `index.html` is the dedicated landing page template.
 
 Single CSS file `static/css/main.css`: `@font-face` for Lora, full token set, base element styles, landing page layout. Phase 4 will add inner page styles.
 
-### Nav controls
+### Footer controls
 
-Both right-aligned text labels matching the `~/name` nav convention:
+Moved out of the header nav into the footer, as two rows below the copyright line. Same `~/name` label convention:
 - **Theme toggle:** `~/dark` or `~/light` — shows target. Reads `localStorage`, falls back to `prefers-color-scheme`. Sets `data-theme` on `<html>`.
 - **Language switcher:** `~/español` on EN pages, `~/english` on ES pages. Uses Hugo `.Translations`.
+- **RSS links:** `~/rss` and `~/notes rss` — own row, separate from the language/theme row.
 
 ## Data files
 

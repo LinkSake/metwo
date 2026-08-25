@@ -2,7 +2,7 @@
 title = "Enero en la poesía"
 date = 2026-02-08T19:25:21Z
 slug = "enero-en-la-poesia"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://luisangelortega.substack.com/p/enero-en-la-poesia"

@@ -2,7 +2,7 @@
 title = "London Fog"
 date = 2026-01-05T17:35:21Z
 slug = "london-fog"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://linksake.substack.com/p/london-fog"

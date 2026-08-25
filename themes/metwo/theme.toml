@@ -7,5 +7,5 @@ tags = ["personal", "blog", "minimal"]
 features = ["notes", "posse"]
 
 [author]
-  name = "Luis Angel Ortega"
+  name = "Luis Ángel Ortega"
   homepage = "https://luisangel.me"

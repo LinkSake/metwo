@@ -2,7 +2,7 @@
 title = "Knowingly"
 date = 2026-05-04T16:27:08Z
 slug = "knowingly"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://linksake.substack.com/p/knowingly"

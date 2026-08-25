@@ -2,7 +2,7 @@
 title = "Drywall wall"
 date = 2026-02-05T19:32:12Z
 slug = "drywall-wall"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://linksake.substack.com/p/drywall-wall"

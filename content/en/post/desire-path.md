@@ -2,7 +2,7 @@
 title = "Desire Path"
 date = 2026-01-29T17:30:51Z
 slug = "desire-path"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://linksake.substack.com/p/desire-path"

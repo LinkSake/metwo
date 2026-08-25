@@ -2,7 +2,7 @@
 title = "Bicicleta"
 date = 2026-06-18T00:31:06Z
 slug = "bicicleta"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://luisangelortega.substack.com/p/bicicleta"

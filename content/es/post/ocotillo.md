@@ -2,7 +2,7 @@
 title = "Ocotillo"
 date = 2025-12-09T18:56:07Z
 slug = "ocotillo"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://luisangelortega.substack.com/p/ocotillo"

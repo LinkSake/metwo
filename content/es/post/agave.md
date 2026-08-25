@@ -2,7 +2,7 @@
 title = "Agave"
 date = 2026-01-20T17:39:38Z
 slug = "agave"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://luisangelortega.substack.com/p/agave"

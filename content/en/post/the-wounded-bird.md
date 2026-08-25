@@ -2,7 +2,7 @@
 title = "The Wounded Bird"
 date = 2025-12-04T21:55:45Z
 slug = "the-wounded-bird"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://linksake.substack.com/p/the-wounded-bird"

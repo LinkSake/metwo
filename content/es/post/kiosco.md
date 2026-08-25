@@ -2,7 +2,7 @@
 title = "Kiosco"
 date = 2026-01-22T17:25:22Z
 slug = "kiosco"
-author = "Luis Angel Ortega"
+author = "Luis Ángel Ortega"
 categories = ["Works"]
 tags = []
 original_url = "https://luisangelortega.substack.com/p/kiosco"
