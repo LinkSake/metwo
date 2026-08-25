@@ -2,7 +2,8 @@
 
 # sync-lately.sh
 # Syncs "Lately" data from GoodReads, Letterboxd, and Raindrop.io
-# into data/lately.yaml for use by the Hugo landing page.
+# into data/lately.yaml for use by the Hugo landing page, and appends
+# new Raindrop reads to the garden/latest-reads.md archive (EN+ES).
 
 set -euo pipefail
 
@@ -12,6 +13,8 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BLOG_DIR="$(dirname "$SCRIPT_DIR")"
 DATA_FILE="$BLOG_DIR/data/lately.yaml"
+EN_READS_FILE="$BLOG_DIR/content/en/garden/latest-reads.md"
+ES_READS_FILE="$BLOG_DIR/content/es/garden/latest-reads.md"
 TEMP_DIR="/tmp/sync-lately"
 ENV_FILE="$BLOG_DIR/.env"
 
@@ -21,7 +24,9 @@ ENV_FILE="$BLOG_DIR/.env"
 GOODREADS_RSS="https://www.goodreads.com/review/list_rss/76567849?shelf=currently-reading"
 LETTERBOXD_RSS="https://letterboxd.com/linksake/rss/"
 RAINDROP_API="https://api.raindrop.io/rest/v1"
-RAINDROP_LINKS_COUNT=5
+RAINDROP_WIDGET_COUNT=1    # shown in the landing page "lately" widget
+RAINDROP_ARCHIVE_FETCH=20  # fetched per run to backfill the latest-reads archive
+RAINDROP_JSON_FILE="$TEMP_DIR/raindrop.json"  # fetch_links() writes here on success
 
 # ---------------------------------------------------------------------------
 # Colours
@@ -206,7 +211,7 @@ fetch_links() {
     fi
 
     local response_file="$TEMP_DIR/raindrop.json"
-    local url="$RAINDROP_API/raindrops/$collection?sort=-created&perpage=$RAINDROP_LINKS_COUNT"
+    local url="$RAINDROP_API/raindrops/$collection?sort=-created&perpage=$RAINDROP_ARCHIVE_FETCH"
 
     local http_code
     http_code=$(curl -s --max-time 15 -w "%{http_code}" \
@@ -220,10 +225,10 @@ fetch_links() {
         return
     fi
 
-    # Build YAML list using jq
+    # Build YAML list (just the top entries for the widget) using jq
     local links_yaml
-    links_yaml=$(jq -r '
-        .items[] |
+    links_yaml=$(jq -r --argjson n "$RAINDROP_WIDGET_COUNT" '
+        .items[0:$n][] |
         select(.title != null and .link != null) |
         {
             title: (.title | gsub("[\n\r]"; " ") | gsub("'\''"; "'\\'''\''") ),
@@ -245,6 +250,78 @@ fetch_links() {
 
     echo "links:"
     echo "$links_yaml"
+}
+
+# ---------------------------------------------------------------------------
+# Garden archive — append new Raindrop reads to latest-reads.md (EN+ES)
+# ---------------------------------------------------------------------------
+format_date() {
+    local iso_date="$1"
+    local date_part="${iso_date%T*}"
+    local formatted
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        formatted=$(date -j -f "%Y-%m-%d" "$date_part" +"%d/%m/%y" 2>/dev/null)
+    else
+        formatted=$(date -d "$date_part" +"%d/%m/%y" 2>/dev/null)
+    fi
+    echo "${formatted:-$(date +"%d/%m/%y")}"
+}
+
+prepend_entry() {
+    local file="$1" entry="$2"
+    local header_end next_line total_lines
+    header_end=$(grep -n "^+++" "$file" | tail -1 | cut -d: -f1)
+    next_line=$((header_end + 1))
+    total_lines=$(wc -l < "$file")
+
+    if [[ $next_line -le $total_lines ]]; then
+        sed -i '' "${next_line}i\\
+$entry
+" "$file"
+    else
+        sed -i '' "${header_end}a\\
+\\
+$entry
+" "$file"
+    fi
+}
+
+update_latest_reads() {
+    local json_file="$1"
+    [[ -n "$json_file" && -f "$json_file" ]] || return 0
+
+    log "Updating garden latest-reads archive..."
+
+    local new_entries=()
+    while IFS=$'\t' read -r created title link; do
+        [[ -z "$link" ]] && continue
+        if grep -qF "$link" "$EN_READS_FILE" 2>/dev/null || grep -qF "$link" "$ES_READS_FILE" 2>/dev/null; then
+            continue
+        fi
+        local date_str escaped_title
+        date_str=$(format_date "$created")
+        escaped_title="${title//\[/\\[}"
+        escaped_title="${escaped_title//\]/\\]}"
+        new_entries+=("- ($date_str) [$escaped_title]($link)")
+    done < <(jq -r '
+        .items[] |
+        select(.title != null and .link != null) |
+        [.created, (.title | gsub("[\n\r\t]"; " ")), .link] |
+        @tsv
+    ' "$json_file" 2>/dev/null)
+
+    if [[ ${#new_entries[@]} -eq 0 ]]; then
+        log "Latest reads archive: no new entries"
+        return
+    fi
+
+    # API returns newest-first; insert in reverse so newest ends up first after the front matter
+    local i
+    for ((i=${#new_entries[@]}-1; i>=0; i--)); do
+        prepend_entry "$EN_READS_FILE" "${new_entries[$i]}"
+        prepend_entry "$ES_READS_FILE" "${new_entries[$i]}"
+    done
+    log "Latest reads archive: ${#new_entries[@]} new entries added"
 }
 
 # ---------------------------------------------------------------------------
@@ -282,6 +359,7 @@ main() {
     book_yaml=$(fetch_book)
     film_yaml=$(fetch_film)
     links_yaml=$(fetch_links)
+    update_latest_reads "$RAINDROP_JSON_FILE"
 
     write_yaml "$book_yaml" "$film_yaml" "$links_yaml"
 
