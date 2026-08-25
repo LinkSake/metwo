@@ -84,6 +84,16 @@
       </li>
       {{ end }}
 
+      {{ with .track }}
+      <li class="lately-item">
+        <span class="lately-label">{{ i18n "landing_lately_track" }}</span>
+        <span class="lately-content">
+          <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
+          {{ with .artist }}<span class="lately-by">{{ i18n "by" }} {{ . }}</span>{{ end }}
+        </span>
+      </li>
+      {{ end }}
+
       {{ with .links }}
         {{ range first 1 . }}
         <li class="lately-item">

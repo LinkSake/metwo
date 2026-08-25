@@ -9,7 +9,7 @@
 - **Stack:** Hugo, custom theme `themes/metwo`, bilingual EN/ES.
 - **URL:** `luisangel.me`
 - **Content sections:** Writings (blogposts, articles, reports, works), Notes, Projects, Garden, About.
-- **Automations:** `sync-lately.sh` (GoodReads + Letterboxd + Raindrop → `data/lately.yaml`), `sync-raindrop-reads.sh` (full reads list to garden pages), `import-substack.py` (one-time + ongoing Substack import).
+- **Automations:** `sync-lately.sh` (GoodReads + Letterboxd + Raindrop → `data/lately.yaml`, and Raindrop → garden `latest-reads` archive), `import-substack.py` (one-time + ongoing Substack import).
 
 ## The intent
 
@@ -57,6 +57,7 @@ Layout inspiration: paco.me and jamesg.blog — bio card at top, named sections 
 |---|---|---|
 | GoodReads | `https://www.goodreads.com/review/list_rss/76567849?shelf=currently-reading` | Title, author |
 | Letterboxd | `https://letterboxd.com/linksake/rss/` | Film title, year, rating, watched date |
+| Last.fm | API (`user.getrecenttracks`, key in `.env`) | Track title, artist, URL |
 | Raindrop.io | API (token in `.env`) | Link title, URL, date |
 | Substack EN | `https://linksake.substack.com/feed` | *tiny engines* — poetry and short stories |
 | Substack ES | `https://luisangelortega.substack.com/feed` | *pequeños motores* — poetry and short stories |

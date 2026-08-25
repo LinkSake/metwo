@@ -45,26 +45,23 @@ All scripts live in `scripts/` and read credentials from a `.env` file (copy fro
 
 ```bash
 cp .env.example .env
-# fill in RAINDROP_TOKEN and RAINDROP_COLLECTION_ID
+# fill in RAINDROP_TOKEN, RAINDROP_COLLECTION_ID, and LASTFM_API_KEY
 ```
 
-### `sync-lately.sh` — Lately section data
+### `sync-lately.sh` — Lately section data + garden reads archive
 
 Fetches the landing page "Lately" data and writes `data/lately.yaml`:
 - Book: currently-reading shelf from GoodReads (public RSS, no credentials needed)
 - Film: most recently watched from Letterboxd (public RSS, no credentials needed)
-- Links: last 5 bookmarks from Raindrop.io (requires `.env`)
+- Track: most recent scrobble from Last.fm (requires `LASTFM_API_KEY`)
+- Article: latest bookmark from Raindrop.io (requires `.env`)
+
+Any source missing its credentials is skipped gracefully — the rest of the sync still runs.
+
+Also appends any new Raindrop.io bookmarks (up to 20 fetched per run) to the garden `latest-reads` archive pages (EN + ES), deduped against existing entries.
 
 ```bash
 ./scripts/sync-lately.sh
-```
-
-### `sync-raindrop-reads.sh` — Garden latest reads
-
-Syncs the last 50 Raindrop.io bookmarks into the full garden `latest-reads` pages (EN + ES).
-
-```bash
-./scripts/sync-raindrop-reads.sh
 ```
 
 ### `import-substack.py` — Substack migration
