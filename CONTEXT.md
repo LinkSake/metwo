@@ -57,6 +57,7 @@ Layout inspiration: paco.me and jamesg.blog — bio card at top, named sections 
 |---|---|---|
 | GoodReads | `https://www.goodreads.com/review/list_rss/76567849?shelf=currently-reading` | Title, author |
 | Letterboxd | `https://letterboxd.com/linksake/rss/` | Film title, year, rating, watched date |
+| MyAnimeList | `https://myanimelist.net/animelist/LinkSake/load.json?status=1` | Anime title, episode progress, URL |
 | Last.fm | API (`user.getrecenttracks`, key in `.env`) | Track title, artist, URL |
 | Raindrop.io | API (token in `.env`) | Link title, URL, date |
 | Substack EN | `https://linksake.substack.com/feed` | *tiny engines* — poetry and short stories |

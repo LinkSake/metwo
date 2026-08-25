@@ -53,6 +53,7 @@ cp .env.example .env
 Fetches the landing page "Lately" data and writes `data/lately.yaml`:
 - Book: currently-reading shelf from GoodReads (public RSS, no credentials needed)
 - Film: most recently watched from Letterboxd (public RSS, no credentials needed)
+- Anime: currently-watching, most recently progressed, from MyAnimeList (public list endpoint, no credentials needed) — shown as a second line under "watching"
 - Track: most recent scrobble from Last.fm (requires `LASTFM_API_KEY`)
 - Article: latest bookmark from Raindrop.io (requires `.env`)
 

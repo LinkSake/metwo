@@ -80,6 +80,11 @@
         <span class="lately-content">
           <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
           {{ with .stars }}<span class="lately-rating" aria-label="rating">{{ . }}</span>{{ end }}
+          {{ with $.Site.Data.lately.anime }}
+          <br>
+          <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
+          {{ with .episode }}<span class="lately-rating" aria-label="episode">ep {{ . }}</span>{{ end }}
+          {{ end }}
         </span>
       </li>
       {{ end }}
