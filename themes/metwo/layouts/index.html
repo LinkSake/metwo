@@ -106,7 +106,13 @@
       {{ end }}
 
     </ul>
-    <a class="see-more" href="{{ absLangURL "/garden/latest-reads" }}">{{ i18n "landing_see_more" }} &rarr;</a>
+    {{ $gardenPages := where $.Site.RegularPages "Section" "garden" }}
+    {{ $readsMatches := where $gardenPages "File.ContentBaseName" "latest-reads" }}
+    {{ with $readsMatches }}
+    {{ with index . 0 }}
+    <a class="see-more" href="{{ .RelPermalink }}">{{ i18n "landing_see_more" }} &rarr;</a>
+    {{ end }}
+    {{ end }}
   </section>
   {{ end }}
 
