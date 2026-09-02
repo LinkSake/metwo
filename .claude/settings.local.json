@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./sync-raindrop-reads.sh:*)",
+      "Bash(chmod:*)",
+      "Bash(./scripts/update-reads.sh:*)",
+      "Bash(./scripts/translate-reads.sh:*)",
+      "Bash(find:*)",
+      "Bash(sed:*)",
+      "Bash(./scripts/sync-raindrop-reads.sh:*)",
+      "Bash(curl:*)",
+      "Bash(echo:*)",
+      "Bash(export RAINDROP_TOKEN=\"test_token\")",
+      "Bash(export RAINDROP_COLLECTION_ID=\"12345\")",
+      "Bash(/tmp/test_index_update.sh:*)",
+      "Bash(/tmp/manual_index_update.sh:*)",
+      "Bash(sort:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -5,6 +5,12 @@ date = 2024-05-24T12:26:36-05:00
 slug ='ultimas-lecturas'
 simple = true
 +++
+- (01/09/26) [How I Turned My Security Cameras Into an Automatic Bird Identification System with BirdNet-Go](https://jasontucker.blog/how-i-turned-my-security-cameras-into-an-automatic-bird-identification-system-with-birdnet-go/)
+- (01/09/26) [The Safest Job from AI may be Writing](https://muratbuffalo.blogspot.com/2026/08/the-safest-job-from-ai-may-be-writing.html)
+- (01/09/26) [State of Open Models: Summer 2026 Observations](https://huggingface.co/blog/state-of-open-models-summer-2026)
+- (01/09/26) [¿Los lectores dejaron de leer o las editoriales dejaron de encontrarlos?](https://www.eleconomista.com.mx/arteseideas/lectores-dejaron-leer-editoriales-dejaron-encontrarlos-20260818-828883.html)
+- (01/09/26) [Libreros, atrapados en la guerra de precios de plataformas](https://www.eleconomista.com.mx/arteseideas/libreros-atrapados-guerra-precios-plataformas-20260823-829784.html)
+- (27/08/26) [Six Months of Writing Code Exclusively With Agents - exe.dev blog](https://blog.exe.dev/engineering-with-ai)
 - (20/08/26) [Silicon Valley Executives Are Tech Fans. Just Not for Their Own Kids.](https://www.nytimes.com/2026/08/18/technology/silicon-valley-tech-fans-children.html?unlocked_article_code=1.6VA.lKFj.DijwrbLexEr-)
 - (20/08/26) [How to Hold Death and Carry Life: A Zen Master Explains Existence to a Child and Outlines the Three Essential Principles of Zen Mind](https://www.themarginalian.org/2026/08/19/dropping-ashes-on-the-buddha-death/)
 - (20/08/26) [Citizens Build, Agents Execute, Experts Govern](https://martinfowler.com/rachels-ramblings/citizens-agents-experts.html)
