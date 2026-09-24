@@ -16,7 +16,7 @@
         <li><a class="u-email" href="mailto:{{ . }}">email</a></li>
         {{ end }}
         {{ with $socials.bluesky }}
-        <li><a class="u-url" rel="me" href="{{ . }}" target="_blank" rel="noopener">bluesky</a></li>
+        <li><a class="u-url" rel="me noopener" href="{{ . }}" target="_blank">bluesky</a></li>
         {{ end }}
         {{ with $socials.instagram }}
         <li><a class="u-url" href="{{ . }}" target="_blank" rel="noopener">instagram</a></li>
