@@ -70,23 +70,25 @@ Replace the current blog-centric homepage with a presentation card landing page 
 
 ### Phase 5 — POSSE plumbing ← current
 
-- [ ] **5.1 — RSS feeds audit**
-  Verify feeds exist and are well-formed for every content type: posts, notes, garden reads. Check per-section feeds for writings subcategories. Add any missing.
+- [x] **5.1 — RSS feeds audit**
+  Verified via a full `hugo --minify` build: every section (post, notes, garden, categories, tags, home) emits a well-formed feed in both languages — 72 XML files checked, all parse clean. `notes/index.xml` is empty because no notes have been published yet (expected); drafts are correctly excluded (e.g. `es/garden/awesome-list.md`, `draft = true`).
 
-- [ ] **5.2 — `rel="me"` verification**
-  Confirm the `rel="me"` link to Bluesky is correct in `<head>`. Mastodon was removed (no longer active) — verify no lingering references remain.
+- [x] **5.2 — `rel="me"` verification**
+  `<head>`'s `rel="me"` → Bluesky is correct. No Mastodon references remain in templates or config (only in two blog posts' prose, which is legitimate editorial content, not site identity). Found and fixed a real bug: the landing page's bio-card Bluesky link had a duplicate `rel` attribute (`rel="me" ... rel="noopener"`), which is invalid HTML and could silently drop the `rel="me"` on parse — merged into `rel="me noopener"` in `themes/metwo/layouts/index.html`.
 
-- [ ] **5.3 — Microformats2 on posts and notes**
-  Add `h-entry` markup to `single.html` and `notes/list.html`. Landing bio card already has `h-card`.
+- [x] **5.3 — Microformats2 on posts and notes**
+  Already in place: `single.html` has `h-entry`/`p-name`/`dt-published`/`e-content`/`u-url`; `notes/list.html` has `h-entry`/`dt-published`/`e-content`/`u-url`. Landing bio card already has `h-card`.
 
-- [ ] **5.4 — `sitemap.xml` and `robots.txt` review**
-  Confirm Hugo is generating both correctly for the bilingual site.
+- [x] **5.4 — `sitemap.xml` and `robots.txt` review**
+  Confirmed via build output: root `sitemap.xml` is a valid `sitemapindex` pointing to `/en/sitemap.xml` and `/es/sitemap.xml` (correct multilingual behavior). `robots.txt` allows all agents and points to the sitemap index correctly.
 
-- [ ] **5.5 — Bluesky cross-posting script**
-  Write `scripts/post-to-bluesky.sh` (or `.py`). Takes a note file path, reads date + body, posts to Bluesky via the AT Protocol API. Run manually after `hugo new notes/...`.
+- [x] **5.5 — Bluesky cross-posting script**
+  `scripts/post-to-bluesky.py` — takes a note file path, reads date + body, posts to Bluesky via `com.atproto.repo.createRecord`. Run manually after `hugo new notes/...`.
 
 - [ ] **5.6 — *(Stretch)* Webmentions**
   Add a Webmention endpoint and/or display received Webmentions on posts.
+
+- **Substack cross-posting — decided against automation.** Investigated a Substack equivalent of 5.5: Substack has no public write API (its 2026 developer API only exposes profile search), no publish-by-email, and no ActivityPub/fediverse support (unlike Ghost). The only automation path is an unofficial, cookie-authenticated client (`python-substack`), which is fragile and sits in a ToS gray area. Decision: keep the existing manual workflow — write on site first, then cross-post to Substack by hand.
 
 ---
 
@@ -108,4 +110,5 @@ Replace the current blog-centric homepage with a presentation card landing page 
 - Phase 2 done — Lora, design tokens, theme toggle, language switcher
 - Phase 3 done — landing page, all sections, bilingual, data-driven
 - Phase 4 done — inner page templates and styles
-- **Next: Phase 5** — POSSE plumbing
+- Phase 5 done — RSS audit, `rel="me"` fix, microformats confirmed, sitemap/robots confirmed, Bluesky script shipped, Substack automation deliberately skipped (5.6 Webmentions remains an optional stretch item)
+- **Next: Phase 6** — polish & ship

@@ -4,7 +4,7 @@ Personal website of Luis Ángel Ortega — developer, writer, and poet from Chih
 
 The logo/icon was made by [Horse Wizard](http://instagram.com/horse.wizard).
 
-> **Redesign in progress** on `main` — Phase 5 (POSSE plumbing) next. See [`CONTEXT.md`](CONTEXT.md) for intent and [`PLAN.md`](PLAN.md) for the full roadmap.
+> **Redesign in progress** on `main` — Phase 6 (polish & ship) next. See [`CONTEXT.md`](CONTEXT.md) for intent and [`PLAN.md`](PLAN.md) for the full roadmap.
 
 ## Sections
 
