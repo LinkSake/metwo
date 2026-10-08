@@ -258,10 +258,12 @@ fetch_track() {
     local url="${LASTFM_API}?method=user.getrecenttracks&user=${LASTFM_USER}&api_key=${api_key}&format=json&limit=1"
 
     local http_code
-    http_code=$(curl -s --max-time 15 -w "%{http_code}" "$url" -o "$response_file")
+    # Last.fm intermittently returns 5xx; retry before giving up
+    http_code=$(curl -s --max-time 15 --retry 3 --retry-all-errors --retry-delay 2 \
+        -w "%{http_code}" "$url" -o "$response_file" || true)
 
-    if [[ "$http_code" != "200" ]]; then
-        warn "Last.fm API returned HTTP $http_code — skipping track"
+    if [[ "$http_code" != "200" ]] || jq -e '.error' "$response_file" &>/dev/null; then
+        warn "Last.fm API failed (HTTP $http_code): $(head -c 200 "$response_file" 2>/dev/null) — skipping track"
         echo ""
         return
     fi
@@ -287,6 +289,13 @@ track:
   artist: '$artist'
   url: '$track_url'
 YAML
+}
+
+# Print a top-level block (e.g. "track") from the existing data file, so a
+# failed fetch doesn't blank the last good value.
+previous_block() {
+    [[ -f "$DATA_FILE" ]] || return 0
+    awk -v key="$1:" '$0 == key {p=1} p && /^$/ {exit} p' "$DATA_FILE"
 }
 
 # ---------------------------------------------------------------------------
@@ -460,6 +469,10 @@ main() {
     film_yaml=$(fetch_film)
     anime_yaml=$(fetch_anime)
     track_yaml=$(fetch_track)
+    if [[ -z "$track_yaml" ]]; then
+        track_yaml=$(previous_block track)
+        [[ -n "$track_yaml" ]] && warn "Keeping previous track from $DATA_FILE"
+    fi
     links_yaml=$(fetch_links)
     update_latest_reads "$RAINDROP_JSON_FILE"
 

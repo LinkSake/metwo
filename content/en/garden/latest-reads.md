@@ -5,6 +5,23 @@ date = 2024-05-24T12:26:36-05:00
 slug ='latest-reads'
 simple = true
 +++
+- (06/10/26) [Nietzsche on Walking and Creativity](https://www.themarginalian.org/2026/10/05/nietzsche-walking/)
+- (06/10/26) [I hope you enjoy these](https://www.vivienhenz.com/common-lisp)
+- (02/10/26) [‘If you can’t hold it, you don’t own it’: why media fans want to escape algorithms with CDs, DVDs and vinyl](https://www.theguardian.com/media/2026/oct/02/physical-media-fans-streaming-algorithms-cds-dvds-vinyl)
+- (24/09/26) [Ideas on modernizing the open-source desktop](https://lwn.net/SubscriberLink/1095425/2d9f411252325784/)
+- (22/09/26) [I Don’t Want to Read What You Didn’t Write](https://blog.colinbreck.com/i-dont-want-to-read-what-you-didnt-write/)
+- (22/09/26) [Spymarks, not Watermarks - brand](https://brand.io/article/spymarks/)
+- (18/09/26) [How To Write With An LLM — A Final Ward](https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/)
+- (16/09/26) [Virginia Woolf on Creativity](https://www.themarginalian.org/2026/09/16/virginia-woolf-cotton-wool-moments-of-being/)
+- (15/09/26) [dario, please! - POP RDI; RET;](https://pop.rdi.sh/dario-please/)
+- (15/09/26) [Pluralistic: LLMs are real, AI is fake (12 Sep 2026) – Pluralistic: Daily links from Cory Doctorow](https://pluralistic.net/2026/09/12/god-in-the-box/#llms-are-fake)
+- (10/09/26) [I Don’t Want to Interact With Stochastic Parrots](https://ploum.net/2026-09-09-ai_policy.html)
+- (10/09/26) [How to build a f**king printer · Nishant Joshi](https://nishantjosh.dev/blogs/how-to-build-a-fking-printer/)
+- (10/09/26) [Do people prefer stories written by AI?](https://www.cambridge.org/gb/universitypress/about-us/news-and-blogs/do-people-prefer-stories-written-by-ai)
+- (10/09/26) [Our Age of Silicon is Collapsing · EmilyGorcenski.com](https://emilygorcenski.com/post/our-age-of-silicon-is-collapsing/)
+- (02/09/26) [Offpunk Manifesto](https://blog.ayom.media/ideiasdechirico/offpunk-manifesto)
+- (02/09/26) [My local model setup on an M4 Pro Mac mini](https://lws.io/blog/my-local-model-setup/)
+- (02/09/26) [I Don’t Have a Smartphone…](https://ploum.net/2026-09-02-i_dont_have_a_smartphone.html)
 - (01/09/26) [How I Turned My Security Cameras Into an Automatic Bird Identification System with BirdNet-Go](https://jasontucker.blog/how-i-turned-my-security-cameras-into-an-automatic-bird-identification-system-with-birdnet-go/)
 - (01/09/26) [The Safest Job from AI may be Writing](https://muratbuffalo.blogspot.com/2026/08/the-safest-job-from-ai-may-be-writing.html)
 - (01/09/26) [State of Open Models: Summer 2026 Observations](https://huggingface.co/blog/state-of-open-models-summer-2026)
