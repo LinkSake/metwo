@@ -5,6 +5,9 @@ date = 2024-05-24T12:26:36-05:00
 slug ='ultimas-lecturas'
 simple = true
 +++
+- (20/10/26) [Why I’m no longer updating this repository](https://po-ru.com/2026/10/18/why-im-no-longer-updating-this-repository)
+- (19/10/26) [William Gibson and the trademarking of Cyberspace™](https://colo.to/cyberspace.html)
+- (16/10/26) [Pinecoder blog](https://www.pinecoder.dev/blog/2026-10-15/my-old-job-is-distant/)
 - (06/10/26) [Nietzsche on Walking and Creativity](https://www.themarginalian.org/2026/10/05/nietzsche-walking/)
 - (06/10/26) [I hope you enjoy these](https://www.vivienhenz.com/common-lisp)
 - (02/10/26) [‘If you can’t hold it, you don’t own it’: why media fans want to escape algorithms with CDs, DVDs and vinyl](https://www.theguardian.com/media/2026/oct/02/physical-media-fans-streaming-algorithms-cds-dvds-vinyl)
