@@ -442,7 +442,7 @@ te dejó
 - "Yo siempre he creído que la narrativa es movimiento perpetuo, ya sea del lenguaje o de la acción." — Eduardo Antonio Parra
 - "Lo que debe hacer un escritor es ocultar lo que no sabe." — Eduardo Antonio Parra, sobre una enseñanza de Paco Ignacio Taibo II
 - "Ya no escribo en el Vips porque ya no dejan fumar." — Eduardo Antonio Parra
-- "Faulkner inventó todo, pero ya nadie lo lee."
+- "Faulkner inventó todo, pero ya nadie lo lee." — Eduardo Antonio Parra
 - "Si quieres poner algo muy evidente, no lo pongas, o ponlo a simple vista." — Borges
 - "El plagio no es un concepto literario, es uno comercial." — Borges
 
