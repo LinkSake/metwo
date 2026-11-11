@@ -59,7 +59,7 @@
   {{/* ------------------------------------------------------------------ */}}
   {{/* Lately                                                              */}}
   {{/* ------------------------------------------------------------------ */}}
-  {{ with .Site.Data.lately }}
+  {{ with hugo.Data.lately }}
   <section class="landing-section" aria-label="{{ i18n "landing_lately" }}">
     <h2 class="section-label">{{ i18n "landing_lately" }}</h2>
     <ul class="lately-list">
@@ -80,7 +80,7 @@
         <span class="lately-content">
           <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
           {{ with .stars }}<span class="lately-rating" aria-label="rating">{{ . }}</span>{{ end }}
-          {{ with $.Site.Data.lately.anime }}
+          {{ with hugo.Data.lately.anime }}
           <br>
           <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
           {{ with .episode }}<span class="lately-rating" aria-label="episode">ep {{ . }}</span>{{ end }}
@@ -145,7 +145,7 @@
   {{/* ------------------------------------------------------------------ */}}
   {{/* Featured project                                                    */}}
   {{/* ------------------------------------------------------------------ */}}
-  {{ $project := index .Site.Data (lower .Site.Language.Lang) "featured_project" }}
+  {{ $project := index hugo.Data (lower .Site.Language.Lang) "featured_project" }}
   {{ with $project }}
   <section class="landing-section" aria-label="{{ i18n "landing_project" }}">
     <h2 class="section-label">{{ i18n "landing_project" }}</h2>

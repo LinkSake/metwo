@@ -4,7 +4,7 @@ enableEmoji = true
 enableRobotsTXT = true
 footnotereturnlinkcontents = "↩"
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
-languageCode = "en-us"
+locale = "en-us"
 theme = "metwo"
 title = "luis ángel ortega"
 copyright = "2026 Luis Ángel Ortega Holguin All rights reserved"
@@ -43,9 +43,9 @@ post = "/post/:year/:month/:day/:slug/"
 [languages.en]
 contentDir = 'content/en'
 disabled = false
-languageCode = 'en-US'
-languageDirection = 'ltr'
-languageName = 'English'
+locale = 'en-US'
+direction = 'ltr'
+label = 'English'
 weight = 0
 [languages.en.params]
 description = "Hello there! I'm Luis Ángel, a Mexican developer, writer and poet from the city of Chihuahua, Mexico. In the absense of joy in social media, this webpage is my effort to create and share more to the world."
@@ -92,9 +92,9 @@ weight = 3
 [languages.es]
 contentDir = 'content/es'
 disabled = false
-languageCode = 'es-MX'
-languageDirection = 'ltr'
-languageName = 'Español'
+locale = 'es-MX'
+direction = 'ltr'
+label = 'Español'
 weight = 1
 [languages.es.params]
 description = "Soy Luis Ángel, un desarrollador, escritor y poeta mexicano de la ciudad de Chihuahua. No me gusta el estado actual de las redes sociales así que esta página web es mi esfuerzo para crear y compartir más con el mundo."

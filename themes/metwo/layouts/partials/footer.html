@@ -4,7 +4,7 @@
   <p class="footer-line">
     {{ with .Site.Params.footer }}{{ . }}{{ end -}}
     {{/* Language switcher — links to translated versions (excludes current language) */}}
-    {{- range .Translations }} | <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>{{ end -}}
+    {{- range .Translations }} | <a href="{{ .Permalink }}">{{ .Language.Label }}</a>{{ end -}}
     {{/* RSS feed links */}}
     {{- range .Site.Menus.feed }} | <a href="{{ absLangURL .URL }}">{{ replace (title .Name) "Rss" "RSS" }}</a>{{ end -}}
     {{/* Theme toggle — label shows where you'll go, JS handles the rest */}}
