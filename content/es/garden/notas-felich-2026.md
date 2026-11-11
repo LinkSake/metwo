@@ -6,20 +6,24 @@ slug = 'notas-felich-2026'
 simple = true
 +++
 
-Del 24 de octubre al 1 de noviembre de 2026 se llevó a cabo la **[Feria del Libro Chihuahua (FELICh)](https://www.culturachihuahua.com/felich)** en el Complejo Cultural Los Laureles. Tomé dos talleres; estos son mis apuntes, pasados en limpio desde mi libreta.
+Del 24 de octubre al 1 de noviembre de 2026 se llevó a cabo la **[Feria del Libro Chihuahua (FELICh)](https://www.culturachihuahua.com/felich)** en el Complejo Cultural Los Laureles, organizada por la Secretaría de Cultura del Estado bajo el lema "Leer es encontrar el norte". Tomé dos talleres; estos son mis apuntes, pasados en limpio desde mi libreta.
 
 ## poesía en lo cotidiano
 
-- **Imparte:** Raúl Aníbal Sánchez
+- **Imparte:** Raúl Aníbal Sánchez Vargas
 - **Fechas:** del 24 al 27 de octubre de 2026
+- **Material del taller:**
+  - [Cotidianidad en la poesía: poética del relato y del objeto](/docs/felich-2026-cotidianidad-en-la-poesia.pdf) (presentación, PDF)
+  - [Ejercicios para contar una cotidianidad](/docs/felich-2026-ejercicios-para-contar-una-cotidianidad.pdf) (presentación con los ejemplos de los ejercicios, PDF)
+  - [El tema del queso: cotidianidad y poesía](/docs/felich-2026-el-tema-del-queso.pdf) (ensayo de Raúl Aníbal Sánchez Vargas, PDF)
 
-> "… Algo medicinal hay en las gentes<br>
+> "…Algo medicinal hay en las gentes<br>
 > que recorren la tarde<br>
 > sin decir a dónde se dirigen,<br>
-> algo que la muerte no comprenderá:<br>
+> algo que la muerte no comprendería:<br>
 > un paraguas,<br>
-> un trozo de galleta,<br>
-> una camisa de color azul"
+> un trozo de galleta.<br>
+> Una camisa de color azul."
 >
 > — Julián Herbert
 
@@ -28,13 +32,14 @@ Del 24 de octubre al 1 de noviembre de 2026 se llevó a cabo la **[Feria del Lib
 #### ¿qué es lo cotidiano?
 
 - ¿Qué no es lo cotidiano?
-  - No es lo doméstico.
-  - No es lo normal.
-  - No es inherente ni permanente.
+  - **No es lo doméstico:** puede existir plenamente en la calle, el transporte o el trabajo; no depende de las cuatro paredes del hogar.
+  - **No es lo normal:** muchas vidas transcurren al margen de la norma social o estadística y construyen su propio ritmo cotidiano.
+  - **No es inherente ni permanente:** es una construcción frágil; puede suspenderse de golpe ante una crisis médica, la guerra o una pandemia.
 - Definir lo cotidiano exige desprenderlo de la moral de la normalidad y del cerco familiar.
 - Lo cotidiano está entre la rutina y el acontecimiento:
-  - Es una dialéctica viva de la experiencia.
-  - Es la historia que nos decimos que es lo cotidiano.
+  - **La rutina** repite un trayecto fijo, automatiza la acción y procura anular la sorpresa.
+  - **La cotidianidad** es una dialéctica viva de la experiencia: contiene accidentes, suspensiones y acontecimientos imprevistos. Christian Lalive d'Epinay la describe como "una dialéctica entre la rutina y el acontecimiento".
+  - Es la historia que nos decimos que es lo cotidiano: un cuento que nos contamos todos los días, cambiando aquí y allá una frase para acomodarnos.
   - Una guerra de un día no es cotidiana; una de diez años sí se vuelve.
   - "Una constatación de que el mundo sigue existiendo".
 
@@ -47,34 +52,40 @@ Del 24 de octubre al 1 de noviembre de 2026 se llevó a cabo la **[Feria del Lib
 - Fabián Espejel, "Adiós":
 
 <pre>
-hay que aceptar que si
+hay que aceptar que sí
 la vida sigue
-que un juego menos de
-cubiertos
-o algún lugar vacío
-  en el carro
+que un juego menos de cubiertos
+o algún lugar vacío en el carro
 serán apenas una diferencia
 entre las cosas
 </pre>
 
-- La poesía empieza con una mirada:
-  - Mirar cualquier texto utilitario como materia plástica y sonora.
-  - Suspender la función instrumental para imponer una pausa estética.
-  - Obligar a las palabras comunes a abrir resonancias imprevistas.
-- Lo banal no produce textos banales: consignar lo cotidiano en versos no equivale a escribir un texto banal.
+- Junto a este poema vimos "Pequeño vals vienés", de Federico García Lorca, y "A Santa Catarina de Alejandría", de Sor Juana Inés de la Cruz.
+- La poesía empieza con una mirada, que interviene el texto en tres operaciones:
+  1. **Mirar cualquier texto como material verbal:** mirar cualquier texto utilitario como materia plástica y sonora.
+  2. **Decretar una lectura distinta:** suspender la función instrumental para imponer una pausa estética.
+  3. **Desplegar su polisemia:** obligar a las palabras comunes a abrir resonancias imprevistas.
+- El poema no inventa un vocabulario sagrado: emancipa las palabras de su servidumbre práctica.
+- Lo banal no produce textos banales: consignar lo cotidiano en versos no equivale a escribir un texto banal. La poesía no copia la superficie, sino que decide qué merece ser mirado.
+  - La diferencia entre registrar un dato y fundar una experiencia está en la densidad de la atención.
 - ¿Qué cambia cuando cambia la mirada?
-  - El tono y el registro.
-  - La música verbal.
-  - El espacio y el silencio.
+  - **Tono y registro:** el humor incidental puede volverse ironía crítica; el reclamo doméstico, denuncia existencial o política.
+  - **Música verbal:** los acentos, las aliteraciones y los fonemas descuidados construyen pulso rítmico y cadencia.
+  - **Espacio y silencio:** los espacios en blanco dejan de ser vacío tipográfico y se vuelven pausa, respiración y suspensión.
   - Mirar poéticamente es descubrir que ninguna palabra era verdaderamente ordinaria.
 - Para cortar un texto cotidiano en versos:
-  1. Elegir el texto.
-  2. Cortar en verso.
-  3. Repetir y pulir.
+  1. **Elegir el texto:** un recado, una lista, un mensaje, un encabezado o un chat.
+  2. **Cortar en versos:** aislar frases y palabras, y darle a cada verso una pausa propia.
+  3. **Repetir y pulir:** releer en voz alta, ajustar el ritmo y dejar que la repetición fije su valor estético.
+
+> "La cotidianidad nos teje, diariamente, una telaraña en los ojos."
+>
+> — Oliverio Girondo
 
 #### del texto al poema
 
 - ¿Cómo transforman el decreto y la mirada de la poesía el texto?
+  - Un poema es aquel texto que es leído como poema en las condiciones que el texto pide.
   - El texto pasa a ser leído desde las reglas de la poesía. Todos los componentes, signos y ausencias de signos del texto exaltan su sentido o se vacían para dar paso a intuiciones de sentido.
   - "El fin del poema es ser poema".
 - La transformación del "sentido" en la poesía:
@@ -101,7 +112,13 @@ entre las cosas
 - *Me acuerdo*, de Georges Perec.
 - Los "me acuerdo" funcionan mejor si son muy específicos y detallados.
 
+#### el tema del queso
+
+En su ensayo [*El tema del queso: cotidianidad y poesía*](/docs/felich-2026-el-tema-del-queso.pdf), Raúl Aníbal parte de una frase de G. K. Chesterton en *Alarmas y digresiones*, "los poetas han guardado un misterioso silencio en el tema del queso", para hablar de todo lo que los poetas han dejado de cantar por considerarlo prosaico. Propone que, conforme la poesía se ha desprendido de la métrica y la rima, lo que queda de ella es una mirada, y que pocas cosas producen tanto texto como la cotidianidad: chats, listas del súper, memos y el recadito en el refri. "No es lo mismo consignar en versos lo cotidiano que construir con lo cotidiano versos." Cierra invitando a tomar el WhatsApp y empezar a cortar en versos.
+
 ### ejercicios
+
+Los ejemplos con los que se explicaron los ejercicios están en la presentación [*Ejercicios para contar una cotidianidad*](/docs/felich-2026-ejercicios-para-contar-una-cotidianidad.pdf).
 
 #### cortar un texto cotidiano en versos
 
@@ -348,6 +365,10 @@ te dejó
 
 - **Imparte:** Eduardo Antonio Parra
 - **Fechas:** del 26 al 29 de octubre de 2026
+- **Lecturas del taller:**
+  - Raymond Carver, ["Tanta agua tan cerca de casa"](https://literatura.us/idiomas/rc_tanta.html) (*So Much Water So Close to Home*), de *De qué hablamos cuando hablamos de amor* (1981).
+  - Raymond Carver, ["Diles a las mujeres que nos vamos"](https://www.literatura.us/idiomas/rc_diles.html) (*Tell the Women We're Going*), de *De qué hablamos cuando hablamos de amor* (1981).
+  - William Faulkner, ["Una rosa para Emilia"](https://ciudadseva.com/texto/una-rosa-para-emilia/) (*A Rose for Emily*), publicado en la revista *The Forum* en 1930 e incluido en *These Thirteen* (1931).
 
 ### cuento y novela
 
