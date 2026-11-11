@@ -16,6 +16,10 @@ Del 24 de octubre al 1 de noviembre de 2026 se llevó a cabo la **[Feria del Lib
   - [Cotidianidad en la poesía: poética del relato y del objeto](/docs/felich-2026-cotidianidad-en-la-poesia.pdf) (presentación, PDF)
   - [Ejercicios para contar una cotidianidad](/docs/felich-2026-ejercicios-para-contar-una-cotidianidad.pdf) (presentación con los ejemplos de los ejercicios, PDF)
   - [El tema del queso: cotidianidad y poesía](/docs/felich-2026-el-tema-del-queso.pdf) (ensayo de Raúl Aníbal Sánchez Vargas, PDF)
+- **Libros compartidos en el taller:**
+  - Helena Beristáin, [*Diccionario de retórica y poética*](https://www.elem.mx/obra/datos/5240), Editorial Porrúa (primera edición, 1985).
+  - Joe Brainard, [*Me acuerdo*](https://latam.casadellibro.com/libro-me-acuerdo/9788496867451/1250621), traducción de Julia Osuna Aguilar, Sexto Piso (2009).
+  - Georges Perec, *Me acuerdo*, traducción de Yolanda Morató, Berenice (2006).
 
 > "…Algo medicinal hay en las gentes<br>
 > que recorren la tarde<br>
