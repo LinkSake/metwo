@@ -1,4 +1,5 @@
 +++
+translationKey = "dropdowns-and-toggles-with-css"
 title = "Dropdowns and Toggles with Pure CSS"
 description = "No need to use JavaScript in your project, you can have interactive and stylish menus with CSS only"
 date = 2022-11-05T11:53:11-05:00

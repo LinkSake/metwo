@@ -1,6 +1,6 @@
 +++
 title = "projects"
-description = "A collection of my projects over the years, let's hope it just gets bigger!"
+description = "Books, anthologies, awards, talks and projects by Luis Ángel Ortega, writer and developer from Chihuahua, Mexico: El oficio de las cosas (Premio Estatal de Literatura Joven 2026), El Telar and more."
 simple = true
 +++
 

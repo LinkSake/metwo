@@ -1,4 +1,5 @@
 +++
+translationKey = "times"
 title = "Temporales"
 date = 2026-03-19T17:25:48Z
 slug = "temporales"

@@ -1,4 +1,5 @@
 +++
+translationKey = "digitalizing-education"
 title = "¿Para quién estamos digitalizando la educación? Una llamada urgente a la accesibilidad"
 description = "Desde hace más de dos décadas, hablar de transformación digital en la educación se ha vuelto casi obligatorio. Se invierte en plataformas, se promueven nuevas metodologías y se celebran los avances tecnológicos en las aulas. Pero hay una pregunta que rara vez se formula con claridad: ¿para quién estamos digitalizando?"
 date = 2025-06-26T17:00:00-00:00

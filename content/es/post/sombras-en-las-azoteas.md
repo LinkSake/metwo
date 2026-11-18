@@ -1,4 +1,5 @@
 +++
+translationKey = "roof-shadows"
 title = "Sombras en las azoteas"
 date = 2025-12-07T17:07:42Z
 slug = "sombras-en-las-azoteas"

@@ -1,4 +1,5 @@
 +++
+translationKey = "the-issue-with-home-office"
 title = "Home Office or No Home Office? That is the Question"
 description = "My thoughts on the good, the bad, and what comes next regarding home office."
 date = 2021-04-20T15:07:57-05:00

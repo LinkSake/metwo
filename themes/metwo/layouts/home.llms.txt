@@ -1,0 +1,41 @@
+{{- $lang := .Site.Language.Lang -}}
+{{- $p := hugo.Data.person -}}
+{{- $es := eq $lang "es" -}}
+# {{ $p.name }}
+
+> {{ index $p.description $lang }}
+
+{{ if $es -}}
+Luis Ángel Ortega Holguín (Chihuahua, 1998) es escritor, poeta y desarrollador de software chihuahuense. Este es su sitio personal: cuentos, poemas, notas, reseñas, artículos técnicos y proyectos. También existe en inglés: {{ absURL "/llms.txt" }}
+{{- else -}}
+Luis Ángel Ortega Holguín (Chihuahua, 1998) is a Mexican writer, poet and software developer from Chihuahua, Mexico. This is his personal site: short stories, poems, notes, reviews, technical articles and projects. A Spanish version is at {{ absURL "/es/llms.txt" }}
+{{- end }}
+
+{{ if $es }}## Datos clave{{ else }}## Key facts{{ end }}
+
+{{ range $p.books }}- {{ if $es }}Libro{{ else }}Book{{ end }}: *{{ .name }}* ({{ .genre }}, {{ .year }}) — {{ .url }}
+{{ end -}}
+{{ range $p.awards }}- {{ if $es }}Premio{{ else }}Award{{ end }}: {{ . }}
+{{ end -}}
+{{ range $p.memberOf }}- {{ if $es }}Integrante de{{ else }}Member of{{ end }}: {{ .name }}, {{ index .description $lang }} — {{ .url }}
+{{ end -}}
+- {{ if $es }}Ubicación{{ else }}Based in{{ end }}: Chihuahua, Chihuahua, México
+- {{ if $es }}Contacto{{ else }}Contact{{ end }}: {{ $p.email }}
+
+{{ if $es }}## Páginas principales{{ else }}## Main pages{{ end }}
+
+{{ range .Site.Menus.main -}}{{ if ne .Identifier "projects" -}}
+- [{{ .Name }}]({{ .URL | absLangURL }})
+{{ end }}{{ end }}
+{{- with .Site.GetPage "/projects" }}- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{ end }}
+{{ if $es }}## Escritos{{ else }}## Writings{{ end }}
+
+{{ range where .Site.RegularPages "Section" "post" -}}
+- [{{ .Title | plainify }}]({{ .Permalink }}) ({{ .Date.Format "2006-01-02" }}{{ with .Params.categories }}, {{ index . 0 }}{{ end }}){{ with .Description }}: {{ . | plainify }}{{ end }}
+{{ end }}
+{{ if $es }}## En otros sitios{{ else }}## Elsewhere{{ end }}
+
+{{ range $p.sameAs -}}
+- {{ . }}
+{{ end -}}

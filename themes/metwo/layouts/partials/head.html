@@ -1,10 +1,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
+{{- $description := .Description | default .Site.Params.description }}
+<meta name="description" content="{{ $description }}">
+<meta name="author" content="{{ .Site.Params.author.name }}">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 
-<title>
-  {{ if i18n .Title }}{{ i18n .Title }}{{ else }}{{ .Title }}{{ end }}{{ if not .IsHome }} | {{ .Site.Title }}{{ end }}
-</title>
+{{- /* Home gets a descriptive title (its .Title is just "home"/"inicio"); other pages keep "page | site". */}}
+{{- $title := "" }}
+{{- if .IsHome }}{{ $title = .Site.Params.seoTitle | default .Site.Title }}
+{{- else }}{{ $title = print (cond (ne (i18n .Title) "") (i18n .Title) (.Title | plainify)) " | " .Site.Title }}{{ end }}
+<title>{{ $title }}</title>
+
+<link rel="canonical" href="{{ .Permalink }}">
+{{- /* hreflang: this page plus its translations, and x-default pointing at the English version. */}}
+{{- if .IsTranslated }}
+<link rel="alternate" hreflang="{{ .Site.Language.Locale }}" href="{{ .Permalink }}">
+{{- range .Translations }}
+<link rel="alternate" hreflang="{{ .Site.Language.Locale }}" href="{{ .Permalink }}">
+{{- end }}
+{{- range .AllTranslations }}{{ if eq .Site.Language.Lang "en" }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{- end }}{{ end }}
+{{- end }}
 
 <link rel="preload" href="/fonts/lora.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/lora-italic.woff2" as="font" type="font/woff2" crossorigin>
@@ -17,8 +34,16 @@
 {{- end }}
 
 {{- range .AlternativeOutputFormats }}
+{{- if ne .Name "llms" }}
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | absLangURL }}">
 {{- end }}
+{{- end }}
+
+<!-- Social cards -->
+{{ partial "social.html" (dict "page" . "description" $description) }}
+
+<!-- Structured data -->
+{{ partial "jsonld.html" . }}
 
 <!-- IndieWeb identity -->
 <link rel="me" href="https://bsky.app/profile/luisangel.me">

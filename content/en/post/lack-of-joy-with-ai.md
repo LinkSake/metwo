@@ -1,4 +1,5 @@
 +++
+translationKey = "lack-of-joy-with-ai"
 title = "The lack of joy in the era of generative artificial intelligence"
 description = "A small reflection, or vent about how generative artificial intelligence is affecting my little piece of the world."
 date = 2025-10-03T17:00:00-00:00
