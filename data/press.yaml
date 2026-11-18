@@ -1,0 +1,101 @@
+# Press coverage. Used by the {{< press >}} shortcode (projects page) and by the
+# Person JSON-LD (`subjectOf`). Newest event first; items oldest first within an event.
+- event:
+    en: "Premio Estatal de Literatura Joven 2026"
+    es: "Premio Estatal de Literatura Joven 2026"
+  items:
+    - outlet: "NTCD"
+      title: "Ganadores de los Premios Estatales de Literatura Joven 2026 en Chihuahua"
+      date: 2026-08-07
+      url: "https://ntcd.mx/noticias-ganadores-de-los-premios-estatales-de-literatura-joven-2026-en-chihuahua"
+    - outlet: "Página 8"
+      title: "Anuncian autores ganadores de los Premios Estatales de Literatura Joven"
+      date: 2026-08-07
+      url: "https://pagina8.com.mx/anuncian-autores-ganadores-de-los-premios-estatales-de-literatura-joven/"
+    - outlet: "Tiempo"
+      title: "Estos son los ganadores de “Premios Estatales de Literatura Joven”"
+      date: 2026-08-08
+      url: "https://www.tiempo.com.mx/local/chihuahua-lista-ganadores-premios-estatales-literatura-joven-2026/"
+    - outlet: "El Diario de Chihuahua"
+      title: "Premian a jóvenes escritores durante actividades del FELICh"
+      date: 2026-10-30
+      url: "https://www.eldiariodechihuahua.mx/local/2026/oct/30/premian-a-jovenes-escritores-durante-actividades-del-felich-853064.html"
+    - outlet: "Tiempo"
+      title: "Reconocen a ganadores de Premios Estatales de Literatura Joven 2026"
+      date: 2026-10-30
+      url: "https://www.tiempo.com.mx/local/reconocen-a-ganadores-de-premios-estatales-de-literatura-joven-2026/"
+    - outlet: "Puentelibre"
+      title: "Reconocen a ganadores de Premios Estatales de Literatura Joven 2026"
+      date: 2026-10-30
+      url: "https://puentelibre.mx/local/reconocen-a-ganadores-de-premios-estatales-de-literatura-joven-2026/"
+    - outlet: "Pausa"
+      title: "Reconocen a ganadores de los Premios Estatales de Literatura Joven 2026"
+      date: 2026-10-30
+      url: "https://pausa.mx/reconocen-a-ganadores-de-los-premios-estatales-de-literatura-joven-2026-2/"
+
+- event:
+    en: "“Deberías tener una página web fea” talk, Paréntesis Cultural"
+    es: "Plática «Deberías tener una página web fea», Paréntesis Cultural"
+  items:
+    - outlet: "En Blanco y Negro"
+      title: "¡Arte y cultura para todos! Descubre las actividades imperdibles de Chihuahua Capital esta semana"
+      date: 2026-10-16
+      url: "https://enblancoynegro.com.mx/2026/10/16/arte-y-cultura-para-todos-descubre-las-actividades-imperdibles-de-chihuahua-capital-esta-semana/"
+    - outlet: "Tiempo"
+      title: "Participa en la charla “Deberías tener una página web fea”"
+      date: 2026-10-19
+      url: "https://www.tiempo.com.mx/local/chihuahua-invitar-pech-charla-deberias-tener-pagina-web-fea/"
+    - outlet: "Chihuahua en Red"
+      title: "“Deberías tener una página web fea”: así será la próxima charla de Paréntesis Cultural"
+      date: 2026-10-20
+      url: "https://www.chihuahuaenred.com/archivos/137261"
+    - outlet: "Zona EAC"
+      title: "Paréntesis Cultural invita a recuperar el control de la vida digital"
+      date: 2026-10-20
+      url: "https://www.zonaeac.com/archivos/38594"
+
+- event:
+    en: "IndieWeb and POSSE talk, GLUCH"
+    es: "Plática sobre IndieWeb y POSSE, GLUCH"
+  items:
+    - outlet: "GLUCH"
+      title: "El principio POSSE y la web independiente"
+      date: 2026-08-27
+      url: "https://gluch.org.mx/eventos/reunion_agosto/"
+
+- event:
+    en: "FOMAC 8 and the presentation of La Cueva"
+    es: "FOMAC 8 y la presentación de La Cueva"
+  items:
+    - outlet: "Gobierno Municipal de Chihuahua"
+      title: "Anuncia Municipio a los seleccionados de la octava emisión del FOMAC"
+      date: 2025-03-24
+      url: "https://www.municipiochihuahua.gob.mx/CCS/Prensa/Anuncia_Municipio_a_los_seleccionados_de_la_octava_emisi%C3%B3n_del_FOMAC"
+    - outlet: "Gobierno Municipal de Chihuahua"
+      title: "Reconoce alcalde Bonilla a artistas e investigadores que ganaron el FOMAC 8"
+      date: 2025-04-08
+      url: "https://www.municipiochihuahua.gob.mx/CCS/Prensa/Reconoce_alcalde_Bonilla_a_artistas_e_investigadores_que_ganaron_el_FOMAC_8"
+    - outlet: "Tiempo"
+      title: "Arranca Encuentro FOMAC 8 con 37 proyectos culturales"
+      date: 2026-06-09
+      url: "https://www.tiempo.com.mx/local/encuentro-fomac-8-presentara-37-proyectos-culturales-en-chihuahua-9-junio-2026/"
+    - outlet: "El Pueblo"
+      title: "Invita Cultura Municipal a la octava edición de FOMAC"
+      date: 2026-06-09
+      url: "https://elpueblo.com/local/invita-cultura-municipal-a-la-octava-edicion-de-fomac-20260609-473464.html"
+    - outlet: "Puentelibre"
+      title: ""  # the article has no headline (its title is just an emoji)
+      date: 2026-06-16
+      url: "https://puentelibre.mx/local/chihuahua-invitar-primera-semana-presentaciones-culturales-fomac-8/"
+    - outlet: "Tiempo"
+      title: "Concluye con éxito primera semana del Encuentro FOMAC 8"
+      date: 2026-06-21
+      url: "https://www.tiempo.com.mx/local/concluye-primera-semana-encuentro-fomac-8-chihuahua-21-junio-2026/"
+    - outlet: "Quadratín Chihuahua"
+      title: "Concluye con éxito la primera semana del Encuentro FOMAC 8"
+      date: 2026-06-21
+      url: "https://chihuahua.quadratin.com.mx/municipios/concluye-con-exito-la-primera-semana-del-encuentro-fomac-8/"
+    - outlet: "El Diario de Chihuahua"
+      title: "Presentan talentos locales nuevos proyectos"
+      date: 2026-06-22
+      url: "https://www.eldiariodechihuahua.mx/local/2026/jun/22/presentan-talentos-locales-nuevos-proyectos-810586.html"
