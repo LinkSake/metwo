@@ -41,7 +41,7 @@ A lo largo de los años he trabajado en varias cosas, aquí tienes una lista de 
 - [**Dagh Salón (web | 2021 - 2026)**](https://linksake.github.io/dagh/): Sitio web de un salón de belleza en Chihuahua.
 - [**Tu código tiene memoria (web | 2026)**](https://linksake.github.io/git-basico/): Una pequeña introducción interactiva a Git, hecha como trabajo para una materia de mi maestría.
 - [**Tejiendo Relatos 10 (web | 2025)**](https://taller.eltelar.xyz/): Página de la décima edición del taller de creación literaria de El Telar.
-- [**Curcubita (colectivo | 2024)**](https://curcubita.art/): Colectivo/estudio de arte fundado junto con algunos amigos artistas con la intención de tener sinergia entre nosotros.
+- **Curcubita (colectivo | 2024)**: Colectivo/estudio de arte fundado junto con algunos amigos artistas con la intención de tener sinergia entre nosotros.
 - [**luisangel.me v1 (web | 2020 - 2024)**](https://github.com/LinkSake/me): Mi web/blog anterior hecha con Nextra.
 - [**startpage (web | 2023)**](https://github.com/LinkSake/startpage): Página de inicio minimalista basada en varias páginas que vi en [r/startpages](https://www.reddit.com/r/startpages/comments/12bobou/my_first_custom_start_page/).
 - [**uwusuarios (podcast | 2021 - 2022)**](https://www.youtube.com/@uwusuarios/featured): Mi último podcast donde no teníamos un tema principal pero hablábamos de que estaba en nuestra mente. Realmente disfruté mi tiempo haciendo esto con Nessie, así que espero que algún día podamos darle otra oportunidad.

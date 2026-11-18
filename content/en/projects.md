@@ -41,7 +41,7 @@ Over the years I've worked on several things, most of them are in spanish but he
 - [**Dagh Salón (website | 2021 - 2026)**](https://linksake.github.io/dagh/): Website for a beauty salon in Chihuahua.
 - [**Tu código tiene memoria (website | 2026)**](https://linksake.github.io/git-basico/): A small interactive intro to Git, made as coursework for my master's.
 - [**Tejiendo Relatos 10 (website | 2025)**](https://taller.eltelar.xyz/): Landing page for the 10th edition of El Telar's creative writing workshop.
-- [**Curcubita (collective | 2024)**](https://curcubita.art/): Art collective/studio founded along with some artist friends with the intention to have synergy with each other.
+- **Curcubita (collective | 2024)**: Art collective/studio founded along with some artist friends with the intention to have synergy with each other.
 - [**luisangel.me v1 (website | 2020 - 2024)**](https://github.com/LinkSake/me): My previous webpage/blog made with Nextra.
 - [**startpage (website | 2023)**](https://github.com/LinkSake/startpage): Minimal startpage based on several startpages I saw on [r/startpages](https://www.reddit.com/r/startpages/comments/12bobou/my_first_custom_start_page/).
 - [**uwusuarios (podcast | 2021 - 2022)**](https://www.youtube.com/@uwusuarios/featured): My latest podcast where we didn't had a main theme but we talked about the topics that where on our mind. I really enjoyed my time doing this with Nessie, hopefully someday we can give it another shot.
