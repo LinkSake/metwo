@@ -22,7 +22,7 @@ ENV_FILE="$BLOG_DIR/.env"
 # ---------------------------------------------------------------------------
 # External sources
 # ---------------------------------------------------------------------------
-GOODREADS_RSS="https://www.goodreads.com/review/list_rss/76567849?shelf=currently-reading"
+GOODREADS_PROFILE="https://www.goodreads.com/user/show/76567849-luis-ortega"
 LETTERBOXD_RSS="https://letterboxd.com/linksake/rss/"
 MAL_WATCHING_URL="https://myanimelist.net/animelist/LinkSake/load.json?status=1"
 LASTFM_API="https://ws.audioscrobbler.com/2.0/"
@@ -118,21 +118,67 @@ PYEOF
 
 # ---------------------------------------------------------------------------
 # GoodReads — currently-reading shelf
-# NOTE: list_rss returned 404 as of 2026-11-06. The fetch below is kept
-# in case it comes back, and main() keeps the previous book when it fails.
-# Scraping the profile page instead does not work from curl (Goodreads
-# returns a sign-in wall to non-browser requests).
+# The list_rss feed has returned 404 since 2026-11-06 and the shelf page
+# needs a login, but the public profile page still renders a
+# "<name> is Currently Reading" box without signing in. We parse the first
+# book from that box (a.bookTitle + the a.authorName that follows it).
+# If the markup changes, main() keeps the previous book.
 # ---------------------------------------------------------------------------
 fetch_book() {
     log "Fetching book from GoodReads..."
-    local rss_file="$TEMP_DIR/goodreads.xml"
+    local html_file="$TEMP_DIR/goodreads.html"
 
-    curl -s --max-time 15 "$GOODREADS_RSS" -o "$rss_file" || { warn "GoodReads fetch failed"; echo ""; return; }
+    curl -sL --max-time 15 -A "Mozilla/5.0" "$GOODREADS_PROFILE" -o "$html_file" \
+        || { warn "GoodReads fetch failed"; echo ""; return; }
 
-    local title author url
-    title=$(xml_get "$rss_file" "channel/item[0]/title")
-    author=$(xml_get "$rss_file" "channel/item[0]/author_name")
-    url=$(xml_get "$rss_file" "channel/item[0]/link")
+    local parsed title author url
+    parsed=$(python3 - "$html_file" <<'PYEOF'
+import sys
+from html.parser import HTMLParser
+
+class CurrentlyReading(HTMLParser):
+    """Collect (title, author, href) from the 'Currently Reading' box."""
+    def __init__(self):
+        super().__init__()
+        self.in_box = False      # inside the currently-reading bigBox
+        self.capture = None      # 'title' | 'author' while inside that <a>
+        self.books = []
+        self.text = ""
+
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        href = a.get("href") or ""
+        if tag == "a" and "shelf=currently-reading" in href and not self.books:
+            self.in_box = True   # the box's <h2> links to the shelf
+        if not self.in_box or tag != "a":
+            return
+        cls = (a.get("class") or "").split()
+        if "bookTitle" in cls:
+            self.books.append({"title": "", "author": "", "url": href})
+            self.capture, self.text = "title", ""
+        elif "authorName" in cls and self.books and not self.books[-1]["author"]:
+            self.capture, self.text = "author", ""
+
+    def handle_endtag(self, tag):
+        if tag == "a" and self.capture:
+            self.books[-1][self.capture] = " ".join(self.text.split())
+            self.capture = None
+
+    def handle_data(self, data):
+        if self.capture:
+            self.text += data
+
+p = CurrentlyReading()
+p.feed(open(sys.argv[1], encoding="utf-8", errors="replace").read())
+books = [b for b in p.books if b["title"]]
+if books:
+    b = books[0]
+    url = b["url"] if b["url"].startswith("http") else "https://www.goodreads.com" + b["url"]
+    print(b["title"], b["author"], url, sep="\t")
+PYEOF
+    )
+
+    IFS=$'\t' read -r title author url <<< "$parsed"
 
     if [[ -z "$title" ]]; then
         warn "No currently-reading book found on GoodReads"
