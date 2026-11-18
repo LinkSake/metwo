@@ -57,3 +57,7 @@ A lo largo de los años he trabajado en varias cosas, aquí tienes una lista de 
 - [**Deberías tener una página web fea (plática | 2026)**](/es/garden/platica-pagina-web-fea-parentesis-cultural/): Por qué los artistas tienen que liderar la descentralización de la web, en Paréntesis Cultural (PECH).
 - [**IndieWeb y POSSE (plática | 2026)**](/es/garden/platica-indieweb-posse-gluch/): En el Grupo de Usuarios de Linux de Chihuahua (GLUCH).
 - [**Introducción a Hugo (taller | 2025)**](https://github.com/LinkSake/hugo-ulsa-2025): Proyecto demo y presentación del taller que di en la Semana ULSA 2025.
+
+## en medios
+
+{{< press >}}
