@@ -15,6 +15,7 @@ Over the years I've worked on several things, most of them are in spanish but he
 ### anthologies
 
 - [***Quarantine Poetry: 2020 Homemade Poems*** **(2020)**](/post/2020/09/19/a-teaspoon-of-sun/): Includes my poem *Una cucharadita de sol*, translated into English, French, Italian and Indonesian. [PDF](/docs/quarantine-poetry.pdf).
+- [***Amar Hasta Morir II*** **(2025)**](https://www.buscalibre.com.mx/libro-amar-hasta-morir-ii/9786287855502/p/64884933): Poetry anthology from Ediciones Converso that includes a poem of mine.
 - [**4th Short Story Contest of the Lasallian Library Network (forthcoming)**](/post/2024/04/24/titan/): Includes my short story *Titán*.
 
 ### magazines

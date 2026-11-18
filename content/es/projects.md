@@ -15,6 +15,7 @@ A lo largo de los años he trabajado en varias cosas, aquí tienes una lista de 
 ### antologías
 
 - [***Quarantine Poetry: 2020 Homemade Poems*** **(2020)**](/es/post/2020/09/19/a-teaspoon-of-sun/): Incluye mi poema *Una cucharadita de sol*, traducido al inglés, francés, italiano e indonesio. [PDF](/docs/quarantine-poetry.pdf).
+- [***Amar Hasta Morir II*** **(2025)**](https://www.buscalibre.com.mx/libro-amar-hasta-morir-ii/9786287855502/p/64884933): Antología de poesía de Ediciones Converso que incluye un poema mío.
 - [**4.º Concurso de Cuento Corto de la Red de Bibliotecas Lasallistas (próximamente)**](/es/post/2024/04/24/titan/): Incluye mi cuento *Titán*.
 
 ### revistas
