@@ -5,6 +5,19 @@ date = 2024-05-24T12:26:36-05:00
 slug ='latest-reads'
 simple = true
 +++
+- (12/11/26) [Why Japan has such good railways - Works in Progress Magazine](https://worksinprogress.co/issue/why-japan-has-such-good-railways/)
+- (12/11/26) [Magic](https://commandlinesystems.com/magic.txt)
+- (11/11/26) [Risks vs. Harms: Youth & Social Media](https://zephoria.medium.com/risks-vs-harms-youth-social-media-97dad513e2fb)
+- (11/11/26) [I'm just a meat proxy](https://justin.searls.co/posts/im-just-a-meat-proxy/)
+- (09/11/26) [Writing as a thinking tool](https://muratbuffalo.blogspot.com/2026/11/writing-as-thinking-tool.html)
+- (03/11/26) [La inflación llegó a 3.71% en Chihuahua; los algoritmos que fijan el precio de tu canasta ya saben exactamente cuánto más puedes pagar](https://www.omnia.com.mx/noticia/448014/la-inflacion-llego-a-371-en-chihuahua-los-algoritmos-que-fijan-el-precio-de-tu-c)
+- (23/10/26) [Award-Winning AI Literature](https://jamesyu.org/award-winning-ai-literature/)
+- (21/10/26) [Comprar casa en México se ha vuelto casi imposible: se necesitan 64,000 pesos mensuales, pero el mexicano promedio gana una cuarta parte](https://www.xataka.com.mx/otros-1/comprar-casa-mexico-se-ha-vuelto-casi-imposible-se-necesitan-64-000-pesos-mensuales-mexicano-promedio-gana-cuarta-parte)
+- (21/10/26) [Find the Place You Love. Then Move There.](https://www.theatlantic.com/family/archive/2021/01/what-moving-house-can-do-your-happiness/617667/?gift=j9r7avb6p-KY8zdjhsiSZ_WVacR_xvGiAsUFKmGKXA8)
+- (21/10/26) [Digger Is Good, Notebooks, Please Be Weirder — Roden newsletter issue 119](https://craigmod.com/roden/119/)
+- (21/10/26) [Cloud Rats and Software Roaches (Idle Words)](https://idlewords.com/2026/10/cloud_rats_and_software_roaches.htm)
+- (21/10/26) [On AI writing](https://www.bolkunov.com/p/on-ai-writing)
+- (21/10/26) [Qué significa este proverbio chino: "Un árbol torcido vive su propia vida, pero un árbol recto se convierte en madera"](https://www.xataka.com.mx/otros-1/que-significa-este-proverbio-chino-arbol-torcido-vive-su-propia-vida-arbol-recto-se-convierte-madera)
 - (20/10/26) [Why I’m no longer updating this repository](https://po-ru.com/2026/10/18/why-im-no-longer-updating-this-repository)
 - (19/10/26) [William Gibson and the trademarking of Cyberspace™](https://colo.to/cyberspace.html)
 - (16/10/26) [Pinecoder blog](https://www.pinecoder.dev/blog/2026-10-15/my-old-job-is-distant/)
