@@ -44,6 +44,10 @@ log()  { echo -e "${GREEN}[$(date +'%H:%M:%S')]${NC} $1" >&2; }
 warn() { echo -e "${YELLOW}[WARN]${NC} $1" >&2; }
 error(){ echo -e "${RED}[ERROR]${NC} $1" >&2; exit 1; }
 
+# Escape a value for a single-quoted YAML string (' -> ''). Uses a variable
+# for the quote so it behaves the same in bash 3.2 (macOS /bin/bash) and 5.x.
+yaml_sq() { local q="'"; printf '%s' "${1//$q/$q$q}"; }
+
 # ---------------------------------------------------------------------------
 # Bootstrap
 # ---------------------------------------------------------------------------
@@ -187,8 +191,8 @@ PYEOF
     fi
 
     # Escape for YAML single-quote: double any single quotes
-    title="${title//\'/\'\'}"
-    author="${author//\'/\'\'}"
+    title=$(yaml_sq "$title")
+    author=$(yaml_sq "$author")
 
     log "Book: $title by $author"
     cat <<YAML
@@ -221,7 +225,7 @@ fetch_film() {
         return
     fi
 
-    title="${title//\'/\'\'}"
+    title=$(yaml_sq "$title")
 
     # Convert rating (e.g. 4.5) to star string (★★★★½)
     local stars
@@ -280,7 +284,7 @@ fetch_anime() {
     ' "$response_file" 2>/dev/null)
     anime_path=$(jq -r 'sort_by(-.updated_at) | .[0].anime_url // empty' "$response_file" 2>/dev/null)
 
-    title="${title//\'/\'\'}"
+    title=$(yaml_sq "$title")
 
     log "Anime: $title (ep $episode)"
     cat <<YAML
@@ -329,8 +333,8 @@ fetch_track() {
         return
     fi
 
-    title="${title//\'/\'\'}"
-    artist="${artist//\'/\'\'}"
+    title=$(yaml_sq "$title")
+    artist=$(yaml_sq "$artist")
 
     log "Track: $title by $artist"
     cat <<YAML
