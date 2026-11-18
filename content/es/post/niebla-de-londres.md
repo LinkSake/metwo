@@ -1,4 +1,5 @@
 +++
+translationKey = "london-fog"
 title = "Niebla de Londres"
 date = 2026-01-05T17:30:36Z
 slug = "niebla-de-londres"

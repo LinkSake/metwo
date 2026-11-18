@@ -1,4 +1,5 @@
 +++
+translationKey = "sycamore"
 title = "Sicomoro"
 date = 2026-01-13T19:35:27Z
 slug = "sicomoro"

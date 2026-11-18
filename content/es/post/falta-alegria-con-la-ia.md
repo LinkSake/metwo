@@ -1,4 +1,5 @@
 +++
+translationKey = "lack-of-joy-with-ai"
 title = "La falta de alegría en la era de la inteligencia artificial generativa"
 description = "Una pequeña reflexión, o desahogo sobre como la inteligencia artificial generativa está afectando mi pequeño pedacito de mundo."
 date = 2025-10-03T17:00:00-00:00

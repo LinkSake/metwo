@@ -1,4 +1,5 @@
 +++
+translationKey = "a-teaspoon-of-sun"
 title = "Una cucharadita de sol (Poema)"
 description = "Me emociona compartir que mi poema Una Cucharadita de Sol fue seleccionado como ganador en la convocatoria Quarantine Poetry: Homemade Poems Competition en 2020. "
 date = 2020-09-19T15:15:49-05:00

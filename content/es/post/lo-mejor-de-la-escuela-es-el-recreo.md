@@ -1,4 +1,5 @@
 +++
+translationKey = "the-best-thing-about-school-is-recess"
 title = "Lo mejor de la escuela es el recreo"
 description = "Una reflexion sobre el poema del maestro Jaime Sabines y la cuarentena."
 date = 2020-08-11T13:50:59-05:00

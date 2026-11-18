@@ -1,5 +1,6 @@
 +++
 title = "about me"
+description = "About Luis Ángel Ortega, a writer, poet and software developer from Chihuahua, Mexico, and how to get in touch."
 simple = true
 +++
 

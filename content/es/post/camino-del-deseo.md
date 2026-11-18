@@ -1,4 +1,5 @@
 +++
+translationKey = "desire-path"
 title = "Camino del deseo"
 date = 2026-01-29T17:25:15Z
 slug = "camino-del-deseo"

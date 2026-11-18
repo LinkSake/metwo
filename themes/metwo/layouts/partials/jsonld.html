@@ -1,0 +1,91 @@
+{{- /* schema.org structured data. Person data lives in data/person.yaml. */ -}}
+{{- $lang := .Site.Language.Lang -}}
+{{- $p := hugo.Data.person -}}
+{{- $home := .Site.Home.Permalink -}}
+{{- $base := "" }}{{ with .File }}{{ $base = .ContentBaseName }}{{ end -}}
+{{- $personID := print (absURL "/") "#person" -}}
+
+{{- $members := slice -}}
+{{- range $p.memberOf -}}
+  {{- $members = $members | append (dict "@type" "Organization" "name" .name "url" .url "description" (index .description $lang)) -}}
+{{- end -}}
+
+{{- $books := slice -}}
+{{- range $p.books -}}
+  {{- $books = $books | append (dict "@type" "Book" "name" .name "genre" .genre "inLanguage" .inLanguage "datePublished" (string .year) "url" .url "author" (dict "@id" $personID)) -}}
+{{- end -}}
+
+{{- $person := dict
+  "@type" "Person"
+  "@id" $personID
+  "name" $p.name
+  "alternateName" $p.alternateName
+  "url" (absURL "/")
+  "image" (absURL $p.image)
+  "email" (print "mailto:" $p.email)
+  "jobTitle" (index $p.jobTitle $lang)
+  "description" (index $p.description $lang)
+  "birthDate" (string $p.birthYear)
+  "nationality" (dict "@type" "Country" "name" "México")
+  "homeLocation" (dict "@type" "Place" "name" (print $p.city ", " $p.region ", México") "address" (dict "@type" "PostalAddress" "addressLocality" $p.city "addressRegion" $p.region "addressCountry" $p.country))
+  "knowsAbout" (index $p.knowsAbout $lang)
+  "knowsLanguage" (slice "es" "en")
+  "memberOf" $members
+  "award" $p.awards
+  "workExample" $books
+  "sameAs" $p.sameAs
+-}}
+
+{{- $graph := slice -}}
+
+{{- if .IsHome -}}
+  {{- $graph = $graph | append $person -}}
+  {{- $graph = $graph | append (dict
+    "@type" "WebSite"
+    "@id" (print $home "#website")
+    "url" $home
+    "name" $p.name
+    "description" .Site.Params.description
+    "inLanguage" .Site.Language.Locale
+    "author" (dict "@id" $personID)
+    "publisher" (dict "@id" $personID)
+  ) -}}
+{{- else if and .IsPage (in (slice "about" "projects") $base) -}}
+  {{- $graph = $graph | append $person -}}
+  {{- $type := cond (eq $base "about") "ProfilePage" "WebPage" -}}
+  {{- $graph = $graph | append (dict
+    "@type" $type
+    "@id" (print .Permalink "#webpage")
+    "url" .Permalink
+    "name" .Title
+    "description" (.Description | default .Site.Params.description)
+    "inLanguage" .Site.Language.Locale
+    "mainEntity" (dict "@id" $personID)
+    "about" (dict "@id" $personID)
+  ) -}}
+{{- else if and .IsPage (eq .Section "post") -}}
+  {{- $img := absURL $p.image -}}
+  {{- with .Params.images }}{{ $img = absURL (index . 0) }}{{ end -}}
+  {{- $article := dict
+    "@type" "BlogPosting"
+    "@id" (print .Permalink "#article")
+    "mainEntityOfPage" .Permalink
+    "url" .Permalink
+    "headline" (.Title | plainify)
+    "description" (.Description | default (.Summary | plainify | truncate 200))
+    "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+    "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+    "inLanguage" .Site.Language.Locale
+    "wordCount" .WordCount
+    "image" $img
+    "author" (dict "@type" "Person" "@id" $personID "name" $p.name "url" (absURL "/"))
+    "publisher" (dict "@type" "Person" "@id" $personID "name" $p.name)
+    "keywords" (delimit (.Params.tags | default slice) ", ")
+  -}}
+  {{- with .Params.categories }}{{ $article = merge $article (dict "articleSection" (index . 0)) }}{{ end -}}
+  {{- $graph = $graph | append $article -}}
+{{- end -}}
+
+{{- if $graph }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" $graph | jsonify | safeJS }}</script>
+{{- end }}

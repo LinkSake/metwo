@@ -1,4 +1,5 @@
 +++
+translationKey = "goodbye-nextra-hello-hugo"
 title = "Adiós Nextra, hola Hugo"
 description = "La historia de la migración de este blog de Nextra a Hugo, más como lo estoy restructurando conceptualmente."
 date = 2024-07-31T17:00:00-00:00

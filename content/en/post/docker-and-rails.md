@@ -1,4 +1,5 @@
 +++
+translationKey = "docker-and-rails"
 title = "Docker + Rails: A Solution for Your Headaches"
 description = "Do the new developers on your team take weeks to get the project running? Is getting the project to production an odyssey? Maybe Docker is the solution."
 date = 2021-09-02T15:15:49-05:00
