@@ -56,7 +56,7 @@ cp .env.example .env
 ### `sync-lately.sh` — Lately section data + garden reads archive
 
 Fetches the landing page "Lately" data and writes `data/lately.yaml`:
-- Book: currently-reading shelf from GoodReads (public RSS, no credentials needed)
+- Book: first book in the "Currently Reading" box of the public GoodReads profile page (no credentials needed; the old RSS feed was retired)
 - Film: most recently watched from Letterboxd (public RSS, no credentials needed)
 - Anime: currently-watching, most recently progressed, from MyAnimeList (public list endpoint, no credentials needed) — shown as a second line under "watching"
 - Track: most recent scrobble from Last.fm (requires `LASTFM_API_KEY`)
