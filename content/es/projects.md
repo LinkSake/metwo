@@ -17,6 +17,10 @@ A lo largo de los años he trabajado en varias cosas, aquí tienes una lista de 
 - [***Quarantine Poetry: 2020 Homemade Poems*** **(2020)**](/es/post/2020/09/19/a-teaspoon-of-sun/): Incluye mi poema *Una cucharadita de sol*, traducido al inglés, francés, italiano e indonesio. [PDF](/docs/quarantine-poetry.pdf).
 - [**4.º Concurso de Cuento Corto de la Red de Bibliotecas Lasallistas (próximamente)**](/es/post/2024/04/24/titan/): Incluye mi cuento *Titán*.
 
+### revistas
+
+- [***Rastro*** **n.º 3 (2026)**](https://rastrocuu.wixsite.com/rastro-revista/luis-angel-ortega): Un cuento mío en esta revista cultural independiente de Chihuahua. [Lee el número completo](https://archive.org/details/rastro-no.-3-2026/mode/2up) (PDF en Internet Archive).
+
 ## premios
 
 - [**Premio Estatal de Literatura Joven (2026)**](https://eltelar.xyz/blog/felicidades-a-luis-angel-y-ana-gabriela-premio-literatura-joven-y-pecda-2026/): Categoría de cuento "Nellie Campobello", por *El oficio de las cosas*.
@@ -26,14 +30,14 @@ A lo largo de los años he trabajado en varias cosas, aquí tienes una lista de 
 
 - [**Maestría (educación | 2025 - hoy)**](https://uveg.edu.mx/index.php/es/info-mael): Maestría en Educación con enfoque en Educación en Línea en la Universidad Virtual de Guanajuato.
 - **Libro sin título (cuento | 2026 - hoy)**: Estoy trabajando en una nueva colección de cuentos. Más información pronto.
-- [**El telar (colectivo | 2024 - hoy)**](https://eltelar.xyz/): Un grupo de escritores chihuahuenses que se juntan semanalmente a leer nuestras obras y darnos retroalimentación. Además de ser parte de ellos, mantengo el sitio web.
+- [**El telar (colectivo | 2023 - hoy)**](https://eltelar.xyz/): Un grupo de escritores chihuahuenses que se juntan semanalmente a leer nuestras obras y darnos retroalimentación. Además de ser parte de ellos, mantengo el sitio web.
 - **Bonito (app | 2026 - hoy)**: Una app tranquila y sin conexión sobre cuidar a un pequeño compañero jugando algunos juegos cortos cada día. Todavía en proceso.
 - [**luisangel.me v2 (web | 2024 - hoy)**](https://github.com/LinkSake/metwo): ¡La cosa que está detrás de estas palabras!
 
 ## archivado
 
 - [**Luna Sophia Terra (web | 2026)**](https://luna.eltelar.xyz/): Sitio de autora de la escritora Luna Sophia Terra.
-- [**Dagh Salón (web | 2026)**](https://linksake.github.io/dagh/): Sitio web de un salón de belleza en Chihuahua.
+- [**Dagh Salón (web | 2021 - 2026)**](https://linksake.github.io/dagh/): Sitio web de un salón de belleza en Chihuahua.
 - [**Tu código tiene memoria (web | 2026)**](https://linksake.github.io/git-basico/): Una pequeña introducción interactiva a Git, hecha como trabajo para una materia de mi maestría.
 - [**Tejiendo Relatos 10 (web | 2025)**](https://taller.eltelar.xyz/): Página de la décima edición del taller de creación literaria de El Telar.
 - [**Curcubita (colectivo | 2024)**](https://curcubita.art/): Colectivo/estudio de arte fundado junto con algunos amigos artistas con la intención de tener sinergia entre nosotros.
