@@ -15,6 +15,16 @@
   {{- $books = $books | append (dict "@type" "Book" "name" .name "genre" .genre "inLanguage" .inLanguage "datePublished" (string .year) "url" .url "author" (dict "@id" $personID)) -}}
 {{- end -}}
 
+{{- /* Press coverage about the person (data/press.yaml). */ -}}
+{{- $press := slice -}}
+{{- range hugo.Data.press -}}
+  {{- range .items -}}
+    {{- $a := dict "@type" "NewsArticle" "url" .url "datePublished" (time.Format "2006-01-02" .date) "inLanguage" "es" "publisher" (dict "@type" "Organization" "name" .outlet) "about" (dict "@id" $personID) -}}
+    {{- with .title }}{{ $a = merge $a (dict "headline" .) }}{{ end -}}
+    {{- $press = $press | append $a -}}
+  {{- end -}}
+{{- end -}}
+
 {{- $person := dict
   "@type" "Person"
   "@id" $personID
@@ -34,6 +44,7 @@
   "award" $p.awards
   "workExample" $books
   "sameAs" $p.sameAs
+  "subjectOf" $press
 -}}
 
 {{- $graph := slice -}}
