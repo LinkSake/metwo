@@ -57,3 +57,7 @@ Over the years I've worked on several things, most of them are in spanish but he
 - [**You should have an ugly website (talk | 2026)**](/es/garden/platica-pagina-web-fea-parentesis-cultural/): Why artists should lead the decentralization of the web, at Paréntesis Cultural (PECH). In Spanish.
 - [**IndieWeb and POSSE (talk | 2026)**](/es/garden/platica-indieweb-posse-gluch/): At the Linux Users Group of Chihuahua (GLUCH). In Spanish.
 - [**Intro to Hugo (workshop | 2025)**](https://github.com/LinkSake/hugo-ulsa-2025): Demo project and slides from the workshop I gave at Semana ULSA 2025. In Spanish.
+
+## press
+
+{{< press >}}
