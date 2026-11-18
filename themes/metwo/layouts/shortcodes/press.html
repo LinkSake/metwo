@@ -1,0 +1,11 @@
+{{- /* Press coverage list from data/press.yaml, one line per event. Usage: {{< press >}} */ -}}
+{{- $lang := .Page.Language.Lang -}}
+<ul>
+{{- range hugo.Data.press }}
+  <li><strong>{{ index .event $lang }}</strong>:
+    {{- range $i, $a := .items }}{{ if $i }},{{ end }}
+    <a href="{{ $a.url }}"{{ with $a.title }} title="{{ . }}"{{ end }}>{{ $a.outlet }}</a> ({{ time.Format ":date_medium" $a.date }})
+    {{- end }}
+  </li>
+{{- end }}
+</ul>
