@@ -17,6 +17,10 @@ Over the years I've worked on several things, most of them are in spanish but he
 - [***Quarantine Poetry: 2020 Homemade Poems*** **(2020)**](/post/2020/09/19/a-teaspoon-of-sun/): Includes my poem *Una cucharadita de sol*, translated into English, French, Italian and Indonesian. [PDF](/docs/quarantine-poetry.pdf).
 - [**4th Short Story Contest of the Lasallian Library Network (forthcoming)**](/post/2024/04/24/titan/): Includes my short story *Titán*.
 
+### magazines
+
+- [***Rastro*** **No. 3 (2026)**](https://rastrocuu.wixsite.com/rastro-revista/luis-angel-ortega): A short story of mine in this independent cultural magazine from Chihuahua. [Read the issue](https://archive.org/details/rastro-no.-3-2026/mode/2up) (PDF on the Internet Archive).
+
 ## awards
 
 - [**Premio Estatal de Literatura Joven (2026)**](https://eltelar.xyz/blog/felicidades-a-luis-angel-y-ana-gabriela-premio-literatura-joven-y-pecda-2026/): Short story category "Nellie Campobello", for *El oficio de las cosas*.
@@ -26,14 +30,14 @@ Over the years I've worked on several things, most of them are in spanish but he
 
 - [**Master's degree (education | 2025 - now)**](https://uveg.edu.mx/index.php/es/info-mael): Master's in Education with a focus on Online Education at the Universidad Virtual de Guanajuato.
 - **Untitled book (short stories | 2026 - now)**: I'm working on a new short story collection. More info soon(tm).
-- [**El telar (collective | 2024 - now)**](https://eltelar.xyz/): A group of writers based on Chihuahua, Mexico that gets together to read our work and give feedback. I also maintain the website.
+- [**El telar (collective | 2023 - now)**](https://eltelar.xyz/): A group of writers based on Chihuahua, Mexico that gets together to read our work and give feedback. I also maintain the website.
 - **Bonito (app | 2026 - now)**: A calm, offline app about caring for a tiny companion by playing a few small games each day. Still in the works.
 - [**luisangel.me v2 (website | 2024 - now)**](https://github.com/LinkSake/metwo): The thing powering this words!
 
 ## archived
 
 - [**Luna Sophia Terra (website | 2026)**](https://luna.eltelar.xyz/): Author website for the writer Luna Sophia Terra.
-- [**Dagh Salón (website | 2026)**](https://linksake.github.io/dagh/): Website for a beauty salon in Chihuahua.
+- [**Dagh Salón (website | 2021 - 2026)**](https://linksake.github.io/dagh/): Website for a beauty salon in Chihuahua.
 - [**Tu código tiene memoria (website | 2026)**](https://linksake.github.io/git-basico/): A small interactive intro to Git, made as coursework for my master's.
 - [**Tejiendo Relatos 10 (website | 2025)**](https://taller.eltelar.xyz/): Landing page for the 10th edition of El Telar's creative writing workshop.
 - [**Curcubita (collective | 2024)**](https://curcubita.art/): Art collective/studio founded along with some artist friends with the intention to have synergy with each other.
