@@ -9,7 +9,7 @@ Usage:
     python3 scripts/post-to-bluesky.py content/en/notes/2026-07-07-my-note.md --dry-run
 
 Credentials (in .env or environment):
-    BSKY_IDENTIFIER   your Bluesky handle, e.g. linksake.bsky.social
+    BSKY_IDENTIFIER   your Bluesky handle, e.g. luisangel.me
     BSKY_APP_PASSWORD an app password from bsky.app/settings/app-passwords
                       (NOT your main account password)
 

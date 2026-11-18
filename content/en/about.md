@@ -11,4 +11,4 @@ I'm Luis Ángel, a software developer and writter from Mexico. I'm a curious per
 
 ## contact
 
-Nowdays I really don't use social media that much, but I would love to talk! So the best way to get in touch is via email ([hey@luisangel.me](mailto:hey@luisangel.me)) or Bluesky ([@linksake.bsky.social](https://bsky.app/profile/linksake.bsky.social)) (￣▽￣)ノ
+Nowdays I really don't use social media that much, but I would love to talk! So the best way to get in touch is via email ([hey@luisangel.me](mailto:hey@luisangel.me)) or Bluesky ([@luisangel.me](https://bsky.app/profile/luisangel.me)) (￣▽￣)ノ
