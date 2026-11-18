@@ -29,6 +29,13 @@ Luis Ángel Ortega Holguín (Chihuahua, 1998) is a Mexican writer, poet and soft
 {{ end }}{{ end }}
 {{- with .Site.GetPage "/projects" }}- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
 {{ end }}
+{{ if $es }}## En medios{{ else }}## Press{{ end }}
+
+{{ range hugo.Data.press -}}
+{{ index .event $lang }}:
+{{ range .items }}- {{ .outlet }}, {{ time.Format "2006-01-02" .date }}{{ with .title }}: "{{ . }}"{{ end }} — {{ .url }}
+{{ end }}
+{{ end -}}
 {{ if $es }}## Escritos{{ else }}## Writings{{ end }}
 
 {{ range where .Site.RegularPages "Section" "post" -}}
