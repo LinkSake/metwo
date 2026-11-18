@@ -1,0 +1,41 @@
+# Single source for the schema.org Person (JSON-LD) and llms.txt.
+# Edit here when something about you changes (awards, books, profiles).
+name: "Luis Ángel Ortega"
+alternateName: ["Luis Ángel Ortega Holguín", "LinkSake"]
+birthYear: 1998
+image: "/images/index/avatar.jpeg"
+email: "hey@luisangel.me"
+city: "Chihuahua"
+region: "Chihuahua"
+country: "MX"
+jobTitle:
+  en: "Writer, poet and software developer"
+  es: "Escritor, poeta y desarrollador de software"
+description:
+  en: "Mexican writer, poet and software developer from Chihuahua, Mexico. Winner of the 2026 Premio Estatal de Literatura Joven (short story) with El oficio de las cosas and member of the El Telar writers' collective."
+  es: "Escritor, poeta y desarrollador de software chihuahuense. Ganador del Premio Estatal de Literatura Joven 2026 en cuento con El oficio de las cosas e integrante del colectivo literario El Telar de Chihuahua."
+knowsAbout:
+  en: ["Short story", "Poetry", "Literature from Chihuahua", "Software development", "IndieWeb", "Hugo", "Online education"]
+  es: ["Cuento", "Poesía", "Literatura chihuahuense", "Desarrollo de software", "IndieWeb", "Hugo", "Educación en línea"]
+memberOf:
+  - name: "El Telar"
+    url: "https://eltelar.xyz/"
+    description:
+      en: "Writers' collective and literary workshop in Chihuahua, Mexico"
+      es: "Colectivo y taller literario de Chihuahua"
+awards:
+  - "Premio Estatal de Literatura Joven 2026, cuento «Nellie Campobello» (Secretaría de Cultura de Chihuahua)"
+  - "Fondo Municipal para Artistas y Creadores (FOMAC), octava emisión, 2025"
+books:
+  - name: "El oficio de las cosas"
+    genre: "Cuento"
+    inLanguage: "es"
+    year: 2026
+    url: "https://eltelar.xyz/blog/felicidades-a-luis-angel-y-ana-gabriela-premio-literatura-joven-y-pecda-2026/"
+sameAs:
+  - "https://bsky.app/profile/luisangel.me"
+  - "https://instagram.com/linksake"
+  - "https://github.com/LinkSake"
+  - "https://linksake.substack.com"
+  - "https://luisangelortega.substack.com"
+  - "https://eltelar.xyz/autores/luis-angel-ortega/"

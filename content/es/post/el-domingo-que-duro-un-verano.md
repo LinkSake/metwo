@@ -1,4 +1,5 @@
 +++
+translationKey = "the-sunday-that-lasted-a-summer"
 title = "El domingo que duro un verano"
 description = "Sobre un sentimiento particular y la cuarentena."
 date = 2020-07-26T13:34:27-05:00

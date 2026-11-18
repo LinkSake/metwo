@@ -1,4 +1,5 @@
 +++
+translationKey = "migraine"
 title = "Migraña"
 date = 2026-01-07T17:30:35Z
 slug = "migrana"

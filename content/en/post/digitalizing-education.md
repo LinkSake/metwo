@@ -1,4 +1,5 @@
 +++
+translationKey = "digitalizing-education"
 title = "Who are we digitalizing education for? An urgent call for accessibility"
 description = "For more than two decades, talking about digital transformation in education has become almost mandatory. Investments are made in platforms, new methodologies are promoted, and technological advances in classrooms are celebrated. But there's a question that is rarely asked clearly: who are we digitalizing for?"
 date = 2025-06-26T17:00:00-00:00

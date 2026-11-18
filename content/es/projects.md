@@ -1,6 +1,6 @@
 +++
 title = "proyectos"
-description = "Una colección de mis proyectos a lo largo de los años, ¡esperemos que siga creciendo!"
+description = "Libros, antologías, premios, pláticas y proyectos de Luis Ángel Ortega, escritor chihuahuense: El oficio de las cosas (Premio Estatal de Literatura Joven 2026), El Telar y más."
 simple = true
 +++
 
